@@ -1,4 +1,4 @@
-name: pyvista-doc-auto-update
+name: pyvista-doc-tutorial-update
 on:
   schedule:
     - cron:  '0 1 * * *'
