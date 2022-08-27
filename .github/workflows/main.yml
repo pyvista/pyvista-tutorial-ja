@@ -70,7 +70,7 @@ jobs:
         make -C doc html SPHINXOPTS="-w build_errors.txt -N -D language=ja -D locale_dirs='../../locale'"
         cd ../
         cd ../
-        ls pyvista-tutorial-translations/pyvista-tutorial
+        ls pyvista-tutorial-translations/pyvista-tutorial/doc
     - name: commit
       if: contains(github.ref, 'main')
       env:
