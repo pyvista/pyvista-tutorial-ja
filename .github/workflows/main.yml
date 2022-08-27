@@ -70,7 +70,7 @@ jobs:
         make -C doc html SPHINXOPTS="-w build_errors.txt -N -D language=ja -D locale_dirs='../../locale'"
         cd ../
         cd ../
-        ls pyvista-tutorial-translations/pyvista-tutorial/doc/build
+        ls pyvista-tutorial-translations/pyvista-tutorial/doc/build/html
     - name: commit
       if: contains(github.ref, 'main')
       env:
@@ -80,7 +80,7 @@ jobs:
         cd pyvista-tutorial-ja
         git checkout gh-pages
         git rm -rf *
-        mv ../pyvista-tutorial-translations/pyvista-tutorial/doc/_build/html/* .
+        mv ../pyvista-tutorial-translations/pyvista-tutorial/doc/build/html/* .
         touch .nojekyll
         git config --global user.email $GITHUB_REPOSITORY
         git config --global user.name $GITHUB_REPOSITORY
