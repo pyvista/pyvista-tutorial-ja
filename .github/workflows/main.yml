@@ -67,7 +67,7 @@ jobs:
         set +x
         git submodule update --remote
         cd pyvista-tutorial
-        make -C doc html SPHINXOPTS="-w build_errors.txt -N -D language=ja -D locale_dirs='../../locale'"
+        make -C doc html SPHINXOPTS="-w build_errors.txt -N -D language=ja -D locale_dirs='../../../locale'"
         cd ../
         cd ../
     - name: commit
