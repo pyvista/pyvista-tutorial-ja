@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>PyVista Tutorial for SciPy 2022 &#8212; PyVista Tutorial</title>
+    <title>PyVistaチュートリアル SciPy 2022 &#8212; PyVista Tutorial</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -58,7 +58,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="Getting Started" href="getting-started.html" />
+    <link rel="next" title="はじめに" href="getting-started.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="ja">
   </head>
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="getting-started.html">
-  Getting Started
+  はじめに
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="tutorial.html">
-  PyVista Tutorial
+  PyVistaチュートリアル
  </a>
 </li>
 
@@ -188,27 +188,27 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quick-links">
-   Quick Links
+   クイックリンク
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-gallery">
-   Example Gallery
+   ギャラリー例
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pyvista-overview">
-   PyVista Overview
+   PyVistaの概要
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tutorial-description">
-   Tutorial Description
+   チュートリアルの説明
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#instructor-bios">
-   Instructor Bios
+   講師略歴
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -230,7 +230,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tutorial-prerequisites">
-   Tutorial Prerequisites
+   チュートリアルの前提条件
   </a>
  </li>
 </ul>
@@ -253,34 +253,32 @@
               <article class="bd-article" role="main">
                 
   <section id="pyvista-tutorial-for-scipy-2022">
-<h1>PyVista Tutorial for <a class="reference external" href="https://www.scipy2022.scipy.org/">SciPy 2022</a><a class="headerlink" href="#pyvista-tutorial-for-scipy-2022" title="このヘッドラインへのパーマリンク">#</a></h1>
+<h1>PyVistaチュートリアル <a class="reference external" href="https://www.scipy2022.scipy.org/">SciPy 2022</a><a class="headerlink" href="#pyvista-tutorial-for-scipy-2022" title="このヘッドラインへのパーマリンク">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<p>Welcome to PyVista's tutorial for <a class="reference external" href="https://www.scipy2022.scipy.org/">SciPy 2022</a>!</p>
-<p>Here you can find all the resources to be up and running with PyVista in no
-time. Feel free to reference our dedicated documentation at <a class="reference external" href="https://docs.pyvista.org/">PyVista
-Documentation</a></p>
+<p>PyVistaの <a class="reference external" href="https://www.scipy2022.scipy.org/">SciPy 2022</a> 用のチュートリアルへようこそ!</p>
+<p>ここでは，PyVistaをすぐに使いこなすためのすべてのリソースを見つけることができます．また， <a class="reference external" href="https://docs.pyvista.org/">PyVista Documentation</a> にある専用のドキュメントも自由に参照してください．</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">JupyterLab</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">IPython</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p>Here's a quick demo of PyVista running within <a class="reference external" href="https://jupyter.org/">Jupyterlab</a>.</p>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">JupyterLab</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">IPython</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p><a class="reference external" href="https://jupyter.org/">Jupyterlab</a> 内で動作するPyVistaの簡単なデモを紹介します．</p>
 <video width="100%" height="auto" controls autoplay muted>
   <source src="_static/pyvista_jupyterlab_demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
-</video></div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>Here's a quick demo of PyVista running within a terminal using <a class="reference external" href="https://ipython.org/">IPython</a>.</p>
+</video></div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>ここでは， <a class="reference external" href="https://ipython.org/">IPython</a> を使用してターミナル内でPyVistaを実行する簡単なデモを紹介します．</p>
 <video width="100%" height="auto" controls autoplay muted>
   <source src="_static/pyvista_ipython_demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video></div></div>
 <section id="quick-links">
-<h2>Quick Links<a class="headerlink" href="#quick-links" title="このヘッドラインへのパーマリンク">#</a></h2>
+<h2>クイックリンク<a class="headerlink" href="#quick-links" title="このヘッドラインへのパーマリンク">#</a></h2>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 docutils">
 <div class="card w-100 shadow install-card docutils">
 <div class="card-header docutils">
-<p class="card-text">Getting Started</p>
+<p class="card-text">はじめに</p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">Get PyVista setup on your environment.</p>
+<p class="card-text">PyVistaをあなたの環境にセットアップします．</p>
 </div>
 <div class="card-footer docutils">
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="getting-started.html"><span class="doc">Installation and Getting Started</span></a></p>
@@ -290,10 +288,10 @@ Documentation</a></p>
 <div class="d-flex col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 docutils">
 <div class="card w-100 shadow install-card docutils">
 <div class="card-header docutils">
-<p class="card-text">Tutorial Content</p>
+<p class="card-text">チュートリアル内容</p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">Jump right to the tutorial content.</p>
+<p class="card-text">チュートリアルの内容へジャンプします．</p>
 </div>
 <div class="card-footer docutils">
 <p class="card-text"><a class="sphinx-bs btn text-wrap btn-outline-primary btn-block stretched-link reference internal" href="tutorial.html"><span class="doc">Tutorial</span></a></p>
@@ -304,59 +302,46 @@ Documentation</a></p>
 </div>
 </section>
 <section id="example-gallery">
-<h2>Example Gallery<a class="headerlink" href="#example-gallery" title="このヘッドラインへのパーマリンク">#</a></h2>
-<p>Click below for our extensive example gallery!</p>
+<h2>ギャラリー例<a class="headerlink" href="#example-gallery" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>下記をクリックすると，豊富なサンプルギャラリーをご覧いただけます．</p>
 <a class="reference external image-reference" href="http://docs.pyvista.org/examples/index.html"><img alt="_images/pyvista_banner.png" src="_images/pyvista_banner.png" /></a>
 </section>
 <section id="pyvista-overview">
-<h2>PyVista Overview<a class="headerlink" href="#pyvista-overview" title="このヘッドラインへのパーマリンク">#</a></h2>
-<p><a class="reference external" href="https://github.com/pyvista/pyvista">PyVista</a> is a general purpose 3D visualization library used for over 500+ open source projects and many closed source projects for the visualization of everything from <a class="reference external" href="https://dev.pyvista.org/getting-started/external_examples.html">computer aided engineering and geophysics to volcanoes and digital artwork</a>.</p>
-<p>PyVista exposes a Pythonic API to the <a class="reference external" href="http://www.vtk.org">Visualization Toolkit (VTK)</a> to provide tooling that is immediately usable without any prior knowledge of VTK and is being built as the 3D equivalent of <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>, with plugins to <a class="reference external" href="https://jupyter.org/">Jupyter</a> to enable visualization of 3D data using both server and client-side rendering.</p>
-<p>We will provide a hands-on tutorial accessible to anyone with internet access and a computer via many of PyVista's existing <a class="reference external" href="https://docs.pyvista.org/examples/index.html">example Jupyter notebooks</a> and new material through a comprehensive overview highlighting popular 3D visualization use cases.</p>
+<h2>PyVistaの概要<a class="headerlink" href="#pyvista-overview" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p><a class="reference external" href="https://github.com/pyvista/pyvista">PyVista</a> は汎用の3D可視化ライブラリで，500以上のオープンソースプロジェクトや多くのクローズドソースプロジェクトで， <a class="reference external" href="https://dev.pyvista.org/getting-started/external_examples.html">コンピュータ支援エンジニアリングや地球物理学から火山やデジタルアートワーク</a> まであらゆるものの可視化に利用されています．</p>
+<p>PyVistaは， <a class="reference external" href="http://www.vtk.org">Visualization Toolkit (VTK)</a> にPythonic APIを公開し，VTKの予備知識がなくてもすぐに使えるツールを提供します．また， <a class="reference external" href="https://matplotlib.org/">Matplotlib</a> と同等の3Dとして構築されており， <a class="reference external" href="https://jupyter.org/">Jupyter</a> へのプラグインによりサーバーサイドレンダリングを用いた3Dデータの視覚化を可能にするものです．</p>
+<p>PyVistaの既存の <a href="#id7"><span class="problematic" id="id8">`サンプルJupyterノートブック&lt;https://docs.pyvista.org/examples/index.html&gt;`_</span></a> の多くを通じて，インターネットアクセスとコンピュータがあれば誰でもアクセスできる実践的なチュートリアルと，人気のある3D可視化の使用例に焦点を当てた包括的な概要を通じて新しい教材を提供します．</p>
 </section>
 <section id="tutorial-description">
-<h2>Tutorial Description<a class="headerlink" href="#tutorial-description" title="このヘッドラインへのパーマリンク">#</a></h2>
+<h2>チュートリアルの説明<a class="headerlink" href="#tutorial-description" title="このヘッドラインへのパーマリンク">#</a></h2>
 <ul class="simple">
-<li><p>Use PyVista to create 3D visualizations from a variety of datasets in common
-formats.</p></li>
-<li><p>Overview the classes and data structures of PyVista with real-world examples.</p></li>
-<li><p>Be familiar with the various filters and features of PyVista.</p></li>
-<li><p>Know which Python libraries are used and can be used by PyVista (meshio,
-trimesh etc).</p></li>
+<li><p>PyVistaを使って，一般的な形式のさまざまなデータセットから3Dビジュアライゼーションを作成できます．</p></li>
+<li><p>PyVistaのクラスとデータ構造の概要を実例を交えて解説します．</p></li>
+<li><p>PyVistaの様々なフィルタや機能を使いこなすことができる．</p></li>
+<li><p>PyVistaで使用されている，または使用できるPythonライブラリ（meshio，trimeshなど）を知ります．</p></li>
 </ul>
-<p>We see this tutorial catering to anyone who wants to visualize data in any
-domain, and this ranges from basic Python users to advanced power users.</p>
+<p>このチュートリアルは，Pythonの基本的なユーザーから上級のパワーユーザーまで，あらゆる分野のデータを可視化したいと考えるすべての人を対象にしています．</p>
 <ol class="arabic simple">
-<li><p>Basic knowledge of Python to get started. Be able to install Jupyter Lab on
-your machine and be up and running.</p></li>
-<li><p>Intermediate users will want to be familiar with <a class="reference external" href="https://numpy.org/">NumPy</a> and other libraries that are compatible with PyVista,
-like <a class="reference external" href="https://trimsh.org/examples.html">trimesh</a> or <a class="reference external" href="https://github.com/nschloe/meshio">meshio</a>.</p></li>
-<li><p>Advanced users should be familiar with the Visualization Toolkit (VTK), general
-data science, and GUI frameworks like Qt.</p></li>
+<li><p>Pythonの基本的な知識を持っていること．Jupyter Labをあなたのマシンにインストールし，働させることができること．</p></li>
+<li><p>中級者は <a class="reference external" href="https://numpy.org/">NumPy</a> や， <a class="reference external" href="https://trimsh.org/examples.html">trimesh</a> や <a class="reference external" href="https://github.com/nschloe/meshio">meshio</a> など，PyVista と互換性のあるライブラリに慣れておくとよいでしょう．</p></li>
+<li><p>上級者はVisualization Toolkit (VTK)，一般的なデータサイエンス，QtのようなGUIフレームワークに精通している必要があります．</p></li>
 </ol>
 </section>
 <section id="instructor-bios">
-<h2>Instructor Bios<a class="headerlink" href="#instructor-bios" title="このヘッドラインへのパーマリンク">#</a></h2>
+<h2>講師略歴<a class="headerlink" href="#instructor-bios" title="このヘッドラインへのパーマリンク">#</a></h2>
 <section id="alexander-kaszynski">
 <h3>Alexander Kaszynski<a class="headerlink" href="#alexander-kaszynski" title="このヘッドラインへのパーマリンク">#</a></h3>
-<p><a class="reference external" href="https://github.com/akaszynski/resume">Alex Kaszynski</a>, co-creator of PyVista
-and creator of the <a class="reference external" href="https://github.com/pyansys">PyAnsys</a> organization.</p>
-<p>Advocate for all things open source and has contributed to the creation of
-Ansys's open source projects at <a class="reference external" href="https://ansys.github.io/">Ansys</a> and
-<a class="reference external" href="https://https://github.com/pyansys/pymapdl">PyMAPDL</a>. Enjoys presenting and
-demoing Python, especially 3D visualization but also its application to CAE and
-automation.</p>
+<p>Alex Kaszynski &lt;<a class="reference external" href="https://github.com/akaszynski/resume">https://github.com/akaszynski/resume</a>&gt;`_ ，PyVistaの共同制作者であり， <a class="reference external" href="https://github.com/pyansys">PyAnsys</a> organization の制作者でもあります．</p>
+<p>オープンソースを支持し， <a class="reference external" href="https://ansys.github.io/">Ansys</a>  と  <a class="reference external" href="https://https://github.com/pyansys/pymapdl">PyMAPDL</a> のオープンソースプロジェクトの作成に貢献した．Pythonのプレゼンテーションやデモを楽しんでおり，特に3DビジュアライゼーションやCAEやオートメーションへの応用を得意としています．</p>
 </section>
 <section id="bane-sullivan">
 <h3>Bane Sullivan<a class="headerlink" href="#bane-sullivan" title="このヘッドラインへのパーマリンク">#</a></h3>
-<p><a class="reference external" href="https://banesullivan.com">Bane Sullivan</a>, co-creator of PyVista, is a Research Software Engineer working at the intersection of geoscience, visualization, and data science.</p>
-<p>Bane is a geophysicist/hydrologist by training and has been working to grow PyVista's adoption within the subsurface geoscience communities, previously presenting PyVista at <a class="reference external" href="https://www.youtube.com/watch?v=FmNmRBsEBHE">Transform 2021</a>.</p>
+<p>PyVistaの共同開発者である <a class="reference external" href="https://banesullivan.com">Bane Sullivan</a> は，球科学，可視化，データサイエンスの交差点で働く研究ソフトウェア技術者です．</p>
+<p>Baneは地球物理学者/水文学者であり，地下の地球科学コミュニティにおけるPyVistaの普及に努めており，過去には <a class="reference external" href="https://www.youtube.com/watch?v=FmNmRBsEBHE">Transform 2021</a> でPyVistaを発表しています．</p>
 </section>
 <section id="tetsuo-koyama">
 <h3>Tetsuo Koyama<a class="headerlink" href="#tetsuo-koyama" title="このヘッドラインへのパーマリンク">#</a></h3>
-<p><a class="reference external" href="https://github.com/tkoyama010">Tetsuo Koyama</a> is interested in scientific computing and visualization with computer graphics.
-Developer team member of PyVista.
-Past experience as a speaker:</p>
+<p><a class="reference external" href="https://github.com/tkoyama010">Tetsuo Koyama</a> は科学計算とコンピュータグラフィックスによる可視化に興味がります．PyVistaの開発メンバー．講演経験あり．</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://youtu.be/6JuB1GiDLQQ">PyConJP 2019 speaker &quot;Introduction to FEM Analysis with Python&quot;</a></p></li>
 <li><p><a class="reference external" href="https://youtu.be/X3Z54Kw4I6Y">PyConJP 2020 speaker &quot;How to plot unstructured mesh file on Jupyter Notebook&quot;</a></p></li>
@@ -366,18 +351,12 @@ Past experience as a speaker:</p>
 </section>
 </section>
 <section id="tutorial-prerequisites">
-<h2>Tutorial Prerequisites<a class="headerlink" href="#tutorial-prerequisites" title="このヘッドラインへのパーマリンク">#</a></h2>
-<p>We see this tutorial catering to anyone who wants to visualize data in any
-domain, and this ranges from basic Python users to advanced power users.  In
-fact, our tutorial instructors and community members are involved in any
-domain.</p>
+<h2>チュートリアルの前提条件<a class="headerlink" href="#tutorial-prerequisites" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>このチュートリアルは，Pythonの基本的なユーザーから上級のパワーユーザーまで，あらゆる分野のデータを可視化したいと考えるすべての人を対象にしています．実際，私たちのチュートリアル講師やコミュニティメンバーは，どのような分野にも携わっています．</p>
 <ol class="arabic simple">
-<li><p>Basic knowledge of Python to get started. Be able to install Jupyter Lab on
-your machine and be up and running.</p></li>
-<li><p>Intermediate users will want to be familiar with <a class="reference external" href="https://numpy.org/">NumPy</a> and other libraries that are compatible with PyVista,
-like <a class="reference external" href="https://trimsh.org/examples.html">trimesh</a> or <a class="reference external" href="https://github.com/nschloe/meshio">meshio</a>.</p></li>
-<li><p>Advanced users will be familiar with GUI frameworks like Qt, VTK, and
-advanced data science.</p></li>
+<li><p>Pythonの基本的な知識を持っていること．Jupyter Labをあなたのマシンにインストールし，働させることができること．</p></li>
+<li><p>中級者は <a class="reference external" href="https://numpy.org/">NumPy</a> や， <a class="reference external" href="https://trimsh.org/examples.html">trimesh</a> や <a class="reference external" href="https://github.com/nschloe/meshio">meshio</a> など，PyVista と互換性のあるライブラリに慣れておくとよいでしょう．</p></li>
+<li><p>上級者はQtなどのGUIフレームワークやVTK，高度なデータサイエンスに精通することになります．</p></li>
 </ol>
 </section>
 </section>
@@ -393,7 +372,7 @@ advanced data science.</p></li>
   <a class='right-next' id="next-link" href="getting-started.html" title="次へ ページ">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">次へ</p>
-      <p class="prev-next-title">Getting Started</p>
+      <p class="prev-next-title">はじめに</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>

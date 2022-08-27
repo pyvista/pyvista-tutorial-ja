@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>PyVista and VTK Together &#8212; PyVista Tutorial</title>
+    <title>PyVistaとVTKの連携 &#8212; PyVista Tutorial</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -57,8 +57,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="Create VTK Objects" href="b_create_vtk.html" />
-    <link rel="prev" title="Transitioning from VTK to PyVista" href="a_1_transition_vtk.html" />
+    <link rel="next" title="VTKオブジェクトの作成" href="b_create_vtk.html" />
+    <link rel="prev" title="VTKからPyVistaへの移行" href="a_1_transition_vtk.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="ja">
   </head>
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../getting-started.html">
-  Getting Started
+  はじめに
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../../tutorial.html">
-  PyVista Tutorial
+  PyVistaチュートリアル
  </a>
 </li>
 
@@ -178,13 +178,13 @@
   <div class="bd-toc-item active">
     <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Lessons
+  レッスン内容
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../00_intro/index.html">
-   Introduction
+   はじめに
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -194,19 +194,19 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../00_intro/a_basic.html">
-     Create Basic Geometric Objects
+     基本的な幾何学的オブジェクトを作成します
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../01_basic/index.html">
-   Basic usage
+   基本的な使い方
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../02_mesh/index.html">
-   What is a Mesh?
+   メッシュとは?
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -216,54 +216,54 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_mesh/a_lesson_mesh.html">
-     Lesson Overview
+     レッスンの概要
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_mesh/exercises/b_create-point-cloud.html">
-     Create Point Cloud
+     点群を作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_mesh/exercises/c_create-uniform-grid.html">
-     Creating a Uniform Grid
+     統合グリッドを作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_mesh/exercises/d_create-tri-surface.html">
-     Create Triangulated Surface
+     三角形状のサーフェスを作成する
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_mesh/exercises/e_read-file.html">
-     Load and Plot from a File
+     ファイルからロードおよびプロットする
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_mesh/soultions/b_create-point-cloud.html">
-     Create Point Cloud
+     点群を作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_mesh/soultions/c_create-uniform-grid.html">
-     Creating a Uniform Grid
+     統合グリッドを作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_mesh/soultions/d_create-tri-surface.html">
-     Create Triangulated Surface
+     三角形状のサーフェスを作成する
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_mesh/soultions/e_read-file.html">
-     Load and Plot from a File
+     ファイルからロードおよびプロットする
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../03_figures/index.html">
-   Plotting Options and Animations
+   プロットオプションとアニメーション
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -273,47 +273,47 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/a_lesson_figures.html">
-     Lesson Overview
+     レッスンの概要
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/b_shading.html">
-     Types of Shading
+     シェーディングのタイプ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/c_geological-map.html">
-     Geological Map on Topography
+     地形上の地質図
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/d_gif.html">
-     Create a GIF Movie
+     GIFムービーの作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/bonus/d_pbr.html">
-     Physically Based Rendering
+     物理ベースのレンダリング
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/bonus/e_labels.html">
-     Label Points
+     ラベルポイント
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/bonus/g_orbit.html">
-     Orbiting
+     オービット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/exercises/a_display_options.html">
-     Display Options
+     表示オプション
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/exercises/b_lighting_mesh.html">
-     Lighting Properties
+     照明特性
     </a>
    </li>
    <li class="toctree-l2">
@@ -323,12 +323,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/solutions/a_display_options.html">
-     Display Options
+     表示オプション
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_figures/solutions/b_lighting_mesh.html">
-     Lighting Properties
+     照明特性
     </a>
    </li>
    <li class="toctree-l2">
@@ -340,7 +340,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../04_filters/index.html">
-   Filters
+   フィルタ
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -350,54 +350,54 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_filters/a_lesson_filters.html">
-     Using Common Filters
+     共通フィルタの使用
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_filters/exercises/b_clipping.html">
-     Clipping with Planes &amp; Boxes
+     平面とボックスでクリップします
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_filters/exercises/c_compute-normals.html">
-     Computing Surface Normals
+     表面の法線を計算します
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_filters/exercises/d_contouring.html">
-     Contouring
+     コンタリング
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_filters/exercises/e_glyphs.html">
-     Plotting Glyphs (Vectors or PolyData)
+     字形のプロット (ベクトルかPolyData)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_filters/solutions/b_clipping.html">
-     Clipping with Planes &amp; Boxes
+     平面とボックスでクリップします
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_filters/solutions/c_compute-normals.html">
-     Computing Surface Normals
+     表面の法線を計算します
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_filters/solutions/d_contouring.html">
-     Contouring
+     コンタリング
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_filters/solutions/e_glyphs.html">
-     Plotting Glyphs (Vectors or PolyData)
+     字形のプロット (ベクトルかPolyData)
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../05_action/index.html">
-   PyVista in Action
+   PyVistaの動作
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -422,12 +422,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://dennissergeev.github.io/exoconvection-apj-2020/">
-     Atmospheric Convection
+     大気対流
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://nbviewer.jupyter.org/github/banesullivan/damavand-volcano/blob/master/Damavand_Volcano.ipynb">
-     Damavand Volcano
+     Damavand火山
     </a>
    </li>
    <li class="toctree-l2">
@@ -437,64 +437,64 @@
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://gist.github.com/hichamjanati/6668d91848283c31ac18d801552fb582">
-     Optimization visualization with PyVista
+     PyVistaによる最適化可視化
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://github.com/johnjarmitage/flem">
-     FLEM: A diffusive landscape evolution model
+     FLEM: 拡散的景観進化モデル
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://github.com/BartheG/Orvisu">
-     Orvisu Demo Application
+     Orvisuデモアプリケーション
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="http://pymeshfix.pyvista.org/examples/index.html">
-     PyMeshFix's example gallery
+     PyMeshFixのサンプルギャラリー
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="http://tetgen.pyvista.org/examples/index.html">
-     TetGen's example gallery
+     TetGenの実例ギャラリー
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://pvgeo.org/examples/index.html">
-     PVGeo's example gallery
+     PVGeoの実例ギャラリー
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://forge.pvgeo.org/project/index.html">
-     FORGE Geothermal Project
+     FORGE地熱プロジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://peterdsharpe.github.io/AeroSandbox/">
-     AeroSandbox
+     エアロサンドボックス
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://pswpswpsw.github.io/posts/2018/09/blog-post-modify-vtk-openfoam/">
-     OpenFOAM Rendering
+     OpenFOAMレンダリング
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="http://discretize.simpeg.xyz/en/main/examples/plot_pyvista_laguna.html">
-     3D Rendering with Discretize
+     離散化を使用した3 Dレンダリング
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://opengeovis.github.io/omfvista/examples/index.html">
-     3D visualization for the Open Mining Format (omf)
+     Open Mining Format (omf) の3 D表示
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   PyVista &amp; VTK
+   PyVistaとVTK
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -504,34 +504,34 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="a_1_transition_vtk.html">
-     Transitioning from VTK to PyVista
+     VTKからPyVistaへの移行
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     PyVista and VTK Together
+     PyVistaとVTKの連携
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="b_create_vtk.html">
-     Create VTK Objects
+     VTKオブジェクトの作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="c_vtk_algorithms.html">
-     Using VTK Algorithms
+     VTKアルゴリズムの使用
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../07_sphinx/index.html">
-   PyVista and Sphinx
+   PyVistaとSphinx
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../08_widgets/index.html">
-   Widgets in PyVista
+   PyVistaのウィジェット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -541,49 +541,49 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_widgets/a_box-widget.html">
-     Box Widget
+     ボックスウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_widgets/b_checkbox-widget.html">
-     Checkbox Widget
+     チェックボックスウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_widgets/c_line-widget.html">
-     Line Widget
+     線ウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_widgets/d_multi-slider-widget.html">
-     Multiple Slider Widgets
+     複数のスライダウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_widgets/e_plane-widget.html">
-     Plane Widget
+     平面ウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_widgets/f_slider-bar-widget.html">
-     Slider Bar Widget
+     スライダバーウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_widgets/g_sphere-widget.html">
-     Sphere Widget
+     球体ウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_widgets/h_spline-widget.html">
-     Spline Widget
+     スプラインウィジェット
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../09_qt/index.html">
-   PyVista and QT
+   PyVistaとQT
   </a>
  </li>
 </ul>
@@ -612,12 +612,12 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   PyVista and VTK Together
+   PyVistaとVTKの連携
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vtk-algorithms">
-   VTK Algorithms
+   VTKアルゴリズム
   </a>
  </li>
 </ul>
@@ -645,20 +645,19 @@
 to download the full example code or to run this example in your browser via Binder</p>
 </div>
 <section class="sphx-glr-example-title" id="pyvista-and-vtk-together">
-<span id="sphx-glr-tutorial-06-vtk-a-2-pyvista-vtk-py"></span><h1>PyVista and VTK Together<a class="headerlink" href="#pyvista-and-vtk-together" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>PyVista is best known for is easy to use plotting API -- being familiar to most Python users already experienced with libraries like Matplotlib. Many people benefit from combining the power of VTK's Python bindings for their data pipelines and the flexibility and simplicity of PyVista for 3D rendering. The following section demonstrates this usage scenario.</p>
+<span id="sphx-glr-tutorial-06-vtk-a-2-pyvista-vtk-py"></span><h1>PyVistaとVTKの連携<a class="headerlink" href="#pyvista-and-vtk-together" title="このヘッドラインへのパーマリンク">#</a></h1>
+<p>PyVistaは，使いやすいプロットAPIでよく知られており，Matplotlibのようなライブラリですでに経験を積んだほとんどのPythonユーザーにとってなじみ深いものです．多くの人が，データパイプラインにVTKのPythonバインディングの力を，3DレンダリングにPyVistaの柔軟性とシンプルさを組み合わせることで利益を得ています．次のセクションでは，この使用シナリオを説明します．</p>
 <div class="admonition tip">
 <p class="admonition-title">ちなみに</p>
-<p>In case it was not made clear in the <a class="reference internal" href="../02_mesh/index.html#mesh"><span class="std std-ref">What is a Mesh?</span></a> section, PyVista mesh classes are subclasses of their VTK counterparts - which means PyVista can be intermixed with VTK workflows.</p>
+<p><a class="reference internal" href="../02_mesh/index.html#mesh"><span class="std std-ref">メッシュとは?</span></a> のセクションで明確にされていないかもしれませんが，PyVistaのメッシュクラスはVTKの対応するクラスのサブクラスであり，これはPyVistaとVTKのワークフローを混在させることができることを意味しています．</p>
 </div>
-<p>Nothing stops you from using VTK classes and then wrapping
-the output with PyVista for streamlined plotting. For example:</p>
+<p>VTKのクラスを使って，出力をPyVistaでラップして，効率的にプロットすることを止めるものはありません．例えば</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">vtk</span>
 </pre></div>
 </div>
-<p>Create a circle using vtk</p>
+<p>vtkを使用して円を作成する</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">polygonSource</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkRegularPolygonSource</span><span class="p">()</span>
 <span class="n">polygonSource</span><span class="o">.</span><span class="n">GeneratePolygonOff</span><span class="p">()</span>
 <span class="n">polygonSource</span><span class="o">.</span><span class="n">SetNumberOfSides</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
@@ -667,34 +666,32 @@ the output with PyVista for streamlined plotting. For example:</p>
 <span class="n">polygonSource</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>wrap and plot using pyvista</p>
+<p>Pyvistaを使ったラップとプロット</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.wrap.html#pyvista.wrap" title="pyvista.wrap" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-function"><span class="n">pv</span><span class="o">.</span><span class="n">wrap</span></a><span class="p">(</span><span class="n">polygonSource</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.plot.html#pyvista.PolyData.plot" title="pyvista.PolyData.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_a_2_pyvista_vtk_001.png" srcset="../../_images/sphx_glr_a_2_pyvista_vtk_001.png" alt="a 2 pyvista vtk" class = "sphx-glr-single-img"/><p>In this manner, you can get the &quot;best of both worlds&quot; should you need
-the flexibility of PyVista and the raw power of VTK.</p>
+<img src="../../_images/sphx_glr_a_2_pyvista_vtk_001.png" srcset="../../_images/sphx_glr_a_2_pyvista_vtk_001.png" alt="a 2 pyvista vtk" class = "sphx-glr-single-img"/><p>このようにして， PyVistaの柔軟性とVTKの原動力の両方を必要とする &quot;best of both worlds&quot; を得ることができるのです．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>You can use <a class="reference external" href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.Polygon.html#pyvista.Polygon" title="(in PyVista v0.36.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Polygon()</span></code></a> for a one line replacement of
-the above VTK code.</p>
+<p>上記のVTKコードを1行で置き換えるために， <a class="reference external" href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.Polygon.html#pyvista.Polygon" title="(in PyVista v0.36.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Polygon()</span></code></a> を使用することができます．</p>
 </div>
 </section>
 <section id="vtk-algorithms">
-<h1>VTK Algorithms<a class="headerlink" href="#vtk-algorithms" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>Perhaps there is a VTK algorithm that is not (yet) exposed in PyVista that you'd like to use. This is easy enough to work with since PyVista objects are VTK objects. We can pass our PyVista meshes to the VTK algorithm, then wrap the output for plotting, further filtering, or anything.</p>
+<h1>VTKアルゴリズム<a class="headerlink" href="#vtk-algorithms" title="このヘッドラインへのパーマリンク">#</a></h1>
+<p>おそらく，PyVistaで（まだ）公開されていないVTKアルゴリズムで，使いたいものがあるのでしょう．PyVistaのオブジェクトはVTKのオブジェクトなので，これは十分に簡単に扱えます．PyVistaのメッシュをVTKアルゴリズムに渡して，出力をラップしてプロットしたり，さらにフィルタリングしたり，何でもできるのです．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny_coarse</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Initialize VTK algorithm</p>
+<p>VTKアルゴリズムの初期化</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">splatter</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkGaussianSplatter</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Pass PyVista object as input to VTK</p>
+<p>VTKへの入力としてPyVistaオブジェクトを渡す</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">splatter</span><span class="o">.</span><span class="n">SetInputData</span><span class="p">(</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p>Set parameters</p>
+<p>パラメータの設定</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">n</span></a> <span class="o">=</span> <span class="mi">200</span>
 <span class="n">splatter</span><span class="o">.</span><span class="n">SetSampleDimensions</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">n</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">n</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">n</span></a><span class="p">)</span>
 <span class="n">splatter</span><span class="o">.</span><span class="n">SetRadius</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>
@@ -703,15 +700,15 @@ the above VTK code.</p>
 <span class="n">splatter</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Retrieve output and wrap with PyVista</p>
+<p>PyVistaで出力とラップを取得する</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">vol</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.wrap.html#pyvista.wrap" title="pyvista.wrap" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-function"><span class="n">pv</span><span class="o">.</span><span class="n">wrap</span></a><span class="p">(</span><span class="n">splatter</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>Use PyVista to produce contours</p>
+<p>PyVistaを使って輪郭線を作成する</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cntrs</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UniformGrid.contour.html#pyvista.UniformGrid.contour" title="pyvista.UniformGrid.contour" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">vol</span><span class="o">.</span><span class="n">contour</span></a><span class="p">([</span><span class="mf">0.95</span> <span class="o">*</span> <span class="n">splatter</span><span class="o">.</span><span class="n">GetRadius</span><span class="p">()])</span>
 </pre></div>
 </div>
-<p>Use PyVista to plot</p>
+<p>PyVistaを使ってプロットする</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class"><span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span></a><span class="p">()</span>
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span></a><span class="p">(</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span></a><span class="p">(</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cntrs</span></a><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -720,12 +717,12 @@ the above VTK code.</p>
 </div>
 <img src="../../_images/sphx_glr_a_2_pyvista_vtk_002.png" srcset="../../_images/sphx_glr_a_2_pyvista_vtk_002.png" alt="a 2 pyvista vtk" class = "sphx-glr-single-img"/><div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>The above example was adapted from VTK's <a class="reference external" href="https://kitware.github.io/vtk-examples/site/Cxx/PolyData/EmbedPointsIntoVolume/">Embed Points Into Volume</a></p>
+<p>上記の例は，VTKの <a class="reference external" href="https://kitware.github.io/vtk-examples/site/Cxx/PolyData/EmbedPointsIntoVolume/">Embed Points Into Volume</a> から引用したものです．</p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.548 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.576 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-06-vtk-a-2-pyvista-vtk-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/a_2_pyvista_vtk.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo14.svg" width="150px" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/a_2_pyvista_vtk.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo14.svg" width="150px" /></a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/8d95f231e44f09c16af5a67e62bf56b6/a_2_pyvista_vtk.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">a_2_pyvista_vtk.py</span></code></a></p>
@@ -734,7 +731,7 @@ the above VTK code.</p>
 <p><a class="reference download internal" download="" href="../../_downloads/c0a478c783226669c3808ee647c02dc6/a_2_pyvista_vtk.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">a_2_pyvista_vtk.ipynb</span></code></a></p>
 </div>
 </div>
-<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Sphinx-Galleryによるギャラリー</a></p>
 </section>
 
 
@@ -749,13 +746,13 @@ the above VTK code.</p>
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">前へ</p>
-          <p class="prev-next-title">Transitioning from VTK to PyVista</p>
+          <p class="prev-next-title">VTKからPyVistaへの移行</p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="b_create_vtk.html" title="次へ ページ">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">次へ</p>
-      <p class="prev-next-title">Create VTK Objects</p>
+      <p class="prev-next-title">VTKオブジェクトの作成</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Computing Surface Normals &#8212; PyVista Tutorial</title>
+    <title>表面の法線を計算します &#8212; PyVista Tutorial</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -57,8 +57,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="Contouring" href="d_contouring.html" />
-    <link rel="prev" title="Clipping with Planes &amp; Boxes" href="b_clipping.html" />
+    <link rel="next" title="コンタリング" href="d_contouring.html" />
+    <link rel="prev" title="平面とボックスでクリップします" href="b_clipping.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="ja">
   </head>
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../getting-started.html">
-  Getting Started
+  はじめに
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../../../tutorial.html">
-  PyVista Tutorial
+  PyVistaチュートリアル
  </a>
 </li>
 
@@ -178,13 +178,13 @@
   <div class="bd-toc-item active">
     <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Lessons
+  レッスン内容
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../00_intro/index.html">
-   Introduction
+   はじめに
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -194,19 +194,19 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../00_intro/a_basic.html">
-     Create Basic Geometric Objects
+     基本的な幾何学的オブジェクトを作成します
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../01_basic/index.html">
-   Basic usage
+   基本的な使い方
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../02_mesh/index.html">
-   What is a Mesh?
+   メッシュとは?
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -216,54 +216,54 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_mesh/a_lesson_mesh.html">
-     Lesson Overview
+     レッスンの概要
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_mesh/exercises/b_create-point-cloud.html">
-     Create Point Cloud
+     点群を作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_mesh/exercises/c_create-uniform-grid.html">
-     Creating a Uniform Grid
+     統合グリッドを作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_mesh/exercises/d_create-tri-surface.html">
-     Create Triangulated Surface
+     三角形状のサーフェスを作成する
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_mesh/exercises/e_read-file.html">
-     Load and Plot from a File
+     ファイルからロードおよびプロットする
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_mesh/soultions/b_create-point-cloud.html">
-     Create Point Cloud
+     点群を作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_mesh/soultions/c_create-uniform-grid.html">
-     Creating a Uniform Grid
+     統合グリッドを作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_mesh/soultions/d_create-tri-surface.html">
-     Create Triangulated Surface
+     三角形状のサーフェスを作成する
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_mesh/soultions/e_read-file.html">
-     Load and Plot from a File
+     ファイルからロードおよびプロットする
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../03_figures/index.html">
-   Plotting Options and Animations
+   プロットオプションとアニメーション
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -273,47 +273,47 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/a_lesson_figures.html">
-     Lesson Overview
+     レッスンの概要
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/b_shading.html">
-     Types of Shading
+     シェーディングのタイプ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/c_geological-map.html">
-     Geological Map on Topography
+     地形上の地質図
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/d_gif.html">
-     Create a GIF Movie
+     GIFムービーの作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/bonus/d_pbr.html">
-     Physically Based Rendering
+     物理ベースのレンダリング
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/bonus/e_labels.html">
-     Label Points
+     ラベルポイント
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/bonus/g_orbit.html">
-     Orbiting
+     オービット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/exercises/a_display_options.html">
-     Display Options
+     表示オプション
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/exercises/b_lighting_mesh.html">
-     Lighting Properties
+     照明特性
     </a>
    </li>
    <li class="toctree-l2">
@@ -323,12 +323,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/solutions/a_display_options.html">
-     Display Options
+     表示オプション
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03_figures/solutions/b_lighting_mesh.html">
-     Lighting Properties
+     照明特性
     </a>
    </li>
    <li class="toctree-l2">
@@ -340,7 +340,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
-   Filters
+   フィルタ
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -350,54 +350,54 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../a_lesson_filters.html">
-     Using Common Filters
+     共通フィルタの使用
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../exercises/b_clipping.html">
-     Clipping with Planes &amp; Boxes
+     平面とボックスでクリップします
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../exercises/c_compute-normals.html">
-     Computing Surface Normals
+     表面の法線を計算します
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../exercises/d_contouring.html">
-     Contouring
+     コンタリング
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../exercises/e_glyphs.html">
-     Plotting Glyphs (Vectors or PolyData)
+     字形のプロット (ベクトルかPolyData)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="b_clipping.html">
-     Clipping with Planes &amp; Boxes
+     平面とボックスでクリップします
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Computing Surface Normals
+     表面の法線を計算します
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="d_contouring.html">
-     Contouring
+     コンタリング
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="e_glyphs.html">
-     Plotting Glyphs (Vectors or PolyData)
+     字形のプロット (ベクトルかPolyData)
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../05_action/index.html">
-   PyVista in Action
+   PyVistaの動作
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -422,12 +422,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://dennissergeev.github.io/exoconvection-apj-2020/">
-     Atmospheric Convection
+     大気対流
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://nbviewer.jupyter.org/github/banesullivan/damavand-volcano/blob/master/Damavand_Volcano.ipynb">
-     Damavand Volcano
+     Damavand火山
     </a>
    </li>
    <li class="toctree-l2">
@@ -437,64 +437,64 @@
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://gist.github.com/hichamjanati/6668d91848283c31ac18d801552fb582">
-     Optimization visualization with PyVista
+     PyVistaによる最適化可視化
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://github.com/johnjarmitage/flem">
-     FLEM: A diffusive landscape evolution model
+     FLEM: 拡散的景観進化モデル
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://github.com/BartheG/Orvisu">
-     Orvisu Demo Application
+     Orvisuデモアプリケーション
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="http://pymeshfix.pyvista.org/examples/index.html">
-     PyMeshFix's example gallery
+     PyMeshFixのサンプルギャラリー
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="http://tetgen.pyvista.org/examples/index.html">
-     TetGen's example gallery
+     TetGenの実例ギャラリー
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://pvgeo.org/examples/index.html">
-     PVGeo's example gallery
+     PVGeoの実例ギャラリー
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://forge.pvgeo.org/project/index.html">
-     FORGE Geothermal Project
+     FORGE地熱プロジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://peterdsharpe.github.io/AeroSandbox/">
-     AeroSandbox
+     エアロサンドボックス
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://pswpswpsw.github.io/posts/2018/09/blog-post-modify-vtk-openfoam/">
-     OpenFOAM Rendering
+     OpenFOAMレンダリング
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="http://discretize.simpeg.xyz/en/main/examples/plot_pyvista_laguna.html">
-     3D Rendering with Discretize
+     離散化を使用した3 Dレンダリング
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://opengeovis.github.io/omfvista/examples/index.html">
-     3D visualization for the Open Mining Format (omf)
+     Open Mining Format (omf) の3 D表示
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../06_vtk/index.html">
-   PyVista &amp; VTK
+   PyVistaとVTK
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -504,34 +504,34 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../06_vtk/a_1_transition_vtk.html">
-     Transitioning from VTK to PyVista
+     VTKからPyVistaへの移行
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../06_vtk/a_2_pyvista_vtk.html">
-     PyVista and VTK Together
+     PyVistaとVTKの連携
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../06_vtk/b_create_vtk.html">
-     Create VTK Objects
+     VTKオブジェクトの作成
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../06_vtk/c_vtk_algorithms.html">
-     Using VTK Algorithms
+     VTKアルゴリズムの使用
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../07_sphinx/index.html">
-   PyVista and Sphinx
+   PyVistaとSphinx
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../08_widgets/index.html">
-   Widgets in PyVista
+   PyVistaのウィジェット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -541,49 +541,49 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08_widgets/a_box-widget.html">
-     Box Widget
+     ボックスウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08_widgets/b_checkbox-widget.html">
-     Checkbox Widget
+     チェックボックスウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08_widgets/c_line-widget.html">
-     Line Widget
+     線ウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08_widgets/d_multi-slider-widget.html">
-     Multiple Slider Widgets
+     複数のスライダウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08_widgets/e_plane-widget.html">
-     Plane Widget
+     平面ウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08_widgets/f_slider-bar-widget.html">
-     Slider Bar Widget
+     スライダバーウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08_widgets/g_sphere-widget.html">
-     Sphere Widget
+     球体ウィジェット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08_widgets/h_spline-widget.html">
-     Spline Widget
+     スプラインウィジェット
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../09_qt/index.html">
-   PyVista and QT
+   PyVistaとQT
   </a>
  </li>
 </ul>
@@ -630,8 +630,8 @@
 to download the full example code or to run this example in your browser via Binder</p>
 </div>
 <section class="sphx-glr-example-title" id="computing-surface-normals">
-<span id="surface-normal-example"></span><span id="sphx-glr-tutorial-04-filters-solutions-c-compute-normals-py"></span><h1>Computing Surface Normals<a class="headerlink" href="#computing-surface-normals" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>Compute normals on a surface.</p>
+<span id="surface-normal-example"></span><span id="sphx-glr-tutorial-04-filters-solutions-c-compute-normals-py"></span><h1>表面の法線を計算します<a class="headerlink" href="#computing-surface-normals" title="このヘッドラインへのパーマリンク">#</a></h1>
+<p>表面上の法線を計算します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -640,12 +640,7 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.plot.html#pyvista.PolyData.plot" title="pyvista.PolyData.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gist_earth&quot;</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_c_compute-normals_001.png" srcset="../../../_images/sphx_glr_c_compute-normals_001.png" alt="c compute normals" class = "sphx-glr-single-img"/><p>Now we have a surface dataset of the globe loaded - unfortunately, the
-dataset shows the globe with a uniform radius which hides topographic relief.
-Using <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.compute_normals()</span></code>, we can compute the normal
-vectors on the globe at all points in the dataset, then use the values given
-in the dataset to warp the surface in the normals direction to create some
-exaggerated topographic relief.</p>
+<img src="../../../_images/sphx_glr_c_compute-normals_001.png" srcset="../../../_images/sphx_glr_c_compute-normals_001.png" alt="c compute normals" class = "sphx-glr-single-img"/><p>これで地球のサーフェスデータセットがロードされました．残念ながら，データセットには地形起伏を隠す均一な半径の地球が表示されます． <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.compute_normals()</span></code> を使用して，データセット内のすべてのポイントで地球上の法線ベクトルを計算し，データセットで指定された値を使用してサーフェスを法線方向にワープし，誇張された地形レリーフを作成します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute the normals in-place and use them to warp the globe</span>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.compute_normals.html#pyvista.PolyData.compute_normals" title="pyvista.PolyData.compute_normals" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">mesh</span><span class="o">.</span><span class="n">compute_normals</span></a><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># this activates the normals as well</span>
 </pre></div>
@@ -673,17 +668,15 @@ exaggerated topographic relief.</p>
 </td></tr> </table>
 </div>
 <br />
-<br /><p>Now use those normals to warp the surface</p>
+<br /><p>次に，これらの法線を使用して，サーフェスをワープさせます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">warp</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.warp_by_scalar.html#pyvista.PolyData.warp_by_scalar" title="pyvista.PolyData.warp_by_scalar" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">mesh</span><span class="o">.</span><span class="n">warp_by_scalar</span></a><span class="p">(</span><span class="n">factor</span><span class="o">=</span><span class="mf">0.5e-5</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And let's see it!</p>
+<p>そして，見てみよう!</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.plot.html#pyvista.PolyData.plot" title="pyvista.PolyData.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">warp</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gist_earth&quot;</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_c_compute-normals_002.png" srcset="../../../_images/sphx_glr_c_compute-normals_002.png" alt="c compute normals" class = "sphx-glr-single-img"/><p>We could also use face/cell normals to extract all the faces of a mesh
-facing a general direction. In the following snippet, we take a mesh, compute
-the normals along its cell faces, and extract the faces that face upward.</p>
+<img src="../../../_images/sphx_glr_c_compute-normals_002.png" srcset="../../../_images/sphx_glr_c_compute-normals_002.png" alt="c compute normals" class = "sphx-glr-single-img"/><p>面/セル法線を使用して，一般的な方向を向いているメッシュのすべての面を抽出することもできます．次のスニペットでは，メッシュを取得し，そのセル面に沿って法線を計算し，上向きの面を抽出します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_nefertiti</span><span class="p">()</span>
 <span class="c1"># Compute normals</span>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.compute_normals.html#pyvista.PolyData.compute_normals" title="pyvista.PolyData.compute_normals" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">mesh</span><span class="o">.</span><span class="n">compute_normals</span></a><span class="p">(</span><span class="n">cell_normals</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">point_normals</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -703,10 +696,10 @@ the normals along its cell faces, and extract the faces that face upward.</p>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.plot.html#pyvista.UnstructuredGrid.plot" title="pyvista.UnstructuredGrid.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">top</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_c_compute-normals_003.png" srcset="../../../_images/sphx_glr_c_compute-normals_003.png" alt="c compute normals" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  19.236 seconds)</p>
+<img src="../../../_images/sphx_glr_c_compute-normals_003.png" srcset="../../../_images/sphx_glr_c_compute-normals_003.png" alt="c compute normals" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  19.374 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-04-filters-solutions-c-compute-normals-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/solutions/c_compute-normals.ipynb"><img alt="Launch binder" src="../../../_images/binder_badge_logo13.svg" width="150px" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/solutions/c_compute-normals.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo13.svg" width="150px" /></a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b31c62b19d7a2233cfb0b0334e7c2878/c_compute-normals.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">c_compute-normals.py</span></code></a></p>
@@ -715,7 +708,7 @@ the normals along its cell faces, and extract the faces that face upward.</p>
 <p><a class="reference download internal" download="" href="../../../_downloads/4f77ca4de7db767013f0f40d2ff14e4e/c_compute-normals.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">c_compute-normals.ipynb</span></code></a></p>
 </div>
 </div>
-<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Sphinx-Galleryによるギャラリー</a></p>
 </section>
 
 
@@ -730,13 +723,13 @@ the normals along its cell faces, and extract the faces that face upward.</p>
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">前へ</p>
-          <p class="prev-next-title">Clipping with Planes &amp; Boxes</p>
+          <p class="prev-next-title">平面とボックスでクリップします</p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="d_contouring.html" title="次へ ページ">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">次へ</p>
-      <p class="prev-next-title">Contouring</p>
+      <p class="prev-next-title">コンタリング</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>
