@@ -96,7 +96,7 @@ After interacting with the scene, the clipped mesh is available as:
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7fabf39ae280)
+    [UnstructuredGrid (0x7f6593019dc0)
       N Cells:	2018232
       N Points:	1009118
       X Bounds:	-1.194e+02, 1.194e+02
