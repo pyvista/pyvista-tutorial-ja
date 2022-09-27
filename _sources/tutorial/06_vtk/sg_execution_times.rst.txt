@@ -5,14 +5,14 @@
 
 Computation times
 =================
-**00:03.970** total execution time for **tutorial_06_vtk** files:
+**00:03.973** total execution time for **tutorial_06_vtk** files:
 
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``a_2_pyvista_vtk.py``)       | 00:01.286 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``a_2_pyvista_vtk.py``)       | 00:01.285 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py` (``a_1_transition_vtk.py``) | 00:01.232 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py` (``a_1_transition_vtk.py``) | 00:01.242 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` (``c_vtk_algorithms.py``)     | 00:00.787 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` (``c_vtk_algorithms.py``)     | 00:00.786 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)             | 00:00.665 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)             | 00:00.661 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+
