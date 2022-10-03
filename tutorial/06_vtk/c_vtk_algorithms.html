@@ -1466,13 +1466,6 @@ class vtkOutlineFilter(vtkmodules.vtkCommonExecutionModel.vtkPolyDataAlgorithm)
  |      input data object. The MTime of the vtkAlgorithm will not change
  |      unless the data object changed.
  |
- |  SetProgress(...)
- |      SetProgress(self, __a:float) -&gt; None
- |      C++: void SetProgress(double)
- |
- |      `SetProgress` is deprecated. Subclasses should use
- |      `UpdateProgress` to report progress updates.
- |
  |  SetProgressObserver(...)
  |      SetProgressObserver(self, __a:vtkProgressObserver) -&gt; None
  |      C++: void SetProgressObserver(vtkProgressObserver *)
@@ -1603,6 +1596,12 @@ class vtkOutlineFilter(vtkmodules.vtkCommonExecutionModel.vtkPolyDataAlgorithm)
  |
  |      Bring this algorithm&#39;s outputs up-to-date.
  |
+ |  UsesGarbageCollector(...)
+ |      UsesGarbageCollector(self) -&gt; bool
+ |      C++: bool UsesGarbageCollector() override;
+ |
+ |      Participate in garbage collection.
+ |
  |  ----------------------------------------------------------------------
  |  Data and other attributes inherited from vtkmodules.vtkCommonExecutionModel.vtkAlgorithm:
  |
@@ -1678,6 +1677,17 @@ class vtkOutlineFilter(vtkmodules.vtkCommonExecutionModel.vtkPolyDataAlgorithm)
  |
  |      Return this object&#39;s modified time.
  |
+ |  GetObjectDescription(...)
+ |      GetObjectDescription(self) -&gt; str
+ |      C++: std::string GetObjectDescription() override;
+ |
+ |      The object description printed in messages and PrintSelf output.
+ |      To be used only for reporting purposes.
+ |
+ |  GetObjectName(...)
+ |      GetObjectName(self) -&gt; str
+ |      C++: virtual std::string GetObjectName()
+ |
  |  GlobalWarningDisplayOff(...)
  |      GlobalWarningDisplayOff() -&gt; None
  |      C++: static void GlobalWarningDisplayOff()
@@ -1751,6 +1761,16 @@ class vtkOutlineFilter(vtkmodules.vtkCommonExecutionModel.vtkPolyDataAlgorithm)
  |
  |      This is a global flag that controls whether any debug, warning or
  |      error messages are displayed.
+ |
+ |  SetObjectName(...)
+ |      SetObjectName(self, objectName:str) -&gt; None
+ |      C++: virtual void SetObjectName(const std::string &amp;objectName)
+ |
+ |      Set/get the name of this object for reporting purposes. The name
+ |      appears in warning and debug messages and in the Print output.
+ |      Setting the object name does not change the MTime and does not
+ |      invoke a ModifiedEvent. Derived classes implementing copying
+ |      methods are expected not to copy the ObjectName.
  |
  |  ----------------------------------------------------------------------
  |  Methods inherited from vtkmodules.vtkCommonCore.vtkObjectBase:
@@ -1832,6 +1852,24 @@ class vtkOutlineFilter(vtkmodules.vtkCommonExecutionModel.vtkPolyDataAlgorithm)
  |      Decrease the reference count (release by another object). This
  |      has the same effect as invoking Delete() (i.e., it reduces the
  |      reference count by 1).
+ |
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from vtkmodules.vtkCommonCore.vtkObjectBase:
+ |
+ |  override(...) from builtins.type
+ |      This method can be used to override a VTK class with a Python subclass.
+ |      The class type passed to override will afterwards be instantiated
+ |      instead of the type override is called on.
+ |      For example,
+ |
+ |      class foo(vtk.vtkPoints):
+ |        pass
+ |      vtk.vtkPoints.override(foo)
+ |
+ |      will lead to foo being instantied everytime vtkPoints() is called.
+ |      The main objective of this functionality is to enable developers to
+ |      extend VTK classes with more pythonic subclasses that contain
+ |      convenience functionality.
 </pre></div>
 </div>
 <p>このVTKフィルタを自分で使ってみるには，こちらをご覧ください．</p>
@@ -1898,7 +1936,7 @@ class vtkOutlineFilter(vtkmodules.vtkCommonExecutionModel.vtkPolyDataAlgorithm)
 <h2>自分だけのフィルターを探す<a class="headerlink" href="#find-your-own-filter" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>VTKのサンプルやドキュメントを見て，自分のメッシュに適用したいフィルタを探してみましょう．インストラクターが実装のお手伝いをします．</p>
 <p><a class="reference external" href="https://kitware.github.io/vtk-examples/site/Python/">https://kitware.github.io/vtk-examples/site/Python/</a> をご覧ください．</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.064 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.819 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-06-vtk-c-vtk-algorithms-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/c_vtk_algorithms.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo14.svg" width="150px" /></a>
