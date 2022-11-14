@@ -42,7 +42,6 @@ jobs:
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: install
       run: |
-        git submodule update --remote
         sudo apt-get update
         sudo apt-get install -y --no-install-recommends python3-setuptools
         sudo apt-get install -y --no-install-recommends libgl1-mesa-dev xvfb ffmpeg
@@ -51,8 +50,8 @@ jobs:
         sudo apt-get install -y --no-install-recommends python3-tk pandoc
         pip install -U pip setuptools wheel
         cd pyvista-tutorial-translations
+        git submodule update --remote
         pip install -r ./requirements.txt
-        pip install Sphinx==4.4.0
         cd ../
     - name: build
       env:
