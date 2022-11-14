@@ -50,8 +50,8 @@ jobs:
         sudo apt-get install -y --no-install-recommends python3-tk pandoc
         pip install -U pip setuptools wheel
         cd pyvista-tutorial-translations
+        git submodule update --remote
         pip install -r ./requirements.txt
-        pip install Sphinx==4.4.0
         cd ../
     - name: build
       env:
