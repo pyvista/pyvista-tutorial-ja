@@ -188,7 +188,7 @@ Create the grid.  Note how the values must use Fortran ordering.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/site-packages/pyvista/core/grid.py:510: PyVistaDeprecationWarning: `dims` argument is deprecated. Please use `dimensions`.
+    /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pyvista/core/grid.py:510: PyVistaDeprecationWarning: `dims` argument is deprecated. Please use `dimensions`.
       warnings.warn(
 
 
@@ -317,12 +317,12 @@ that to a  `vtkPoints`_ class.  For example:
 
  .. code-block:: none
 
-    vtkPoints (0x55bd65607580)
+    vtkPoints (0x55af64204940)
       Debug: Off
-      Modified Time: 13203371
+      Modified Time: 13203580
       Reference Count: 1
       Registered Events: (none)
-      Data: 0x55bd61a22210
+      Data: 0x55af651b76d0
       Data Array Name: Points
       Number Of Points: 3
       Bounds: 
@@ -518,7 +518,7 @@ you may want to use VTK classes directly.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.157 seconds)
+   **Total running time of the script:** ( 0 minutes  0.862 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_a_1_transition_vtk.py:
