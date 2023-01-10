@@ -455,14 +455,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../04_filters/exercises/b_clipping.html">平面とボックスでクリップします</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../04_filters/exercises/c_compute-normals.html">表面の法線を計算します</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../04_filters/exercises/d_contouring.html">コンタリング</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../04_filters/exercises/e_glyphs.html">字形のプロット (ベクトルかPolyData)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04_filters/exercises/e_glyphs.html">グリフ（矢印）によるベクトルの表示</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../04_filters/solutions/index.html">ソリューション</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../04_filters/solutions/b_clipping.html">平面とボックスでクリップします</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../04_filters/solutions/c_compute-normals.html">表面の法線を計算します</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../04_filters/solutions/d_contouring.html">コンタリング</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../04_filters/solutions/e_glyphs.html">字形のプロット (ベクトルかPolyData)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04_filters/solutions/e_glyphs.html">グリフ（矢印）によるベクトルの表示</a></li>
 </ul>
 </li>
 </ul>
@@ -557,11 +557,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># output first 5 rows</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[0.38585456, 0.97449049, 0.17626689],
-       [0.84794322, 0.63269832, 0.04338843],
-       [0.21756857, 0.35457805, 0.35342175],
-       [0.06352225, 0.31157122, 0.18348352],
-       [0.96948078, 0.06745655, 0.36084027]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[0.545973  , 0.25521244, 0.86777192],
+       [0.76541224, 0.59640896, 0.54750766],
+       [0.35568029, 0.12301611, 0.7161667 ],
+       [0.40153881, 0.04370548, 0.08878259],
+       [0.91627036, 0.68147141, 0.23138472]])
 </pre></div>
 </div>
 <p>点 (n x 3) の numpy 配列を PolyData に渡します．</p>
@@ -576,9 +576,9 @@ to download the full example code or to run this example in your browser via Bin
 <tr><td>N Cells</td><td>100</td></tr>
 <tr><td>N Points</td><td>100</td></tr>
 <tr><td>N Strips</td><td>0</td></tr>
-<tr><td>X Bounds</td><td>4.629e-03, 9.910e-01</td></tr>
-<tr><td>Y Bounds</td><td>1.944e-03, 9.835e-01</td></tr>
-<tr><td>Z Bounds</td><td>1.196e-02, 9.774e-01</td></tr>
+<tr><td>X Bounds</td><td>6.640e-03, 9.890e-01</td></tr>
+<tr><td>Y Bounds</td><td>4.924e-03, 9.955e-01</td></tr>
+<tr><td>Z Bounds</td><td>1.516e-02, 9.720e-01</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
 
@@ -693,7 +693,7 @@ Contains arrays :
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.show.html#pyvista.Plotter.show" title="pyvista.Plotter.show" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">pl</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_a_lesson_mesh_008.png" srcset="../../_images/sphx_glr_a_lesson_mesh_008.png" alt="a lesson mesh" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.775 seconds)</p>
+<img src="../../_images/sphx_glr_a_lesson_mesh_008.png" srcset="../../_images/sphx_glr_a_lesson_mesh_008.png" alt="a lesson mesh" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.508 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-a-lesson-mesh-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/a_lesson_mesh.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo4.svg" width="150px" /></a>
