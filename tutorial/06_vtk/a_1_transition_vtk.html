@@ -408,7 +408,7 @@
 
 
 
-<li class="toctree-l2 has-children"><a class="reference internal" href="../02_mesh/exercises/index.html">自分でやる</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02_mesh/exercises/index.html">やってみよう</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../02_mesh/exercises/b_create-point-cloud.html">点群を作成</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../02_mesh/exercises/c_create-uniform-grid.html">統合グリッドを作成</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../02_mesh/exercises/d_create-tri-surface.html">三角形状のサーフェスを作成する</a></li>
@@ -435,7 +435,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../03_figures/bonus/g_orbit.html">オービット</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../03_figures/exercises/index.html">自分でやる</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../03_figures/exercises/index.html">やってみよう</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../03_figures/exercises/a_display_options.html">表示オプション</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../03_figures/exercises/b_lighting_mesh.html">照明特性</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../03_figures/exercises/c_edl.html">Eye Dome Lighting</a></li>
@@ -451,7 +451,7 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../04_filters/index.html">フィルタ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../04_filters/a_lesson_filters.html">共通フィルタの使用</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../04_filters/exercises/index.html">自分でやる</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../04_filters/exercises/index.html">やってみよう</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../04_filters/exercises/b_clipping.html">平面とボックスでクリップします</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../04_filters/exercises/c_compute-normals.html">表面の法線を計算します</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../04_filters/exercises/d_contouring.html">コンタリング</a></li>
@@ -651,12 +651,12 @@ to download the full example code or to run this example in your browser via Bin
 <span class="nb">print</span><span class="p">(</span><span class="n">vtk_points</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>vtkPoints (0x55d85c139060)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>vtkPoints (0x55fe189d5fa0)
   Debug: Off
-  Modified Time: 13202086
+  Modified Time: 13203214
   Reference Count: 1
   Registered Events: (none)
-  Data: 0x55d8557cab20
+  Data: 0x55fe12158670
   Data Array Name: Points
   Number Of Points: 3
   Bounds:
@@ -720,7 +720,7 @@ to download the full example code or to run this example in your browser via Bin
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_a_1_transition_vtk_002.png" srcset="../../_images/sphx_glr_a_1_transition_vtk_002.png" alt="a 1 transition vtk" class = "sphx-glr-single-img"/><p>フードの下では，コリジョンフィルタは OBB (oriented bounding box) ツリーを使ってメッシュの衝突を検出します． しかし， <a class="reference external" href="https://docs.pyvista.org/examples/01-filter/collisions.html">Collision Example</a> の例のように，同じメッシュで複数の衝突を計算する場合には，OBBツリーが各メッシュに対して一度ずつ計算されるため， <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkCollisionDetectionFilter.html">vtkCollisionDetectionFilter</a> を使用した方が効率的です． ほとんどのデータサイエンスでは，純粋なPyVistaで十分ですが，VTKクラスを直接使用したい場合もあります．</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.923 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.131 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-06-vtk-a-1-transition-vtk-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/a_1_transition_vtk.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo14.svg" width="150px" /></a>
