@@ -571,7 +571,7 @@ to download the full example code or to run this example in your browser via Bin
 </pre></div>
 </div>
 <p>ここで，サニティチェックを実行します</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.allclose.html#numpy.allclose" title="numpy.allclose" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">allclose</span></a><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">point_cloud</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.allclose.html#numpy.allclose" title="numpy.allclose" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">allclose</span></a><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">point_cloud</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>これでPyVistaメッシュができたので，プロットすることができます．ここでは，eye domeライティングを使用するオプションを追加します．これは，ポイントクラウド( <a class="reference external" href="https://docs.pyvista.org/examples/02-plot/edl.html">EDL</a> についてもっと学ぶ)を使用して深さの認識を向上させるシェーディング技法です．</p>
@@ -600,7 +600,7 @@ to download the full example code or to run this example in your browser via Bin
 <span class="k">def</span> <span class="nf">compute_vectors</span><span class="p">(</span><span class="n">mesh</span><span class="p">):</span>
     <span class="n">origin</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">center</span>
     <span class="n">vectors</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">points</span> <span class="o">-</span> <span class="n">origin</span>
-    <span class="n">vectors</span> <span class="o">=</span> <span class="n">vectors</span> <span class="o">/</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.linalg.norm.html#numpy.linalg.norm" title="numpy.linalg.norm" class="sphx-glr-backref-module-numpy-linalg sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span></a><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">vectors</span> <span class="o">=</span> <span class="n">vectors</span> <span class="o">/</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.linalg.norm.html#numpy.linalg.norm" title="numpy.linalg.norm" class="sphx-glr-backref-module-numpy-linalg sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span></a><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">vectors</span>
 
 
