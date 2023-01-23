@@ -555,26 +555,26 @@ to download the full example code or to run this example in your browser via Bin
 <span class="k">def</span> <span class="nf">generate_points</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="mf">0.02</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A helper to make a 3D NumPy array of points (n_points by 3)&quot;&quot;&quot;</span>
     <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_lidar</span><span class="p">()</span>
-    <span class="n">ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">n_points</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">n_points</span> <span class="o">*</span> <span class="n">subset</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">dataset</span><span class="o">.</span><span class="n">points</span><span class="p">[</span><span class="n">ids</span><span class="p">]</span>
+    <span class="n">ids</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/random/generated/numpy.random.randint.html#numpy.random.randint" title="numpy.random.randint" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span></a><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">n_points</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">n_points</span> <span class="o">*</span> <span class="n">subset</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">dataset</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="n">ids</span><span class="p">]</span>
 
 
-<span class="n">points</span> <span class="o">=</span> <span class="n">generate_points</span><span class="p">()</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a> <span class="o">=</span> <span class="n">generate_points</span><span class="p">()</span>
 <span class="c1"># Print first 5 rows to prove its a numpy array (n_points by 3)</span>
 <span class="c1"># Columns are (X Y Z)</span>
-<span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.81053975e+05, 4.40013220e+06, 1.77016003e+03],
-                 [4.80998275e+05, 4.40010210e+06, 1.76225000e+03],
-                 [4.80963575e+05, 4.40023860e+06, 1.75770996e+03],
-                 [4.81126775e+05, 4.40007630e+06, 1.76055005e+03],
-                 [4.80977175e+05, 4.40012550e+06, 1.76193994e+03]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.80935475e+05, 4.40012790e+06, 1.76341003e+03],
+                 [4.81082075e+05, 4.40014500e+06, 1.76254004e+03],
+                 [4.80942675e+05, 4.40007790e+06, 1.76747998e+03],
+                 [4.81065175e+05, 4.40021240e+06, 1.75794995e+03],
+                 [4.80933875e+05, 4.40024460e+06, 1.76380005e+03]])
 </pre></div>
 </div>
 <p>サンプルデータまたは自分のプロジェクトからの点/頂点のNumPy配列ができたので，それらの点からPyVistaメッシュを作成します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># insert your code here</span>
-<a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">point_cloud</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class"><span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span></a><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">point_cloud</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class"><span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">)</span>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">point_cloud</span></a>
 </pre></div>
 </div>
@@ -595,7 +595,7 @@ to download the full example code or to run this example in your browser via Bin
 </div>
 <br />
 <br /><p>ここで，サニティチェックを実行します</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.points.html#pyvista.PolyData.points" title="pyvista.PolyData.points" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-property"><span class="n">point_cloud</span><span class="o">.</span><span class="n">points</span></a><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.allclose.html#numpy.allclose" title="numpy.allclose" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">allclose</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">,</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.points.html#pyvista.PolyData.points" title="pyvista.PolyData.points" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-property"><span class="n">point_cloud</span><span class="o">.</span><span class="n">points</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>True
@@ -609,7 +609,7 @@ to download the full example code or to run this example in your browser via Bin
 <p>points配列と同じ長さのスカラ値の配列を作成します．この配列の各要素は，同じインデックスのポイントに対応します．</p>
 <p>ヒント: <code class="docutils literal notranslate"><span class="pre">points</span></code> 配列のコンポーネントを使用するか，メッシュオブジェクトの <code class="docutils literal notranslate"><span class="pre">n_points</span></code> プロパティを使用すると，その長さの配列を作成することができます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make data array using z-component of points array</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">points</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>そのデータを &quot;elevation&quot; という名前でメッシュに追加します．</p>
@@ -623,15 +623,15 @@ to download the full example code or to run this example in your browser via Bin
 <img src="../../../_images/sphx_glr_b_create-point-cloud_002.png" srcset="../../../_images/sphx_glr_b_create-point-cloud_002.png" alt="b create point cloud" class = "sphx-glr-single-img"/><p>そのデータは退屈ですよね?複数のスカラ値を持つデータ配列，例えば3つの要素を持つベクトルを追加することもできます．ポイントクラウド内のすべてのノードのベクトルを計算し，それらのベクトルをメッシュに追加する簡単な関数を作成します．</p>
 <p>今回は，全く新しいランダムな点群を作成します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create random XYZ points</span>
-<span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/random/generated/numpy.random.rand.html#numpy.random.rand" title="numpy.random.rand" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span></a><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="c1"># Make PolyData</span>
-<a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">point_cloud</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class"><span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span></a><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">point_cloud</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class"><span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">compute_vectors</span><span class="p">(</span><span class="n">mesh</span><span class="p">):</span>
     <span class="n">origin</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">center</span>
-    <span class="n">vectors</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">points</span> <span class="o">-</span> <span class="n">origin</span>
-    <span class="n">vectors</span> <span class="o">=</span> <span class="n">vectors</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">vectors</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a> <span class="o">-</span> <span class="n">origin</span>
+    <span class="n">vectors</span> <span class="o">=</span> <span class="n">vectors</span> <span class="o">/</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.linalg.norm.html#numpy.linalg.norm" title="numpy.linalg.norm" class="sphx-glr-backref-module-numpy-linalg sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span></a><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">vectors</span>
 
 
@@ -639,11 +639,11 @@ to download the full example code or to run this example in your browser via Bin
 <span class="n">vectors</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[-0.92627991,  0.08569151,  0.36696389],
-                 [-0.92618708,  0.37689496,  0.01129932],
-                 [ 0.47975442,  0.71416329,  0.50971216],
-                 [ 0.53525429,  0.78245982, -0.31821296],
-                 [-0.70242553,  0.61349871,  0.36085691]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[-0.6695062 , -0.64979427,  0.35990119],
+                 [ 0.00955479,  0.07005975,  0.99749704],
+                 [-0.04881143,  0.95618246,  0.28867377],
+                 [-0.91181359, -0.38801834,  0.1343047 ],
+                 [-0.00452187,  0.95530619, -0.29558354]])
 </pre></div>
 </div>
 <p>ベクトル配列を点データとして新しいメッシュに追加します:</p>
@@ -667,7 +667,7 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.show.html#pyvista.Plotter.show" title="pyvista.Plotter.show" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">plotter</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_b_create-point-cloud_003.png" srcset="../../../_images/sphx_glr_b_create-point-cloud_003.png" alt="b create point cloud" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.973 seconds)</p>
+<img src="../../../_images/sphx_glr_b_create-point-cloud_003.png" srcset="../../../_images/sphx_glr_b_create-point-cloud_003.png" alt="b create point cloud" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.856 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-soultions-b-create-point-cloud-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/soultions/b_create-point-cloud.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo6.svg" width="150px" /></a>
