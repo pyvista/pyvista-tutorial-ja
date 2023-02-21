@@ -88,7 +88,7 @@ Add point data
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkImageData(0x5651b851b680) at 0x7f74445972e0>
+    <vtkmodules.vtkCommonDataModel.vtkImageData(0x5628eca94de0) at 0x7f87283eab80>
 
 
 
@@ -153,7 +153,7 @@ Create ``vtkStructuredGrid``
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x5651bafb45e0) at 0x7f7409e2ce20>
+    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x5628efa9eb90) at 0x7f872836c520>
 
 
 
@@ -207,7 +207,7 @@ Plot with PyVista for simplicity
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.589 seconds)
+   **Total running time of the script:** ( 0 minutes  0.726 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_b_create_vtk.py:
