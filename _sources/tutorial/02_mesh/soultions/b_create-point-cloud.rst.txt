@@ -78,11 +78,11 @@ than creating a PyVista mesh with your own NumPy arrays of vertice locations.
  .. code-block:: none
 
 
-    pyvista_ndarray([[4.81103275e+05, 4.40013860e+06, 1.75932996e+03],
-                     [4.80930975e+05, 4.40014990e+06, 1.76254004e+03],
-                     [4.80965575e+05, 4.40018610e+06, 1.75981995e+03],
-                     [4.81075775e+05, 4.40020770e+06, 1.77098999e+03],
-                     [4.81060475e+05, 4.40008390e+06, 1.76188000e+03]])
+    pyvista_ndarray([[4.81084575e+05, 4.40010360e+06, 1.76067004e+03],
+                     [4.81122475e+05, 4.40010170e+06, 1.75977002e+03],
+                     [4.80991675e+05, 4.40008760e+06, 1.76444995e+03],
+                     [4.80984775e+05, 4.40018320e+06, 1.76510999e+03],
+                     [4.81033075e+05, 4.40008750e+06, 1.76208997e+03]])
 
 
 
@@ -116,7 +116,7 @@ data or your own project, creating a PyVista mesh of those points:
     <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>4.809e+05, 4.811e+05</td></tr>
     <tr><td>Y Bounds</td><td>4.400e+06, 4.400e+06</td></tr>
-    <tr><td>Z Bounds</td><td>1.754e+03, 1.784e+03</td></tr>
+    <tr><td>Z Bounds</td><td>1.754e+03, 1.785e+03</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
 
@@ -283,11 +283,11 @@ This time, we're going to create a totally new, random point cloud.
  .. code-block:: none
 
 
-    pyvista_ndarray([[-0.80292065,  0.32394471,  0.50037811],
-                     [ 0.76349443, -0.64102209,  0.07852979],
-                     [-0.82687579, -0.26844082, -0.4941821 ],
-                     [-0.11322993,  0.95763723,  0.26478278],
-                     [ 0.30064544,  0.90942792, -0.28732068]])
+    pyvista_ndarray([[ 0.85299493, -0.44479206, -0.27305617],
+                     [ 0.82371037,  0.5428485 , -0.16375818],
+                     [ 0.52718116, -0.19960859,  0.82597605],
+                     [ 0.54258606, -0.68085513,  0.49197221],
+                     [-0.21922995, -0.45420936, -0.86349991]])
 
 
 
@@ -348,7 +348,7 @@ Now we can make arrows using those vectors using the glyph filter
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.638 seconds)
+   **Total running time of the script:** ( 0 minutes  5.636 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_soultions_b_create-point-cloud.py:
