@@ -1,9 +1,4 @@
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.4.0
-  hooks:
-  - id: requirements-txt-fixer
-# this validates our github workflow files
 - repo: https://github.com/python-jsonschema/check-jsonschema
   rev: 0.22.0
   hooks:
