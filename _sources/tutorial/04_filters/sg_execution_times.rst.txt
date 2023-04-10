@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**00:01.428** total execution time for **tutorial_04_filters** files:
+**00:01.485** total execution time for **tutorial_04_filters** files:
 
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_04_filters_a_lesson_filters.py` (``a_lesson_filters.py``) | 00:01.428 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_04_filters_a_lesson_filters.py` (``a_lesson_filters.py``) | 00:01.485 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+
