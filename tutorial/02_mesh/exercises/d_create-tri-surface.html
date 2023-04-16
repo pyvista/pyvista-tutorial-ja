@@ -569,7 +569,7 @@ to download the full example code or to run this example in your browser via Bin
 <span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<p>次に，これらの点を使って，点群PyVistaデータオブジェクトを作成します．これは <a class="reference external" href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.38.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトに包含されることになります．</p>
+<p>次に，これらの点を使って，点群PyVistaデータオブジェクトを作成します．これは <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code> オブジェクトに包含されることになります．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># simply pass the numpy points to the PolyData constructor</span>
 <span class="n">cloud</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">cloud</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">point_size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
@@ -598,7 +598,7 @@ to download the full example code or to run this example in your browser via Bin
 <span class="n">points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <a href="https://numpy.org/devdocs/reference/random/generated/numpy.random.rand.html#numpy.random.rand" title="numpy.random.rand" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span></a><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">points</span><span class="p">))</span> <span class="o">*</span> <span class="mf">0.3</span>
 
 <span class="c1"># Create the point cloud mesh to triangulate from the coordinates</span>
-<span class="n">cloud</span> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span></a><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="n">cloud</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
 <span class="n">cloud</span>
 </pre></div>
 </div>
