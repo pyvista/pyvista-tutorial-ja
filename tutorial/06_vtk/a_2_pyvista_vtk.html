@@ -565,20 +565,20 @@ to download the full example code or to run this example in your browser via Bin
 </pre></div>
 </div>
 <p>Pyvistaを使ったラップとプロット</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">polygonSource</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
-<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.wrap.html#pyvista.wrap" title="pyvista.wrap" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-function"><span class="n">pv</span><span class="o">.</span><span class="n">wrap</span></a><span class="p">(</span><span class="n">polygonSource</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
+<a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSet.plot.html#pyvista.DataSet.plot" title="pyvista.DataSet.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_a_2_pyvista_vtk_001.png" srcset="../../_images/sphx_glr_a_2_pyvista_vtk_001.png" alt="a 2 pyvista vtk" class = "sphx-glr-single-img"/><p>このようにして， PyVistaの柔軟性とVTKの原動力の両方を必要とする &quot;best of both worlds&quot; を得ることができるのです．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>上記のVTKコードを1行で置き換えるために， <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Polygon()</span></code> を使用することができます．</p>
+<p>上記のVTKコードを1行で置き換えるために， <a class="reference external" href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.Polygon.html#pyvista.Polygon" title="(in PyVista v0.38.5)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Polygon()</span></code></a> を使用することができます．</p>
 </div>
 </section>
 <section id="vtk-algorithms">
 <h1>VTKアルゴリズム<a class="headerlink" href="#vtk-algorithms" title="この見出しへのパーマリンク">#</a></h1>
 <p>おそらく，PyVistaで（まだ）公開されていないVTKアルゴリズムで，使いたいものがあるのでしょう．PyVistaのオブジェクトはVTKのオブジェクトなので，これは十分に簡単に扱えます．PyVistaのメッシュをVTKアルゴリズムに渡して，出力をラップしてプロットしたり，さらにフィルタリングしたり，何でもできるのです．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny_coarse</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny_coarse</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>VTKアルゴリズムの初期化</p>
@@ -586,7 +586,7 @@ to download the full example code or to run this example in your browser via Bin
 </pre></div>
 </div>
 <p>VTKへの入力としてPyVistaオブジェクトを渡す</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">splatter</span><span class="o">.</span><span class="n">SetInputData</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">splatter</span><span class="o">.</span><span class="n">SetInputData</span><span class="p">(</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <p>パラメータの設定</p>
@@ -599,25 +599,25 @@ to download the full example code or to run this example in your browser via Bin
 </pre></div>
 </div>
 <p>PyVistaで出力とラップを取得する</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vol</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">splatter</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">vol</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.wrap.html#pyvista.wrap" title="pyvista.wrap" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-function"><span class="n">pv</span><span class="o">.</span><span class="n">wrap</span></a><span class="p">(</span><span class="n">splatter</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>PyVistaを使って輪郭線を作成する</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cntrs</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">contour</span><span class="p">([</span><span class="mf">0.95</span> <span class="o">*</span> <span class="n">splatter</span><span class="o">.</span><span class="n">GetRadius</span><span class="p">()])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cntrs</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSetFilters.contour.html#pyvista.DataSetFilters.contour" title="pyvista.DataSetFilters.contour" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">vol</span><span class="o">.</span><span class="n">contour</span></a><span class="p">([</span><span class="mf">0.95</span> <span class="o">*</span> <span class="n">splatter</span><span class="o">.</span><span class="n">GetRadius</span><span class="p">()])</span>
 </pre></div>
 </div>
 <p>PyVistaを使ってプロットする</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">cntrs</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class"><span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span></a><span class="p">()</span>
+<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span></a><span class="p">(</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
+<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span></a><span class="p">(</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cntrs</span></a><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.show.html#pyvista.Plotter.show" title="pyvista.Plotter.show" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">p</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_a_2_pyvista_vtk_002.png" srcset="../../_images/sphx_glr_a_2_pyvista_vtk_002.png" alt="a 2 pyvista vtk" class = "sphx-glr-single-img"/><div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>上記の例は，VTKの <a class="reference external" href="https://kitware.github.io/vtk-examples/site/Cxx/PolyData/EmbedPointsIntoVolume/">Embed Points Into Volume</a> から引用したものです．</p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.934 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.939 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-06-vtk-a-2-pyvista-vtk-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/a_2_pyvista_vtk.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo14.svg" width="150px" /></a>
