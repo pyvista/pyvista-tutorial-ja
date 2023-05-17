@@ -455,7 +455,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      pyvista.StructuredGrid
      |          This grid as a structured grid.
      |  
-     |  to_tetrahedra(self, tetra_per_cell: int = 5, mixed: Union[Sequence[int], bool] = False, pass_cell_ids: bool = True, pass_cell_data: bool = True, progress_bar: bool = False)
+     |  to_tetrahedra(self, tetra_per_cell: int = 5, mixed: Union[Sequence[int], bool] = False, pass_cell_ids: bool = True, pass_data: bool = True, progress_bar: bool = False, **kwargs)
      |      Create a tetrahedral mesh structured grid.
      |      
      |      Parameters
@@ -481,7 +481,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          :class:`pyvista.RectilinearGrid`. The name of this array is
      |          ``'vtkOriginalCellIds'`` within the ``cell_data``.
      |      
-     |      pass_cell_data : bool, default: True
+     |      pass_data : bool, default: True
      |          Set to ``True`` to make the tetrahedra mesh have the cell data from
      |          the original :class:`pyvista.RectilinearGrid`.  This uses
      |          ``pass_cell_ids=True`` internally. If ``True``, ``pass_cell_ids``
@@ -489,6 +489,9 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
+     |      
+     |      **kwargs : dict, optional
+     |          Deprecated keyword argument ``pass_cell_data``.
      |      
      |      Returns
      |      -------
@@ -6451,14 +6454,15 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> import pyvista
      |      >>> from pyvista import examples
      |      >>> hex_beam = pyvista.read(examples.hexbeamfile)
-     |      >>> hex_beam.extract_geometry()  # doctest:+SKIP
-     |      PolyData (0x7f2f8c132040)
-     |        N Cells:      88
-     |        N Points:     90
-     |        X Bounds:     0.000e+00, 1.000e+00
-     |        Y Bounds:     0.000e+00, 1.000e+00
-     |        Z Bounds:     0.000e+00, 5.000e+00
-     |        N Arrays:     3
+     |      >>> hex_beam.extract_geometry()
+     |      PolyData (...)
+     |        N Cells:    88
+     |        N Points:   90
+     |        N Strips:   0
+     |        X Bounds:   0.000e+00, 1.000e+00
+     |        Y Bounds:   0.000e+00, 1.000e+00
+     |        Z Bounds:   0.000e+00, 5.000e+00
+     |        N Arrays:   3
      |      
      |      See :ref:`surface_smoothing_example` for more examples using this filter.
      |  
@@ -8529,14 +8533,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> volume[:3] = 1
      |      >>> vol = pyvista.wrap(volume)
      |      >>> threshed = vol.threshold(0.1)
-     |      >>> threshed  # doctest:+SKIP
-     |      UnstructuredGrid (0x7f00f9983fa0)
-     |        N Cells:      243
-     |        N Points:     400
-     |        X Bounds:     0.000e+00, 3.000e+00
-     |        Y Bounds:     0.000e+00, 9.000e+00
-     |        Z Bounds:     0.000e+00, 9.000e+00
-     |        N Arrays:     1
+     |      >>> threshed
+     |      UnstructuredGrid (...)
+     |        N Cells:    243
+     |        N Points:   400
+     |        X Bounds:   0.000e+00, 3.000e+00
+     |        Y Bounds:   0.000e+00, 9.000e+00
+     |        Z Bounds:   0.000e+00, 9.000e+00
+     |        N Arrays:   1
      |      
      |      Apply the threshold filter to Perlin noise.  First generate
      |      the structured grid.
@@ -9243,7 +9247,7 @@ See the PyVista documentation for further details on
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.879 seconds)
+   **Total running time of the script:** ( 0 minutes  5.317 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_soultions_c_create-uniform-grid.py:

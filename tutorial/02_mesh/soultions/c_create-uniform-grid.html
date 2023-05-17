@@ -791,7 +791,7 @@ class UniformGrid(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core
  |      pyvista.StructuredGrid
  |          This grid as a structured grid.
  |
- |  to_tetrahedra(self, tetra_per_cell: int = 5, mixed: Union[Sequence[int], bool] = False, pass_cell_ids: bool = True, pass_cell_data: bool = True, progress_bar: bool = False)
+ |  to_tetrahedra(self, tetra_per_cell: int = 5, mixed: Union[Sequence[int], bool] = False, pass_cell_ids: bool = True, pass_data: bool = True, progress_bar: bool = False, **kwargs)
  |      Create a tetrahedral mesh structured grid.
  |
  |      Parameters
@@ -817,7 +817,7 @@ class UniformGrid(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core
  |          :class:`pyvista.RectilinearGrid`. The name of this array is
  |          ``&#39;vtkOriginalCellIds&#39;`` within the ``cell_data``.
  |
- |      pass_cell_data : bool, default: True
+ |      pass_data : bool, default: True
  |          Set to ``True`` to make the tetrahedra mesh have the cell data from
  |          the original :class:`pyvista.RectilinearGrid`.  This uses
  |          ``pass_cell_ids=True`` internally. If ``True``, ``pass_cell_ids``
@@ -825,6 +825,9 @@ class UniformGrid(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core
  |
  |      progress_bar : bool, default: False
  |          Display a progress bar to indicate progress.
+ |
+ |      **kwargs : dict, optional
+ |          Deprecated keyword argument ``pass_cell_data``.
  |
  |      Returns
  |      -------
@@ -6787,14 +6790,15 @@ class UniformGrid(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core
  |      &gt;&gt;&gt; import pyvista
  |      &gt;&gt;&gt; from pyvista import examples
  |      &gt;&gt;&gt; hex_beam = pyvista.read(examples.hexbeamfile)
- |      &gt;&gt;&gt; hex_beam.extract_geometry()  # doctest:+SKIP
- |      PolyData (0x7f2f8c132040)
- |        N Cells:      88
- |        N Points:     90
- |        X Bounds:     0.000e+00, 1.000e+00
- |        Y Bounds:     0.000e+00, 1.000e+00
- |        Z Bounds:     0.000e+00, 5.000e+00
- |        N Arrays:     3
+ |      &gt;&gt;&gt; hex_beam.extract_geometry()
+ |      PolyData (...)
+ |        N Cells:    88
+ |        N Points:   90
+ |        N Strips:   0
+ |        X Bounds:   0.000e+00, 1.000e+00
+ |        Y Bounds:   0.000e+00, 1.000e+00
+ |        Z Bounds:   0.000e+00, 5.000e+00
+ |        N Arrays:   3
  |
  |      See :ref:`surface_smoothing_example` for more examples using this filter.
  |
@@ -8865,14 +8869,14 @@ class UniformGrid(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core
  |      &gt;&gt;&gt; volume[:3] = 1
  |      &gt;&gt;&gt; vol = pyvista.wrap(volume)
  |      &gt;&gt;&gt; threshed = vol.threshold(0.1)
- |      &gt;&gt;&gt; threshed  # doctest:+SKIP
- |      UnstructuredGrid (0x7f00f9983fa0)
- |        N Cells:      243
- |        N Points:     400
- |        X Bounds:     0.000e+00, 3.000e+00
- |        Y Bounds:     0.000e+00, 9.000e+00
- |        Z Bounds:     0.000e+00, 9.000e+00
- |        N Arrays:     1
+ |      &gt;&gt;&gt; threshed
+ |      UnstructuredGrid (...)
+ |        N Cells:    243
+ |        N Points:   400
+ |        X Bounds:   0.000e+00, 3.000e+00
+ |        Y Bounds:   0.000e+00, 9.000e+00
+ |        Z Bounds:   0.000e+00, 9.000e+00
+ |        N Arrays:   1
  |
  |      Apply the threshold filter to Perlin noise.  First generate
  |      the structured grid.
@@ -9491,7 +9495,7 @@ class UniformGrid(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSet.plot.html#pyvista.DataSet.plot" title="pyvista.DataSet.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">vol</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_c_create-uniform-grid_005.png" srcset="../../../_images/sphx_glr_c_create-uniform-grid_005.png" alt="c create uniform grid" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.879 seconds)</p>
+<img src="../../../_images/sphx_glr_c_create-uniform-grid_005.png" srcset="../../../_images/sphx_glr_c_create-uniform-grid_005.png" alt="c create uniform grid" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.317 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-soultions-c-create-uniform-grid-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/soultions/c_create-uniform-grid.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo6.svg" width="150px" /></a>
