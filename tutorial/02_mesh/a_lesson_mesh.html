@@ -558,11 +558,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># output first 5 rows</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[0.25926644, 0.10726482, 0.93234522],
-       [0.33524395, 0.96222541, 0.73739103],
-       [0.41648232, 0.3819152 , 0.03717561],
-       [0.21197566, 0.21749939, 0.94737303],
-       [0.34120055, 0.39969681, 0.40809534]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[0.27533403, 0.37327561, 0.93597429],
+       [0.24571545, 0.57984515, 0.92623466],
+       [0.65905552, 0.68567066, 0.7878065 ],
+       [0.98802135, 0.77129767, 0.201138  ],
+       [0.82859767, 0.20187308, 0.47411372]])
 </pre></div>
 </div>
 <p>点 (n x 3) の numpy 配列を PolyData に渡します．</p>
@@ -572,14 +572,14 @@ to download the full example code or to run this example in your browser via Bin
 </div>
 <div class="output_subarea output_html rendered_html output_result">
 
-<table>
+<table style='width: 100%;'>
 <tr><th>PolyData</th><th>Information</th></tr>
 <tr><td>N Cells</td><td>100</td></tr>
 <tr><td>N Points</td><td>100</td></tr>
 <tr><td>N Strips</td><td>0</td></tr>
-<tr><td>X Bounds</td><td>1.350e-02, 9.906e-01</td></tr>
-<tr><td>Y Bounds</td><td>1.999e-03, 9.785e-01</td></tr>
-<tr><td>Z Bounds</td><td>1.098e-03, 9.847e-01</td></tr>
+<tr><td>X Bounds</td><td>2.008e-03, 9.992e-01</td></tr>
+<tr><td>Y Bounds</td><td>1.080e-02, 9.757e-01</td></tr>
+<tr><td>Z Bounds</td><td>1.799e-03, 9.962e-01</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
 
@@ -652,12 +652,12 @@ to download the full example code or to run this example in your browser via Bin
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
-<a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">uni</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
+<span class="n">uni</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pl</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class"><span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span></a><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">border</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span></a><span class="p">(</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">uni</span></a><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;Spatial Point Data&quot;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span></a><span class="p">(</span><span class="n">uni</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;Spatial Point Data&quot;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.subplot.html#pyvista.Plotter.subplot" title="pyvista.Plotter.subplot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">pl</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span></a><span class="p">(</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">uni</span></a><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;Spatial Cell Data&quot;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span></a><span class="p">(</span><span class="n">uni</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;Spatial Cell Data&quot;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.show.html#pyvista.Plotter.show" title="pyvista.Plotter.show" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">pl</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
@@ -694,7 +694,7 @@ Contains arrays :
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.show.html#pyvista.Plotter.show" title="pyvista.Plotter.show" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">pl</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_a_lesson_mesh_008.png" srcset="../../_images/sphx_glr_a_lesson_mesh_008.png" alt="a lesson mesh" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.240 seconds)</p>
+<img src="../../_images/sphx_glr_a_lesson_mesh_008.png" srcset="../../_images/sphx_glr_a_lesson_mesh_008.png" alt="a lesson mesh" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.063 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-a-lesson-mesh-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/a_lesson_mesh.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo4.svg" width="150px" /></a>
