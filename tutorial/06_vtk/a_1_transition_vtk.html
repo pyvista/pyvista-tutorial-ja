@@ -604,11 +604,7 @@ to download the full example code or to run this example in your browser via Bin
 <p>ここでは，PyVistaがいくつかのことをしてくれています．</p>
 <ol class="arabic">
 <li><p>PyVistaでは，データの次元（ <a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.0.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> の形をしている）とデータの値を1行にまとめています．VTKでは，データの形状(空間上の位置)を表すために &quot;タプル&quot; を使用し，データの種類(1=スカラー/スカラーフィールド，2=ベクトル/ベクトルフィールド，n=テンソル/テンソルフィールド)を表すために &quot;コンポーネント&quot; を使用しています．ここでは，1つの変数に形状と値が具体的に格納されています．</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.ImageData</span></code> wraps <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkImageData.html">vtk.vtkImageData</a>, just with a
-different name; they are both containers of evenly spaced points. Your
-data does not have to be an &quot;image&quot; to use it with
-<a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkImageData.html">vtk.vtkImageData</a>; rather, like images, values in the dataset are
-evenly spaced apart like pixels in an image.</p>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.ImageData</span></code> は <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkImageData.html">vtk.vtkImageData</a> をラップしたものです．名前が違うだけで，どちらも等間隔の点のコンテナです．どちらも等間隔の点のコンテナです． <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkImageData.html">vtk.vtkImageData</a> で使用するデータは &quot;画像&quot; である必要はありません．</p>
 <p>さらに，コンテナが等間隔のデータ用であることがわかっているので， pyvista はデフォルトで原点と間隔を <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code> と <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1,</span> <span class="pre">1)</span></code> に設定します．これは，PyVistaとPythonのもう一つの素晴らしい点です．VTKライブラリのすべてを前もって知っておく必要はなく，非常に簡単に始めることができます．慣れてきて，もっと複雑なことをする必要が出てきたら，もっと深く掘り下げることができます．例えば，原点と間隔の変更は以下のように簡単にできます．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">grid</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
@@ -656,12 +652,12 @@ evenly spaced apart like pixels in an image.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">vtk_points</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>vtkPoints (0x560ea1a929d0)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>vtkPoints (0x560bf85aed80)
   Debug: Off
-  Modified Time: 13932532
+  Modified Time: 13931866
   Reference Count: 1
   Registered Events: (none)
-  Data: 0x560ea7336a60
+  Data: 0x560bfa33b0c0
   Data Array Name: Points
   Number Of Points: 3
   Bounds:
@@ -725,7 +721,7 @@ evenly spaced apart like pixels in an image.</p>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_a_1_transition_vtk_002.png" srcset="../../_images/sphx_glr_a_1_transition_vtk_002.png" alt="a 1 transition vtk" class = "sphx-glr-single-img"/><p>フードの下では，コリジョンフィルタは OBB (oriented bounding box) ツリーを使ってメッシュの衝突を検出します． しかし， <a class="reference external" href="https://docs.pyvista.org/examples/01-filter/collisions.html">Collision Example</a> の例のように，同じメッシュで複数の衝突を計算する場合には，OBBツリーが各メッシュに対して一度ずつ計算されるため， <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkCollisionDetectionFilter.html">vtkCollisionDetectionFilter</a> を使用した方が効率的です． ほとんどのデータサイエンスでは，純粋なPyVistaで十分ですが，VTKクラスを直接使用したい場合もあります．</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.703 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.780 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-06-vtk-a-1-transition-vtk-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/a_1_transition_vtk.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo14.svg" width="150px" /></a>
