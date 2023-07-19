@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Using PyVista in Jupyter &#8212; PyVista Tutorial</title>
+    <title>JupyterでPyVistaを使う &#8212; PyVista Tutorial</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -63,7 +63,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="Test out PyVista&#39;s Jupyter Backend" href="jupyter.html" />
+    <link rel="next" title="PyVistaのJupyterバックエンドを試す" href="jupyter.html" />
     <link rel="prev" title="基本的な幾何学的オブジェクトを作成します" href="../00_intro/a_basic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="ja">
@@ -399,8 +399,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../00_intro/a_basic.html">基本的な幾何学的オブジェクトを作成します</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Using PyVista in Jupyter</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="jupyter.html">Test out PyVista's Jupyter Backend</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">JupyterでPyVistaを使う</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="jupyter.html">PyVistaのJupyterバックエンドを試す</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../01_basic/index.html">基本的な使い方</a></li>
@@ -420,11 +420,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../02_mesh/exercises/e_read-file.html">ファイルからロードおよびプロットする</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../02_mesh/soultions/index.html">ソリューション</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../02_mesh/soultions/b_create-point-cloud.html">点群を作成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../02_mesh/soultions/c_create-uniform-grid.html">統合グリッドを作成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../02_mesh/soultions/d_create-tri-surface.html">三角形状のサーフェスを作成する</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../02_mesh/soultions/e_read-file.html">ファイルからロードおよびプロットする</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02_mesh/solutions/index.html">ソリューション</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02_mesh/solutions/b_create-point-cloud.html">点群を作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_mesh/solutions/c_create-uniform-grid.html">統合グリッドを作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_mesh/solutions/d_create-tri-surface.html">三角形状のサーフェスを作成する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_mesh/solutions/e_read-file.html">ファイルからロードおよびプロットする</a></li>
 </ul>
 </li>
 </ul>
@@ -473,6 +473,18 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../05_action/index.html">PyVistaの活用</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://docs.sunpy.org/projects/sunkit-pyvista/en/latest/">sunkit-pyvista</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/stla/PyHyperbolic3D/tree/main">PyHyperbolic3D</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://topogenesis.readthedocs.io/notebooks/boolean_marching_cubes/">topoGenesis</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://pyfbs.readthedocs.io/en/latest/examples/examples.html">pyFBS: Pythonによる周波数ベースのサブストラクチャリング</a></li>
+
+<li class="toctree-l2"><a class="reference external" href="https://medium.com/towards-data-science/neighborhood-analysis-kd-trees-and-octrees-for-meshes-and-point-clouds-in-python-19fa96527b77">近隣分析についての Ivan Nikolov </a></li>
+<li class="toctree-l2"><a class="reference external" href="https://medium.com/towards-data-science/how-to-voxelize-meshes-and-point-clouds-in-python-ca94d403f81d">ボクセリゼーションの Ivan Nikolov</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://medium.com/towards-data-science/python-libraries-for-mesh-and-point-cloud-visualization-part-1-daa2af36de30">視覚化ライブラリの Ivan Nikolov</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/JacobBumgarner/grad-descent-visualizer">勾配降下ビジュアライザー</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gmshmodel.readthedocs.io/en/latest/">GmshModel</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/bjlittle/geovista">GeoVista</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://geemap.org/">geemap</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://github.com/camurban/pterasoftware">PteraSoftware</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://laustep.github.io/stlahblog/posts/MyPyVistaArtworks.html">Stﾃｩphane Laurent's artwork</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://jacobbumgarner.github.io/VesselVio/">VesselVio</a></li>
@@ -490,6 +502,7 @@
 <li class="toctree-l2"><a class="reference external" href="https://pswpswpsw.github.io/posts/2018/09/blog-post-modify-vtk-openfoam/">OpenFOAMレンダリング</a></li>
 <li class="toctree-l2"><a class="reference external" href="http://discretize.simpeg.xyz/en/main/examples/plot_pyvista_laguna.html">離散化を使用した3 Dレンダリング</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://opengeovis.github.io/omfvista/examples/index.html">Open Mining Format (omf) の3 D表示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_action/a_lesson_geovista.html">GeoVistaの使用</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../06_vtk/index.html">PyVistaとVTK</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -501,7 +514,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../06_vtk/c_vtk_algorithms.html">VTKアルゴリズムの使用</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../07_sphinx/index.html">PyVistaとSphinx</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../08_widgets/index.html">PyVistaのウィジェット</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../08_widgets/a_box-widget.html">ボックスウィジェット</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../08_widgets/b_checkbox-widget.html">チェックボックスウィジェット</a></li>
@@ -513,8 +525,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../08_widgets/h_spline-widget.html">スプラインウィジェット</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../09_qt/index.html">PyVistaとQT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../10_trame/index.html">PyVista and Trame</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09_trame/index.html">PyVistaとTrame</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../09_trame/a_trame_simple.html">シンプルなTrameアプリ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_trame/b_trame_actor_color.html">アクターの色をコントロールします</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_trame/c_trame_scalars.html">スカラー配列の制御</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_trame/d_trame_scalar_range.html">スカラー範囲の制御</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_trame/e_trame_algorithm.html">VTK，PyVista，Trameの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_trame/f_trame_open_file.html">メッシュファイルを開きます</a></li>
+</ul>
+</li>
 </ul>
 
   </div>
@@ -544,23 +563,14 @@
             <article class="bd-article" role="main">
               
   <section id="using-pyvista-in-jupyter">
-<span id="jupyter"></span><h1>Using PyVista in Jupyter<a class="headerlink" href="#using-pyvista-in-jupyter" title="この見出しへのパーマリンク">#</a></h1>
-<p>PyVista is designed to be used in Jupyter notebooks. This section of the
-tutorial will walk you through the basics of using PyVista in Jupyter
-notebooks and will be a reference guide for you when configuring PyVista
-to work in Jupyter.</p>
+<span id="jupyter"></span><h1>JupyterでPyVistaを使う<a class="headerlink" href="#using-pyvista-in-jupyter" title="この見出しへのパーマリンク">#</a></h1>
+<p>PyVistaはJupyterノートブックで使用するように設計されています．チュートリアルのこのセクションでは，JupyterノートブックでPyVistaを使用するための基本を説明し，Jupyterで動作するようにPyVistaを設定する際の参考ガイドを提供します．</p>
+<img alt="PyVistaのJupyterバックエンド" class="align-center" src="../../_images/jupyter.png" />
 <section id="trame-jupyter-backend-for-pyvista">
-<h2>Trame Jupyter Backend for PyVista<a class="headerlink" href="#trame-jupyter-backend-for-pyvista" title="この見出しへのパーマリンク">#</a></h2>
-<p>PyVista has the ability to display fully featured plots within a
-Jupyter environment using <a class="reference external" href="https://kitware.github.io/trame/index.html">Trame</a>.
-We provide mechanisms to pair PyVista and Trame so that PyVista plotters
-can be used in a web context with both server and client-side rendering.</p>
-<p>The server-side rendering mode of the Trame backend works by streaming the
-current render window to a canvas within Jupyter and then passing any user
-actions from the canvas back to the VTK render window (this is done under
-the hood by the <code class="docutils literal notranslate"><span class="pre">vtkRemoteView</span></code> in <code class="docutils literal notranslate"><span class="pre">trame-vtk</span></code>.</p>
-<p>For example, both sections of code will display an interactive canvas
-within Jupyter:</p>
+<h2>PyVista用Trame Jupyterバックエンド<a class="headerlink" href="#trame-jupyter-backend-for-pyvista" title="この見出しへのパーマリンク">#</a></h2>
+<p>PyVistaには， <a class="reference external" href="https://kitware.github.io/trame/index.html">Trame</a> を使用してJupyter環境内で完全な機能を持つプロットを表示する機能があります．我々は，PyVistaとTrameをペアリングするメカニズムを提供し，PyVistaプロッタをサーバサイドレンダリングとクライアントサイドレンダリングの両方でWebコンテキストで使用できるようにします．</p>
+<p>Trameバックエンドのサーバーサイドレンダリングモードは，現在のレンダーウィンドウをJupyter内のcanvasにストリーミングし，canvasからのユーザーアクションをVTKレンダーウィンドウに戻すことで動作します（これは， <code class="docutils literal notranslate"><span class="pre">trame-vtk</span></code> 内の <code class="docutils literal notranslate"><span class="pre">vtkRemoteView</span></code> によって、フードの下で行われます．</p>
+<p>例えば，この2つのコードはJupyterのインタラクティブキャンバスを表示します:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 
@@ -573,22 +583,20 @@ within Jupyter:</p>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">jupyter_backend</span><span class="o">=</span><span class="s1">&#39;trame&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For convenience, you can enable <code class="docutils literal notranslate"><span class="pre">trame</span></code> with (this is the default):</p>
+<p>便宜上， <code class="docutils literal notranslate"><span class="pre">trame</span></code> を有効にすることもできます(これがデフォルト):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="n">pv</span><span class="o">.</span><span class="n">set_jupyter_backend</span><span class="p">(</span><span class="s1">&#39;trame&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <section id="trame-jupyter-modes">
-<h3>Trame Jupyter Modes<a class="headerlink" href="#trame-jupyter-modes" title="この見出しへのパーマリンク">#</a></h3>
-<p>The PyVista Trame jupyter backend provides three modes of operation (technically
-as three separate backend choices):</p>
+<h3>Trame Jupyter モード<a class="headerlink" href="#trame-jupyter-modes" title="この見出しへのパーマリンク">#</a></h3>
+<p>PyVista Trame jupyterバックエンドは，3つの動作モードを提供します（技術的には3つの別々のバックエンドを選択できます）:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'trame'</span></code>: Uses a view that can switch between client- and server-rendering modes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'server'</span></code>: Uses a view that is purely server-rendering.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'client'</span></code>: Uses a view that is purely client-rendering (generally safe without a virtual frame buffer)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'trame'</span></code>: クライアントレンダリングモードとサーバーレンダリングモードを切り替えることができるビューを使用します．</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'server'</span></code>: 純粋にサーバーレンダリングのビューを使用します．</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'client'</span></code>：純粋なクライアントレンダリングのビューを使用します（一般的に仮想フレームバッファなしで安全）</p></li>
 </ul>
-<p>You can choose your backend either by using <a class="reference external" href="https://docs.pyvista.org/user-guide/jupyter/index.html#pyvista.set_jupyter_backend" title="(in PyVista v0.38.5)"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_jupyter_backend()</span></code></a>
-or passing <code class="docutils literal notranslate"><span class="pre">jupyter_backend</span></code> on the <code class="xref py py-func docutils literal notranslate"><span class="pre">show()</span></code> call.</p>
+<p><a class="reference external" href="https://docs.pyvista.org/user-guide/jupyter/index.html#pyvista.set_jupyter_backend" title="(in PyVista v0.38.5)"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_jupyter_backend()</span></code></a> を使用するか， <code class="xref py py-func docutils literal notranslate"><span class="pre">show()</span></code> 呼び出し時に <code class="docutils literal notranslate"><span class="pre">jupyter_backend</span></code> を渡すことでバックエンドを選択することができます．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="n">pv</span><span class="o">.</span><span class="n">set_jupyter_backend</span><span class="p">(</span><span class="s1">&#39;client&#39;</span><span class="p">)</span>
 
@@ -606,46 +614,33 @@ or passing <code class="docutils literal notranslate"><span class="pre">jupyter_
 </section>
 <section id="installation">
 <h3>インストール<a class="headerlink" href="#installation" title="この見出しへのパーマリンク">#</a></h3>
-<p>Using pip, you can set up your jupyter environment with:</p>
+<p>pipを使って，次のようにjupyter環境をセットアップすることがでます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">&#39;jupyterlab&gt;=3&#39;</span> <span class="n">ipywidgets</span> <span class="s1">&#39;pyvista[all,trame]&#39;</span>
 </pre></div>
 </div>
 </section>
 <section id="jupyter-server-proxy">
 <h3>Jupyter-Server-Proxy<a class="headerlink" href="#jupyter-server-proxy" title="この見出しへのパーマリンク">#</a></h3>
-<p>When using PyVista in Jupyter that is hosted remotely (docker, cloud JupyterHub,
-or otherwise), you will need to pair the Trame backend with <code class="docutils literal notranslate"><span class="pre">jupyter-server-proxy</span></code>.</p>
-<p><a class="reference external" href="https://jupyter-server-proxy.readthedocs.io/en/latest/">Jupyter Server Proxy</a>
-lets you access the Trame server hosting the views of the PyVista plotters
-alongside your notebook, and provide authenticated web access to them directly
-through Jupyter.</p>
+<p>リモートでホストされているJupyter（docker，クラウドJupyterHubなど）でPyVistaを使用する場合は，Trameバックエンドと <code class="docutils literal notranslate"><span class="pre">jupyter-server-proxy</span></code> をペアリングする必要があります．</p>
+<p><a class="reference external" href="https://jupyter-server-proxy.readthedocs.io/en/latest/">Jupyter Server Proxy</a> を使用すると，ノートブックと一緒にPyVistaプロッタのビューをホスティングしているTrameサーバにアクセスし， Jupyterから直接認証されたウェブアクセスを提供することができます．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>In a future version of <a class="reference external" href="https://github.com/Kitware/wslink">wslink</a>
-(the driving mechanism behind Trame's server), we plan to add support such that
-the server can communicate via the
-<a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/comms.html">Jupyter Comms</a>
-to avoid the need for a secondary web server and thus <code class="docutils literal notranslate"><span class="pre">jupyter-server-proxy</span></code>.</p>
+<p>将来のバージョンの <a class="reference external" href="https://github.com/Kitware/wslink">wslink</a> (Trameのサーバーの背後にある駆動メカニズム)では，サーバーが <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/comms.html">Jupyter Comms</a> を介して通信できるようなサポートを追加し，セカンダリWebサーバーの必要性を回避する予定です．</p>
 </div>
-<p>To configure PyVista and Trame to work with <code class="docutils literal notranslate"><span class="pre">jupyter-server-proxy</span></code> in a remote
-environment, you will need to set some options on the global PyVista theme:</p>
+<p>リモート環境で <code class="docutils literal notranslate"><span class="pre">jupyter-server-proxy</span></code> を使って動作するように PyVista と Trame を設定するには，PyVista のグローバルテーマでいくつかのオプションを設定する必要があります．</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes._TrameConfig.server_proxy_enabled.html#pyvista.themes._TrameConfig.server_proxy_enabled" title="(in PyVista v0.38.5)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.trame.server_proxy_enabled</span></code></a></p></li>
 <li><p><a class="reference external" href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes._TrameConfig.server_proxy_prefix.html#pyvista.themes._TrameConfig.server_proxy_prefix" title="(in PyVista v0.38.5)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.trame.server_proxy_prefix</span></code></a></p></li>
 </ul>
-<p>The default for <code class="docutils literal notranslate"><span class="pre">server_proxy_prefix</span></code> is <code class="docutils literal notranslate"><span class="pre">'/proxy/'</span></code> and this should be sufficient
-for most remote Jupyter environment and use within Docker.</p>
-<p>This can also be set with an environment variable:</p>
+<p>デフォルトの <code class="docutils literal notranslate"><span class="pre">server_proxy_prefix</span></code> は <code class="docutils literal notranslate"><span class="pre">'/proxy/'</span></code> で，ほとんどのリモートJupyter環境やDocker内での使用にはこれで十分です．</p>
+<p>これは，環境変数で設定することもできます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PYVISTA_TRAME_SERVER_PROXY_PREFIX</span><span class="o">=</span><span class="s1">&#39;/proxy/&#39;</span>
 </pre></div>
 </div>
-<p>The prefix will need to be modified for JupyterHub deployments.</p>
-<p>On MyBinder, the <code class="docutils literal notranslate"><span class="pre">JUPYTERHUB_SERVICE_PREFIX</span></code> string often needs to prefix
-<code class="docutils literal notranslate"><span class="pre">'/proxy/'</span></code>. This makes it so the prefix includes the users ID in the URL.
-In PyVista, we automatically check for the presence of this variable and
-prepend it to the <code class="docutils literal notranslate"><span class="pre">server_proxy_prefix</span></code>.</p>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Become familiar with PyVista Jupyter backend."><img alt="Test out PyVista's Jupyter Backend" src="../../_images/sphx_glr_jupyter_thumb.png" />
-<p><a class="reference internal" href="jupyter.html#sphx-glr-tutorial-00-jupyter-jupyter-py"><span class="std std-ref">Test out PyVista's Jupyter Backend</span></a></p>
+<p>JupyterHubのデプロイメントではプレフィックスを変更する必要があります．</p>
+<p>MyBinderでは、 <code class="docutils literal notranslate"><span class="pre">JUPYTERHUB_SERVICE_PREFIX</span></code> の文字列の前に <code class="docutils literal notranslate"><span class="pre">'/proxy/'</span></code> を付ける必要があることが多いです．これにより，接頭辞にユーザIDがURLに含まれるようになります． PyVista では，この変数があるかどうかを自動的にチェックし， <code class="docutils literal notranslate"><span class="pre">server_proxy_prefix</span></code> の前に追加します．</p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Become familiar with PyVista Jupyter backend."><img alt="PyVistaのJupyterバックエンドを試す" src="../../_images/sphx_glr_jupyter_thumb.png" />
+<p><a class="reference internal" href="jupyter.html#sphx-glr-tutorial-00-jupyter-jupyter-py"><span class="std std-ref">PyVistaのJupyterバックエンドを試す</span></a></p>
   <div class="sphx-glr-thumbnail-title">Test out PyVista's Jupyter Backend</div>
 </div></div><div class="toctree-wrapper compound">
 </div>
@@ -672,7 +667,7 @@ prepend it to the <code class="docutils literal notranslate"><span class="pre">s
   <a class='right-next' id="next-link" href="jupyter.html" title="次へ ページ">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">次へ</p>
-      <p class="prev-next-title">Test out PyVista's Jupyter Backend</p>
+      <p class="prev-next-title">PyVistaのJupyterバックエンドを試す</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -694,12 +689,12 @@ prepend it to the <code class="docutils literal notranslate"><span class="pre">s
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trame-jupyter-backend-for-pyvista">
-   Trame Jupyter Backend for PyVista
+   PyVista用Trame Jupyterバックエンド
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#trame-jupyter-modes">
-     Trame Jupyter Modes
+     Trame Jupyter モード
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">

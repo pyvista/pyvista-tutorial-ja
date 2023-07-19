@@ -413,71 +413,36 @@
   <section id="getting-started">
 <span id="id1"></span><h1>はじめに<a class="headerlink" href="#getting-started" title="この見出しへのパーマリンク">#</a></h1>
 <p>PyVistaをインストールするための唯一の前提条件は，Pythonそのものです．Pythonをまだ持っていなくて，最も簡単な方法で始めたい場合は， <a class="reference external" href="https://www.anaconda.com/">Anaconda Distribution</a> を使うことをお勧めします．</p>
-<p>PyVista は <a class="reference internal" href="#conda"><span class="std std-ref">conda</span></a> や <a class="reference internal" href="#pip"><span class="std std-ref">pip</span></a> を使ってローカルにインストールすることができます．また，クラウド上で <a class="reference internal" href="#colab"><span class="std std-ref">Google Colab</span></a> や <a class="reference internal" href="#mybinder"><span class="std std-ref">MyBinder</span></a> を使って PyVista を動作させることもできます．より詳細な手順については，以下のインストールガイドを参照してください．</p>
+<p>PyVista は conda や pip を使ってローカルにインストールできます．また，クラウド上で <a class="reference internal" href="#colab"><span class="std std-ref">Google Colab</span></a> や <a class="reference internal" href="#mybinder"><span class="std std-ref">MyBinder</span></a> を使って PyVista を実行することもできます．より詳細な手順については，以下のインストールガイドを参照してください．</p>
 <section id="installation">
 <h2>インストール<a class="headerlink" href="#installation" title="この見出しへのパーマリンク">#</a></h2>
 <p>PyVistaは，いくつかの環境にインストールすることができますが，これらに限定されません:</p>
-<ul class="simple">
-<li><p><strong>ローカル</strong></p>
-<ul>
-<li><p><a class="reference internal" href="#pip"><span class="std std-ref">pip</span></a></p></li>
-<li><p><a class="reference internal" href="#conda"><span class="std std-ref">conda</span></a></p></li>
-</ul>
-</li>
-<li><p><strong>クラウド</strong></p>
-<ul>
-<li><p><a class="reference internal" href="#colab"><span class="std std-ref">Google Colab</span></a></p></li>
-<li><p><a class="reference internal" href="#mybinder"><span class="std std-ref">MyBinder</span></a></p></li>
-</ul>
-</li>
-</ul>
-<section id="pip">
-<span id="id2"></span><h3>pip<a class="headerlink" href="#pip" title="この見出しへのパーマリンク">#</a></h3>
-<p>もし， <code class="docutils literal notranslate"><span class="pre">pip</span></code> を使っているならば，インストールは以下だけです:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyvista</span>
-</pre></div>
-</div>
-<script id="asciicast-507562"  src="https://asciinema.org/a/507562.js" async></script></section>
-<section id="conda">
-<span id="id3"></span><h3>conda<a class="headerlink" href="#conda" title="この見出しへのパーマリンク">#</a></h3>
-<p><a class="reference external" href="https://www.anaconda.com/">Anaconda Distribution</a> を使用してPyVistaをインストールします．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pyvista</span>
-</pre></div>
-</div>
-<script id="asciicast-507565"  src="https://asciinema.org/a/507565.js" async></script></section>
-</section>
-<section id="additional-packages">
-<h2>追加パッケージ<a class="headerlink" href="#additional-packages" title="この見出しへのパーマリンク">#</a></h2>
-<p>Jupyter環境での作業を希望される場合は，以下のパッケージのインストールをお勧めします．</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">pip</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">conda</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyterlab</span> <span class="n">trame</span> <span class="n">ipywidgets</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">pip</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">conda</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">&#39;pyvista[all,trame]&#39;</span> <span class="n">jupyterlab</span> <span class="s1">&#39;ipywidgets&lt;8.0.0&#39;</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span> <span class="n">trame</span> <span class="n">ipywidgets</span>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pyvista</span> <span class="n">jupyterlab</span> <span class="n">trame</span> <span class="n">ipywidgets</span>
 </pre></div>
 </div>
 </div></div>
-<p>その後，JupyterlabまたはJupyter Notebookを使用して，3つのバックエンドのうちの1つを使用して対話的にプロットすることができます:</p>
+<p>その後、Jupyterで静的またはインタラクティブなバックエンドでプロットすることができます:</p>
 <blockquote>
-<div><div class="jupyter_cell docutils container">
-<div class="cell_output docutils container">
-</div>
-</div>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_lucy</span><span class="p">()</span>
 <span class="n">dataset</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/getting-started_1_0.png" src="_images/getting-started_1_0.png" />
-</div>
-</div>
+<figure class="align-default">
+<img alt="_images/getting-started-1_00_00.png" src="_images/getting-started-1_00_00.png" />
+</figure>
 </div></blockquote>
+</section>
+<section id="mybinder">
+<span id="id2"></span><h2>MyBinder<a class="headerlink" href="#mybinder" title="この見出しへのパーマリンク">#</a></h2>
+<p>MyBinderはGoogle Colabと同様に，クラウド上でJupyterノートブックを実行することができます．以下のリンクをクリックして，PyVistaを実行するためのMyBinder環境を開いてみてください．</p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks"><img alt="Binderでの起動" src="https://static.mybinder.org/badge_logo.svg" /></a></p>
 </section>
 <section id="google-colab">
 <span id="colab"></span><h2>Google Colab<a class="headerlink" href="#google-colab" title="この見出しへのパーマリンク">#</a></h2>
@@ -494,11 +459,6 @@
 <span class="n">pyvista</span><span class="o">.</span><span class="n">start_xvfb</span><span class="p">()</span>
 </pre></div>
 </div>
-</section>
-<section id="mybinder">
-<span id="id5"></span><h2>MyBinder<a class="headerlink" href="#mybinder" title="この見出しへのパーマリンク">#</a></h2>
-<p>MyBinderはGoogle Colabと同様に，クラウド上でJupyterノートブックを実行することができます．以下のリンクをクリックして，PyVistaを実行するためのMyBinder環境を開いてみてください．</p>
-<p><a class="reference external" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks"><img alt="Binderでの起動" src="https://static.mybinder.org/badge_logo.svg" /></a></p>
 </section>
 </section>
 
@@ -544,32 +504,15 @@
   <a class="reference internal nav-link" href="#installation">
    インストール
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pip">
-     pip
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conda">
-     conda
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-packages">
-   追加パッケージ
+  <a class="reference internal nav-link" href="#mybinder">
+   MyBinder
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#google-colab">
    Google Colab
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mybinder">
-   MyBinder
   </a>
  </li>
 </ul>

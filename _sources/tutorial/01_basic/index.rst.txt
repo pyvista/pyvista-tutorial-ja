@@ -36,10 +36,10 @@ Here's a very basic dataset you can download.
 
    # Configure for trame
    import pyvista
-   pyvista.global_theme.background = 'white'
+   pyvista.set_plot_theme('document')
+   pyvista.set_jupyter_backend('static')
    pyvista.global_theme.axes.show = False
    pyvista.global_theme.smooth_shading = True
-   pyvista.global_theme.anti_aliasing = 'fxaa'
 
 
 .. jupyter-execute::
@@ -134,7 +134,7 @@ along with this lesson.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This section demonstrates how to use PyVista to reading and plotting 3D data using the `pyvista...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This section demonstrates how to use PyVista to read and plot 3D data using the `pyvista.exampl...">
 
 .. only:: html
 

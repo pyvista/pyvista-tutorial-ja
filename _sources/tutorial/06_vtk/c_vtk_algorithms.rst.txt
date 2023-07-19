@@ -331,20 +331,6 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  Data and other attributes defined here:
      |  
      |  CompositeOutlineStyle = <class 'vtkmodules.vtkFiltersModeling.vtkOutli...
-     |      int([x]) -> integer
-     |      int(x, base=10) -> integer
-     |      
-     |      Convert a number or string to an integer, or return 0 if no arguments
-     |      are given.  If x is a number, return x.__int__().  For floating point
-     |      numbers, this truncates towards zero.
-     |      
-     |      If x is not a number or if base is given, then x must be a string,
-     |      bytes, or bytearray instance representing an integer literal in the
-     |      given base.  The literal can be preceded by '+' or '-' and be surrounded
-     |      by whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.
-     |      Base 0 means to interpret the base from the string as an integer literal.
-     |      >>> int('0b100', base=0)
-     |      4
      |  
      |  LEAF_DATASETS = 1
      |  
@@ -1042,20 +1028,6 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  DOUBLE_PRECISION = 1
      |  
      |  DesiredOutputPrecision = <class 'vtkmodules.vtkCommonExecutionModel.vt...
-     |      int([x]) -> integer
-     |      int(x, base=10) -> integer
-     |      
-     |      Convert a number or string to an integer, or return 0 if no arguments
-     |      are given.  If x is a number, return x.__int__().  For floating point
-     |      numbers, this truncates towards zero.
-     |      
-     |      If x is not a number or if base is given, then x must be a string,
-     |      bytes, or bytearray instance representing an integer literal in the
-     |      given base.  The literal can be preceded by '+' or '-' and be surrounded
-     |      by whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.
-     |      Base 0 means to interpret the base from the string as an integer literal.
-     |      >>> int('0b100', base=0)
-     |      4
      |  
      |  SINGLE_PRECISION = 0
      |  
@@ -1427,7 +1399,7 @@ See https://kitware.github.io/vtk-examples/site/Python/
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.075 seconds)
+   **Total running time of the script:** ( 0 minutes  0.954 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_c_vtk_algorithms.py:
