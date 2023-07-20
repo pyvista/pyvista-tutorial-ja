@@ -5,14 +5,14 @@
 
 Computation times
 =================
-**00:27.489** total execution time for **tutorial_03_figures** files:
+**00:26.896** total execution time for **tutorial_03_figures** files:
 
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``c_geological-map.py``) | 00:17.816 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``c_geological-map.py``) | 00:17.680 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py` (``a_lesson_figures.py``) | 00:05.629 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py` (``a_lesson_figures.py``) | 00:05.682 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)                       | 00:02.561 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)                       | 00:02.199 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)               | 00:01.483 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)               | 00:01.335 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+
