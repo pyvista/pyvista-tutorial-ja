@@ -575,7 +575,12 @@ to download the full example code or to run this example in your browser via Bin
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
-<p>点群は一般的に <a class="reference external" href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.38.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> を使用して構築され， 個々の点に関連付けられたスカラーまたはベクトルデータ配列を簡単に持つことができます．この例では， まず <code class="docutils literal notranslate"><span class="pre">examples</span></code> モジュールから入手可能な点群を使って逆算してみます．ただし，これは独自の頂点位置のNumPy配列を使用してPyVistaメッシュを作成するのと同じです．</p>
+<p>Point clouds are generally constructed using <a class="reference external" href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.38.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> and
+can easily have scalar or vector data arrays associated with the individual
+points. In this example, we'll start by working backwards using a point cloud
+that is available from our <code class="docutils literal notranslate"><span class="pre">examples</span></code> module. This however is no
+different than creating a PyVista mesh with your own NumPy arrays of vertice
+locations.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define some helpers - ignore these and use your own data if you like!</span>
 <span class="k">def</span> <span class="nf">generate_points</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="mf">0.02</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A helper to make a 3D NumPy array of points (n_points by 3).&quot;&quot;&quot;</span>
