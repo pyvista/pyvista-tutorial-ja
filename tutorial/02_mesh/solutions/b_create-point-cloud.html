@@ -575,12 +575,7 @@ to download the full example code or to run this example in your browser via Bin
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
-<p>Point clouds are generally constructed using <a class="reference external" href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.38.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> and
-can easily have scalar or vector data arrays associated with the individual
-points. In this example, we'll start by working backwards using a point cloud
-that is available from our <code class="docutils literal notranslate"><span class="pre">examples</span></code> module. This however is no
-different than creating a PyVista mesh with your own NumPy arrays of vertice
-locations.</p>
+<p>点群は一般的に <a class="reference external" href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.38.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> を使用して構築され， 個々の点に関連付けられたスカラーまたはベクトルデータ配列を簡単に持つことができます．この例では， まず <code class="docutils literal notranslate"><span class="pre">examples</span></code> モジュールから入手可能な点群を使って逆算してみます．ただし，これは独自の頂点位置のNumPy配列を使用してPyVistaメッシュを作成するのと同じです．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define some helpers - ignore these and use your own data if you like!</span>
 <span class="k">def</span> <span class="nf">generate_points</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="mf">0.02</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A helper to make a 3D NumPy array of points (n_points by 3).&quot;&quot;&quot;</span>
@@ -595,11 +590,11 @@ locations.</p>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.81061075e+05, 4.40013660e+06, 1.76441003e+03],
-                 [4.80972275e+05, 4.40009720e+06, 1.77390002e+03],
-                 [4.81019775e+05, 4.40012270e+06, 1.76310999e+03],
-                 [4.80963575e+05, 4.40012610e+06, 1.76237000e+03],
-                 [4.81101875e+05, 4.40012050e+06, 1.75976001e+03]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.81050775e+05, 4.40013170e+06, 1.77241003e+03],
+                 [4.81058875e+05, 4.40018400e+06, 1.75922998e+03],
+                 [4.81042775e+05, 4.40022640e+06, 1.75768994e+03],
+                 [4.80946875e+05, 4.40008240e+06, 1.76476001e+03],
+                 [4.81064675e+05, 4.40015780e+06, 1.76146997e+03]])
 </pre></div>
 </div>
 <p>サンプルデータまたは自分のプロジェクトからの点/頂点のNumPy配列ができたので，それらの点からPyVistaメッシュを作成します．</p>
@@ -616,7 +611,7 @@ locations.</p>
 <tr><td>N Strips</td><td>0</td></tr>
 <tr><td>X Bounds</td><td>4.809e+05, 4.811e+05</td></tr>
 <tr><td>Y Bounds</td><td>4.400e+06, 4.400e+06</td></tr>
-<tr><td>Z Bounds</td><td>1.754e+03, 1.785e+03</td></tr>
+<tr><td>Z Bounds</td><td>1.754e+03, 1.784e+03</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
 
@@ -672,11 +667,11 @@ locations.</p>
 <a href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.pyvista_ndarray.html#pyvista.pyvista_ndarray" title="pyvista.pyvista_ndarray" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">vectors</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[ 0.00448569,  0.14664546, -0.98917895],
-                 [-0.42512031,  0.83928365,  0.33893315],
-                 [ 0.95846331,  0.28513555, -0.00676737],
-                 [-0.22923988, -0.03139616,  0.97286348],
-                 [-0.46121022, -0.72044343,  0.51792509]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[ 0.86234777, -0.32500904, -0.38823376],
+                 [-0.49398761,  0.40078765, -0.77158635],
+                 [ 0.64456655, -0.70634072,  0.2926034 ],
+                 [ 0.39384902,  0.64257657,  0.65725056],
+                 [ 0.99917531,  0.03971333,  0.00845832]])
 </pre></div>
 </div>
 <p>ベクトル配列を点データとして新しいメッシュに追加します:</p>
@@ -700,7 +695,7 @@ locations.</p>
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.show.html#pyvista.Plotter.show" title="pyvista.Plotter.show" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">plotter</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_b_create-point-cloud_003.png" srcset="../../../_images/sphx_glr_b_create-point-cloud_003.png" alt="b create point cloud" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.282 seconds)</p>
+<img src="../../../_images/sphx_glr_b_create-point-cloud_003.png" srcset="../../../_images/sphx_glr_b_create-point-cloud_003.png" alt="b create point cloud" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.353 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-solutions-b-create-point-cloud-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/b_create-point-cloud.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo7.svg" width="150px" /></a>
