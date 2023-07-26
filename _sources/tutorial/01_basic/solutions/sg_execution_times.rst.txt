@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**00:08.451** total execution time for **tutorial_01_basic_solutions** files:
+**00:06.087** total execution time for **tutorial_01_basic_solutions** files:
 
 +-----------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py` (``a_load_examples_solution.py``) | 00:08.451 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py` (``a_load_examples_solution.py``) | 00:06.087 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------+-----------+--------+
