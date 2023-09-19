@@ -5,12 +5,12 @@
 
 Computation times
 =================
-**01:20.123** total execution time for **tutorial_03_figures_solutions** files:
+**01:30.356** total execution time for **tutorial_03_figures_solutions** files:
 
 +-----------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py` (``c_edl.py``)                         | 01:00.260 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py` (``c_edl.py``)                         | 01:07.958 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_solutions_b_lighting_mesh.py` (``b_lighting_mesh.py``)     | 00:14.712 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_solutions_b_lighting_mesh.py` (``b_lighting_mesh.py``)     | 00:16.402 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py` (``a_display_options.py``) | 00:05.151 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py` (``a_display_options.py``) | 00:05.997 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------+-----------+--------+
