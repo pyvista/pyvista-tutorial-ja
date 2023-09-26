@@ -212,17 +212,6 @@
           
           
           
-          <a href="http://slack.pyvista.org" title="Slack Community" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-slack"></i></span>
-            <label class="sr-only">Slack Community</label></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
           <a href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst" title="Contributing" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa fa-gavel fa-fw"></i></span>
             <label class="sr-only">Contributing</label></a>
         </li>
@@ -345,17 +334,6 @@
           
           <a href="https://docs.pyvista.org/" title="Docs" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa fa-book fa-fw"></i></span>
             <label class="sr-only">Docs</label></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          <a href="http://slack.pyvista.org" title="Slack Community" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-slack"></i></span>
-            <label class="sr-only">Slack Community</label></a>
         </li>
         <li class="nav-item">
           
@@ -590,11 +568,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.81097875e+05, 4.40022180e+06, 1.76944995e+03],
-                 [4.81053075e+05, 4.40019470e+06, 1.75870996e+03],
-                 [4.81106575e+05, 4.40008760e+06, 1.77031006e+03],
-                 [4.80943575e+05, 4.40012350e+06, 1.76597998e+03],
-                 [4.80983775e+05, 4.40016450e+06, 1.76043005e+03]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.80935175e+05, 4.40016640e+06, 1.76105005e+03],
+                 [4.80956775e+05, 4.40022130e+06, 1.76190002e+03],
+                 [4.81109175e+05, 4.40019150e+06, 1.76939001e+03],
+                 [4.80995775e+05, 4.40023920e+06, 1.75772998e+03],
+                 [4.81042075e+05, 4.40018220e+06, 1.75963000e+03]])
 </pre></div>
 </div>
 <p>サンプルデータまたは自分のプロジェクトからの点/頂点のNumPy配列ができたので，それらの点からPyVistaメッシュを作成します．</p>
@@ -611,7 +589,7 @@ to download the full example code or to run this example in your browser via Bin
 <tr><td>N Strips</td><td>0</td></tr>
 <tr><td>X Bounds</td><td>4.809e+05, 4.811e+05</td></tr>
 <tr><td>Y Bounds</td><td>4.400e+06, 4.400e+06</td></tr>
-<tr><td>Z Bounds</td><td>1.754e+03, 1.787e+03</td></tr>
+<tr><td>Z Bounds</td><td>1.754e+03, 1.784e+03</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
 
@@ -667,11 +645,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.pyvista_ndarray.html#pyvista.pyvista_ndarray" title="pyvista.pyvista_ndarray" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">vectors</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[ 0.03044085, -0.07801384,  0.99648743],
-                 [ 0.58146408,  0.28075726,  0.7635934 ],
-                 [-0.72874771,  0.6714554 , -0.13444116],
-                 [ 0.84931533, -0.50862888, -0.14128031],
-                 [ 0.63811476, -0.26330565, -0.72351897]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[-0.56184798,  0.24351219,  0.79058754],
+                 [-0.00395384, -0.83261877, -0.55383241],
+                 [-0.54739775,  0.60522958, -0.57797306],
+                 [-0.5847115 ,  0.41744296, -0.69559603],
+                 [-0.68824022,  0.70177395, -0.18395303]])
 </pre></div>
 </div>
 <p>ベクトル配列を点データとして新しいメッシュに追加します:</p>
@@ -695,7 +673,7 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.show.html#pyvista.Plotter.show" title="pyvista.Plotter.show" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">plotter</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_b_create-point-cloud_003.png" srcset="../../../_images/sphx_glr_b_create-point-cloud_003.png" alt="b create point cloud" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.175 seconds)</p>
+<img src="../../../_images/sphx_glr_b_create-point-cloud_003.png" srcset="../../../_images/sphx_glr_b_create-point-cloud_003.png" alt="b create point cloud" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.274 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-solutions-b-create-point-cloud-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/b_create-point-cloud.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo7.svg" width="150px" /></a>
