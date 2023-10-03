@@ -36,7 +36,7 @@ jobs:
         ref: 'gh-pages'
         path: pyvista-tutorial-ja
     - name: Setup SSH
-      uses: MrSquaare/ssh-setup-action@v2
+      uses: MrSquaare/ssh-setup-action@v3
       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
