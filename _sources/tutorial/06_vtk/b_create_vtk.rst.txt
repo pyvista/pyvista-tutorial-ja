@@ -88,7 +88,7 @@ Add point data
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkImageData(0x55681857eaf0) at 0x7fb61c2e0280>
+    <vtkmodules.vtkCommonDataModel.vtkImageData(0x5588a7da7070) at 0x7f3d69bf12e0>
 
 
 
@@ -153,7 +153,7 @@ Create ``vtkStructuredGrid``
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x55682c08aab0) at 0x7fb5e6d5aa00>
+    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x5588b2692f20) at 0x7f3d35a6b880>
 
 
 
@@ -187,11 +187,12 @@ Add point data
 
 Plot with PyVista for simplicity
 
-.. GENERATED FROM PYTHON SOURCE LINES 70-71
+.. GENERATED FROM PYTHON SOURCE LINES 70-72
 
 .. code-block:: default
 
     pv.plot(grid, show_edges=True)
+
 
 
 
@@ -203,6 +204,16 @@ Plot with PyVista for simplicity
 
 
 
+
+.. GENERATED FROM PYTHON SOURCE LINES 73-80
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/06_vtk/b_create_vtk.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
 
 
 .. rst-class:: sphx-glr-timing
