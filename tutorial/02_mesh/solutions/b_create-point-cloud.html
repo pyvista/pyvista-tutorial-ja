@@ -435,7 +435,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04_filters/index.html">フィルタ</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../04_filters/a_lesson_filters.html">共通フィルタの使用</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../04_filters/bonus/index.html">ボーナスコンテンツ</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../04_filters/bonus/f_sampling_functions_3d.html">Sample Function: Perlin Noise in 3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../04_filters/bonus/f_sampling_functions_3d.html">サンプル関数:3DでのPerlinノイズ</a></li>
 
 </ul>
 </li>
@@ -573,11 +573,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.81056475e+05, 4.40016690e+06, 1.75995996e+03],
-                 [4.81000575e+05, 4.40015150e+06, 1.76095996e+03],
-                 [4.81012975e+05, 4.40013880e+06, 1.76153003e+03],
-                 [4.81123575e+05, 4.40009790e+06, 1.75996997e+03],
-                 [4.80975275e+05, 4.40011180e+06, 1.76585999e+03]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.81120475e+05, 4.40014710e+06, 1.75847998e+03],
+                 [4.81110375e+05, 4.40014010e+06, 1.75895996e+03],
+                 [4.81047875e+05, 4.40012590e+06, 1.76219995e+03],
+                 [4.80961075e+05, 4.40021860e+06, 1.75828003e+03],
+                 [4.81001075e+05, 4.40009630e+06, 1.76675000e+03]])
 </pre></div>
 </div>
 <p>サンプルデータまたは自分のプロジェクトからの点/頂点のNumPy配列ができたので，それらの点からPyVistaメッシュを作成します．</p>
@@ -650,11 +650,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.pyvista_ndarray.html#pyvista.pyvista_ndarray" title="pyvista.pyvista_ndarray" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">vectors</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[-0.67347315,  0.73731754,  0.0528844 ],
-                 [ 0.74937806,  0.430455  , -0.50313121],
-                 [ 0.59654692, -0.23430845, -0.76761405],
-                 [-0.66433713, -0.70694248,  0.24266953],
-                 [ 0.68767596,  0.15215233,  0.70989537]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[ 0.20409252,  0.95925421,  0.19539091],
+                 [ 0.5044285 ,  0.53169125, -0.68033544],
+                 [-0.43560953, -0.2848469 , -0.85387738],
+                 [-0.75293707, -0.34155693, -0.56251633],
+                 [ 0.98202535, -0.0113511 ,  0.18840747]])
 </pre></div>
 </div>
 <p>ベクトル配列を点データとして新しいメッシュに追加します:</p>
@@ -682,7 +682,7 @@ to download the full example code or to run this example in your browser via Bin
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/b_create-point-cloud.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.952 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.786 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-solutions-b-create-point-cloud-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/b_create-point-cloud.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo7.svg" width="150px" /></a>
