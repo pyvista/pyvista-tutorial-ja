@@ -553,9 +553,10 @@
 <span id="basic-lesson"></span><span id="sphx-glr-tutorial-01-basic-a-lesson-basic-py"></span><h1>基本的な使い方のレッスン<a class="headerlink" href="#basic-usage-lesson" title="この見出しへのパーマリンク">#</a></h1>
 <p>このセクションでは， <a class="reference external" href="https://docs.pyvista.org/api/examples/_autosummary/pyvista.examples.downloads.html">pyvista.examples.downloads</a> モジュールと外部ファイルを使用して，PyVistaで3Dデータを読み取り，プロットする方法を説明します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="c1"># Set the default plot theme to the &quot;document&quot; theme.</span>
-<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.set_plot_theme.html#pyvista.set_plot_theme" title="pyvista.set_plot_theme" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-function"><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span></a><span class="p">(</span><span class="s1">&#39;document&#39;</span><span class="p">)</span>
+<span class="c1"># pv.set_plot_theme(&#39;document&#39;)</span>
 </pre></div>
 </div>
 <section id="using-existing-data">
@@ -567,7 +568,6 @@
 <span class="c1"># &lt;https://docs.pyvista.org/api/examples/_autosummary/pyvista.examples.downloads.html&gt;`_</span>
 <span class="c1">#</span>
 
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_saddle_surface</span><span class="p">()</span>
 <span class="n">dataset</span>
@@ -665,7 +665,7 @@
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/01_basic/a_lesson_basic.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  11.226 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.069 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-01-basic-a-lesson-basic-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/01_basic/a_lesson_basic.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo2.svg" width="150px" /></a>
