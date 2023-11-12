@@ -5,12 +5,12 @@
 
 Computation times
 =================
-**03:35.898** total execution time for **tutorial_03_figures_bonus** files:
+**01:52.121** total execution time for **tutorial_03_figures_bonus** files:
 
 +-------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)   | 01:56.102 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)   | 01:01.912 | 0.0 MB |
 +-------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)       | 01:38.452 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)       | 00:49.422 | 0.0 MB |
 +-------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py` (``e_labels.py``) | 00:01.343 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py` (``e_labels.py``) | 00:00.788 | 0.0 MB |
 +-------------------------------------------------------------------------+-----------+--------+
