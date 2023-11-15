@@ -1268,6 +1268,14 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  DeepCopy(...)
      |      DeepCopy(self, src:vtkDataObject) -> None
      |      C++: void DeepCopy(vtkDataObject *src) override;
+     |      
+     |      The goal of the method is to copy the complete data from src into
+     |      this object. The implementation is delegated to the differenent
+     |      subclasses. If you want to copy the data up to the array pointers
+     |      only, @see ShallowCopy.
+     |      
+     |      This method deep copy the field data and copy the internal
+     |      structure.
      |  
      |  DeleteCell(...)
      |      DeleteCell(self, cellId:int) -> None
@@ -1720,9 +1728,19 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |          -> None
      |      C++: void ReplaceCellPoint(vtkIdType cellId, vtkIdType oldPtId,
      |          vtkIdType newPtId)
+     |      ReplaceCellPoint(self, cellId:int, oldPtId:int, newPtId:int,
+     |          cellPointIds:vtkIdList) -> None
+     |      C++: void ReplaceCellPoint(vtkIdType cellId, vtkIdType oldPtId,
+     |          vtkIdType newPtId, vtkIdList *cellPointIds)
      |      
      |      Replace a point in the cell connectivity list with a different
      |      point. Use this method only when the dataset is set as Editable.
+     |      
+     |      The version with cellPointIds avoids allocating/deallocating a
+     |      vtkIdList at each call internally.
+     |      
+     |      THIS METHOD IS THREAD SAFE IF BuildCells() IS FIRST CALLED FROM A
+     |      SINGLE THREAD.
      |  
      |  ReplaceLinkedCell(...)
      |      ReplaceLinkedCell(self, cellId:int, npts:int, pts:(int, ...))
@@ -2096,6 +2114,20 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      the pointer to the array to save a lookup involving string
      |      comparisons
      |  
+     |  GetCellNumberOfFaces(...)
+     |      GetCellNumberOfFaces(self, cellId:int, cellType:int,
+     |          cell:vtkGenericCell) -> int
+     |      C++: int GetCellNumberOfFaces(vtkIdType cellId,
+     |          unsigned char &cellType, vtkGenericCell *cell)
+     |      
+     |      Get the number of faces of a cell.
+     |      
+     |      Most of the times extracting the number of faces requires only
+     |      extracting the cell type. However, for some cell types, the
+     |      number of faces is not constant. For example, a vtkPolyhedron
+     |      cell can have a different number of faces for each cell. That's
+     |      why this method requires the cell id and the dataset.
+     |  
      |  GetCellTypes(...)
      |      GetCellTypes(self, types:vtkCellTypes) -> None
      |      C++: virtual void GetCellTypes(vtkCellTypes *types)
@@ -2414,7 +2446,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  GetDataReleased(...)
      |      GetDataReleased(self) -> int
-     |      C++: virtual int GetDataReleased()
+     |      C++: virtual vtkTypeBool GetDataReleased()
      |      
      |      Get the flag indicating the data has been released.
      |  
@@ -2436,7 +2468,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  GetGlobalReleaseDataFlag(...)
      |      GetGlobalReleaseDataFlag() -> int
-     |      C++: static int GetGlobalReleaseDataFlag()
+     |      C++: static vtkTypeBool GetGlobalReleaseDataFlag()
      |  
      |  GetInformation(...)
      |      GetInformation(self) -> vtkInformation
@@ -2551,7 +2583,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  SetGlobalReleaseDataFlag(...)
      |      SetGlobalReleaseDataFlag(val:int) -> None
-     |      C++: static void SetGlobalReleaseDataFlag(int val)
+     |      C++: static void SetGlobalReleaseDataFlag(vtkTypeBool val)
      |      
      |      Turn on/off flag to control whether every object releases its
      |      data after being used by a filter.
@@ -2666,7 +2698,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  GetGlobalWarningDisplay(...)
      |      GetGlobalWarningDisplay() -> int
-     |      C++: static int GetGlobalWarningDisplay()
+     |      C++: static vtkTypeBool GetGlobalWarningDisplay()
      |  
      |  GetObjectDescription(...)
      |      GetObjectDescription(self) -> str
@@ -2748,7 +2780,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  SetGlobalWarningDisplay(...)
      |      SetGlobalWarningDisplay(val:int) -> None
-     |      C++: static void SetGlobalWarningDisplay(int val)
+     |      C++: static void SetGlobalWarningDisplay(vtkTypeBool val)
      |      
      |      This is a global flag that controls whether any debug, warning or
      |      error messages are displayed.
@@ -12330,7 +12362,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |  ----------------------------------------------------------------------
      |  Data and other attributes inherited from pyvista.plotting.plotter.Plotter:
      |  
-     |  last_update_time = 1699927388.6575904
+     |  last_update_time = 1700013860.9183187
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from pyvista.plotting.plotter.BasePlotter:
@@ -20090,7 +20122,7 @@ Or grab the mesh object for use with PyVista and GeoVista.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  20.414 seconds)
+   **Total running time of the script:** ( 1 minutes  1.112 seconds)
 
 
 .. _sphx_glr_download_tutorial_05_action_a_lesson_geovista.py:
