@@ -79,11 +79,11 @@ locations.
  .. code-block:: none
 
 
-    pyvista_ndarray([[4.81026475e+05, 4.40014780e+06, 1.76110999e+03],
-                     [4.81065275e+05, 4.40017050e+06, 1.75965002e+03],
-                     [4.81070575e+05, 4.40020510e+06, 1.75818994e+03],
-                     [4.81059175e+05, 4.40008600e+06, 1.76189001e+03],
-                     [4.81032775e+05, 4.40009670e+06, 1.76243994e+03]])
+    pyvista_ndarray([[4.81021175e+05, 4.40023710e+06, 1.75764001e+03],
+                     [4.81043875e+05, 4.40017360e+06, 1.75992004e+03],
+                     [4.80973175e+05, 4.40021420e+06, 1.75852002e+03],
+                     [4.81022975e+05, 4.40014950e+06, 1.76106995e+03],
+                     [4.80954575e+05, 4.40019280e+06, 1.75955005e+03]])
 
 
 
@@ -116,7 +116,7 @@ data or your own project, create a PyVista mesh using those points.
     <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>4.809e+05, 4.811e+05</td></tr>
     <tr><td>Y Bounds</td><td>4.400e+06, 4.400e+06</td></tr>
-    <tr><td>Z Bounds</td><td>1.754e+03, 1.784e+03</td></tr>
+    <tr><td>Z Bounds</td><td>1.754e+03, 1.785e+03</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
 
@@ -289,11 +289,11 @@ This time, we're going to create a totally new, random point cloud containing
  .. code-block:: none
 
 
-    pyvista_ndarray([[-0.47513249,  0.29981869,  0.82725925],
-                     [ 0.38118391, -0.61391146,  0.69123914],
-                     [-0.51394868,  0.65999807, -0.54795922],
-                     [ 0.41454638,  0.86640453, -0.27837831],
-                     [ 0.26441009,  0.8853688 , -0.38237338]])
+    pyvista_ndarray([[-0.61988477,  0.77873387, -0.09652166],
+                     [-0.50322283, -0.65492206, -0.56377644],
+                     [-0.21799919, -0.95176823, -0.21590181],
+                     [-0.70808149, -0.3231623 ,  0.62784292],
+                     [-0.55320568, -0.33036887, -0.76473517]])
 
 
 
@@ -366,7 +366,7 @@ for more details).
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.354 seconds)
+   **Total running time of the script:** ( 0 minutes  5.892 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_b_create-point-cloud.py:
