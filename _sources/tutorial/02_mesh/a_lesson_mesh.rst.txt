@@ -64,11 +64,11 @@ You can create one by defining a 2D array of Cartesian coordinates like so:
  .. code-block:: none
 
 
-    array([[0.58652967, 0.57217995, 0.9779533 ],
-           [0.25948961, 0.36231243, 0.88633566],
-           [0.89261795, 0.47677325, 0.04890232],
-           [0.18754971, 0.03139787, 0.62996451],
-           [0.60460623, 0.26572145, 0.27183429]])
+    array([[0.82656804, 0.29386256, 0.29495161],
+           [0.6571493 , 0.44694037, 0.33017381],
+           [0.07787863, 0.31999544, 0.44704363],
+           [0.19862324, 0.7999571 , 0.23959168],
+           [0.7901678 , 0.82890621, 0.16764769]])
 
 
 
@@ -97,9 +97,9 @@ Pass numpy array of points (n by 3) to PolyData
     <tr><td>N Cells</td><td>100</td></tr>
     <tr><td>N Points</td><td>100</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>3.930e-04, 9.932e-01</td></tr>
-    <tr><td>Y Bounds</td><td>6.978e-03, 9.890e-01</td></tr>
-    <tr><td>Z Bounds</td><td>3.978e-02, 9.923e-01</td></tr>
+    <tr><td>X Bounds</td><td>6.875e-03, 9.958e-01</td></tr>
+    <tr><td>Y Bounds</td><td>4.136e-03, 9.861e-01</td></tr>
+    <tr><td>Z Bounds</td><td>5.340e-03, 9.867e-01</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
 
@@ -414,7 +414,7 @@ Note how this varies from assigning scalars to each point
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.791 seconds)
+   **Total running time of the script:** ( 0 minutes  2.595 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_a_lesson_mesh.py:
