@@ -127,8 +127,39 @@ mesh-generating/altering code.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/dataset.py:2123: PyVistaDeprecationWarning: Use of `DataSet.overwrite` is deprecated. Use `DataSet.copy_from` instead.
-      warnings.warn(
+    /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/utilities/misc.py:207: UserWarning: Encountered issue in callback (most recent call last):
+      File "/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py", line 47, in <lambda>
+        callback=lambda value: engine('phi_resolution', int(value)),
+      File "/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py", line 28, in __call__
+        self.update()
+      File "/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py", line 33, in update
+        self.output.overwrite(result)
+      File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/dataset.py", line 150, in __getattr__
+        return super().__getattribute__(item)
+    AttributeError: 'PolyData' object has no attribute 'overwrite'
+      warnings.warn(formatted_exception)
+    /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/utilities/misc.py:207: UserWarning: Encountered issue in callback (most recent call last):
+      File "/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py", line 56, in <lambda>
+        callback=lambda value: engine('theta_resolution', int(value)),
+      File "/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py", line 28, in __call__
+        self.update()
+      File "/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py", line 33, in update
+        self.output.overwrite(result)
+      File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/dataset.py", line 150, in __getattr__
+        return super().__getattribute__(item)
+    AttributeError: 'PolyData' object has no attribute 'overwrite'
+      warnings.warn(formatted_exception)
+    /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/utilities/misc.py:207: UserWarning: Encountered issue in callback (most recent call last):
+      File "/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py", line 65, in <lambda>
+        callback=lambda value: engine('radius', value),
+      File "/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py", line 28, in __call__
+        self.update()
+      File "/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py", line 33, in update
+        self.output.overwrite(result)
+      File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/dataset.py", line 150, in __getattr__
+        return super().__getattribute__(item)
+    AttributeError: 'PolyData' object has no attribute 'overwrite'
+      warnings.warn(formatted_exception)
 
 
 

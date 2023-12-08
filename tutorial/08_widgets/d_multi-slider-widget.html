@@ -614,8 +614,39 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.show.html#pyvista.Plotter.show" title="pyvista.Plotter.show" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">p</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_d_multi-slider-widget_001.png" srcset="../../_images/sphx_glr_d_multi-slider-widget_001.png" alt="d multi slider widget" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/dataset.py:2123: PyVistaDeprecationWarning: Use of `DataSet.overwrite` is deprecated. Use `DataSet.copy_from` instead.
-  warnings.warn(
+<img src="../../_images/sphx_glr_d_multi-slider-widget_001.png" srcset="../../_images/sphx_glr_d_multi-slider-widget_001.png" alt="d multi slider widget" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/utilities/misc.py:207: UserWarning: Encountered issue in callback (most recent call last):
+  File &quot;/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py&quot;, line 47, in &lt;lambda&gt;
+    callback=lambda value: engine(&#39;phi_resolution&#39;, int(value)),
+  File &quot;/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py&quot;, line 28, in __call__
+    self.update()
+  File &quot;/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py&quot;, line 33, in update
+    self.output.overwrite(result)
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/dataset.py&quot;, line 150, in __getattr__
+    return super().__getattribute__(item)
+AttributeError: &#39;PolyData&#39; object has no attribute &#39;overwrite&#39;
+  warnings.warn(formatted_exception)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/utilities/misc.py:207: UserWarning: Encountered issue in callback (most recent call last):
+  File &quot;/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py&quot;, line 56, in &lt;lambda&gt;
+    callback=lambda value: engine(&#39;theta_resolution&#39;, int(value)),
+  File &quot;/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py&quot;, line 28, in __call__
+    self.update()
+  File &quot;/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py&quot;, line 33, in update
+    self.output.overwrite(result)
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/dataset.py&quot;, line 150, in __getattr__
+    return super().__getattribute__(item)
+AttributeError: &#39;PolyData&#39; object has no attribute &#39;overwrite&#39;
+  warnings.warn(formatted_exception)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/utilities/misc.py:207: UserWarning: Encountered issue in callback (most recent call last):
+  File &quot;/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py&quot;, line 65, in &lt;lambda&gt;
+    callback=lambda value: engine(&#39;radius&#39;, value),
+  File &quot;/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py&quot;, line 28, in __call__
+    self.update()
+  File &quot;/home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/d_multi-slider-widget.py&quot;, line 33, in update
+    self.output.overwrite(result)
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/dataset.py&quot;, line 150, in __getattr__
+    return super().__getattribute__(item)
+AttributeError: &#39;PolyData&#39; object has no attribute &#39;overwrite&#39;
+  warnings.warn(formatted_exception)
 </pre></div>
 </div>
 <p>以下はユーザ対話型のスクリーンショットです</p>

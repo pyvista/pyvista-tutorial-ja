@@ -570,7 +570,10 @@ to download the full example code or to run this example in your browser via Bin
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Help on method add_mesh in module pyvista.plotting.plotter:
 
-add_mesh(mesh, color=None, style=None, scalars=None, clim=None, show_edges=None, edge_color=None, point_size=None, line_width=None, opacity=None, flip_scalars=False, lighting=None, n_colors=256, interpolate_before_map=None, cmap=None, label=None, reset_camera=None, scalar_bar_args=None, show_scalar_bar=None, multi_colors=False, name=None, texture=None, render_points_as_spheres=None, render_lines_as_tubes=None, smooth_shading=None, split_sharp_edges=None, ambient=None, diffuse=None, specular=None, specular_power=None, nan_color=None, nan_opacity=1.0, culling=None, rgb=None, categories=False, silhouette=None, use_transparency=False, below_color=None, above_color=None, annotations=None, pickable=True, preference=&#39;point&#39;, log_scale=False, pbr=None, metallic=None, roughness=None, render=True, component=None, emissive=None, copy_mesh=False, backface_params=None, show_vertices=None, **kwargs) method of pyvista.plotting.plotter.Plotter instance
+add_mesh(mesh, color=None, style=None, scalars=None, clim=None, show_edges=None, edge_color=None, point_size=None, line_width=None, opacity=None, flip_scalars=False, lighting=None, n_colors=256, interpolate_before_map=None, cmap=None, label=None, reset_camera=None, scalar_bar_args=None, show_scalar_bar=None, multi_colors=False, name=None, texture=None, render_points_as_spheres=None, render_lines_as_tubes=None, smooth_shading=None, split_sharp_edges=None, ambient=None, diffuse=None, specular=None, specular_power=None, nan_color=None, nan_opacity=1.0, culling=None, rgb=None, categories=False, silhouette=None, use_transparency=False, below_color=None, above_color=None, annotations=None, pickable=True, preference=&#39;point&#39;, log_scale=False, pbr=None, metallic=None, roughness=None, render=True, user_matrix=array([[1., 0., 0., 0.],
+       [0., 1., 0., 0.],
+       [0., 0., 1., 0.],
+       [0., 0., 0., 1.]]), component=None, emissive=None, copy_mesh=False, backface_params=None, show_vertices=None, edge_opacity=None, **kwargs) method of pyvista.plotting.plotter.Plotter instance
     Add any PyVista/VTK mesh or dataset that PyVista can wrap to the scene.
 
     This method is using a mesh representation to view the surfaces
@@ -707,9 +710,14 @@ add_mesh(mesh, color=None, style=None, scalars=None, clim=None, show_edges=None,
         If ``False``, a scalar bar will not be added to the
         scene.
 
-    multi_colors : bool, default: False
+    multi_colors : bool | str | cycler.Cycler | sequence[ColorLike], default: False
         If a :class:`pyvista.MultiBlock` dataset is given this will color
-        each block by a solid color using matplotlib&#39;s color cycler.
+        each block by a solid color using a custom cycler.
+
+        If ``True``, the default &#39;matplotlib&#39; color cycler is used.
+
+        See :func:`set_color_cycler&lt;Plotter.set_color_cycler&gt;` for usage of
+        custom color cycles.
 
     name : str, optional
         The name for the added mesh/actor so that it can be easily
@@ -851,6 +859,12 @@ add_mesh(mesh, color=None, style=None, scalars=None, clim=None, show_edges=None,
     render : bool, default: True
         Force a render when ``True``.
 
+    user_matrix : np.ndarray | vtk.vtkMatrix4x4, default: np.eye(4)
+        Matrix passed to the Actor class before rendering. This affects the
+        actor/rendering only, not the input volume itself. The user matrix is the
+        last transformation applied to the actor before rendering. Defaults to the
+        identity matrix.
+
     component : int, optional
         Set component of vector valued scalars to plot.  Must be
         nonnegative, if supplied. If ``None``, the magnitude of
@@ -890,6 +904,16 @@ add_mesh(mesh, color=None, style=None, scalars=None, clim=None, show_edges=None,
         * ``vertex_color`` - The color of the vertices
         * ``vertex_style`` - Change style to ``&#39;points_gaussian&#39;``
         * ``vertex_opacity`` - Control the opacity of the vertices
+
+    edge_opacity : float, optional
+        Edge opacity of the mesh. A single float value that will be applied globally
+        edge opacity of the mesh and uniformly applied everywhere - should be
+        between 0 and 1.
+
+        .. note::
+            `edge_opacity` uses ``SetEdgeOpacity`` as the underlying method which
+            requires VTK version 9.3 or higher. If ``SetEdgeOpacity`` is not
+            available, `edge_opacity` is set to 1.
 
     **kwargs : dict, optional
         Optional keyword arguments.
@@ -1028,7 +1052,7 @@ add_mesh(mesh, color=None, style=None, scalars=None, clim=None, show_edges=None,
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/solutions/a_display_options.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.962 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.921 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-03-figures-solutions-a-display-options-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/solutions/a_display_options.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo11.svg" width="150px" /></a>

@@ -713,30 +713,30 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |  --------
  |  Create an empty ImageData.
  |
- |  &gt;&gt;&gt; import pyvista
- |  &gt;&gt;&gt; grid = pyvista.ImageData()
+ |  &gt;&gt;&gt; import pyvista as pv
+ |  &gt;&gt;&gt; grid = pv.ImageData()
  |
  |  Initialize from a ``vtk.vtkImageData`` object.
  |
  |  &gt;&gt;&gt; import vtk
  |  &gt;&gt;&gt; vtkgrid = vtk.vtkImageData()
- |  &gt;&gt;&gt; grid = pyvista.ImageData(vtkgrid)
+ |  &gt;&gt;&gt; grid = pv.ImageData(vtkgrid)
  |
  |  Initialize using just the grid dimensions and default
  |  spacing and origin. These must be keyword arguments.
  |
- |  &gt;&gt;&gt; grid = pyvista.ImageData(dimensions=(10, 10, 10))
+ |  &gt;&gt;&gt; grid = pv.ImageData(dimensions=(10, 10, 10))
  |
  |  Initialize using dimensions and spacing.
  |
- |  &gt;&gt;&gt; grid = pyvista.ImageData(
+ |  &gt;&gt;&gt; grid = pv.ImageData(
  |  ...     dimensions=(10, 10, 10),
  |  ...     spacing=(2, 1, 5),
  |  ... )
  |
  |  Initialize using dimensions, spacing, and an origin.
  |
- |  &gt;&gt;&gt; grid = pyvista.ImageData(
+ |  &gt;&gt;&gt; grid = pv.ImageData(
  |  ...     dimensions=(10, 10, 10),
  |  ...     spacing=(2, 1, 5),
  |  ...     origin=(10, 35, 50),
@@ -744,12 +744,12 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |  Initialize from another ImageData.
  |
- |  &gt;&gt;&gt; grid = pyvista.ImageData(
+ |  &gt;&gt;&gt; grid = pv.ImageData(
  |  ...     dimensions=(10, 10, 10),
  |  ...     spacing=(2, 1, 5),
  |  ...     origin=(10, 35, 50),
  |  ... )
- |  &gt;&gt;&gt; grid_from_grid = pyvista.ImageData(grid)
+ |  &gt;&gt;&gt; grid_from_grid = pv.ImageData(grid)
  |  &gt;&gt;&gt; grid_from_grid == grid
  |  True
  |
@@ -868,8 +868,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; grid = pyvista.ImageData(dimensions=(2, 2, 2))
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; grid = pv.ImageData(dimensions=(2, 2, 2))
  |      &gt;&gt;&gt; grid.x
  |      array([0., 1., 0., 1., 0., 1., 0., 1.])
  |
@@ -878,8 +878,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; grid = pyvista.ImageData(dimensions=(2, 2, 2))
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; grid = pv.ImageData(dimensions=(2, 2, 2))
  |      &gt;&gt;&gt; grid.y
  |      array([0., 0., 1., 1., 0., 0., 1., 1.])
  |
@@ -888,8 +888,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; grid = pyvista.ImageData(dimensions=(2, 2, 2))
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; grid = pv.ImageData(dimensions=(2, 2, 2))
  |      &gt;&gt;&gt; grid.z
  |      array([0., 0., 0., 0., 1., 1., 1., 1.])
  |
@@ -905,8 +905,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Create a ``ImageData`` and show its extent.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; grid = pyvista.ImageData(dimensions=(10, 10, 10))
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; grid = pv.ImageData(dimensions=(10, 10, 10))
  |      &gt;&gt;&gt; grid.extent
  |      (0, 9, 0, 9, 0, 9)
  |
@@ -927,15 +927,15 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; grid = pyvista.ImageData(dimensions=(5, 5, 5))
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; grid = pv.ImageData(dimensions=(5, 5, 5))
  |      &gt;&gt;&gt; grid.origin
  |      (0.0, 0.0, 0.0)
  |
  |      Show how the origin is in the bottom &quot;southwest&quot; corner of the
  |      ImageData.
  |
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(grid, show_edges=True)
  |      &gt;&gt;&gt; _ = pl.add_axes_at_origin(ylabel=None)
  |      &gt;&gt;&gt; pl.camera_position = &#39;xz&#39;
@@ -945,7 +945,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      ImageData.
  |
  |      &gt;&gt;&gt; grid.origin = (1, 1, 1)
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(grid, show_edges=True)
  |      &gt;&gt;&gt; _ = pl.add_axes_at_origin(ylabel=None)
  |      &gt;&gt;&gt; pl.camera_position = &#39;xz&#39;
@@ -965,8 +965,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; grid = pyvista.ImageData(dimensions=(2, 2, 2))
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; grid = pv.ImageData(dimensions=(2, 2, 2))
  |      &gt;&gt;&gt; grid.points
  |      array([[0., 0., 0.],
  |             [1., 0., 0.],
@@ -990,8 +990,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Create a 5 x 5 x 5 uniform grid.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; grid = pyvista.ImageData(dimensions=(5, 5, 5))
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; grid = pv.ImageData(dimensions=(5, 5, 5))
  |      &gt;&gt;&gt; grid.spacing
  |      (1.0, 1.0, 1.0)
  |      &gt;&gt;&gt; grid.plot(show_edges=True)
@@ -2747,8 +2747,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Create a uniform grid with dimensions ``(1, 2, 3)``.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; grid = pyvista.ImageData(dimensions=(2, 3, 4))
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; grid = pv.ImageData(dimensions=(2, 3, 4))
  |      &gt;&gt;&gt; grid.dimensions
  |      (2, 3, 4)
  |      &gt;&gt;&gt; grid.plot(show_edges=True)
@@ -2794,8 +2794,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Wavelet()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Wavelet()
  |      &gt;&gt;&gt; pointset = mesh.cast_to_pointset()
  |      &gt;&gt;&gt; type(pointset)
  |      &lt;class &#39;pyvista.core.pointset.PointSet&#39;&gt;
@@ -2861,8 +2861,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Cast a :class:`pyvista.PolyData` to a
  |      :class:`pyvista.UnstructuredGrid`.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; type(mesh)
  |      &lt;class &#39;pyvista.core.pointset.PolyData&#39;&gt;
  |      &gt;&gt;&gt; grid = mesh.cast_to_unstructured_grid()
@@ -2925,10 +2925,10 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Show a visual example.
  |
  |      &gt;&gt;&gt; from functools import partial
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere(theta_resolution=10)
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere(theta_resolution=10)
  |      &gt;&gt;&gt;
- |      &gt;&gt;&gt; pl = pyvista.Plotter(shape=(1, 2))
+ |      &gt;&gt;&gt; pl = pv.Plotter(shape=(1, 2))
  |      &gt;&gt;&gt; pl.link_views()
  |      &gt;&gt;&gt; add_point_labels = partial(
  |      ...     pl.add_point_labels,
@@ -2990,7 +2990,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      n_levels : int, default: 1
  |          Number of levels to search for cell neighbors.
- |          When equal to 1, it is equivalent to :func:`pyvista.DataSet.point_neighbors`.
+ |          When equal to 1, it is equivalent to :func:`pyvista.DataSet.cell_neighbors`.
  |
  |      Returns
  |      -------
@@ -3070,42 +3070,42 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; pl.camera.zoom(6.0)
  |      &gt;&gt;&gt; pl.show()
  |
- |  clear_cell_data(self)
+ |  clear_cell_data(self) -&gt; &#39;None&#39;
  |      Remove all cell arrays.
  |
- |  clear_data(self)
+ |  clear_data(self) -&gt; &#39;None&#39;
  |      Remove all arrays from point/cell/field data.
  |
  |      Examples
  |      --------
  |      Clear all arrays from a mesh.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh.point_data.keys()
  |      [&#39;Normals&#39;]
  |      &gt;&gt;&gt; mesh.clear_data()
  |      &gt;&gt;&gt; mesh.point_data.keys()
  |      []
  |
- |  clear_point_data(self)
+ |  clear_point_data(self) -&gt; &#39;None&#39;
  |      Remove all point arrays.
  |
  |      Examples
  |      --------
  |      Clear all point arrays from a mesh.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh.point_data.keys()
  |      [&#39;Normals&#39;]
  |      &gt;&gt;&gt; mesh.clear_point_data()
  |      &gt;&gt;&gt; mesh.point_data.keys()
  |      []
  |
- |  copy_from(self, mesh: &#39;_vtk.vtkDataSet&#39;, deep: &#39;bool&#39; = True)
+ |  copy_from(self, mesh: &#39;_vtk.vtkDataSet&#39;, deep: &#39;bool&#39; = True) -&gt; &#39;None&#39;
  |      Overwrite this dataset inplace with the new dataset&#39;s geometries and data.
  |
  |      Parameters
@@ -3121,14 +3121,14 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Create two meshes and overwrite ``mesh_a`` with ``mesh_b``.
  |      Show that ``mesh_a`` is equal to ``mesh_b``.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh_a = pyvista.Sphere()
- |      &gt;&gt;&gt; mesh_b = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh_a = pv.Sphere()
+ |      &gt;&gt;&gt; mesh_b = pv.Cube()
  |      &gt;&gt;&gt; mesh_a.copy_from(mesh_b)
  |      &gt;&gt;&gt; mesh_a == mesh_b
  |      True
  |
- |  copy_meta_from(self, ido: &#39;DataSet&#39;, deep: &#39;bool&#39; = True)
+ |  copy_meta_from(self, ido: &#39;DataSet&#39;, deep: &#39;bool&#39; = True) -&gt; &#39;None&#39;
  |      Copy pyvista meta data onto this object from another object.
  |
  |      Parameters
@@ -3139,17 +3139,17 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      deep : bool, default: True
  |          Deep or shallow copy.
  |
- |  find_cells_along_line(self, pointa: &#39;Iterable[float]&#39;, pointb: &#39;Iterable[float]&#39;, tolerance=0.0) -&gt; &#39;np.ndarray&#39;
+ |  find_cells_along_line(self, pointa: &#39;Vector&#39;, pointb: &#39;Vector&#39;, tolerance: &#39;float&#39; = 0.0) -&gt; &#39;np.ndarray&#39;
  |      Find the index of cells whose bounds intersect a line.
  |
  |      Line is defined from ``pointa`` to ``pointb``.
  |
  |      Parameters
  |      ----------
- |      pointa : sequence[float]
+ |      pointa : Vector
  |          Length 3 coordinate of the start of the line.
  |
- |      pointb : sequence[float]
+ |      pointb : Vector
  |          Length 3 coordinate of the end of the line.
  |
  |      tolerance : float, default: 0.0
@@ -3178,12 +3178,12 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh.find_cells_along_line([0.0, 0, 0], [1.0, 0, 0])
  |      array([  86,   87, 1652, 1653])
  |
- |  find_cells_intersecting_line(self, pointa: &#39;Iterable[float]&#39;, pointb: &#39;Iterable[float]&#39;, tolerance=0.0) -&gt; &#39;np.ndarray&#39;
+ |  find_cells_intersecting_line(self, pointa: &#39;Vector&#39;, pointb: &#39;Vector&#39;, tolerance: &#39;float&#39; = 0.0) -&gt; &#39;np.ndarray&#39;
  |      Find the index of cells that intersect a line.
  |
  |      Line is defined from ``pointa`` to ``pointb``.  This
@@ -3216,12 +3216,12 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh.find_cells_intersecting_line([0.0, 0, 0], [1.0, 0, 0])
  |      array([  86, 1653])
  |
- |  find_cells_within_bounds(self, bounds: &#39;Iterable[float]&#39;) -&gt; &#39;np.ndarray&#39;
+ |  find_cells_within_bounds(self, bounds: &#39;BoundsLike&#39;) -&gt; &#39;np.ndarray&#39;
  |      Find the index of cells in this mesh within bounds.
  |
  |      Parameters
@@ -3244,18 +3244,18 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; index = mesh.find_cells_within_bounds(
  |      ...     [-2.0, 2.0, -2.0, 2.0, -2.0, 2.0]
  |      ... )
  |
- |  find_closest_cell(self, point: &#39;Union[VectorArray, NumericArray]&#39;, return_closest_point: &#39;bool&#39; = False) -&gt; &#39;Union[int, np.ndarray, Tuple[Union[int, np.ndarray], np.ndarray]]&#39;
+ |  find_closest_cell(self, point: &#39;Union[Vector, Matrix]&#39;, return_closest_point: &#39;bool&#39; = False) -&gt; &#39;Union[int, np.ndarray, Tuple[Union[int, np.ndarray], np.ndarray]]&#39;
  |      Find index of closest cell in this mesh to the given point.
  |
  |      Parameters
  |      ----------
- |      point : array_like[float]
+ |      point : Vector | Matrix
  |          Coordinates of point to query (length 3) or a
  |          :class:`numpy.ndarray` of ``n`` points with shape ``(n, 3)``.
  |
@@ -3300,8 +3300,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Find nearest cell on a sphere centered on the
  |      origin to the point ``[0.1, 0.2, 0.3]``.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; point = [0.1, 0.2, 0.3]
  |      &gt;&gt;&gt; index = mesh.find_closest_cell(point)
  |      &gt;&gt;&gt; index
@@ -3331,7 +3331,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      ``z`` normal and ``z=0``.  The closest point inside the cell is
  |      not usually at a nodal point.
  |
- |      &gt;&gt;&gt; unit_square = pyvista.Rectangle()
+ |      &gt;&gt;&gt; unit_square = pv.Rectangle()
  |      &gt;&gt;&gt; index, closest_point = unit_square.find_closest_cell(
  |      ...     [0.25, 0.25, 0.5], return_closest_point=True
  |      ... )
@@ -3381,8 +3381,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Find the index of the closest point to ``(0, 1, 0)``.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; index = mesh.find_closest_point((0, 1, 0))
  |      &gt;&gt;&gt; index
  |      239
@@ -3392,12 +3392,12 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; mesh.points[index]
  |      pyvista_ndarray([-0.05218758,  0.49653167,  0.02706946], dtype=float32)
  |
- |  find_containing_cell(self, point: &#39;Union[VectorArray, NumericArray]&#39;) -&gt; &#39;Union[int, np.ndarray]&#39;
+ |  find_containing_cell(self, point: &#39;Union[Vector, Matrix]&#39;) -&gt; &#39;Union[int, np.ndarray]&#39;
  |      Find index of a cell that contains the given point.
  |
  |      Parameters
  |      ----------
- |      point : array_like[float]
+ |      point : Vector, Matrix
  |          Coordinates of point to query (length 3) or a
  |          :class:`numpy.ndarray` of ``n`` points with shape ``(n, 3)``.
  |
@@ -3423,8 +3423,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      A unit square with 16 equal sized cells is created and a cell
  |      containing the point ``[0.3, 0.3, 0.0]`` is found.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.ImageData(
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.ImageData(
  |      ...     dimensions=[5, 5, 1], spacing=[1 / 4, 1 / 4, 0]
  |      ... )
  |      &gt;&gt;&gt; mesh
@@ -3445,7 +3445,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; indices.shape
  |      (1000,)
  |
- |  flip_normal(self, normal: &#39;List[float]&#39;, point=None, transform_all_input_vectors=False, inplace=False)
+ |  flip_normal(self, normal: &#39;Vector&#39;, point: &#39;Optional[Vector]&#39; = None, transform_all_input_vectors: &#39;bool&#39; = False, inplace: &#39;bool&#39; = False)
  |      Flip mesh about the normal.
  |
  |      .. note::
@@ -3455,7 +3455,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Parameters
  |      ----------
- |      normal : tuple
+ |      normal : sequence[float]
  |         Normal vector to flip about.
  |
  |      point : sequence[float]
@@ -3477,9 +3477,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
- |      &gt;&gt;&gt; pl = pyvista.Plotter(shape=(1, 2))
+ |      &gt;&gt;&gt; pl = pv.Plotter(shape=(1, 2))
  |      &gt;&gt;&gt; pl.subplot(0, 0)
  |      &gt;&gt;&gt; pl.show_axes()
  |      &gt;&gt;&gt; mesh1 = examples.download_teapot()
@@ -3490,7 +3490,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; _ = pl.add_mesh(mesh2)
  |      &gt;&gt;&gt; pl.show(cpos=&quot;xy&quot;)
  |
- |  flip_x(self, point=None, transform_all_input_vectors=False, inplace=False)
+ |  flip_x(self, point: &#39;Optional[Vector]&#39; = None, transform_all_input_vectors: &#39;bool&#39; = False, inplace: &#39;bool&#39; = False)
  |      Flip mesh about the x-axis.
  |
  |      .. note::
@@ -3519,9 +3519,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
- |      &gt;&gt;&gt; pl = pyvista.Plotter(shape=(1, 2))
+ |      &gt;&gt;&gt; pl = pv.Plotter(shape=(1, 2))
  |      &gt;&gt;&gt; pl.subplot(0, 0)
  |      &gt;&gt;&gt; pl.show_axes()
  |      &gt;&gt;&gt; mesh1 = examples.download_teapot()
@@ -3532,7 +3532,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; _ = pl.add_mesh(mesh2)
  |      &gt;&gt;&gt; pl.show(cpos=&quot;xy&quot;)
  |
- |  flip_y(self, point=None, transform_all_input_vectors=False, inplace=False)
+ |  flip_y(self, point: &#39;Optional[Vector]&#39; = None, transform_all_input_vectors: &#39;bool&#39; = False, inplace: &#39;bool&#39; = False)
  |      Flip mesh about the y-axis.
  |
  |      .. note::
@@ -3561,9 +3561,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
- |      &gt;&gt;&gt; pl = pyvista.Plotter(shape=(1, 2))
+ |      &gt;&gt;&gt; pl = pv.Plotter(shape=(1, 2))
  |      &gt;&gt;&gt; pl.subplot(0, 0)
  |      &gt;&gt;&gt; pl.show_axes()
  |      &gt;&gt;&gt; mesh1 = examples.download_teapot()
@@ -3574,7 +3574,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; _ = pl.add_mesh(mesh2)
  |      &gt;&gt;&gt; pl.show(cpos=&quot;xy&quot;)
  |
- |  flip_z(self, point=None, transform_all_input_vectors=False, inplace=False)
+ |  flip_z(self, point: &#39;Optional[Vector]&#39; = None, transform_all_input_vectors: &#39;bool&#39; = False, inplace: &#39;bool&#39; = False)
  |      Flip mesh about the z-axis.
  |
  |      .. note::
@@ -3584,16 +3584,16 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Parameters
  |      ----------
- |      point : list, optional
+ |      point : Vector, optional
  |          Point to rotate about.  Defaults to center of mesh at
  |          :attr:`center &lt;pyvista.DataSet.center&gt;`.
  |
- |      transform_all_input_vectors : bool, optional
+ |      transform_all_input_vectors : bool, default: False
  |          When ``True``, all input vectors are
  |          transformed. Otherwise, only the points, normals and
  |          active vectors are transformed.
  |
- |      inplace : bool, optional
+ |      inplace : bool, default: False
  |          Updates mesh in-place.
  |
  |      Returns
@@ -3603,9 +3603,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
- |      &gt;&gt;&gt; pl = pyvista.Plotter(shape=(1, 2))
+ |      &gt;&gt;&gt; pl = pv.Plotter(shape=(1, 2))
  |      &gt;&gt;&gt; pl.subplot(0, 0)
  |      &gt;&gt;&gt; pl.show_axes()
  |      &gt;&gt;&gt; mesh1 = examples.download_teapot().rotate_x(90, inplace=False)
@@ -3638,8 +3638,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Create a DataSet with a variety of arrays.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; mesh.clear_data()
  |      &gt;&gt;&gt; mesh.point_data[&#39;point-data&#39;] = range(mesh.n_points)
  |      &gt;&gt;&gt; mesh.cell_data[&#39;cell-data&#39;] = range(mesh.n_cells)
@@ -3684,8 +3684,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Create a DataSet with a variety of arrays.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; mesh.clear_data()
  |      &gt;&gt;&gt; mesh.point_data[&#39;point-data&#39;] = range(mesh.n_points)
  |      &gt;&gt;&gt; mesh.cell_data[&#39;cell-data&#39;] = range(mesh.n_cells)
@@ -3761,8 +3761,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; cell.faces[-1].point_ids
  |      [0, 2, 1]
  |
- |  get_data_range(self, arr_var: &#39;Optional[Union[str, np.ndarray]]&#39; = None, preference=&#39;cell&#39;) -&gt; &#39;Tuple[Union[float, np.ndarray], Union[float, np.ndarray]]&#39;
- |      Get the non-NaN min and max of a named array.
+ |  get_data_range(self, arr_var: &#39;Optional[Union[str, np.ndarray]]&#39; = None, preference=&#39;cell&#39;) -&gt; &#39;Tuple[float, float]&#39;
+ |      Get the min and max of a named array.
  |
  |      Parameters
  |      ----------
@@ -3780,18 +3780,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      tuple
  |          ``(min, max)`` of the named array.
  |
- |  overwrite(self, mesh: &#39;_vtk.vtkDataSet&#39;)
- |      Overwrite this dataset inplace with the new dataset&#39;s geometries and data.
- |
- |      .. deprecated:: 0.37.0
- |          Use :func:`DataSet.copy_from` instead.
- |
- |      Parameters
- |      ----------
- |      mesh : vtk.vtkDataSet
- |          The overwriting mesh.
- |
- |  plot(var_item, off_screen=None, full_screen=None, screenshot=None, interactive=True, cpos=None, window_size=None, show_bounds=False, show_axes=None, notebook=None, background=None, text=&#39;&#39;, return_img=False, eye_dome_lighting=False, volume=False, parallel_projection=False, jupyter_backend=None, return_viewer=False, return_cpos=False, jupyter_kwargs=None, theme=None, hidden_line_removal=None, anti_aliasing=None, zoom=None, border=False, border_color=&#39;k&#39;, border_width=2.0, ssao=False, **kwargs)
+ |  plot(var_item, off_screen=None, full_screen=None, screenshot=None, interactive=True, cpos=None, window_size=None, show_bounds=False, show_axes=None, notebook=None, background=None, text=&#39;&#39;, return_img=False, eye_dome_lighting=False, volume=False, parallel_projection=False, jupyter_backend=None, return_viewer=False, return_cpos=False, jupyter_kwargs=None, theme=None, anti_aliasing=None, zoom=None, border=False, border_color=&#39;k&#39;, border_width=2.0, ssao=False, **kwargs)
  |      Plot a PyVista, numpy, or vtk object.
  |
  |      Parameters
@@ -3879,12 +3868,6 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      theme : pyvista.plotting.themes.Theme, optional
  |          Plot-specific theme.
- |
- |      hidden_line_removal : bool, default: :attr:`pyvista.plotting.themes.Theme.hidden_line_removal`
- |          Wireframe geometry will be drawn using hidden line removal if
- |          the rendering engine supports it.  See
- |          :func:`Plotter.enable_hidden_line_removal
- |          &lt;Plotter.enable_hidden_line_removal&gt;`.
  |
  |      anti_aliasing : str | bool, default: :attr:`pyvista.plotting.themes.Theme.anti_aliasing`
  |          Enable or disable anti-aliasing. If ``True``, uses ``&quot;msaa&quot;``. If False,
@@ -4016,7 +3999,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; pl.camera.zoom(7.0)
  |      &gt;&gt;&gt; pl.show()
  |
- |  point_is_inside_cell(self, ind: &#39;int&#39;, point: &#39;Union[VectorArray, NumericArray]&#39;) -&gt; &#39;Union[int, np.ndarray]&#39;
+ |  point_is_inside_cell(self, ind: &#39;int&#39;, point: &#39;Vector | Matrix&#39;) -&gt; &#39;Union[int, np.ndarray]&#39;
  |      Return whether one or more points are inside a cell.
  |
  |      .. versionadded:: 0.35.0
@@ -4026,14 +4009,13 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      ind : int
  |          Cell ID.
  |
- |      point : array_like[float]
- |          Coordinates of point to query (length 3) or a
- |          :class:`numpy.ndarray` of ``n`` points with shape ``(n, 3)``.
+ |      point : Matrix
+ |          Point or points to query if are inside a cell.
  |
  |      Returns
  |      -------
  |      bool or numpy.ndarray
- |          Whether point(s) is/are inside cell. A scalar bool is only returned if
+ |          Whether point(s) is/are inside cell. A single bool is only returned if
  |          the input point has shape ``(3,)``.
  |
  |      Examples
@@ -4163,7 +4145,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; pl.camera.zoom(4.0)
  |      &gt;&gt;&gt; pl.show()
  |
- |  rename_array(self, old_name: &#39;str&#39;, new_name: &#39;str&#39;, preference=&#39;cell&#39;)
+ |  rename_array(self, old_name: &#39;str&#39;, new_name: &#39;str&#39;, preference=&#39;cell&#39;) -&gt; &#39;None&#39;
  |      Change array name by searching for the array then renaming it.
  |
  |      Parameters
@@ -4185,15 +4167,15 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Create a cube, assign a point array to the mesh named
  |      ``&#39;my_array&#39;``, and rename it to ``&#39;my_renamed_array&#39;``.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; cube = pyvista.Cube()
+ |      &gt;&gt;&gt; cube = pv.Cube()
  |      &gt;&gt;&gt; cube[&#39;my_array&#39;] = range(cube.n_points)
  |      &gt;&gt;&gt; cube.rename_array(&#39;my_array&#39;, &#39;my_renamed_array&#39;)
  |      &gt;&gt;&gt; cube[&#39;my_renamed_array&#39;]
  |      pyvista_ndarray([0, 1, 2, 3, 4, 5, 6, 7])
  |
- |  rotate_vector(self, vector: &#39;Iterable[float]&#39;, angle: &#39;float&#39;, point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
+ |  rotate_vector(self, vector: &#39;Vector&#39;, angle: &#39;float&#39;, point: &#39;Vector&#39; = (0.0, 0.0, 0.0), transform_all_input_vectors: &#39;bool&#39; = False, inplace: &#39;bool&#39; = False)
  |      Rotate mesh about a vector.
  |
  |      .. note::
@@ -4203,14 +4185,14 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Parameters
  |      ----------
- |      vector : sequence[float]
- |          Axis to rotate about.
+ |      vector : Vector
+ |          Vector to rotate about.
  |
  |      angle : float
- |          Angle in degrees to rotate about the vector.
+ |          Angle to rotate.
  |
- |      point : sequence[float], default: (0.0, 0.0, 0.0)
- |          Point to rotate about.  Defaults to origin.
+ |      point : Vector, default: (0.0, 0.0, 0.0)
+ |          Point to rotate about. Defaults to origin.
  |
  |      transform_all_input_vectors : bool, default: False
  |          When ``True``, all input vectors are
@@ -4229,19 +4211,19 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Rotate a mesh 30 degrees about the ``(1, 1, 1)`` axis.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; rot = mesh.rotate_vector((1, 1, 1), 30, inplace=False)
  |
  |      Plot the rotated mesh.
  |
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(rot)
  |      &gt;&gt;&gt; _ = pl.add_mesh(mesh, style=&#39;wireframe&#39;, line_width=3)
  |      &gt;&gt;&gt; _ = pl.add_axes_at_origin()
  |      &gt;&gt;&gt; pl.show()
  |
- |  rotate_x(self, angle: &#39;float&#39;, point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
+ |  rotate_x(self, angle: &#39;float&#39;, point: &#39;Vector&#39; = (0.0, 0.0, 0.0), transform_all_input_vectors: &#39;bool&#39; = False, inplace: &#39;bool&#39; = False)
  |      Rotate mesh about the x-axis.
  |
  |      .. note::
@@ -4254,7 +4236,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      angle : float
  |          Angle in degrees to rotate about the x-axis.
  |
- |      point : sequence[float], default: (0.0, 0.0, 0.0)
+ |      point : Vector, default: (0.0, 0.0, 0.0)
  |          Point to rotate about. Defaults to origin.
  |
  |      transform_all_input_vectors : bool, default: False
@@ -4274,19 +4256,19 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Rotate a mesh 30 degrees about the x-axis.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; rot = mesh.rotate_x(30, inplace=False)
  |
  |      Plot the rotated mesh.
  |
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(rot)
  |      &gt;&gt;&gt; _ = pl.add_mesh(mesh, style=&#39;wireframe&#39;, line_width=3)
  |      &gt;&gt;&gt; _ = pl.add_axes_at_origin()
  |      &gt;&gt;&gt; pl.show()
  |
- |  rotate_y(self, angle: &#39;float&#39;, point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
+ |  rotate_y(self, angle: &#39;float&#39;, point: &#39;Vector&#39; = (0.0, 0.0, 0.0), transform_all_input_vectors: &#39;bool&#39; = False, inplace: &#39;bool&#39; = False)
  |      Rotate mesh about the y-axis.
  |
  |      .. note::
@@ -4299,7 +4281,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      angle : float
  |          Angle in degrees to rotate about the y-axis.
  |
- |      point : sequence[float], default: (0.0, 0.0, 0.0)
+ |      point : Vector, default: (0.0, 0.0, 0.0)
  |          Point to rotate about.
  |
  |      transform_all_input_vectors : bool, default: False
@@ -4318,19 +4300,19 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Rotate a cube 30 degrees about the y-axis.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; rot = mesh.rotate_y(30, inplace=False)
  |
  |      Plot the rotated mesh.
  |
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(rot)
  |      &gt;&gt;&gt; _ = pl.add_mesh(mesh, style=&#39;wireframe&#39;, line_width=3)
  |      &gt;&gt;&gt; _ = pl.add_axes_at_origin()
  |      &gt;&gt;&gt; pl.show()
  |
- |  rotate_z(self, angle: &#39;float&#39;, point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
+ |  rotate_z(self, angle: &#39;float&#39;, point: &#39;Vector&#39; = (0.0, 0.0, 0.0), transform_all_input_vectors: &#39;bool&#39; = False, inplace: &#39;bool&#39; = False)
  |      Rotate mesh about the z-axis.
  |
  |      .. note::
@@ -4343,7 +4325,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      angle : float
  |          Angle in degrees to rotate about the z-axis.
  |
- |      point : sequence[float], default: (0.0, 0.0, 0.0)
+ |      point : Vector, default: (0.0, 0.0, 0.0)
  |          Point to rotate about.  Defaults to origin.
  |
  |      transform_all_input_vectors : bool, default: False
@@ -4363,19 +4345,19 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Rotate a mesh 30 degrees about the z-axis.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; rot = mesh.rotate_z(30, inplace=False)
  |
  |      Plot the rotated mesh.
  |
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(rot)
  |      &gt;&gt;&gt; _ = pl.add_mesh(mesh, style=&#39;wireframe&#39;, line_width=3)
  |      &gt;&gt;&gt; _ = pl.add_axes_at_origin()
  |      &gt;&gt;&gt; pl.show()
  |
- |  scale(self, xyz: &#39;Union[Number, list, tuple, np.ndarray]&#39;, transform_all_input_vectors=False, inplace=False)
+ |  scale(self, xyz: &#39;Union[Number, Vector]&#39;, transform_all_input_vectors: &#39;bool&#39; = False, inplace: &#39;bool&#39; = False)
  |      Scale the mesh.
  |
  |      .. note::
@@ -4385,10 +4367,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Parameters
  |      ----------
- |      xyz : float | sequence[float]
- |          A scalar or length 3 sequence defining the scale factors along x,
- |          y, and z. If a scalar, the same uniform scale is used along all
- |          three axes.
+ |      xyz : Number | Vector
+ |          A vector sequence defining the scale factors along x, y, and z. If
+ |          a scalar, the same uniform scale is used along all three axes.
  |
  |      transform_all_input_vectors : bool, default: False
  |          When ``True``, all input vectors are transformed. Otherwise, only
@@ -4404,9 +4385,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
- |      &gt;&gt;&gt; pl = pyvista.Plotter(shape=(1, 2))
+ |      &gt;&gt;&gt; pl = pv.Plotter(shape=(1, 2))
  |      &gt;&gt;&gt; pl.subplot(0, 0)
  |      &gt;&gt;&gt; pl.show_axes()
  |      &gt;&gt;&gt; _ = pl.show_grid()
@@ -4419,7 +4400,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; _ = pl.add_mesh(mesh2)
  |      &gt;&gt;&gt; pl.show(cpos=&quot;xy&quot;)
  |
- |  set_active_scalars(self, name: &#39;Optional[str]&#39;, preference=&#39;cell&#39;)
+ |  set_active_scalars(self, name: &#39;Optional[str]&#39;, preference=&#39;cell&#39;) -&gt; &#39;Tuple[FieldAssociation, Optional[np.ndarray]]&#39;
  |      Find the scalars by name and appropriately sets it as active.
  |
  |      To deactivate any active scalars, pass ``None`` as the ``name``.
@@ -4441,10 +4422,10 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      pyvista.core.utilities.arrays.FieldAssociation
  |          Association of the scalars matching ``name``.
  |
- |      numpy.ndarray
+ |      pyvista_ndarray
  |          An array from the dataset matching ``name``.
  |
- |  set_active_tensors(self, name: &#39;Optional[str]&#39;, preference=&#39;point&#39;)
+ |  set_active_tensors(self, name: &#39;Optional[str]&#39;, preference: &#39;str&#39; = &#39;point&#39;) -&gt; &#39;None&#39;
  |      Find the tensors by name and appropriately sets it as active.
  |
  |      To deactivate any active tensors, pass ``None`` as the ``name``.
@@ -4460,7 +4441,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |          matching this type.  Can be either ``&#39;cell&#39;``,
  |          ``&#39;field&#39;``, or ``&#39;point&#39;``.
  |
- |  set_active_vectors(self, name: &#39;Optional[str]&#39;, preference=&#39;point&#39;)
+ |  set_active_vectors(self, name: &#39;Optional[str]&#39;, preference: &#39;str&#39; = &#39;point&#39;) -&gt; &#39;None&#39;
  |      Find the vectors by name and appropriately sets it as active.
  |
  |      To deactivate any active vectors, pass ``None`` as the ``name``.
@@ -4476,7 +4457,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |          matching this type.  Can be either ``&#39;cell&#39;``,
  |          ``&#39;field&#39;``, or ``&#39;point&#39;``.
  |
- |  translate(self, xyz: &#39;Union[list, tuple, np.ndarray]&#39;, transform_all_input_vectors=False, inplace=False)
+ |  translate(self, xyz: &#39;Vector&#39;, transform_all_input_vectors: &#39;bool&#39; = False, inplace: &#39;bool&#39; = False)
  |      Translate the mesh.
  |
  |      .. note::
@@ -4486,8 +4467,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Parameters
  |      ----------
- |      xyz : sequence[float]
- |          Length 3 sequence of floats.
+ |      xyz : Vector
+ |          A vector of three floats.
  |
  |      transform_all_input_vectors : bool, default: False
  |          When ``True``, all input vectors are
@@ -4506,8 +4487,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Create a sphere and translate it by ``(2, 1, 2)``.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh.center
  |      [0.0, 0.0, 0.0]
  |      &gt;&gt;&gt; trans = mesh.translate((2, 1, 2), inplace=False)
@@ -4536,8 +4517,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      active normals for the dataset.  Show that this is the same size
  |      as the number of points.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh = mesh.compute_normals()
  |      &gt;&gt;&gt; normals = mesh.active_normals
  |      &gt;&gt;&gt; normals.shape
@@ -4577,8 +4558,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      scalars info.  Note how when the scalars are added, they
  |      automatically become the active scalars.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh[&#39;Z Height&#39;] = mesh.points[:, 2]
  |      &gt;&gt;&gt; mesh.active_scalars_info
  |      ActiveArrayInfoTuple(association=&lt;FieldAssociation.POINT: 0&gt;, name=&#39;Z Height&#39;)
@@ -4612,8 +4593,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Create a mesh, compute the normals inplace, and return the
  |      normals vector array.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; _ = mesh.compute_normals(inplace=True)
  |      &gt;&gt;&gt; mesh.active_vectors  # doctest:+SKIP
  |      pyvista_ndarray([[-2.48721432e-10, -1.08815623e-09, -1.00000000e+00],
@@ -4649,8 +4630,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      vectors to the normals, and show that the active vectors are
  |      the ``&#39;Normals&#39;`` array associated with points.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; _ = mesh.compute_normals(inplace=True)
  |      &gt;&gt;&gt; mesh.active_vectors_name = &#39;Normals&#39;
  |      &gt;&gt;&gt; mesh.active_vectors_info
@@ -4704,8 +4685,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Return the array names for a mesh.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh.point_data[&#39;my_array&#39;] = range(mesh.n_points)
  |      &gt;&gt;&gt; mesh.array_names
  |      [&#39;my_array&#39;, &#39;Normals&#39;]
@@ -4727,8 +4708,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Create a mesh, compute the normals and set them active, and
  |      plot the active vectors.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; mesh_w_normals = mesh.compute_normals()
  |      &gt;&gt;&gt; mesh_w_normals.active_vectors_name = &#39;Normals&#39;
  |      &gt;&gt;&gt; arrows = mesh_w_normals.arrows
@@ -4747,8 +4728,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Create a cube and return the bounds of the mesh.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; cube = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; cube = pv.Cube()
  |      &gt;&gt;&gt; cube.bounds
  |      (-0.5, 0.5, -0.5, 0.5, -0.5, 0.5)
  |
@@ -4792,9 +4773,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Add cell arrays to a mesh and list the available ``cell_data``.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; mesh.clear_data()
  |      &gt;&gt;&gt; mesh.cell_data[&#39;my_array&#39;] = np.random.random(mesh.n_cells)
  |      &gt;&gt;&gt; mesh.cell_data[&#39;my_other_array&#39;] = np.arange(mesh.n_cells)
@@ -4824,15 +4805,15 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Returns
  |      -------
- |      Vector :
+ |      Vector
  |          Center of the bounding box.
  |
  |      Examples
  |      --------
  |      Get the center of a mesh.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere(center=(1, 2, 0))
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere(center=(1, 2, 0))
  |      &gt;&gt;&gt; mesh.center
  |      [1.0, 2.0, 0.0]
  |
@@ -4841,7 +4822,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Returns
  |      -------
- |      float :
+ |      float
  |          Length of the diagonal of the bounding box.
  |
  |      Examples
@@ -4850,8 +4831,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      match ``3**(1/2)`` since it is the diagonal of a cube that is
  |      ``1 x 1 x 1``.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; mesh.length
  |      1.7320508075688772
  |
@@ -4873,16 +4854,16 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Notes
  |      -----
- |      This is identical to :attr:`n_faces &lt;pyvista.PolyData.n_faces&gt;`
- |      in :class:`pyvista.PolyData`.
+ |      This returns the total number of cells -- for :class:`pyvista.PolyData`
+ |      this includes vertices, lines, triangle strips and polygonal faces.
  |
  |      Examples
  |      --------
  |      Create a mesh and return the number of cells in the
  |      mesh.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; cube = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; cube = pv.Cube()
  |      &gt;&gt;&gt; cube.n_cells
  |      6
  |
@@ -4899,8 +4880,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Create a mesh and return the number of points in the
  |      mesh.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; cube = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; cube = pv.Cube()
  |      &gt;&gt;&gt; cube.n_points
  |      8
  |
@@ -4932,9 +4913,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Add point arrays to a mesh and list the available ``point_data``.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; mesh.clear_data()
  |      &gt;&gt;&gt; mesh.point_data[&#39;my_array&#39;] = np.random.random(mesh.n_points)
  |      &gt;&gt;&gt; mesh.point_data[&#39;my_other_array&#39;] = np.arange(mesh.n_points)
@@ -5008,13 +4989,29 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Create a mesh, add scalars to the mesh, and return the name of
  |      the active scalars.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh[&#39;Z Height&#39;] = mesh.points[:, 2]
  |      &gt;&gt;&gt; mesh.active_scalars_name
  |      &#39;Z Height&#39;
  |
  |  active_t_coords
+ |      Return the active texture coordinates on the points.
+ |
+ |      Returns
+ |      -------
+ |      Optional[pyvista_ndarray]
+ |          Active texture coordinates on the points.
+ |
+ |  active_tensors_name
+ |      Return the name of the active tensor array.
+ |
+ |      Returns
+ |      -------
+ |      str
+ |          Name of the active tensor array.
+ |
+ |  active_texture_coordinates
  |      Return the active texture coordinates on the points.
  |
  |      Returns
@@ -5028,7 +5025,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      &gt;&gt;&gt; from pyvista import examples
  |      &gt;&gt;&gt; globe = examples.load_globe()
- |      &gt;&gt;&gt; globe.active_t_coords
+ |      &gt;&gt;&gt; globe.active_texture_coordinates
  |      pyvista_ndarray([[0.        , 0.        ],
  |                       [0.        , 0.07142857],
  |                       [0.        , 0.14285714],
@@ -5036,14 +5033,6 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |                       [1.        , 0.85714286],
  |                       [1.        , 0.92857143],
  |                       [1.        , 1.        ]])
- |
- |  active_tensors_name
- |      Return the name of the active tensor array.
- |
- |      Returns
- |      -------
- |      str
- |          Name of the active tensor array.
  |
  |  active_vectors_name
  |      Return the name of the active vectors array.
@@ -5058,8 +5047,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Create a mesh, compute the normals, set them as active, and
  |      return the name of the active vectors.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh_w_normals = mesh.compute_normals()
  |      &gt;&gt;&gt; mesh_w_normals.active_vectors_name = &#39;Normals&#39;
  |      &gt;&gt;&gt; mesh_w_normals.active_vectors_name
@@ -5067,6 +5056,78 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |  ----------------------------------------------------------------------
  |  Methods inherited from pyvista.core.filters.image_data.ImageDataFilters:
+ |
+ |  contour_labeled(self, n_labels: Optional[int] = None, smoothing: bool = False, smoothing_num_iterations: int = 50, smoothing_relaxation_factor: float = 0.5, smoothing_constraint_distance: float = 1, output_mesh_type: Literal[&#39;quads&#39;, &#39;triangles&#39;] = &#39;quads&#39;, output_style: Literal[&#39;default&#39;, &#39;boundary&#39;] = &#39;default&#39;, scalars: Optional[str] = None, progress_bar: bool = False) -&gt; &#39;pyvista.PolyData&#39;
+ |      Generate labeled contours from 3D label maps.
+ |
+ |      SurfaceNets algorithm is used to extract contours preserving sharp
+ |      boundaries for the selected labels from the label maps.
+ |      Optionally, the boundaries can be smoothened to reduce the staircase
+ |      appearance in case of low resolution input label maps.
+ |
+ |      This filter requires that the :class:`ImageData` has integer point
+ |      scalars, such as multi-label maps generated from image segmentation.
+ |
+ |      .. note::
+ |         Requires ``vtk&gt;=9.3.0``.
+ |
+ |      Parameters
+ |      ----------
+ |      n_labels : int, optional
+ |          Number of labels to be extracted (all are extracted if None is given).
+ |
+ |      smoothing : bool, default: False
+ |          Apply smoothing to the meshes.
+ |
+ |      smoothing_num_iterations : int, default: 50
+ |          Number of smoothing iterations.
+ |
+ |      smoothing_relaxation_factor : float, default: 0.5
+ |          Relaxation factor of the smoothing.
+ |
+ |      smoothing_constraint_distance : float, default: 1
+ |          Constraint distance of the smoothing.
+ |
+ |      output_mesh_type : str, default: &#39;quads&#39;
+ |          Type of the output mesh. Must be either ``&#39;quads&#39;``, or ``&#39;triangles&#39;``.
+ |
+ |      output_style : str, default: &#39;default&#39;
+ |          Style of the output mesh. Must be either ``&#39;default&#39;`` or ``&#39;boundary&#39;``.
+ |          When ``&#39;default&#39;`` is specified, the filter produces a mesh with both
+ |          interior and exterior polygons. When ``&#39;boundary&#39;`` is selected, only
+ |          polygons on the border with the background are produced (without interior
+ |          polygons). Note that style ``&#39;selected&#39;`` is currently not implemented.
+ |
+ |      scalars : str, optional
+ |          Name of scalars to process. Defaults to currently active scalars.
+ |
+ |      progress_bar : bool, default: False
+ |          Display a progress bar to indicate progress.
+ |
+ |      Returns
+ |      -------
+ |      pyvista.PolyData
+ |          :class:`pyvista.PolyData` Labeled mesh with the segments labeled.
+ |
+ |      References
+ |      ----------
+ |      Sarah F. Frisken, SurfaceNets for Multi-Label Segmentations with Preservation
+ |      of Sharp Boundaries, Journal of Computer Graphics Techniques (JCGT), vol. 11,
+ |      no. 1, 34-54, 2022. Available online http://jcgt.org/published/0011/01/03/
+ |
+ |      https://www.kitware.com/really-fast-isocontouring/
+ |
+ |      Examples
+ |      --------
+ |      See :ref:`contouring_example` for a full example using this filter.
+ |
+ |      See Also
+ |      --------
+ |      pyvista.DataSetFilters.contour
+ |          Generalized contouring method which uses MarchingCubes or FlyingEdges.
+ |
+ |      pyvista.DataSetFilters.pack_labels
+ |          Function used internally by SurfaceNets to generate contiguous label data.
  |
  |  extract_subset(self, voi, rate=(1, 1, 1), boundary=False, progress_bar=False)
  |      Select piece (e.g., volume of interest).
@@ -5201,9 +5262,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      to create meaningful data.
  |
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; noise = pyvista.perlin_noise(0.1, (2, 5, 8), (0, 0, 0))
- |      &gt;&gt;&gt; grid = pyvista.sample_function(
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; noise = pv.perlin_noise(0.1, (2, 5, 8), (0, 0, 0))
+ |      &gt;&gt;&gt; grid = pv.sample_function(
  |      ...     noise, [0, 1, 0, 1, 0, 1], dim=(20, 20, 20)
  |      ... )
  |      &gt;&gt;&gt; grid.plot(show_scalar_bar=False)
@@ -5496,9 +5557,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      to create meaningful data.
  |
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; noise = pyvista.perlin_noise(0.1, (2, 5, 8), (0, 0, 0))
- |      &gt;&gt;&gt; grid = pyvista.sample_function(
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; noise = pv.perlin_noise(0.1, (2, 5, 8), (0, 0, 0))
+ |      &gt;&gt;&gt; grid = pv.sample_function(
  |      ...     noise, [0, 1, 0, 1, 0, 1], dim=(20, 20, 20)
  |      ... )
  |      &gt;&gt;&gt; grid.plot(show_scalar_bar=False)
@@ -5683,11 +5744,11 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Plane()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Plane()
  |      &gt;&gt;&gt; mesh.point_data.clear()
  |      &gt;&gt;&gt; centers = mesh.cell_centers()
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; actor = pl.add_mesh(mesh, show_edges=True)
  |      &gt;&gt;&gt; actor = pl.add_points(
  |      ...     centers,
@@ -5785,7 +5846,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Returns
  |      -------
- |      pyvista.PolyData or tuple(pyvista.PolyData)
+ |      pyvista.PolyData or tuple[pyvista.PolyData]
  |          Clipped mesh when ``return_clipped=False``,
  |          otherwise a tuple containing the unclipped and clipped datasets.
  |
@@ -5972,9 +6033,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Clip a cube with a sphere.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere(center=(-0.4, -0.4, -0.4))
- |      &gt;&gt;&gt; cube = pyvista.Cube().triangulate().subdivide(3)
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere(center=(-0.4, -0.4, -0.4))
+ |      &gt;&gt;&gt; cube = pv.Cube().triangulate().subdivide(3)
  |      &gt;&gt;&gt; clipped = cube.clip_surface(sphere)
  |      &gt;&gt;&gt; clipped.plot(show_edges=True, cpos=&#39;xy&#39;, line_width=3)
  |
@@ -6048,8 +6109,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Compute and plot the minimum angle of a sample sphere mesh.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere(theta_resolution=20, phi_resolution=20)
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere(theta_resolution=20, phi_resolution=20)
  |      &gt;&gt;&gt; cqual = sphere.compute_cell_quality(&#39;min_angle&#39;)
  |      &gt;&gt;&gt; cqual.plot(show_edges=True)
  |
@@ -6239,41 +6300,173 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      :ref:`voxelize_surface_mesh_example` for more examples using
  |      this filter.
  |
- |  connectivity(self, largest=False, progress_bar=False)
- |      Find and label connected bodies/volumes.
+ |  connectivity(self, extraction_mode: Literal[&#39;all&#39;, &#39;largest&#39;, &#39;specified&#39;, &#39;cell_seed&#39;, &#39;point_seed&#39;, &#39;closest&#39;] = &#39;all&#39;, variable_input=None, scalar_range=None, scalars=None, label_regions=True, region_ids=None, point_ids=None, cell_ids=None, closest_point=None, inplace=False, progress_bar=False, **kwargs)
+ |      Find and label connected regions.
  |
- |      This adds an ID array to the point and cell data to
- |      distinguish separate connected bodies. This applies a
- |      ``vtkConnectivityFilter`` filter which extracts cells that
- |      share common points and/or meet other connectivity criterion.
+ |      This filter extracts cell regions based on a specified connectivity
+ |      criterion. The extraction criterion can be controlled with
+ |      ``extraction_mode`` to extract the largest region or the closest
+ |      region to a seed point, for example.
  |
- |      Cells that share vertices and meet other connectivity
- |      criterion such as scalar range are known as a region.
+ |      In general, cells are considered to be connected if they
+ |      share a point. However, if a ``scalar_range`` is provided, cells
+ |      must also have at least one point with scalar values in the
+ |      specified range to be considered connected.
+ |
+ |      See :ref:`connectivity_example` and :ref:`volumetric_example` for
+ |      more examples using this filter.
+ |
+ |      .. versionadded:: 0.43.0
+ |
+ |         * New extraction modes: ``&#39;specified&#39;``, ``&#39;cell_seed&#39;``, ``&#39;point_seed&#39;``,
+ |           and ``&#39;closest&#39;``.
+ |         * Extracted regions are now sorted in descending order by
+ |           cell count.
+ |         * Region connectivity can be controlled using ``scalar_range``.
+ |
+ |      .. deprecated:: 0.43.0
+ |         Parameter ``largest`` is deprecated. Use ``&#39;largest&#39;`` or
+ |         ``extraction_mode=&#39;largest&#39;`` instead.
  |
  |      Parameters
  |      ----------
- |      largest : bool, default: False
- |          Extract the largest connected part of the mesh.
+ |      extraction_mode : str, default: &quot;all&quot;
+ |          * ``&#39;all&#39;``: Extract all connected regions.
+ |          * ``&#39;largest&#39;`` : Extract the largest connected region (by cell
+ |            count).
+ |          * ``&#39;specified&#39;``: Extract specific region IDs. Use ``region_ids``
+ |            to specify the region IDs to extract.
+ |          * ``&#39;cell_seed&#39;``: Extract all regions sharing the specified cell
+ |            ids. Use ``cell_ids`` to specify the cell ids.
+ |          * ``&#39;point_seed&#39;`` : Extract all regions sharing the specified
+ |            point ids. Use ``point_ids`` to specify the point ids.
+ |          * ``&#39;closest&#39;`` : Extract the region closest to the specified
+ |            point. Use ``closest_point`` to specify the point.
+ |
+ |      variable_input : float | sequence[float], optional
+ |          The convenience parameter used for specifying any required input
+ |          values for some values of ``extraction_mode``. Setting
+ |          ``variable_input`` is equivalent to setting:
+ |
+ |          * ``&#39;region_ids&#39;`` if mode is ``&#39;specified&#39;``.
+ |          * ``&#39;cell_ids&#39;`` if mode is ``&#39;cell_seed&#39;``.
+ |          * ``&#39;point_ids&#39;`` if mode is ``&#39;point_seed&#39;``.
+ |          * ``&#39;closest_point&#39;`` if mode is ``&#39;closest&#39;``.
+ |
+ |          It has no effect if the mode is ``&#39;all&#39;`` or ``&#39;largest&#39;``.
+ |
+ |      scalar_range : sequence[float], optional
+ |          Scalar range in the form ``[min, max]``. If set, the connectivity is
+ |          restricted to cells with at least one point with scalar values in
+ |          the specified range.
+ |
+ |      scalars : str, optional
+ |          Name of scalars to use if ``scalar_range`` is specified. Defaults
+ |          to currently active scalars.
+ |
+ |          .. note::
+ |             This filter requires point scalars to determine region
+ |             connectivity. If cell scalars are provided, they are first
+ |             converted to point scalars with :func:`cell_data_to_point_data`
+ |             before applying the filter. The converted point scalars are
+ |             removed from the output after applying the filter.
+ |
+ |      label_regions : bool, default: True
+ |          If ``True``, ``&#39;RegionId&#39;`` point and cell scalar arrays are stored.
+ |          Each region is assigned a unique ID. IDs are zero-indexed and are
+ |          assigned by region cell count in descending order (i.e. the largest
+ |          region has ID ``0``).
+ |
+ |      region_ids : sequence[int], optional
+ |          Region ids to extract. Only used if ``extraction_mode`` is
+ |          ``specified``.
+ |
+ |      point_ids : sequence[int], optional
+ |          Point ids to use as seeds. Only used if ``extraction_mode`` is
+ |          ``point_seed``.
+ |
+ |      cell_ids : sequence[int], optional
+ |          Cell ids to use as seeds. Only used if ``extraction_mode`` is
+ |          ``cell_seed``.
+ |
+ |      closest_point : sequence[int], optional
+ |          Point coordinates in ``(x, y, z)``. Only used if
+ |          ``extraction_mode`` is ``closest``.
+ |
+ |      inplace : bool, default: False
+ |          If ``True`` the mesh is updated in-place, otherwise a copy
+ |          is returned. A copy is always returned if the input type is
+ |          not ``pyvista.PolyData`` or ``pyvista.UnstructuredGrid``.
  |
  |      progress_bar : bool, default: False
- |          Display a progress bar to indicate progress.
+ |          Display a progress bar.
+ |
+ |      **kwargs : dict, optional
+ |          Used for handling deprecated parameters.
  |
  |      Returns
  |      -------
  |      pyvista.DataSet
- |          Dataset with labeled connected bodies.  Return type
- |          matches input.
+ |          Dataset with labeled connected bodies. Return type is
+ |          ``pyvista.PolyData`` if input type is ``pyvista.PolyData`` and
+ |          ``pyvista.UnstructuredGrid`` otherwise.
+ |
+ |      See Also
+ |      --------
+ |          :meth:`extract_largest`, :meth:`split_bodies`
  |
  |      Examples
  |      --------
- |      Join two meshes together and plot their connectivity.
+ |      Create a single mesh with three disconnected regions where each
+ |      region has a different cell count.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere() + pyvista.Sphere(center=(2, 0, 0))
- |      &gt;&gt;&gt; conn = mesh.connectivity(largest=False)
- |      &gt;&gt;&gt; conn.plot(cmap=[&#39;red&#39;, &#39;blue&#39;])
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; large = pv.Sphere(
+ |      ...     center=(-4, 0, 0), phi_resolution=40, theta_resolution=40
+ |      ... )
+ |      &gt;&gt;&gt; medium = pv.Sphere(
+ |      ...     center=(-2, 0, 0), phi_resolution=15, theta_resolution=15
+ |      ... )
+ |      &gt;&gt;&gt; small = pv.Sphere(
+ |      ...     center=(0, 0, 0), phi_resolution=7, theta_resolution=7
+ |      ... )
+ |      &gt;&gt;&gt; mesh = large + medium + small
  |
- |      See :ref:`volumetric_example` for more examples using this filter.
+ |      Plot their connectivity.
+ |
+ |      &gt;&gt;&gt; conn = mesh.connectivity(&#39;all&#39;)
+ |      &gt;&gt;&gt; conn.plot(cmap=[&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;], show_edges=True)
+ |
+ |      Restrict connectivity to a scalar range.
+ |
+ |      &gt;&gt;&gt; mesh[&#39;y_coordinates&#39;] = mesh.points[:, 1]
+ |      &gt;&gt;&gt; conn = mesh.connectivity(&#39;all&#39;, scalar_range=[-1, 0])
+ |      &gt;&gt;&gt; conn.plot(cmap=[&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;], show_edges=True)
+ |
+ |      Extract the region closest to the origin.
+ |
+ |      &gt;&gt;&gt; conn = mesh.connectivity(&#39;closest&#39;, (0, 0, 0))
+ |      &gt;&gt;&gt; conn.plot(color=&#39;blue&#39;, show_edges=True)
+ |
+ |      Extract a region using a cell ID ``100`` as a seed.
+ |
+ |      &gt;&gt;&gt; conn = mesh.connectivity(&#39;cell_seed&#39;, 100)
+ |      &gt;&gt;&gt; conn.plot(color=&#39;green&#39;, show_edges=True)
+ |
+ |      Extract the largest region.
+ |
+ |      &gt;&gt;&gt; conn = mesh.connectivity(&#39;largest&#39;)
+ |      &gt;&gt;&gt; conn.plot(color=&#39;red&#39;, show_edges=True)
+ |
+ |      Extract the largest and smallest regions by specifying their
+ |      region IDs. Note that the region IDs of the output differ from
+ |      the specified IDs since the input has three regions but the output
+ |      only has two.
+ |
+ |      &gt;&gt;&gt; large_id = 0  # largest always has ID &#39;0&#39;
+ |      &gt;&gt;&gt; small_id = 2  # smallest has ID &#39;N-1&#39; with N=3 regions
+ |      &gt;&gt;&gt; conn = mesh.connectivity(&#39;specified&#39;, (small_id, large_id))
+ |      &gt;&gt;&gt; conn.plot(cmap=[&#39;red&#39;, &#39;blue&#39;], show_edges=True)
  |
  |  contour(self, isosurfaces=10, scalars=None, compute_normals=False, compute_gradients=False, compute_scalars=True, rng=None, preference=&#39;point&#39;, method=&#39;contour&#39;, progress_bar=False)
  |      Contour an input self by an array.
@@ -6470,8 +6663,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Generate a 3D Delaunay triangulation of a surface mesh of a
  |      sphere and plot the interior edges generated.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere(theta_resolution=5, phi_resolution=5)
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere(theta_resolution=5, phi_resolution=5)
  |      &gt;&gt;&gt; grid = sphere.delaunay_3d()
  |      &gt;&gt;&gt; edges = grid.extract_all_edges()
  |      &gt;&gt;&gt; edges.plot(line_width=5, color=&#39;k&#39;)
@@ -6532,8 +6725,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Generate the &quot;elevation&quot; scalars for a sphere mesh.  This is
  |      simply the height in Z from the XY plane.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere()
  |      &gt;&gt;&gt; sphere_elv = sphere.elevation()
  |      &gt;&gt;&gt; sphere_elv.plot(smooth_shading=True)
  |
@@ -6611,9 +6804,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Extract the edges of a sample unstructured grid and plot the edges.
  |      Note how it plots interior edges.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
- |      &gt;&gt;&gt; hex_beam = pyvista.read(examples.hexbeamfile)
+ |      &gt;&gt;&gt; hex_beam = pv.read(examples.hexbeamfile)
  |      &gt;&gt;&gt; edges = hex_beam.extract_all_edges()
  |      &gt;&gt;&gt; edges.plot(line_width=5, color=&#39;k&#39;)
  |
@@ -6640,13 +6833,13 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
- |      &gt;&gt;&gt; grid = pyvista.read(examples.hexbeamfile)
+ |      &gt;&gt;&gt; grid = pv.read(examples.hexbeamfile)
  |      &gt;&gt;&gt; subset = grid.extract_cells(range(20))
  |      &gt;&gt;&gt; subset.n_cells
  |      20
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; actor = pl.add_mesh(
  |      ...     grid, style=&#39;wireframe&#39;, line_width=5, color=&#39;black&#39;
  |      ... )
@@ -6759,9 +6952,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Extract the edges from an unstructured grid.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
- |      &gt;&gt;&gt; hex_beam = pyvista.read(examples.hexbeamfile)
+ |      &gt;&gt;&gt; hex_beam = pv.read(examples.hexbeamfile)
  |      &gt;&gt;&gt; feat_edges = hex_beam.extract_feature_edges()
  |      &gt;&gt;&gt; feat_edges.clear_data()  # clear array data for plotting
  |      &gt;&gt;&gt; feat_edges.plot(line_width=10)
@@ -6795,9 +6988,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Extract the surface of a sample unstructured grid.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
- |      &gt;&gt;&gt; hex_beam = pyvista.read(examples.hexbeamfile)
+ |      &gt;&gt;&gt; hex_beam = pv.read(examples.hexbeamfile)
  |      &gt;&gt;&gt; hex_beam.extract_geometry()
  |      PolyData (...)
  |        N Cells:    88
@@ -6834,14 +7027,16 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Join two meshes together, extract the largest, and plot it.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere() + pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere() + pv.Cube()
  |      &gt;&gt;&gt; largest = mesh.extract_largest()
- |      &gt;&gt;&gt; largest.point_data.clear()
- |      &gt;&gt;&gt; largest.cell_data.clear()
  |      &gt;&gt;&gt; largest.plot()
  |
- |      See :ref:`volumetric_example` for more examples using this filter.
+ |      See :ref:`connectivity_example` and :ref:`volumetric_example` for
+ |      more examples using this filter.
+ |
+ |      .. seealso::
+ |          :func:`pyvista.DataSetFilters.connectivity`
  |
  |  extract_points(self, ind, adjacent_cells=True, include_cells=True, progress_bar=False)
  |      Return a subset of the grid (with cells) that contains any of the given point indices.
@@ -6871,9 +7066,11 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Extract all the points of a sphere with a Z coordinate greater than 0
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere()
- |      &gt;&gt;&gt; extracted = sphere.extract_points(sphere.points[:, 2] &gt; 0)
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere()
+ |      &gt;&gt;&gt; extracted = sphere.extract_points(
+ |      ...     sphere.points[:, 2] &gt; 0, include_cells=False
+ |      ... )
  |      &gt;&gt;&gt; extracted.clear_data()  # clear for plotting
  |      &gt;&gt;&gt; extracted.plot()
  |
@@ -6884,12 +7081,12 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      ----------
  |      pass_pointid : bool, default: True
  |          Adds a point array ``&quot;vtkOriginalPointIds&quot;`` that
- |          idenfities which original points these surface points
+ |          identifies which original points these surface points
  |          correspond to.
  |
  |      pass_cellid : bool, default: True
  |          Adds a cell array ``&quot;vtkOriginalCellIds&quot;`` that
- |          idenfities which original cells these surface cells
+ |          identifies which original cells these surface cells
  |          correspond to.
  |
  |      nonlinear_subdivision : int, default: 1
@@ -6919,7 +7116,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Extract the surface of an UnstructuredGrid.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
  |      &gt;&gt;&gt; grid = examples.load_hexbeam()
  |      &gt;&gt;&gt; surf = grid.extract_surface()
@@ -7017,13 +7214,13 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Create arrow glyphs oriented by vectors and scaled by scalars.
  |      Factor parameter is used to reduce the size of the arrows.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
  |      &gt;&gt;&gt; mesh = examples.load_random_hills()
  |      &gt;&gt;&gt; arrows = mesh.glyph(
  |      ...     scale=&quot;Normals&quot;, orient=&quot;Normals&quot;, tolerance=0.05
  |      ... )
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; actor = pl.add_mesh(arrows, color=&quot;black&quot;)
  |      &gt;&gt;&gt; actor = pl.add_mesh(
  |      ...     mesh,
@@ -7060,11 +7257,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Integrate data on a sphere mesh.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; sphere = pyvista.Sphere(
- |      ...     theta_resolution=100, phi_resolution=100
- |      ... )
+ |      &gt;&gt;&gt; sphere = pv.Sphere(theta_resolution=100, phi_resolution=100)
  |      &gt;&gt;&gt; sphere.point_data[&quot;data&quot;] = 2 * np.ones(sphere.n_points)
  |      &gt;&gt;&gt; integrated = sphere.integrate_data()
  |
@@ -7151,18 +7346,18 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Interpolate the values of 5 points onto a sample plane.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
  |      &gt;&gt;&gt; np.random.seed(7)
  |      &gt;&gt;&gt; point_cloud = np.random.random((5, 3))
  |      &gt;&gt;&gt; point_cloud[:, 2] = 0
  |      &gt;&gt;&gt; point_cloud -= point_cloud.mean(0)
- |      &gt;&gt;&gt; pdata = pyvista.PolyData(point_cloud)
+ |      &gt;&gt;&gt; pdata = pv.PolyData(point_cloud)
  |      &gt;&gt;&gt; pdata[&#39;values&#39;] = np.random.random(5)
- |      &gt;&gt;&gt; plane = pyvista.Plane()
+ |      &gt;&gt;&gt; plane = pv.Plane()
  |      &gt;&gt;&gt; plane.clear_data()
  |      &gt;&gt;&gt; plane = plane.interpolate(pdata, sharpness=3)
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(
  |      ...     pdata, render_points_as_spheres=True, point_size=50
  |      ... )
@@ -7225,10 +7420,10 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Merge three separate spheres into a single mesh.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere_a = pyvista.Sphere(center=(1, 0, 0))
- |      &gt;&gt;&gt; sphere_b = pyvista.Sphere(center=(0, 1, 0))
- |      &gt;&gt;&gt; sphere_c = pyvista.Sphere(center=(0, 0, 1))
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere_a = pv.Sphere(center=(1, 0, 0))
+ |      &gt;&gt;&gt; sphere_b = pv.Sphere(center=(0, 1, 0))
+ |      &gt;&gt;&gt; sphere_c = pv.Sphere(center=(0, 0, 1))
  |      &gt;&gt;&gt; merged = sphere_a.merge([sphere_b, sphere_c])
  |      &gt;&gt;&gt; merged.plot()
  |
@@ -7253,10 +7448,10 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Generate and plot the outline of a sphere.  This is
  |      effectively the ``(x, y, z)`` bounds of the mesh.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere()
  |      &gt;&gt;&gt; outline = sphere.outline()
- |      &gt;&gt;&gt; pyvista.plot([sphere, outline], line_width=5)
+ |      &gt;&gt;&gt; pv.plot([sphere, outline], line_width=5)
  |
  |      See :ref:`common_filter_example` for more examples using this filter.
  |
@@ -7282,10 +7477,96 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Generate and plot the corners of a sphere.  This is
  |      effectively the ``(x, y, z)`` bounds of the mesh.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere()
  |      &gt;&gt;&gt; corners = sphere.outline_corners(factor=0.1)
- |      &gt;&gt;&gt; pyvista.plot([sphere, corners], line_width=5)
+ |      &gt;&gt;&gt; pv.plot([sphere, corners], line_width=5)
+ |
+ |  pack_labels(self, sort=False, scalars=None, preference=&#39;point&#39;, output_scalars=None, progress_bar=False, inplace=False)
+ |      Renumber labeled data such that labels are contiguous.
+ |
+ |      This filter renumbers scalar label data of any type with ``N`` labels
+ |      such that the output labels are contiguous from ``[0, N)``. The
+ |      output may optionally be sorted by label count.
+ |
+ |      The output array ``&#39;packed_labels&#39;`` is added to the output by default,
+ |      and is automatically set as the active scalars.
+ |
+ |      See Also
+ |      --------
+ |      sort_labels
+ |          Similar function with ``sort=True`` by default.
+ |
+ |      Notes
+ |      -----
+ |      This filter uses ``vtkPackLabels`` as the underlying method which
+ |      requires VTK version 9.3 or higher. If ``vtkPackLabels`` is not
+ |      available, packing is done with ``NumPy`` instead which may be
+ |      slower. For best performance, consider upgrading VTK.
+ |
+ |      .. versionadded:: 0.43
+ |
+ |      Parameters
+ |      ----------
+ |      sort : bool, default: False
+ |          Whether to sort the output by label count in descending order
+ |          (i.e. from largest to smallest).
+ |
+ |      scalars : str, optional
+ |          Name of scalars to pack. Defaults to currently active scalars.
+ |
+ |      preference : str, default: &quot;point&quot;
+ |          When ``scalars`` is specified, this is the preferred array
+ |          type to search for in the dataset.  Must be either
+ |          ``&#39;point&#39;`` or ``&#39;cell&#39;``.
+ |
+ |      output_scalars : str, None
+ |          Name of the packed output scalars. By default, the output is
+ |          saved to ``&#39;packed_labels&#39;``.
+ |
+ |      progress_bar : bool, default: False
+ |          If ``True``, display a progress bar. Has no effect if VTK
+ |          version is lower than 9.3.
+ |
+ |      inplace : bool, default: False
+ |          If ``True``, the mesh is updated in-place.
+ |
+ |      Returns
+ |      -------
+ |      pyvista.Dataset
+ |          Dataset with packed labels.
+ |
+ |      Examples
+ |      --------
+ |      Pack segmented image labels.
+ |
+ |      Load non-contiguous image labels
+ |
+ |      &gt;&gt;&gt; from pyvista import examples
+ |      &gt;&gt;&gt; import numpy as np
+ |      &gt;&gt;&gt; image_labels = examples.download_frog_tissue()
+ |
+ |      Show range of labels
+ |
+ |      &gt;&gt;&gt; image_labels.get_data_range()
+ |      (0, 29)
+ |
+ |      Find &#39;gaps&#39; in the labels
+ |
+ |      &gt;&gt;&gt; label_numbers = np.unique(image_labels.active_scalars)
+ |      &gt;&gt;&gt; label_max = np.max(label_numbers)
+ |      &gt;&gt;&gt; missing_labels = set(range(label_max)) - set(label_numbers)
+ |      &gt;&gt;&gt; len(missing_labels)
+ |      4
+ |
+ |      Pack labels to remove gaps
+ |
+ |      &gt;&gt;&gt; packed_labels = image_labels.pack_labels()
+ |
+ |      Show range of packed labels
+ |
+ |      &gt;&gt;&gt; packed_labels.get_data_range()
+ |      (0, 25)
  |
  |  partition(self, n_partitions, generate_global_id=False, as_composite=True)
  |      Break down input dataset into a requested number of partitions.
@@ -7564,15 +7845,15 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      First, plot these values as point values to show the
  |      difference between point and cell data.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere(theta_resolution=10, phi_resolution=10)
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere(theta_resolution=10, phi_resolution=10)
  |      &gt;&gt;&gt; sphere[&#39;Z Coordinates&#39;] = sphere.points[:, 2]
  |      &gt;&gt;&gt; sphere.plot()
  |
  |      Now, convert these values to cell data and then plot it.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere(theta_resolution=10, phi_resolution=10)
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere(theta_resolution=10, phi_resolution=10)
  |      &gt;&gt;&gt; sphere[&#39;Z Coordinates&#39;] = sphere.points[:, 2]
  |      &gt;&gt;&gt; sphere = sphere.point_data_to_cell_data()
  |      &gt;&gt;&gt; sphere.plot()
@@ -7694,9 +7975,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; mesh = mesh.reflect((0, 0, 1), point=(0, 0, -100))
  |      &gt;&gt;&gt; mesh.plot(show_edges=True)
  |
- |      See the :ref:`ref_reflect_example` for more examples using this filter.
+ |      See the :ref:`reflect_example` for more examples using this filter.
  |
- |  sample(self, target, tolerance=None, pass_cell_data=True, pass_point_data=True, categorical=False, progress_bar=False, locator=None, pass_field_data=True, mark_blank=True)
+ |  sample(self, target, tolerance=None, pass_cell_data=True, pass_point_data=True, categorical=False, progress_bar=False, locator=None, pass_field_data=True, mark_blank=True, snap_to_closest_point=False)
  |      Resample array data from a passed mesh onto this mesh.
  |
  |      For `mesh1.sample(mesh2)`, the arrays from `mesh2` are sampled onto
@@ -7752,6 +8033,12 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      mark_blank : bool, default: True
  |          Whether to mark blank points and cells in &quot;vtkGhostType&quot;.
+ |
+ |      snap_to_closest_point : bool, default: False
+ |          Whether to snap to cell with closest point if no cell is found. Useful
+ |          when sampling from data with vertex cells. Requires vtk &gt;=9.3.0.
+ |
+ |          .. versionadded:: 0.43
  |
  |      Returns
  |      -------
@@ -7822,7 +8109,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Sample a dataset over a circular arc and plot it.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
  |      &gt;&gt;&gt; uniform = examples.load_uniform()
  |      &gt;&gt;&gt; uniform[&quot;height&quot;] = uniform.points[:, 2]
@@ -7844,7 +8131,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; sampled_arc = uniform.sample_over_circular_arc(
  |      ...     pointa, pointb, center
  |      ... )
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(uniform, style=&#39;wireframe&#39;)
  |      &gt;&gt;&gt; _ = pl.add_mesh(sampled_arc, line_width=10)
  |      &gt;&gt;&gt; pl.show_axes()
@@ -7895,7 +8182,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Sample a dataset over a circular arc.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
  |      &gt;&gt;&gt; uniform = examples.load_uniform()
  |      &gt;&gt;&gt; uniform[&quot;height&quot;] = uniform.points[:, 2]
@@ -7909,7 +8196,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; arc = uniform.sample_over_circular_arc_normal(
  |      ...     center, normal=normal, polar=polar
  |      ... )
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(uniform, style=&#39;wireframe&#39;)
  |      &gt;&gt;&gt; _ = pl.add_mesh(arc, line_width=10)
  |      &gt;&gt;&gt; pl.show_axes()
@@ -7946,19 +8233,19 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Sample over a plane that is interpolating a point cloud.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
  |      &gt;&gt;&gt; np.random.seed(12)
  |      &gt;&gt;&gt; point_cloud = np.random.random((5, 3))
  |      &gt;&gt;&gt; point_cloud[:, 2] = 0
  |      &gt;&gt;&gt; point_cloud -= point_cloud.mean(0)
- |      &gt;&gt;&gt; pdata = pyvista.PolyData(point_cloud)
+ |      &gt;&gt;&gt; pdata = pv.PolyData(point_cloud)
  |      &gt;&gt;&gt; pdata[&#39;values&#39;] = np.random.random(5)
- |      &gt;&gt;&gt; plane = pyvista.Plane()
+ |      &gt;&gt;&gt; plane = pv.Plane()
  |      &gt;&gt;&gt; plane.clear_data()
  |      &gt;&gt;&gt; plane = plane.interpolate(pdata, sharpness=3.5)
  |      &gt;&gt;&gt; sample = plane.sample_over_line((-0.5, -0.5, 0), (0.5, 0.5, 0))
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(
  |      ...     pdata, render_points_as_spheres=True, point_size=50
  |      ... )
@@ -7990,21 +8277,21 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Sample over a plane that is interpolating a point cloud.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
  |      &gt;&gt;&gt; np.random.seed(12)
  |      &gt;&gt;&gt; point_cloud = np.random.random((5, 3))
  |      &gt;&gt;&gt; point_cloud[:, 2] = 0
  |      &gt;&gt;&gt; point_cloud -= point_cloud.mean(0)
- |      &gt;&gt;&gt; pdata = pyvista.PolyData(point_cloud)
+ |      &gt;&gt;&gt; pdata = pv.PolyData(point_cloud)
  |      &gt;&gt;&gt; pdata[&#39;values&#39;] = np.random.random(5)
- |      &gt;&gt;&gt; plane = pyvista.Plane()
+ |      &gt;&gt;&gt; plane = pv.Plane()
  |      &gt;&gt;&gt; plane.clear_data()
  |      &gt;&gt;&gt; plane = plane.interpolate(pdata, sharpness=3.5)
  |      &gt;&gt;&gt; sample = plane.sample_over_multiple_lines(
  |      ...     [[-0.5, -0.5, 0], [0.5, -0.5, 0], [0.5, 0.5, 0]]
  |      ... )
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(
  |      ...     pdata, render_points_as_spheres=True, point_size=50
  |      ... )
@@ -8066,15 +8353,15 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      surface mesh.  Extract these points using the
  |      :func:`DataSetFilters.extract_points` filter and then plot them.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere()
- |      &gt;&gt;&gt; plane = pyvista.Plane()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere()
+ |      &gt;&gt;&gt; plane = pv.Plane()
  |      &gt;&gt;&gt; selected = plane.select_enclosed_points(sphere)
  |      &gt;&gt;&gt; pts = plane.extract_points(
  |      ...     selected[&#39;SelectedPoints&#39;].view(bool),
  |      ...     adjacent_cells=False,
  |      ... )
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(sphere, style=&#39;wireframe&#39;)
  |      &gt;&gt;&gt; _ = pl.add_points(pts, color=&#39;r&#39;)
  |      &gt;&gt;&gt; pl.show()
@@ -8132,8 +8419,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      First, plot the original cube.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Cube()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Cube()
  |      &gt;&gt;&gt; mesh.plot(show_edges=True, line_width=5)
  |
  |      Now, plot the mesh with shrunk faces.
@@ -8178,8 +8465,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Slice the surface of a sphere.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; sphere = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; sphere = pv.Sphere()
  |      &gt;&gt;&gt; slice_x = sphere.slice(normal=&#39;x&#39;)
  |      &gt;&gt;&gt; slice_y = sphere.slice(normal=&#39;y&#39;)
  |      &gt;&gt;&gt; slice_z = sphere.slice(normal=&#39;z&#39;)
@@ -8281,20 +8568,18 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Slice the random hills dataset along a circular arc.
  |
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
  |      &gt;&gt;&gt; hills = examples.load_random_hills()
  |      &gt;&gt;&gt; center = np.array(hills.center)
  |      &gt;&gt;&gt; point_a = center + np.array([5, 0, 0])
  |      &gt;&gt;&gt; point_b = center + np.array([-5, 0, 0])
- |      &gt;&gt;&gt; arc = pyvista.CircularArc(
- |      ...     point_a, point_b, center, resolution=100
- |      ... )
+ |      &gt;&gt;&gt; arc = pv.CircularArc(point_a, point_b, center, resolution=100)
  |      &gt;&gt;&gt; line_slice = hills.slice_along_line(arc)
  |
  |      Plot the circular arc and the hills mesh.
  |
- |      &gt;&gt;&gt; pl = pyvista.Plotter()
+ |      &gt;&gt;&gt; pl = pv.Plotter()
  |      &gt;&gt;&gt; _ = pl.add_mesh(hills, smooth_shading=True, style=&#39;wireframe&#39;)
  |      &gt;&gt;&gt; _ = pl.add_mesh(
  |      ...     line_slice,
@@ -8393,6 +8678,79 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      See :ref:`slice_example` for more examples using this filter.
  |
+ |  sort_labels(self, scalars=None, preference=&#39;point&#39;, output_scalars=None, progress_bar=False, inplace=False)
+ |      Sort labeled data by number of points or cells.
+ |
+ |      This filter renumbers scalar label data of any type with ``N`` labels
+ |      such that the output labels are contiguous from ``[0, N)`` and
+ |      sorted in descending order from largest to smallest (by label count).
+ |      I.e., the largest label will have a value of ``0`` and the smallest
+ |      label will have a value of ``N-1``.
+ |
+ |      The filter is a convenience method for :func:`pyvista.DataSetFilters.pack_labels`
+ |      with ``sort=True``.
+ |
+ |      Parameters
+ |      ----------
+ |      scalars : str, optional
+ |          Name of scalars to sort. Defaults to currently active scalars.
+ |
+ |      preference : str, default: &quot;point&quot;
+ |          When ``scalars`` is specified, this is the preferred array
+ |          type to search for in the dataset.  Must be either
+ |          ``&#39;point&#39;`` or ``&#39;cell&#39;``.
+ |
+ |      output_scalars : str, None
+ |          Name of the sorted output scalars. By default, the output is
+ |          saved to ``&#39;packed_labels&#39;``.
+ |
+ |      progress_bar : bool, default: False
+ |          If ``True``, display a progress bar. Has no effect if VTK
+ |          version is lower than 9.3.
+ |
+ |      inplace : bool, default: False
+ |          If ``True``, the mesh is updated in-place.
+ |
+ |      Returns
+ |      -------
+ |      pyvista.Dataset
+ |          Dataset with sorted labels.
+ |
+ |      Examples
+ |      --------
+ |      Sort segmented image labels.
+ |
+ |      Load image labels
+ |
+ |      &gt;&gt;&gt; from pyvista import examples
+ |      &gt;&gt;&gt; import numpy as np
+ |      &gt;&gt;&gt; image_labels = examples.download_frog_tissue()
+ |
+ |      Show label info for first four labels
+ |
+ |      &gt;&gt;&gt; label_number, label_size = np.unique(
+ |      ...     image_labels[&#39;MetaImage&#39;], return_counts=True
+ |      ... )
+ |      &gt;&gt;&gt; label_number[:4]
+ |      pyvista_ndarray([0, 1, 2, 3], dtype=uint8)
+ |      &gt;&gt;&gt; label_size[:4]
+ |      array([30805713,    35279,    19172,    38129])
+ |
+ |      Sort labels
+ |
+ |      &gt;&gt;&gt; sorted_labels = image_labels.sort_labels()
+ |
+ |      Show sorted label info for the four largest labels. Note
+ |      the difference in label size after sorting.
+ |
+ |      &gt;&gt;&gt; sorted_label_number, sorted_label_size = np.unique(
+ |      ...     sorted_labels[&quot;packed_labels&quot;], return_counts=True
+ |      ... )
+ |      &gt;&gt;&gt; sorted_label_number[:4]
+ |      pyvista_ndarray([0, 1, 2, 3], dtype=uint8)
+ |      &gt;&gt;&gt; sorted_label_size[:4]
+ |      array([30805713,   438052,   204672,   133880])
+ |
  |  split_bodies(self, label=False, progress_bar=False)
  |      Find, label, and split connected bodies/volumes.
  |
@@ -8425,7 +8783,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; len(bodies)
  |      2
  |
- |      See :ref:`split_vol_ref` for more examples using this filter.
+ |      See :ref:`split_vol` for more examples using this filter.
  |
  |  streamlines(self, vectors=None, source_center=None, source_radius=None, n_points=100, start_position=None, return_source=False, pointa=None, pointb=None, progress_bar=False, **kwargs)
  |      Integrate a vector field to generate streamlines.
@@ -8578,7 +8936,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      This dataset is a multiblock dataset, and the fluid velocity is in the
  |      first block.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; from pyvista import examples
  |      &gt;&gt;&gt; mesh = examples.download_cylinder_crossflow()
  |      &gt;&gt;&gt; streams = mesh[0].streamlines_evenly_spaced_2D(
@@ -8586,7 +8944,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      ...     separating_distance=3,
  |      ...     separating_distance_ratio=0.2,
  |      ... )
- |      &gt;&gt;&gt; plotter = pyvista.Plotter()
+ |      &gt;&gt;&gt; plotter = pv.Plotter()
  |      &gt;&gt;&gt; _ = plotter.add_mesh(
  |      ...     streams.tube(radius=0.02), scalars=&quot;vorticity_mag&quot;
  |      ... )
@@ -8743,7 +9101,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      First, plot the high order FEM-like elements.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
  |      &gt;&gt;&gt; points = np.array(
  |      ...     [
@@ -8757,7 +9115,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      ... )
  |      &gt;&gt;&gt; cells = np.array([6, 0, 1, 2, 3, 4, 5])
  |      &gt;&gt;&gt; cell_types = np.array([69])
- |      &gt;&gt;&gt; mesh = pyvista.UnstructuredGrid(cells, cell_types, points)
+ |      &gt;&gt;&gt; mesh = pv.UnstructuredGrid(cells, cell_types, points)
  |      &gt;&gt;&gt; mesh.plot(show_edges=True, line_width=5)
  |
  |      Now, plot the tessellated mesh.
@@ -8811,7 +9169,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      See :ref:`ref_topo_map_example`
+ |      See :ref:`topo_map_example`
  |
  |  texture_map_to_sphere(self, center=None, prevent_seam=True, inplace=False, name=&#39;Texture Coordinates&#39;, progress_bar=False)
  |      Texture map this dataset to a user defined sphere.
@@ -8854,7 +9212,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      See :ref:`ref_texture_example`.
+ |      See :ref:`texture_example`.
  |
  |  threshold(self, value=None, scalars=None, invert=False, continuous=False, preference=&#39;cell&#39;, all_scalars=False, component_mode=&#39;all&#39;, component=0, method=&#39;upper&#39;, progress_bar=False)
  |      Apply a ``vtkThreshold`` filter to the input dataset.
@@ -9049,9 +9407,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Apply a 50% threshold filter.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; noise = pyvista.perlin_noise(0.1, (2, 2, 2), (0, 0, 0))
- |      &gt;&gt;&gt; grid = pyvista.sample_function(
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; noise = pv.perlin_noise(0.1, (2, 2, 2), (0, 0, 0))
+ |      &gt;&gt;&gt; grid = pv.sample_function(
  |      ...     noise, [0, 1.0, -0, 1.0, 0, 1.0], dim=(30, 30, 30)
  |      ... )
  |      &gt;&gt;&gt; threshed = grid.threshold_percent(0.5)
@@ -9163,8 +9521,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Generate a mesh with quadrilateral faces.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; plane = pyvista.Plane()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; plane = pv.Plane()
  |      &gt;&gt;&gt; plane.point_data.clear()
  |      &gt;&gt;&gt; plane.plot(show_edges=True, line_width=5)
  |
@@ -9280,7 +9638,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |  ----------------------------------------------------------------------
  |  Methods inherited from pyvista.core.dataobject.DataObject:
  |
- |  __eq__(self, other)
+ |  __eq__(self, other: Any) -&gt; bool
  |      Test equivalency between data objects.
  |
  |  __getstate__(self)
@@ -9293,7 +9651,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |  __setstate__(self, state)
  |      Support unpickle.
  |
- |  add_field_data(self, array: numpy.ndarray, name: str, deep=True)
+ |  add_field_data(self, array: numpy.ndarray, name: str, deep: bool = True)
  |      Add field data.
  |
  |      Use field data when size of the data you wish to associate
@@ -9316,16 +9674,16 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Add field data to a PolyData dataset.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh.add_field_data(np.arange(10), &#39;my-field-data&#39;)
  |      &gt;&gt;&gt; mesh[&#39;my-field-data&#39;]
  |      pyvista_ndarray([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
  |
  |      Add field data to a ImageData dataset.
  |
- |      &gt;&gt;&gt; mesh = pyvista.ImageData(dimensions=(2, 2, 1))
+ |      &gt;&gt;&gt; mesh = pv.ImageData(dimensions=(2, 2, 1))
  |      &gt;&gt;&gt; mesh.add_field_data(
  |      ...     [&#39;I could&#39;, &#39;write&#39;, &#39;notes&#39;, &#39;here&#39;], &#39;my-field-data&#39;
  |      ... )
@@ -9334,22 +9692,22 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Add field data to a MultiBlock dataset.
  |
- |      &gt;&gt;&gt; blocks = pyvista.MultiBlock()
- |      &gt;&gt;&gt; blocks.append(pyvista.Sphere())
- |      &gt;&gt;&gt; blocks[&quot;cube&quot;] = pyvista.Cube(center=(0, 0, -1))
+ |      &gt;&gt;&gt; blocks = pv.MultiBlock()
+ |      &gt;&gt;&gt; blocks.append(pv.Sphere())
+ |      &gt;&gt;&gt; blocks[&quot;cube&quot;] = pv.Cube(center=(0, 0, -1))
  |      &gt;&gt;&gt; blocks.add_field_data([1, 2, 3], &#39;my-field-data&#39;)
  |      &gt;&gt;&gt; blocks.field_data[&#39;my-field-data&#39;]
  |      pyvista_ndarray([1, 2, 3])
  |
- |  clear_field_data(self)
+ |  clear_field_data(self) -&gt; None
  |      Remove all field data.
  |
  |      Examples
  |      --------
  |      Add field data to a PolyData dataset and then remove it.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh.field_data[&#39;my-field-data&#39;] = range(10)
  |      &gt;&gt;&gt; len(mesh.field_data)
  |      1
@@ -9377,13 +9735,13 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Create and make a deep copy of a PolyData object.
  |
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh_a = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh_a = pv.Sphere()
  |      &gt;&gt;&gt; mesh_b = mesh_a.copy()
  |      &gt;&gt;&gt; mesh_a == mesh_b
  |      True
  |
- |  copy_attributes(self, dataset: vtkmodules.vtkCommonDataModel.vtkDataSet)
+ |  copy_attributes(self, dataset: vtkmodules.vtkCommonDataModel.vtkDataSet) -&gt; None
  |      Copy the data attributes of the input dataset object.
  |
  |      Parameters
@@ -9400,7 +9758,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; target.copy_attributes(source)
  |      &gt;&gt;&gt; target.plot(scalars=&#39;Volume&#39;, show_edges=True)
  |
- |  copy_structure(self, dataset: vtkmodules.vtkCommonDataModel.vtkDataSet)
+ |  copy_structure(self, dataset: vtkmodules.vtkCommonDataModel.vtkDataSet) -&gt; None
  |      Copy the structure (geometry and topology) of the input dataset object.
  |
  |      Parameters
@@ -9416,7 +9774,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      &gt;&gt;&gt; target.copy_structure(source)
  |      &gt;&gt;&gt; target.plot(show_edges=True)
  |
- |  deep_copy(self, to_copy: vtkmodules.vtkCommonDataModel.vtkDataObject) -&gt; vtkmodules.vtkCommonDataModel.vtkDataObject
+ |  deep_copy(self, to_copy: vtkmodules.vtkCommonDataModel.vtkDataObject) -&gt; None
  |      Overwrite this data object with another data object as a deep copy.
  |
  |      Parameters
@@ -9443,7 +9801,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      str
  |          Header statistics.
  |
- |  save(self, filename: str, binary=True, texture=None)
+ |  save(self, filename: Union[pathlib.Path, str], binary: bool = True, texture: Union[numpy.ndarray[Any, numpy.dtype[numpy.uint8]], str, NoneType] = None) -&gt; None
  |      Save this vtk object to file.
  |
  |      Parameters
@@ -9474,7 +9832,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      Binary files write much faster than ASCII and have a smaller
  |      file size.
  |
- |  shallow_copy(self, to_copy: vtkmodules.vtkCommonDataModel.vtkDataObject) -&gt; vtkmodules.vtkCommonDataModel.vtkDataObject
+ |  shallow_copy(self, to_copy: vtkmodules.vtkCommonDataModel.vtkDataObject) -&gt; None
  |      Shallow copy the given mesh to this mesh.
  |
  |      Parameters
@@ -9517,9 +9875,9 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |      --------
  |      Add field data to a PolyData dataset and then return it.
  |
- |      &gt;&gt;&gt; import pyvista
+ |      &gt;&gt;&gt; import pyvista as pv
  |      &gt;&gt;&gt; import numpy as np
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh.field_data[&#39;my-field-data&#39;] = np.arange(10)
  |      &gt;&gt;&gt; mesh.field_data[&#39;my-field-data&#39;]
  |      pyvista_ndarray([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
@@ -9534,8 +9892,8 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
  |
  |      Examples
  |      --------
- |      &gt;&gt;&gt; import pyvista
- |      &gt;&gt;&gt; mesh = pyvista.Sphere()
+ |      &gt;&gt;&gt; import pyvista as pv
+ |      &gt;&gt;&gt; mesh = pv.Sphere()
  |      &gt;&gt;&gt; mesh.memory_address
  |      &#39;Addr=...&#39;
  |
@@ -9592,7 +9950,7 @@ class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.f
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/c_create-uniform-grid.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.915 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.067 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-solutions-c-create-uniform-grid-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/c_create-uniform-grid.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo7.svg" width="150px" /></a>
