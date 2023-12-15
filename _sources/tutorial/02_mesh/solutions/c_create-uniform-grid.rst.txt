@@ -2601,7 +2601,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>>
      |      >>> for i, connection in enumerate(["points", "edges"]):
      |      ...     pl.subplot(0, i)
-     |      ...     pl.view_yx()
+     |      ...     pl.view_xy()
      |      ...     _ = pl.add_title(
      |      ...         f"{connection.capitalize()} neighbors",
      |      ...         color="red",
@@ -2727,7 +2727,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> cells = mesh.extract_cells(other_ids, invert=True)
      |      >>> _ = pl.add_mesh(cells, color="white", show_edges=True)
      |      >>>
-     |      >>> pl.view_yx()
+     |      >>> pl.view_xy()
      |      >>> pl.camera.zoom(6.0)
      |      >>> pl.show()
      |  
@@ -3732,7 +3732,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     text_color="red",
      |      ...     font_size=40,
      |      ... )
-     |      >>> pl.camera_position = "yx"
+     |      >>> pl.camera_position = "xy"
      |      >>> pl.camera.zoom(7.0)
      |      >>> pl.show()
      |  
@@ -3802,7 +3802,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     )
      |      ...
      |      >>>
-     |      >>> pl.view_yx()
+     |      >>> pl.view_xy()
      |      >>> pl.camera.zoom(4.0)
      |      >>> pl.show()
      |  
@@ -9708,7 +9708,7 @@ Here's one of these example datasets:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.438 seconds)
+   **Total running time of the script:** ( 0 minutes  5.194 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_c_create-uniform-grid.py:

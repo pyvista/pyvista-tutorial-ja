@@ -3506,7 +3506,7 @@ class PolyData(vtkmodules.vtkCommonDataModel.vtkPolyData, _PointSet, pyvista.cor
  |      &gt;&gt;&gt;
  |      &gt;&gt;&gt; for i, connection in enumerate([&quot;points&quot;, &quot;edges&quot;]):
  |      ...     pl.subplot(0, i)
- |      ...     pl.view_yx()
+ |      ...     pl.view_xy()
  |      ...     _ = pl.add_title(
  |      ...         f&quot;{connection.capitalize()} neighbors&quot;,
  |      ...         color=&quot;red&quot;,
@@ -3632,7 +3632,7 @@ class PolyData(vtkmodules.vtkCommonDataModel.vtkPolyData, _PointSet, pyvista.cor
  |      &gt;&gt;&gt; cells = mesh.extract_cells(other_ids, invert=True)
  |      &gt;&gt;&gt; _ = pl.add_mesh(cells, color=&quot;white&quot;, show_edges=True)
  |      &gt;&gt;&gt;
- |      &gt;&gt;&gt; pl.view_yx()
+ |      &gt;&gt;&gt; pl.view_xy()
  |      &gt;&gt;&gt; pl.camera.zoom(6.0)
  |      &gt;&gt;&gt; pl.show()
  |
@@ -4637,7 +4637,7 @@ class PolyData(vtkmodules.vtkCommonDataModel.vtkPolyData, _PointSet, pyvista.cor
  |      ...     text_color=&quot;red&quot;,
  |      ...     font_size=40,
  |      ... )
- |      &gt;&gt;&gt; pl.camera_position = &quot;yx&quot;
+ |      &gt;&gt;&gt; pl.camera_position = &quot;xy&quot;
  |      &gt;&gt;&gt; pl.camera.zoom(7.0)
  |      &gt;&gt;&gt; pl.show()
  |
@@ -4707,7 +4707,7 @@ class PolyData(vtkmodules.vtkCommonDataModel.vtkPolyData, _PointSet, pyvista.cor
  |      ...     )
  |      ...
  |      &gt;&gt;&gt;
- |      &gt;&gt;&gt; pl.view_yx()
+ |      &gt;&gt;&gt; pl.view_xy()
  |      &gt;&gt;&gt; pl.camera.zoom(4.0)
  |      &gt;&gt;&gt; pl.show()
  |
@@ -12880,7 +12880,7 @@ class GeoPlotter(GeoPlotterBase, pyvista.plotting.plotter.Plotter)
  |  ----------------------------------------------------------------------
  |  Data and other attributes inherited from pyvista.plotting.plotter.Plotter:
  |
- |  last_update_time = 1702519399.8735812
+ |  last_update_time = 1702605926.5385385
  |
  |  ----------------------------------------------------------------------
  |  Methods inherited from pyvista.plotting.plotter.BasePlotter:
@@ -14276,7 +14276,7 @@ class GeoPlotter(GeoPlotterBase, pyvista.plotting.plotter.Plotter)
  |      &gt;&gt;&gt; plotter.view_xy()
  |      &gt;&gt;&gt; plotter.show()
  |
- |  add_scalar_bar(self, title=&#39;&#39;, mapper=None, n_labels=5, italic=False, bold=False, title_font_size=None, label_font_size=None, color=None, font_family=None, shadow=False, width=None, height=None, position_x=None, position_y=None, vertical=None, interactive=None, fmt=None, use_opacity=True, outline=False, nan_annotation=False, below_label=None, above_label=None, background_color=None, n_colors=None, fill=False, render=False, theme=None)
+ |  add_scalar_bar(self, title=&#39;&#39;, mapper=None, n_labels=5, italic=False, bold=False, title_font_size=None, label_font_size=None, color=None, font_family=None, shadow=False, width=None, height=None, position_x=None, position_y=None, vertical=None, interactive=None, fmt=None, use_opacity=True, outline=False, nan_annotation=False, below_label=None, above_label=None, background_color=None, n_colors=None, fill=False, render=False, theme=None, unconstrained_font_size=False)
  |      Create scalar bar using the ranges as set by the last input mesh.
  |
  |      Parameters
@@ -14397,6 +14397,14 @@ class GeoPlotter(GeoPlotterBase, pyvista.plotting.plotter.Plotter)
  |          Plot-specific theme.  By default, calling from the
  |          ``Plotter``, will use the plotter theme.  Setting to
  |          ``None`` will use the global theme.
+ |
+ |      unconstrained_font_size : bool, default: False
+ |          Whether the font size of title and labels is unconstrained.
+ |          When it is constrained, the size of the scalar bar will constrain the font size.
+ |          When it is not, the size of the font will always be respected.
+ |          Using custom labels will force this to be ``True``.
+ |
+ |          .. versionadded:: 0.44.0
  |
  |      Returns
  |      -------
@@ -20572,7 +20580,7 @@ threshold(value=None, scalars=None, invert=False, continuous=False, preference=&
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/05_action/a_lesson_geovista.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  2.271 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  0.742 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-05-action-a-lesson-geovista-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/05_action/a_lesson_geovista.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo16.svg" width="150px" /></a>

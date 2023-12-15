@@ -3219,7 +3219,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>>
      |      >>> for i, connection in enumerate(["points", "edges"]):
      |      ...     pl.subplot(0, i)
-     |      ...     pl.view_yx()
+     |      ...     pl.view_xy()
      |      ...     _ = pl.add_title(
      |      ...         f"{connection.capitalize()} neighbors",
      |      ...         color="red",
@@ -3345,7 +3345,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> cells = mesh.extract_cells(other_ids, invert=True)
      |      >>> _ = pl.add_mesh(cells, color="white", show_edges=True)
      |      >>>
-     |      >>> pl.view_yx()
+     |      >>> pl.view_xy()
      |      >>> pl.camera.zoom(6.0)
      |      >>> pl.show()
      |  
@@ -4350,7 +4350,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      ...     text_color="red",
      |      ...     font_size=40,
      |      ... )
-     |      >>> pl.camera_position = "yx"
+     |      >>> pl.camera_position = "xy"
      |      >>> pl.camera.zoom(7.0)
      |      >>> pl.show()
      |  
@@ -4420,7 +4420,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      ...     )
      |      ...
      |      >>>
-     |      >>> pl.view_yx()
+     |      >>> pl.view_xy()
      |      >>> pl.camera.zoom(4.0)
      |      >>> pl.show()
      |  
@@ -12673,7 +12673,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |  ----------------------------------------------------------------------
      |  Data and other attributes inherited from pyvista.plotting.plotter.Plotter:
      |  
-     |  last_update_time = 1702519399.8735812
+     |  last_update_time = 1702605926.5385385
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from pyvista.plotting.plotter.BasePlotter:
@@ -14069,7 +14069,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      >>> plotter.view_xy()
      |      >>> plotter.show()
      |  
-     |  add_scalar_bar(self, title='', mapper=None, n_labels=5, italic=False, bold=False, title_font_size=None, label_font_size=None, color=None, font_family=None, shadow=False, width=None, height=None, position_x=None, position_y=None, vertical=None, interactive=None, fmt=None, use_opacity=True, outline=False, nan_annotation=False, below_label=None, above_label=None, background_color=None, n_colors=None, fill=False, render=False, theme=None)
+     |  add_scalar_bar(self, title='', mapper=None, n_labels=5, italic=False, bold=False, title_font_size=None, label_font_size=None, color=None, font_family=None, shadow=False, width=None, height=None, position_x=None, position_y=None, vertical=None, interactive=None, fmt=None, use_opacity=True, outline=False, nan_annotation=False, below_label=None, above_label=None, background_color=None, n_colors=None, fill=False, render=False, theme=None, unconstrained_font_size=False)
      |      Create scalar bar using the ranges as set by the last input mesh.
      |      
      |      Parameters
@@ -14190,6 +14190,14 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          Plot-specific theme.  By default, calling from the
      |          ``Plotter``, will use the plotter theme.  Setting to
      |          ``None`` will use the global theme.
+     |      
+     |      unconstrained_font_size : bool, default: False
+     |          Whether the font size of title and labels is unconstrained.
+     |          When it is constrained, the size of the scalar bar will constrain the font size.
+     |          When it is not, the size of the font will always be respected.
+     |          Using custom labels will force this to be ``True``.
+     |      
+     |          .. versionadded:: 0.44.0
      |      
      |      Returns
      |      -------
@@ -20704,7 +20712,7 @@ Or grab the mesh object for use with PyVista and GeoVista.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  2.271 seconds)
+   **Total running time of the script:** ( 1 minutes  0.742 seconds)
 
 
 .. _sphx_glr_download_tutorial_05_action_a_lesson_geovista.py:
