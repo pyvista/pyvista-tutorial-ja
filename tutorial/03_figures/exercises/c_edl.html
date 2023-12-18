@@ -566,14 +566,14 @@ to download the full example code or to run this example in your browser via Bin
 </div>
 <p>そして，この点群をそのままプロットしてみましょう．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot a typical point cloud with no EDL</span>
-<span class="n">p</span> <span class="o">=</span> <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span></a><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <a href="https://docs.pyvista.org/version/stable/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span></a><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tan&quot;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <p><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Renderer.enable_eye_dome_lighting()</span></code> を使ってレンダラでアイドーム照明を有効にすることで，深度マッピングを改善することができます．</p>
 <p>以下に，その点群を自分でアイドームライティングでプロットしてみてください．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span></a><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <a href="https://docs.pyvista.org/version/stable/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span></a><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tan&quot;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="o">...</span>  <span class="c1"># Turn on eye dome lighting here</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>

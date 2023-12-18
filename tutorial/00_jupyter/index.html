@@ -579,7 +579,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">'server'</span></code>: 純粋にサーバーレンダリングのビューを使用します．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'client'</span></code>：純粋なクライアントレンダリングのビューを使用します（一般的に仮想フレームバッファなしで安全）</p></li>
 </ul>
-<p><a class="reference external" href="https://docs.pyvista.org/user-guide/jupyter/index.html#pyvista.set_jupyter_backend" title="(in PyVista v0.38.5)"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_jupyter_backend()</span></code></a> を使用するか， <code class="xref py py-func docutils literal notranslate"><span class="pre">show()</span></code> 呼び出し時に <code class="docutils literal notranslate"><span class="pre">jupyter_backend</span></code> を渡すことでバックエンドを選択することができます．</p>
+<p><a class="reference external" href="https://docs.pyvista.org/version/stable/user-guide/jupyter/index.html#pyvista.set_jupyter_backend" title="(in PyVista v0.43.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_jupyter_backend()</span></code></a> を使用するか， <code class="xref py py-func docutils literal notranslate"><span class="pre">show()</span></code> 呼び出し時に <code class="docutils literal notranslate"><span class="pre">jupyter_backend</span></code> を渡すことでバックエンドを選択することができます．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="n">pv</span><span class="o">.</span><span class="n">set_jupyter_backend</span><span class="p">(</span><span class="s1">&#39;client&#39;</span><span class="p">)</span>
 
@@ -612,8 +612,8 @@
 </div>
 <p>リモート環境で <code class="docutils literal notranslate"><span class="pre">jupyter-server-proxy</span></code> を使って動作するように PyVista と Trame を設定するには，PyVista のグローバルテーマでいくつかのオプションを設定する必要があります．</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes._TrameConfig.server_proxy_enabled.html#pyvista.themes._TrameConfig.server_proxy_enabled" title="(in PyVista v0.38.5)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.trame.server_proxy_enabled</span></code></a></p></li>
-<li><p><a class="reference external" href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes._TrameConfig.server_proxy_prefix.html#pyvista.themes._TrameConfig.server_proxy_prefix" title="(in PyVista v0.38.5)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.trame.server_proxy_prefix</span></code></a></p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.trame.server_proxy_enabled</span></code></p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.trame.server_proxy_prefix</span></code></p></li>
 </ul>
 <p>デフォルトの <code class="docutils literal notranslate"><span class="pre">server_proxy_prefix</span></code> は <code class="docutils literal notranslate"><span class="pre">'/proxy/'</span></code> で，ほとんどのリモートJupyter環境やDocker内での使用にはこれで十分です．</p>
 <p>これは，環境変数で設定することもできます:</p>
