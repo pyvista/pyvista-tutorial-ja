@@ -317,12 +317,12 @@ that to a  `vtkPoints`_ class.  For example:
 
  .. code-block:: none
 
-    vtkPoints (0x55af000a6940)
+    vtkPoints (0x55c12a8103d0)
       Debug: Off
-      Modified Time: 25800334
+      Modified Time: 25800748
       Reference Count: 1
       Registered Events: (none)
-      Data: 0x55aeff776e40
+      Data: 0x55c111480fe0
       Data Array Name: Points
       Number Of Points: 3
       Bounds: 
