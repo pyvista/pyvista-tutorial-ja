@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_03_figures_exercises_c_edl.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_exercises_c_edl.py>`
         to download the full example code or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
@@ -27,16 +27,16 @@ To learn more, please see `this blog post`_.
 
 .. _this blog post: https://blog.kitware.com/eye-dome-lighting-a-non-photorealistic-shading-technique/
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-17
+.. GENERATED FROM PYTHON SOURCE LINES 14-18
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import pyvista as pv
     from pyvista import examples
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 19-24
+.. GENERATED FROM PYTHON SOURCE LINES 20-25
 
 Point Cloud
 +++++++++++
@@ -44,22 +44,22 @@ Point Cloud
 When plotting a simple point cloud, it can be difficult to perceive depth.
 Take this Lidar point cloud for example:
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-28
+.. GENERATED FROM PYTHON SOURCE LINES 25-29
 
-.. code-block:: default
+.. code-block:: Python
 
 
     point_cloud = examples.download_lidar()
     point_cloud
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-30
+.. GENERATED FROM PYTHON SOURCE LINES 30-31
 
 And now plot this point cloud as-is:
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-37
+.. GENERATED FROM PYTHON SOURCE LINES 31-38
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Plot a typical point cloud with no EDL
@@ -69,16 +69,16 @@ And now plot this point cloud as-is:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-42
+.. GENERATED FROM PYTHON SOURCE LINES 39-43
 
 We can improve the depth mapping by enabling eye dome lighting on the
 renderer with :func:`pyvista.Renderer.enable_eye_dome_lighting`.
 
 Try plotting that point cloud with Eye-Dome-Lighting yourself below:
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-49
+.. GENERATED FROM PYTHON SOURCE LINES 43-50
 
-.. code-block:: default
+.. code-block:: Python
 
 
     p = pv.Plotter()
@@ -88,13 +88,13 @@ Try plotting that point cloud with Eye-Dome-Lighting yourself below:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 50-53
+.. GENERATED FROM PYTHON SOURCE LINES 51-54
 
 The eye dome lighting mode can also handle plotting scalar arrays. Try the
 above block but by specifying a ``scalars`` array instead of ``color`` in
 the ``add_mesh`` call.
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-62
+.. GENERATED FROM PYTHON SOURCE LINES 56-63
 
 .. raw:: html
 
@@ -105,17 +105,11 @@ the ``add_mesh`` call.
     </center>
 
 
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
-
-
 .. _sphx_glr_download_tutorial_03_figures_exercises_c_edl.py:
 
 .. only:: html
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
-
 
     .. container:: binder-badge
 
@@ -124,13 +118,13 @@ the ``add_mesh`` call.
         :alt: Launch binder
         :width: 150 px
 
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: c_edl.py <c_edl.py>`
-
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: c_edl.ipynb <c_edl.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: c_edl.py <c_edl.py>`
 
 
 .. only:: html

@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_09_trame_a_trame_simple.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorial_09_trame_a_trame_simple.py>`
         to download the full example code or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
@@ -26,9 +26,10 @@ A simple example of how to create a Trame app with a PyVista Plotter.
 This example contains the boilerplate code to use anytime you are creating a
 new Trame application with PyVista.
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-33
+.. GENERATED FROM PYTHON SOURCE LINES 11-34
 
-.. code-block:: default
+.. code-block:: Python
+
 
     import pyvista as pv
     from pyvista import examples
@@ -53,7 +54,7 @@ new Trame application with PyVista.
     server.start()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-41
+.. GENERATED FROM PYTHON SOURCE LINES 35-42
 
 .. raw:: html
 
@@ -64,17 +65,11 @@ new Trame application with PyVista.
     </center>
 
 
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
-
-
 .. _sphx_glr_download_tutorial_09_trame_a_trame_simple.py:
 
 .. only:: html
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
-
 
     .. container:: binder-badge
 
@@ -83,13 +78,13 @@ new Trame application with PyVista.
         :alt: Launch binder
         :width: 150 px
 
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: a_trame_simple.py <a_trame_simple.py>`
-
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: a_trame_simple.ipynb <a_trame_simple.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: a_trame_simple.py <a_trame_simple.py>`
 
 
 .. only:: html

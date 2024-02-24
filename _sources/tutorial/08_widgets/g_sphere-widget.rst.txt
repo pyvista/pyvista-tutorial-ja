@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_08_widgets_g_sphere-widget.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_g_sphere-widget.py>`
         to download the full example code or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
@@ -33,28 +33,30 @@ easily add several widgets to a scene.
 
 Let's look at a few use cases that all update a surface mesh.
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-18
+.. GENERATED FROM PYTHON SOURCE LINES 17-19
 
-.. code-block:: default
-
-
-
+.. code-block:: Python
+   :dedent: 1
 
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-24
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 21-25
 
 Example A
 +++++++++
 
 Use a single sphere widget
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-52
+.. GENERATED FROM PYTHON SOURCE LINES 25-53
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -96,22 +98,22 @@ Use a single sphere widget
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-56
+.. GENERATED FROM PYTHON SOURCE LINES 54-57
 
 And here is a screen capture of a user interacting with this
 
 .. image:: ../../images/gifs/sphere-widget-a.gif
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-63
+.. GENERATED FROM PYTHON SOURCE LINES 60-64
 
 Example B
 +++++++++
 
 Use several sphere widgets at once
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-92
+.. GENERATED FROM PYTHON SOURCE LINES 64-93
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -154,13 +156,13 @@ Use several sphere widgets at once
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 93-96
+.. GENERATED FROM PYTHON SOURCE LINES 94-97
 
 And here is a screen capture of a user interacting with this
 
 .. image:: ../../images/gifs/sphere-widget-b.gif
 
-.. GENERATED FROM PYTHON SOURCE LINES 98-103
+.. GENERATED FROM PYTHON SOURCE LINES 99-104
 
 Example C
 +++++++++
@@ -168,9 +170,9 @@ Example C
 This one is the coolest - use four sphere widgets to update perturbations on
 a surface and interpolate between them with some boundary conditions
 
-.. GENERATED FROM PYTHON SOURCE LINES 103-150
+.. GENERATED FROM PYTHON SOURCE LINES 104-151
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -226,9 +228,9 @@ a surface and interpolate between them with some boundary conditions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 151-166
+.. GENERATED FROM PYTHON SOURCE LINES 152-167
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Begin the plotting routine
@@ -257,13 +259,13 @@ a surface and interpolate between them with some boundary conditions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 167-170
+.. GENERATED FROM PYTHON SOURCE LINES 168-171
 
 And here is a screen capture of a user interacting with this
 
 .. image:: ../../images/gifs/sphere-widget-c.gif
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-179
+.. GENERATED FROM PYTHON SOURCE LINES 173-180
 
 .. raw:: html
 
@@ -276,7 +278,7 @@ And here is a screen capture of a user interacting with this
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.389 seconds)
+   **Total running time of the script:** (0 minutes 1.099 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_g_sphere-widget.py:
@@ -285,7 +287,6 @@ And here is a screen capture of a user interacting with this
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -293,13 +294,13 @@ And here is a screen capture of a user interacting with this
         :alt: Launch binder
         :width: 150 px
 
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: g_sphere-widget.py <g_sphere-widget.py>`
-
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: g_sphere-widget.ipynb <g_sphere-widget.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: g_sphere-widget.py <g_sphere-widget.py>`
 
 
 .. only:: html

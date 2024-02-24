@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_04_filters_exercises_e_glyphs.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorial_04_filters_exercises_e_glyphs.py>`
         to download the full example code or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
@@ -23,38 +23,39 @@ Plotting Glyphs (Vectors or PolyData)
 
 Use vectors in a dataset to plot and orient glyphs/geometric objects.
 
-.. GENERATED FROM PYTHON SOURCE LINES 7-11
+.. GENERATED FROM PYTHON SOURCE LINES 7-12
 
-.. code-block:: default
+.. code-block:: Python
+
 
     import numpy as np
     import pyvista as pv
     from pyvista import examples
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 12-13
+.. GENERATED FROM PYTHON SOURCE LINES 13-14
 
 Example dataset with normals
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-15
+.. GENERATED FROM PYTHON SOURCE LINES 14-16
 
-.. code-block:: default
+.. code-block:: Python
 
     mesh = examples.load_random_hills()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-17
+.. GENERATED FROM PYTHON SOURCE LINES 17-18
 
 Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-19
+.. GENERATED FROM PYTHON SOURCE LINES 18-20
 
-.. code-block:: default
+.. code-block:: Python
 
     help(mesh.glyph)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-26
+.. GENERATED FROM PYTHON SOURCE LINES 21-27
 
 Sometimes you might not want glyphs for every node in the input dataset. In
 this case, you can choose to build glyphs for a subset of the input dataset
@@ -63,17 +64,17 @@ percent which equates to five percent of the bounding box's length.
 
 create a subset of arrows using the glyph filter
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-29
+.. GENERATED FROM PYTHON SOURCE LINES 27-30
 
-.. code-block:: default
+.. code-block:: Python
 
     arrows = ...
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-35
+.. GENERATED FROM PYTHON SOURCE LINES 31-36
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
     p.add_mesh(arrows, color="black")
@@ -81,14 +82,14 @@ create a subset of arrows using the glyph filter
     p.show()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-38
+.. GENERATED FROM PYTHON SOURCE LINES 37-39
 
 A common approach is to load vectors directly to the mesh object and then
 access the :attr:`pyvista.DataSet.arrows` property to produce glyphs.
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-52
+.. GENERATED FROM PYTHON SOURCE LINES 39-53
 
-.. code-block:: default
+.. code-block:: Python
 
 
     sphere = pv.Sphere(radius=3.14)
@@ -105,9 +106,9 @@ access the :attr:`pyvista.DataSet.arrows` property to produce glyphs.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-61
+.. GENERATED FROM PYTHON SOURCE LINES 54-62
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # add and scale
@@ -118,13 +119,13 @@ access the :attr:`pyvista.DataSet.arrows` property to produce glyphs.
     sphere.arrows.plot()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 62-63
+.. GENERATED FROM PYTHON SOURCE LINES 63-64
 
 Plot the arrows and the sphere.
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-68
+.. GENERATED FROM PYTHON SOURCE LINES 64-69
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
     p.add_mesh(sphere.arrows, lighting=False, scalar_bar_args={'title': "Vector Magnitude"})
@@ -132,7 +133,7 @@ Plot the arrows and the sphere.
     p.show()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-76
+.. GENERATED FROM PYTHON SOURCE LINES 70-77
 
 .. raw:: html
 
@@ -143,17 +144,11 @@ Plot the arrows and the sphere.
     </center>
 
 
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
-
-
 .. _sphx_glr_download_tutorial_04_filters_exercises_e_glyphs.py:
 
 .. only:: html
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
-
 
     .. container:: binder-badge
 
@@ -162,13 +157,13 @@ Plot the arrows and the sphere.
         :alt: Launch binder
         :width: 150 px
 
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: e_glyphs.py <e_glyphs.py>`
-
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: e_glyphs.ipynb <e_glyphs.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: e_glyphs.py <e_glyphs.py>`
 
 
 .. only:: html

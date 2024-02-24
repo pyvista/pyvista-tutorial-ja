@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_09_trame_b_trame_actor_color.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorial_09_trame_b_trame_actor_color.py>`
         to download the full example code or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
@@ -24,9 +24,10 @@ Control the Color of an Actor
 Extending our simple example to have a dropdown menu to control the color of
 the actor.
 
-.. GENERATED FROM PYTHON SOURCE LINES 9-58
+.. GENERATED FROM PYTHON SOURCE LINES 9-59
 
-.. code-block:: default
+.. code-block:: Python
+
 
     import pyvista as pv
     from pyvista.plotting.colors import hexcolors
@@ -78,7 +79,7 @@ the actor.
     server.start()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-66
+.. GENERATED FROM PYTHON SOURCE LINES 60-67
 
 .. raw:: html
 
@@ -89,17 +90,11 @@ the actor.
     </center>
 
 
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
-
-
 .. _sphx_glr_download_tutorial_09_trame_b_trame_actor_color.py:
 
 .. only:: html
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
-
 
     .. container:: binder-badge
 
@@ -108,13 +103,13 @@ the actor.
         :alt: Launch binder
         :width: 150 px
 
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: b_trame_actor_color.py <b_trame_actor_color.py>`
-
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: b_trame_actor_color.ipynb <b_trame_actor_color.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: b_trame_actor_color.py <b_trame_actor_color.py>`
 
 
 .. only:: html

@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_03_figures_exercises_b_lighting_mesh.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_exercises_b_lighting_mesh.py>`
         to download the full example code or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
@@ -31,9 +31,10 @@ to ``add_mesh``.
 See the ``add_mesh`` docs for lighting options:
 https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html
 
-.. GENERATED FROM PYTHON SOURCE LINES 15-22
+.. GENERATED FROM PYTHON SOURCE LINES 15-23
 
-.. code-block:: default
+.. code-block:: Python
+
 
     import pyvista as pv
     from pyvista import examples
@@ -43,37 +44,37 @@ https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html
     cpos = [(575848.0, 5128459.0, 22289.0), (562835.0, 5114981.5, 2294.5), (-0.5, -0.5, 0.7)]
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-25
+.. GENERATED FROM PYTHON SOURCE LINES 25-26
 
 First, let's take a look at the mesh with default lighting conditions
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-27
+.. GENERATED FROM PYTHON SOURCE LINES 26-28
 
-.. code-block:: default
+.. code-block:: Python
 
     mesh.plot(cpos=cpos, show_scalar_bar=False)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-29
+.. GENERATED FROM PYTHON SOURCE LINES 29-30
 
 What about with no lighting?
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-31
+.. GENERATED FROM PYTHON SOURCE LINES 30-32
 
-.. code-block:: default
+.. code-block:: Python
 
     mesh.plot(..., cpos=cpos, show_scalar_bar=False)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-35
+.. GENERATED FROM PYTHON SOURCE LINES 33-36
 
 Demonstration of the specular property
 
 Feel free to adjust the specular value in the ``s`` variable.
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-50
+.. GENERATED FROM PYTHON SOURCE LINES 36-51
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter(shape=(1, 2), window_size=[1500, 500])
 
@@ -91,35 +92,35 @@ Feel free to adjust the specular value in the ``s`` variable.
     p.show(cpos=cpos)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-52
+.. GENERATED FROM PYTHON SOURCE LINES 52-53
 
 Specular power (feel free to adjust)
 
-.. GENERATED FROM PYTHON SOURCE LINES 52-54
+.. GENERATED FROM PYTHON SOURCE LINES 53-55
 
-.. code-block:: default
+.. code-block:: Python
 
     mesh.plot(..., cpos=cpos, show_scalar_bar=False)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-57
+.. GENERATED FROM PYTHON SOURCE LINES 56-58
 
 Demonstration of all diffuse, specular, and ambient in use together
 (feel free to adjust)
 
-.. GENERATED FROM PYTHON SOURCE LINES 57-59
+.. GENERATED FROM PYTHON SOURCE LINES 58-60
 
-.. code-block:: default
+.. code-block:: Python
 
     mesh.plot(..., cpos=cpos, show_scalar_bar=False)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 60-62
+.. GENERATED FROM PYTHON SOURCE LINES 61-63
 
 For detailed control over lighting conditions in general see the
 `lighting examples <https://docs.pyvista.org/examples/index.html#lighting>`_
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-71
+.. GENERATED FROM PYTHON SOURCE LINES 65-72
 
 .. raw:: html
 
@@ -130,17 +131,11 @@ For detailed control over lighting conditions in general see the
     </center>
 
 
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
-
-
 .. _sphx_glr_download_tutorial_03_figures_exercises_b_lighting_mesh.py:
 
 .. only:: html
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
-
 
     .. container:: binder-badge
 
@@ -149,13 +144,13 @@ For detailed control over lighting conditions in general see the
         :alt: Launch binder
         :width: 150 px
 
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: b_lighting_mesh.py <b_lighting_mesh.py>`
-
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: b_lighting_mesh.ipynb <b_lighting_mesh.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: b_lighting_mesh.py <b_lighting_mesh.py>`
 
 
 .. only:: html

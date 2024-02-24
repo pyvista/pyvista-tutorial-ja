@@ -1,61 +1,61 @@
 
 <!DOCTYPE html>
 
-<html lang="ja">
+
+<html lang="ja" data-content_root="../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>PyVistaの活用 &#8212; PyVista Tutorial</title>
-  <script>
+  
+  
+  
+  <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_3.6.3.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/no_search_highlight.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/fontawesome/css/all.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/table.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/cards.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/no_search_highlight.css?v=0f58e32f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/fontawesome/css/all.css?v=efc38b36" />
+    <link rel="stylesheet" type="text/css" href="../../_static/table.css?v=fb00c410" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cards.css?v=d8ea150e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/documentation_options.js?v=c033477b"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/thebelab-helper.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/translations.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=49e1bf35"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/05_action/index';</script>
@@ -63,112 +63,148 @@
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="GeoVistaの使用" href="a_lesson_geovista.html" />
     <link rel="prev" title="グリフ（矢印）によるベクトルの表示" href="../04_filters/solutions/e_glyphs.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="docsearch:language" content="ja">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ja"/>
   </head>
   
   
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
-  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
   <label class="overlay overlay-primary" for="__primary"></label>
-
   
-  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
   <label class="overlay overlay-secondary" for="__secondary"></label>
-
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
-      
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    </div>
+</form></div>
   </div>
-
   
-  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
   <label class="sidebar-toggle primary-toggle" for="__primary">
-      <span class="fa-solid fa-bars"></span>
+    <span class="fa-solid fa-bars"></span>
   </label>
-  <div id="navbar-start">
-    
-    
   
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
 
+  
 
 <a class="navbar-brand logo" href="../../index.html">
-
   
   
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/pyvista_logo_sm.png" class="logo__image only-light" alt="PyVista Tutorial - Home"/>
+    <script>document.write(`<img src="../../_static/pyvista_logo_sm.png" class="logo__image only-dark" alt="PyVista Tutorial - Home"/>`);</script>
   
   
-
-  
-    <img src="../../_static/pyvista_logo_sm.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../_static/pyvista_logo_sm.png" class="logo__image only-dark" alt="Logo image">
-  
-  
-</a>
+</a></div>
     
   </div>
-
   
   <div class="col-lg-9 navbar-header-items">
-    <div id="navbar-center" class="mr-auto">
+    
+    <div class="me-auto navbar-header-items__center">
       
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
-        
-                <li class="nav-item">
-                    <a class="nav-link" href="../../getting-started.html">
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../getting-started.html">
                         はじめに
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item current active">
-                    <a class="nav-link" href="../../tutorial.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../tutorial.html">
                         PyVistaチュートリアル
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
-    </ul>
-</nav>
-      </div>
+  </ul>
+</nav></div>
       
     </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
 
-    <div id="navbar-end">
-      <div class="navbar-end-item navbar-end__search-button-container">
-        
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="検索" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-      </div>
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">検索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
       
-      <div class="navbar-end-item">
-        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
-    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
-</span>
-      </div>
       
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
         <li class="nav-item">
           
           
@@ -177,8 +213,9 @@
           
           
           
-          <a href="https://github.com/pyvista/pyvista-tutorial" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          
+          <a href="https://github.com/pyvista/pyvista-tutorial" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
           
@@ -188,8 +225,9 @@
           
           
           
-          <a href="https://github.com/pyvista/pyvista/discussions" title="Support" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa fa-comment fa-fw"></i></span>
-            <label class="sr-only">Support</label></a>
+          
+          <a href="https://github.com/pyvista/pyvista/discussions" title="Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Support</span></a>
         </li>
         <li class="nav-item">
           
@@ -199,8 +237,9 @@
           
           
           
-          <a href="https://docs.pyvista.org/" title="Docs" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa fa-book fa-fw"></i></span>
-            <label class="sr-only">Docs</label></a>
+          
+          <a href="https://docs.pyvista.org/" title="Docs" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa fa-book fa-fw fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Docs</span></a>
         </li>
         <li class="nav-item">
           
@@ -210,8 +249,9 @@
           
           
           
-          <a href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst" title="Contributing" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa fa-gavel fa-fw"></i></span>
-            <label class="sr-only">Contributing</label></a>
+          
+          <a href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst" title="Contributing" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa fa-gavel fa-fw fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contributing</span></a>
         </li>
         <li class="nav-item">
           
@@ -221,155 +261,167 @@
           
           
           
-          <a href="https://doi.org/10.21105/joss.01450" title="The Paper" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa fa-file-text fa-fw"></i></span>
-            <label class="sr-only">The Paper</label></a>
+          
+          <a href="https://doi.org/10.21105/joss.01450" title="The Paper" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa fa-file-text fa-fw fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">The Paper</span></a>
         </li>
-      </ul>
-      </div>
+</ul></div>
       
     </div>
+    
   </div>
+  
+  
+    <div class="navbar-persistent--mobile">
 
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">検索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
 
   
-  <div class="search-button-container--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="検索" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-  </div>
-
-  
-  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
       <span class="fa-solid fa-outdent"></span>
-  </label>
+    </label>
   
-
 </div>
-  </nav>
+
+    </header>
   
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
+      
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
+
   
   <div class="sidebar-header-items sidebar-primary__section">
     
     
       <div class="sidebar-header-items__center">
-      
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
         
-                <li class="nav-item">
-                    <a class="nav-link" href="../../getting-started.html">
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../getting-started.html">
                         はじめに
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item current active">
-                    <a class="nav-link" href="../../tutorial.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../tutorial.html">
                         PyVistaチュートリアル
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
-    </ul>
-</nav>
-      </div>
-      
+  </ul>
+</nav></div>
+        
       </div>
     
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
 
-    
-    
-    <div class="sidebar-header-items__end">
-      
-      <div class="navbar-end-item">
-        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
-    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
-</span>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pyvista/pyvista-tutorial" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pyvista/pyvista/discussions" title="Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.pyvista.org/" title="Docs" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa fa-book fa-fw fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst" title="Contributing" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa fa-gavel fa-fw fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contributing</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.21105/joss.01450" title="The Paper" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa fa-file-text fa-fw fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">The Paper</span></a>
+        </li>
+</ul></div>
+        
       </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/pyvista/pyvista-tutorial" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/pyvista/pyvista/discussions" title="Support" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa fa-comment fa-fw"></i></span>
-            <label class="sr-only">Support</label></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://docs.pyvista.org/" title="Docs" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa fa-book fa-fw"></i></span>
-            <label class="sr-only">Docs</label></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst" title="Contributing" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa fa-gavel fa-fw"></i></span>
-            <label class="sr-only">Contributing</label></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://doi.org/10.21105/joss.01450" title="The Paper" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa fa-file-text fa-fw"></i></span>
-            <label class="sr-only">The Paper</label></a>
-        </li>
-      </ul>
-      </div>
-      
-    </div>
     
   </div>
-
   
-  <div class="sidebar-start-items sidebar-primary__section">
-    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Section navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    Section Navigation
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    <p aria-level="2" class="caption" role="heading"><span class="caption-text">レッスン内容</span></p>
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">レッスン内容</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../00_intro/index.html">はじめに</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../00_intro/a_basic.html">基本的な幾何学的オブジェクトを作成します</a></li>
@@ -516,35 +568,64 @@
 </ul>
 </li>
 </ul>
-
-  </div>
-</nav>
+</div>
+</nav></div>
     </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
   
+  <div id="rtd-footer-container"></div>
 
-  
-  <div class="sidebar-end-items sidebar-primary__section">
-    <div class="sidebar-end-items__item">
-    </div>
-  </div>
 
       </div>
-      <main class="bd-main">
+      
+      <main id="main-content" class="bd-main">
         
         
-        <div class="bd-content">
-          <div class="bd-article-container">
-            
-            <div class="bd-header-article">
-                
-            </div>
-            
-            
-            <article class="bd-article" role="main">
+          <div class="bd-content">
+            <div class="bd-article-container">
               
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../tutorial.html" class="nav-link">PyVistaチュートリアル</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">PyVistaの活用</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="pyvista-in-action">
-<span id="action"></span><h1>PyVistaの活用<a class="headerlink" href="#pyvista-in-action" title="この見出しへのパーマリンク">#</a></h1>
+<span id="action"></span><h1>PyVistaの活用<a class="headerlink" href="#pyvista-in-action" title="Link to this heading">#</a></h1>
 <p>PyVistaがすでにいくつかのプロジェクトで使用されており，あらゆる可視化に使用できることを紹介します．(講演時間15分)</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -558,7 +639,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="sunkit-pyvista is a python package for visualizing solar physics data in 3D."><figure class="align-default" id="id1">
 <a class="reference external image-reference" href="https://docs.sunpy.org/projects/sunkit-pyvista/en/latest/"><img alt="../../_images/sunkit-pyvista.png" src="../../_images/sunkit-pyvista.png" /></a>
 <figcaption>
-<p><span class="caption-text">sunkit-pyvista</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">sunkit-pyvista</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -566,7 +647,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Python stuff for drawing 3D hyperbolic polyhedra with 'PyVista'."><figure class="align-default" id="id2">
 <a class="reference external image-reference" href="https://github.com/stla/PyHyperbolic3D/tree/main"><img alt="../../_images/griddip.gif" src="../../_images/griddip.gif" /></a>
 <figcaption>
-<p><span class="caption-text">PyHyperbolic3D</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">PyHyperbolic3D</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -574,7 +655,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="topoGenesis is an open-source python package that provides topological structures and functions for Generative Systems and Sciences for various application areas."><figure class="align-default" id="id3">
 <a class="reference external image-reference" href="https://topogenesis.readthedocs.io/notebooks/boolean_marching_cubes/"><img alt="../../_images/boolean_marching_cubes.png" src="../../_images/boolean_marching_cubes.png" /></a>
 <figcaption>
-<p><span class="caption-text">topoGenesis</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">topoGenesis</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -582,7 +663,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="pyFBS is a Python package for Frequency Based Substructuring, Transfer Path Analysis, and multi-reference modal identification."><figure class="align-default" id="id4">
 <a class="reference external image-reference" href="https://pyfbs.readthedocs.io/en/latest/examples/examples.html"><img alt="../../_images/pyfbs.webp" src="../../_images/pyfbs.webp" /></a>
 <figcaption>
-<p><span class="caption-text">pyFBS: Pythonによる周波数ベースのサブストラクチャリング</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">pyFBS: Pythonによる周波数ベースのサブストラクチャリング</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -590,7 +671,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Pyvista streamlines of Coil Field Lines"><figure class="align-default" id="id5">
 <a class="reference external image-reference" href="https://magpylib.readthedocs.io/en/latest/examples/examples_30_coil_field_lines.html#pyvista-streamlines"><img alt="../../_images/coil_field_lines.png" src="../../_images/coil_field_lines.png" /></a>
 <figcaption>
-<p><span class="caption-text">Magpylibでのコイル磁力線の例</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">Magpylibでのコイル磁力線の例</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -598,7 +679,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Neighborhood Analysis, KD-Trees, and Octrees for Meshes and Point Clouds in Python"><figure class="align-default" id="id6">
 <a class="reference external image-reference" href="https://medium.com/towards-data-science/neighborhood-analysis-kd-trees-and-octrees-for-meshes-and-point-clouds-in-python-19fa96527b77"><img alt="../../_images/nikolov3.gif" src="../../_images/nikolov3.gif" /></a>
 <figcaption>
-<p><span class="caption-text">近隣分析についての Ivan Nikolov</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">近隣分析についての Ivan Nikolov</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -606,7 +687,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="How to Voxelize Meshes and Point Clouds in Python"><figure class="align-default" id="id7">
 <a class="reference external image-reference" href="https://medium.com/towards-data-science/how-to-voxelize-meshes-and-point-clouds-in-python-ca94d403f81d"><img alt="../../_images/nikolov2.gif" src="../../_images/nikolov2.gif" /></a>
 <figcaption>
-<p><span class="caption-text">ボクセリゼーションの Ivan Nikolov</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">ボクセリゼーションの Ivan Nikolov</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -614,7 +695,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Python Libraries for Mesh, Point Cloud, and Data Visualization (Part 1)"><figure class="align-default" id="id8">
 <a class="reference external image-reference" href="https://medium.com/towards-data-science/python-libraries-for-mesh-and-point-cloud-visualization-part-1-daa2af36de30"><img alt="../../_images/nikolov1.gif" src="../../_images/nikolov1.gif" /></a>
 <figcaption>
-<p><span class="caption-text">視覚化ライブラリの Ivan Nikolov</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">視覚化ライブラリの Ivan Nikolov</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -622,7 +703,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="A Python package used to visualize the gradient descent of function landscapes."><figure class="align-default" id="id9">
 <a class="reference external image-reference" href="https://github.com/JacobBumgarner/grad-descent-visualizer"><img alt="../../_images/grad_descent_visualizer.gif" src="../../_images/grad_descent_visualizer.gif" /></a>
 <figcaption>
-<p><span class="caption-text">勾配降下ビジュアライザー</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">勾配降下ビジュアライザー</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -630,7 +711,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="A mesh modeling interface to the Gmsh-Python-API"><figure class="align-default" id="id10">
 <a class="reference external image-reference" href="https://gmshmodel.readthedocs.io/en/latest/"><img alt="../../_images/gmsh_model.png" src="../../_images/gmsh_model.png" /></a>
 <figcaption>
-<p><span class="caption-text">GmshModel</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">GmshModel</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -638,7 +719,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Cartographic rendering and mesh analytics powered by PyVista"><figure class="align-default" id="id11">
 <a class="reference external image-reference" href="https://github.com/bjlittle/geovista"><img alt="../../_images/geovista_earth.png" src="../../_images/geovista_earth.png" /></a>
 <figcaption>
-<p><span class="caption-text">GeoVista</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">GeoVista</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -646,7 +727,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="A Python package for interactive mapping with Google Earth Engine, ipyleaflet, and ipywidgets."><figure class="align-default" id="id12">
 <a class="reference external image-reference" href="https://geemap.org/"><img alt="../../_images/geemap.gif" src="../../_images/geemap.gif" /></a>
 <figcaption>
-<p><span class="caption-text">geemap</span><a class="headerlink" href="#id12" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">geemap</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -654,7 +735,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Ptera Software is a fast, easy-to-use, and open-source software package for analyzing flapping-wing flight."><figure class="align-default" id="id13">
 <a class="reference external image-reference" href="https://github.com/camurban/pterasoftware"><img alt="../../_images/ptera_software.gif" src="../../_images/ptera_software.gif" /></a>
 <figcaption>
-<p><span class="caption-text">PteraSoftware</span><a class="headerlink" href="#id13" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">PteraSoftware</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -662,7 +743,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Stﾃｩphane Laurent's blog showing a sample of the animations they realized with PyVista."><figure class="align-default" id="id14">
 <a class="reference external image-reference" href="https://laustep.github.io/stlahblog/posts/MyPyVistaArtworks.html"><img alt="../../_images/Duoprism_3-30.gif" src="../../_images/Duoprism_3-30.gif" /></a>
 <figcaption>
-<p><span class="caption-text">Stﾃｩphane Laurent's artwork</span><a class="headerlink" href="#id14" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">Stﾃｩphane Laurent's artwork</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -670,7 +751,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="An open-source application for vasculature dataset analysis and visualization"><figure class="align-default" id="id15">
 <a class="reference external image-reference" href="https://jacobbumgarner.github.io/VesselVio/"><img alt="../../_images/vessel_vio.png" src="../../_images/vessel_vio.png" /></a>
 <figcaption>
-<p><span class="caption-text">VesselVio</span><a class="headerlink" href="#id15" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">VesselVio</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -678,7 +759,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Atmospheric convection plays a key role in the climate of tidally-locked terrestrial exoplanets: insights from high-resolution simulations"><figure class="align-default" id="id16">
 <a class="reference external image-reference" href="https://dennissergeev.github.io/exoconvection-apj-2020/"><img alt="../../_images/atmospheric_convection.jpeg" src="../../_images/atmospheric_convection.jpeg" /></a>
 <figcaption>
-<p><span class="caption-text">大気対流</span><a class="headerlink" href="#id16" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">大気対流</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -686,7 +767,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Visualize 3D models of Damavand Volcano, Alborz, Iran."><figure class="align-default" id="id17">
 <a class="reference external image-reference" href="https://nbviewer.jupyter.org/github/banesullivan/damavand-volcano/blob/master/Damavand_Volcano.ipynb"><img alt="../../_images/damavand_volcano.gif" src="../../_images/damavand_volcano.gif" /></a>
 <figcaption>
-<p><span class="caption-text">Damavand火山</span><a class="headerlink" href="#id17" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">Damavand火山</span><a class="headerlink" href="#id17" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -694,7 +775,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Dr. Morgan O'Neill at Stanford University is researching Above Anvil Cirrus Plumes and its dynamics as a hydraulic jump."><figure class="align-default" id="id18">
 <a class="reference external image-reference" href="https://www.youtube.com/watch?v=cCPjnF_vHxw&amp;feature=youtu.be"><img alt="../../_images/anvil_cirrus_plumes.png" src="../../_images/anvil_cirrus_plumes.png" /></a>
 <figcaption>
-<p><span class="caption-text">Anvil Cirrus Plumes</span><a class="headerlink" href="#id18" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">Anvil Cirrus Plumes</span><a class="headerlink" href="#id18" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -702,7 +783,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Optimization visualization with PyVista"><figure class="align-default" id="id19">
 <a class="reference external image-reference" href="https://gist.github.com/hichamjanati/6668d91848283c31ac18d801552fb582"><img alt="../../_images/optimization.gif" src="../../_images/optimization.gif" /></a>
 <figcaption>
-<p><span class="caption-text">PyVistaによる最適化可視化</span><a class="headerlink" href="#id19" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">PyVistaによる最適化可視化</span><a class="headerlink" href="#id19" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -710,7 +791,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="FLEM: A diffusive landscape evolution model"><figure class="align-default" id="id20">
 <a class="reference external image-reference" href="https://github.com/johnjarmitage/flem"><img alt="../../_images/flem.png" src="../../_images/flem.png" /></a>
 <figcaption>
-<p><span class="caption-text">FLEM: 拡散的景観進化モデル</span><a class="headerlink" href="#id20" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">FLEM: 拡散的景観進化モデル</span><a class="headerlink" href="#id20" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -718,7 +799,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="Orvisu Demo Application"><figure class="align-default" id="id21">
 <a class="reference external image-reference" href="https://github.com/BartheG/Orvisu"><img alt="../../_images/orvisu.gif" src="../../_images/orvisu.gif" /></a>
 <figcaption>
-<p><span class="caption-text">Orvisuデモアプリケーション</span><a class="headerlink" href="#id21" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">Orvisuデモアプリケーション</span><a class="headerlink" href="#id21" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -726,7 +807,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="PyMeshFix's example gallery"><figure class="align-default" id="id22">
 <a class="reference external image-reference" href="http://pymeshfix.pyvista.org/examples/index.html"><img alt="../../_images/pymeshfix.png" src="../../_images/pymeshfix.png" /></a>
 <figcaption>
-<p><span class="caption-text">PyMeshFixのサンプルギャラリー</span><a class="headerlink" href="#id22" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">PyMeshFixのサンプルギャラリー</span><a class="headerlink" href="#id22" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -734,7 +815,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="TetGen's example gallery"><figure class="align-default" id="id23">
 <a class="reference external image-reference" href="http://tetgen.pyvista.org/examples/index.html"><img alt="../../_images/tetgen.png" src="../../_images/tetgen.png" /></a>
 <figcaption>
-<p><span class="caption-text">TetGenの実例ギャラリー</span><a class="headerlink" href="#id23" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">TetGenの実例ギャラリー</span><a class="headerlink" href="#id23" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -742,7 +823,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="PVGeo's example gallery"><figure class="align-default" id="id24">
 <a class="reference external image-reference" href="https://pvgeo.org/examples/index.html"><img alt="../../_images/pvgeo.png" src="../../_images/pvgeo.png" /></a>
 <figcaption>
-<p><span class="caption-text">PVGeoの実例ギャラリー</span><a class="headerlink" href="#id24" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">PVGeoの実例ギャラリー</span><a class="headerlink" href="#id24" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -750,7 +831,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="FORGE Geothermal Project"><figure class="align-default" id="id25">
 <a class="reference external image-reference" href="https://forge.pvgeo.org/project/index.html"><img alt="../../_images/forge.png" src="../../_images/forge.png" /></a>
 <figcaption>
-<p><span class="caption-text">FORGE地熱プロジェクト</span><a class="headerlink" href="#id25" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">FORGE地熱プロジェクト</span><a class="headerlink" href="#id25" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -758,7 +839,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="AeroSandbox"><figure class="align-default" id="id26">
 <a class="reference external image-reference" href="https://peterdsharpe.github.io/AeroSandbox/"><img alt="../../_images/AeroSandbox.png" src="../../_images/AeroSandbox.png" /></a>
 <figcaption>
-<p><span class="caption-text">エアロサンドボックス</span><a class="headerlink" href="#id26" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">エアロサンドボックス</span><a class="headerlink" href="#id26" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -766,7 +847,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="OpenFOAM Rendering"><figure class="align-default" id="id27">
 <a class="reference external image-reference" href="https://pswpswpsw.github.io/posts/2018/09/blog-post-modify-vtk-openfoam/"><img alt="../../_images/open-foam.png" src="../../_images/open-foam.png" /></a>
 <figcaption>
-<p><span class="caption-text">OpenFOAMレンダリング</span><a class="headerlink" href="#id27" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">OpenFOAMレンダリング</span><a class="headerlink" href="#id27" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -774,7 +855,7 @@
 <div class="sphx-glr-thumbcontainer" tooltip="3D Rendering with Discretize"><figure class="align-default" id="id28">
 <a class="reference external image-reference" href="http://discretize.simpeg.xyz/en/main/examples/plot_pyvista_laguna.html"><img alt="../../_images/discretize.png" src="../../_images/discretize.png" /></a>
 <figcaption>
-<p><span class="caption-text">離散化を使用した3 Dレンダリング</span><a class="headerlink" href="#id28" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">離散化を使用した3 Dレンダリング</span><a class="headerlink" href="#id28" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
@@ -782,14 +863,14 @@
 <div class="sphx-glr-thumbcontainer" tooltip="3D visualization for the Open Mining Format (omf)"><figure class="align-default" id="id29">
 <a class="reference external image-reference" href="https://opengeovis.github.io/omfvista/examples/index.html"><img alt="../../_images/omfvista.png" src="../../_images/omfvista.png" /></a>
 <figcaption>
-<p><span class="caption-text">Open Mining Format (omf) の3 D表示</span><a class="headerlink" href="#id29" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">Open Mining Format (omf) の3 D表示</span><a class="headerlink" href="#id29" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-clear"></div><section id="exercises">
-<h2>演習<a class="headerlink" href="#exercises" title="この見出しへのパーマリンク">#</a></h2>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This is provided by `@bjlittle &lt;https://github.com/bjlittle&gt;`_ in `this discussion &lt;https://git..."><img alt="GeoVistaの使用" src="../../_images/sphx_glr_a_lesson_geovista_thumb.png" />
+<h2>演習<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This is provided by @bjlittle in this discussion and modified by @tkoyama010 ."><img alt="" src="../../_images/sphx_glr_a_lesson_geovista_thumb.png" />
 <p><a class="reference internal" href="a_lesson_geovista.html#sphx-glr-tutorial-05-action-a-lesson-geovista-py"><span class="std std-ref">GeoVistaの使用</span></a></p>
   <div class="sphx-glr-thumbnail-title">Using GeoVista</div>
 </div></div><div class="toctree-wrapper compound">
@@ -799,112 +880,118 @@
 </section>
 
 
-            </article>
-            
-            
-            
-            <footer class="bd-footer-article">
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="../04_filters/solutions/e_glyphs.html" title="前へ ページ">
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../04_filters/solutions/e_glyphs.html"
+       title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-          <p class="prev-next-subtitle">前へ</p>
-          <p class="prev-next-title">グリフ（矢印）によるベクトルの表示</p>
+        <p class="prev-next-subtitle">前へ</p>
+        <p class="prev-next-title">グリフ（矢印）によるベクトルの表示</p>
       </div>
-  </a>
-  <a class='right-next' id="next-link" href="a_lesson_geovista.html" title="次へ ページ">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">次へ</p>
-      <p class="prev-next-title">GeoVistaの使用</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
-</div>
-            </footer>
-            
-          </div>
-          
-          
-          
-            <div class="bd-sidebar-secondary bd-toc">
-              
-<div class="toc-item">
-  
-<div class="tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-</div>
-<nav id="bd-toc-nav" class="page-toc">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercises">
-   演習
-  </a>
- </li>
-</ul>
-
-</nav>
-</div>
-
-<div class="toc-item">
-  
-<div id="searchbox"></div>
-</div>
-
-<div class="toc-item">
-  
-</div>
-
-<div class="toc-item">
-  
-<div class="tocsection sourcelink">
-    <a href="../../_sources/tutorial/05_action/index.rst.txt">
-        <i class="fa-solid fa-file-lines"></i> ソースコードを表示
+    </a>
+    <a class="right-next"
+       href="a_lesson_geovista.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">次へ</p>
+        <p class="prev-next-title">GeoVistaの使用</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">演習</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/tutorial/05_action/index.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> ソースコードを表示
+    </a>
+  </div>
 </div>
 
-            </div>
-          
-          
-        </div>
-        <footer class="bd-footer-content">
-          <div class="bd-footer-content__inner">
+</div></div>
+              
             
           </div>
-        </footer>
+          <footer class="bd-footer-content">
+            
+          </footer>
         
       </main>
     </div>
   </div>
-
   
-    
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-  <footer class="bd-footer"><div class="bd-footer__inner container">
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
   
-  <div class="footer-item">
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
     
-<p class="copyright">
+      © Copyright 2022, PyVista Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
 
-    &copy; Copyright 2022, PyVista Developers.<br>
-
-</p>
-
-  </div>
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
   
-  <div class="footer-item">
-    
-<p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
-</p>
-
-  </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
   
 </div>
+
   </footer>
   </body>
 </html>
