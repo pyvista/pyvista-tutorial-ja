@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/cards.css?v=90395a4f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -56,7 +56,7 @@
     <script src="../../../_static/copybutton.js?v=49e1bf35"></script>
     <script src="../../../_static/asciinema-player_3.6.3.js"></script>
     <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
-    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/02_mesh/solutions/d_create-tri-surface';</script>
@@ -665,11 +665,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[-203.41963768, -200.87075483,    1.67990917],
-       [-177.79913522, -200.87075483,    2.73762445],
-       [-161.24342523, -200.87075483,    3.6246041 ],
-       [-132.49310872, -200.87075483,    5.52893928],
-       [-115.51085218, -200.87075483,    6.8249112 ]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[-198.77863984, -202.96262605,    1.76796899],
+       [-182.0267851 , -202.96262605,    2.43218805],
+       [-157.98012395, -202.96262605,    3.66047467],
+       [-139.79451544, -202.96262605,    4.79874046],
+       [-111.81573566, -202.96262605,    6.82328393]])
 </pre></div>
 </div>
 <p>次に，これらの点を使って，点群PyVistaデータオブジェクトを作成します．これは <a class="reference external" href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.43.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトに包含されることになります．</p>
@@ -794,8 +794,8 @@ delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound=False, inplace=False, edge_s
 <tr><td>N Cells</td><td>100</td></tr>
 <tr><td>N Points</td><td>100</td></tr>
 <tr><td>N Strips</td><td>0</td></tr>
-<tr><td>X Bounds</td><td>5.950e-02, 9.253e+00</td></tr>
-<tr><td>Y Bounds</td><td>4.565e-03, 9.248e+00</td></tr>
+<tr><td>X Bounds</td><td>6.291e-03, 9.295e+00</td></tr>
+<tr><td>Y Bounds</td><td>5.457e-03, 9.269e+00</td></tr>
 <tr><td>Z Bounds</td><td>0.000e+00, 0.000e+00</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
@@ -820,7 +820,7 @@ delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound=False, inplace=False, edge_s
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/d_create-tri-surface.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.042 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.014 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-solutions-d-create-tri-surface-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/d_create-tri-surface.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo7.svg" width="150px" /></a>
