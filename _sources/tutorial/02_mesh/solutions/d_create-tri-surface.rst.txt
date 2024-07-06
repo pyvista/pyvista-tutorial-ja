@@ -76,11 +76,11 @@ First, create some points for the surface.
  .. code-block:: none
 
 
-    array([[-199.05194085, -197.72987952,    1.95273541],
-           [-180.71436125, -197.72987952,    2.76607931],
-           [-157.1314548 , -197.72987952,    4.11978187],
-           [-135.09235619, -197.72987952,    5.6849236 ],
-           [-114.17735204, -197.72987952,    7.37791839]])
+    array([[-202.04033019, -197.83043802,    1.83548972],
+           [-179.29100017, -197.83043802,    2.8322259 ],
+           [-153.44699103, -197.83043802,    4.35370463],
+           [-134.97431674, -197.83043802,    5.68267894],
+           [-116.1441062 , -197.83043802,    7.19836132]])
 
 
 
@@ -101,10 +101,32 @@ be encompassed in a :class:`pyvista.PolyData` object.
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.png
-   :alt: d create tri surface
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.png
+        :alt: d create tri surface
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.vtksz
+
 
 
 
@@ -233,10 +255,32 @@ Apply the ``delaunay_2d`` filter.
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.png
-   :alt: d create tri surface
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.png
+        :alt: d create tri surface
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.vtksz
+
 
 
 
@@ -278,8 +322,8 @@ Clean Edges & Triangulations
     <tr><td>N Cells</td><td>100</td></tr>
     <tr><td>N Points</td><td>100</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>9.671e-03, 9.282e+00</td></tr>
-    <tr><td>Y Bounds</td><td>1.326e-02, 9.291e+00</td></tr>
+    <tr><td>X Bounds</td><td>1.437e-02, 9.285e+00</td></tr>
+    <tr><td>Y Bounds</td><td>3.383e-03, 9.263e+00</td></tr>
     <tr><td>Z Bounds</td><td>0.000e+00, 0.000e+00</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
@@ -298,10 +342,32 @@ Clean Edges & Triangulations
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.png
-   :alt: d create tri surface
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.png
+        :alt: d create tri surface
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.vtksz
+
 
 
 
@@ -321,10 +387,32 @@ Run the triangulation on these points
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.png
-   :alt: d create tri surface
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.png
+        :alt: d create tri surface
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.vtksz
+
 
 
 
@@ -345,10 +433,32 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.png
-   :alt: d create tri surface
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.png
+        :alt: d create tri surface
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.vtksz
+
 
 
 
@@ -367,7 +477,7 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.066 seconds)
+   **Total running time of the script:** (0 minutes 1.044 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py:

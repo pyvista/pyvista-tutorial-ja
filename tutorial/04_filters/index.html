@@ -644,13 +644,7 @@ document.write(`
 <li><p><a class="reference external" href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSetFilters.extract_geometry.html">extract_geometry()</a>: 表面の形状を抽出します．</p></li>
 </ul>
 <p>これらのフィルタを使用するには，データ・オブジェクトで選択したメソッドを直接呼び出します．</p>
-<div class="jupyter_cell docutils container">
-<div class="cell_output docutils container">
-</div>
-</div>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
@@ -662,24 +656,28 @@ document.write(`
 <span class="n">outline</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">outline</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-</div>
-</div>
 <p>これで，新しい <code class="docutils literal notranslate"><span class="pre">threshed</span></code> オブジェクトに入力データセットのしきい値が設定されたバージョンがあります．フィルタの実行方法を変更するためにどのようなキーワード引数を使用できるかを調べるには， <code class="docutils literal notranslate"><span class="pre">help(dataset.threshold)</span></code> またはIPython環境で <code class="docutils literal notranslate"><span class="pre">shift+tab</span></code> を使用してPyVistaオブジェクトに付加されたフィルタのdocstringを出力します．</p>
 <p>このフィルタ処理されたデータセットを，元のデータセットのアウトラインに沿ってプロットできるようになりました:</p>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">outline</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">threshed</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+スタティックなシーン</label><div class="sd-tab-content docutils">
+<figure class="align-default">
+<img alt="../../_images/index-3_00_003.png" src="../../_images/index-3_00_003.png" />
+</figure>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/index_2_04.png" src="../../_images/index_2_04.png" />
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+インタラクティブなシーン</label><div class="sd-tab-content docutils">
+
+    <iframe src='../../_static/static_viewer.html?fileURL=../_images/plot_directive/tutorial/04_filters/index-3_00_00.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
 </div>
 </div>
 <p>他のフィルターはどうですか?いくつかのフィルタ結果を収集して比較してみましょう．</p>
@@ -718,9 +716,21 @@ document.write(`
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+スタティックなシーン</label><div class="sd-tab-content docutils">
 <figure class="align-default">
-<img alt="../../_images/index-1_00_003.png" src="../../_images/index-1_00_003.png" />
+<img alt="../../_images/index-4_00_002.png" src="../../_images/index-4_00_002.png" />
 </figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+インタラクティブなシーン</label><div class="sd-tab-content docutils">
+
+    <iframe src='../../_static/static_viewer.html?fileURL=../_images/plot_directive/tutorial/04_filters/index-4_00_00.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
+</div>
+</div>
 <section id="filter-pipeline">
 <h2>フィルタパイプライン<a class="headerlink" href="#filter-pipeline" title="Link to this heading">#</a></h2>
 <p>VTKでは，フィルタがパイプラインで使用されることが多く，各アルゴリズムはその出力を次のフィルタリング・アルゴリズムに渡します．PyVistaでは，次のようにしてフィルタリングパイプラインを模倣できます．各フィルタを最後のフィルタにアタッチします．次の例では，複数のフィルタが連結されています．</p>
@@ -731,28 +741,30 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">slice_orthogonal</span></code> フィルタを使用して，各軸平面に沿ってスライスを3つ作成します．</p></li>
 </ol>
 <p>フィルタリングチェーンを適用する</p>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">threshold</span><span class="p">()</span><span class="o">.</span><span class="n">elevation</span><span class="p">()</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">normal</span><span class="o">=</span><span class="s2">&quot;z&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">slice_orthogonal</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">threshold</span><span class="p">()</span><span class="o">.</span><span class="n">elevation</span><span class="p">()</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">normal</span><span class="o">=</span><span class="s2">&quot;z&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">slice_orthogonal</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-</div>
-</div>
 <p>フィルタリングされたデータを表示するには， <code class="docutils literal notranslate"><span class="pre">plot</span></code> メソッド (<code class="docutils literal notranslate"><span class="pre">result.plot()</span></code>) を呼び出すか，レンダリングシーンを作成します．</p>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">outline</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;Elevation&quot;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">view_isometric</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+スタティックなシーン</label><div class="sd-tab-content docutils">
+<figure class="align-default">
+<img alt="../../_images/index-6_00_002.png" src="../../_images/index-6_00_002.png" />
+</figure>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/index_4_02.png" src="../../_images/index_4_02.png" />
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+インタラクティブなシーン</label><div class="sd-tab-content docutils">
+
+    <iframe src='../../_static/static_viewer.html?fileURL=../_images/plot_directive/tutorial/04_filters/index-6_00_00.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
 </div>
 </div>
 <section id="exercises">

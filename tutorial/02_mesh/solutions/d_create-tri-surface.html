@@ -665,11 +665,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[-199.05194085, -197.72987952,    1.95273541],
-       [-180.71436125, -197.72987952,    2.76607931],
-       [-157.1314548 , -197.72987952,    4.11978187],
-       [-135.09235619, -197.72987952,    5.6849236 ],
-       [-114.17735204, -197.72987952,    7.37791839]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[-202.04033019, -197.83043802,    1.83548972],
+       [-179.29100017, -197.83043802,    2.8322259 ],
+       [-153.44699103, -197.83043802,    4.35370463],
+       [-134.97431674, -197.83043802,    5.68267894],
+       [-116.1441062 , -197.83043802,    7.19836132]])
 </pre></div>
 </div>
 <p>次に，これらの点を使って，点群PyVistaデータオブジェクトを作成します．これは <a class="reference external" href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.43.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトに包含されることになります．</p>
@@ -678,7 +678,19 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSet.plot.html#pyvista.DataSet.plot" title="pyvista.DataSet.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">cloud</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">point_size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_d_create-tri-surface_001.png" srcset="../../../_images/sphx_glr_d_create-tri-surface_001.png" alt="d create tri surface" class = "sphx-glr-single-img"/><p>点のPyVistaデータ構造ができたので，三角形分割を実行して，つまらない離散点を接続された曲面に変えることができます．  <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.UnstructuredGridFilters.delaunay_2d()</span></code> を参照してください．</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+スタティックなシーン</label><div class="sd-tab-content docutils">
+<img src="../../../_images/sphx_glr_d_create-tri-surface_001.png" srcset="../../../_images/sphx_glr_d_create-tri-surface_001.png" alt="d create tri surface" class = "sphx-glr-single-img"/></div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+インタラクティブなシーン</label><div class="sd-tab-content docutils">
+
+    <iframe src='../../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
+</div>
+</div>
+<p>点のPyVistaデータ構造ができたので，三角形分割を実行して，つまらない離散点を接続された曲面に変えることができます．  <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.UnstructuredGridFilters.delaunay_2d()</span></code> を参照してください．</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><a href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.PolyDataFilters.delaunay_2d.html#pyvista.PolyDataFilters.delaunay_2d" title="pyvista.PolyDataFilters.delaunay_2d" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">cloud</span><span class="o">.</span><span class="n">delaunay_2d</span></a><span class="p">)</span>
 </pre></div>
 </div>
@@ -771,7 +783,19 @@ delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound=False, inplace=False, edge_s
 <a href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSet.plot.html#pyvista.DataSet.plot" title="pyvista.DataSet.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">surf</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_d_create-tri-surface_002.png" srcset="../../../_images/sphx_glr_d_create-tri-surface_002.png" alt="d create tri surface" class = "sphx-glr-single-img"/></section>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+スタティックなシーン</label><div class="sd-tab-content docutils">
+<img src="../../../_images/sphx_glr_d_create-tri-surface_002.png" srcset="../../../_images/sphx_glr_d_create-tri-surface_002.png" alt="d create tri surface" class = "sphx-glr-single-img"/></div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+インタラクティブなシーン</label><div class="sd-tab-content docutils">
+
+    <iframe src='../../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
+</div>
+</div>
+</section>
 <section id="clean-edges-triangulations">
 <h2>クリーンエッジと三角形分割<a class="headerlink" href="#clean-edges-triangulations" title="Link to this heading">#</a></h2>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the points to triangulate</span>
@@ -794,8 +818,8 @@ delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound=False, inplace=False, edge_s
 <tr><td>N Cells</td><td>100</td></tr>
 <tr><td>N Points</td><td>100</td></tr>
 <tr><td>N Strips</td><td>0</td></tr>
-<tr><td>X Bounds</td><td>9.671e-03, 9.282e+00</td></tr>
-<tr><td>Y Bounds</td><td>1.326e-02, 9.291e+00</td></tr>
+<tr><td>X Bounds</td><td>1.437e-02, 9.285e+00</td></tr>
+<tr><td>Y Bounds</td><td>3.383e-03, 9.263e+00</td></tr>
 <tr><td>Z Bounds</td><td>0.000e+00, 0.000e+00</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
@@ -806,21 +830,57 @@ delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound=False, inplace=False, edge_s
 <br /><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSet.plot.html#pyvista.DataSet.plot" title="pyvista.DataSet.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">cloud</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_d_create-tri-surface_003.png" srcset="../../../_images/sphx_glr_d_create-tri-surface_003.png" alt="d create tri surface" class = "sphx-glr-single-img"/><p>これらの点に対して三角測量を実行します</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+スタティックなシーン</label><div class="sd-tab-content docutils">
+<img src="../../../_images/sphx_glr_d_create-tri-surface_003.png" srcset="../../../_images/sphx_glr_d_create-tri-surface_003.png" alt="d create tri surface" class = "sphx-glr-single-img"/></div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+インタラクティブなシーン</label><div class="sd-tab-content docutils">
+
+    <iframe src='../../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
+</div>
+</div>
+<p>これらの点に対して三角測量を実行します</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">surf</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.PolyDataFilters.delaunay_2d.html#pyvista.PolyDataFilters.delaunay_2d" title="pyvista.PolyDataFilters.delaunay_2d" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">cloud</span><span class="o">.</span><span class="n">delaunay_2d</span></a><span class="p">()</span>
 <a href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSet.plot.html#pyvista.DataSet.plot" title="pyvista.DataSet.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">surf</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_d_create-tri-surface_004.png" srcset="../../../_images/sphx_glr_d_create-tri-surface_004.png" alt="d create tri surface" class = "sphx-glr-single-img"/><p>外側のエッジの一部は拘束されておらず，三角形分割によって不要な三角形が追加されていることに注意してください．私たちは <code class="docutils literal notranslate"><span class="pre">alpha</span></code> パラメータでそれを緩和します．</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+スタティックなシーン</label><div class="sd-tab-content docutils">
+<img src="../../../_images/sphx_glr_d_create-tri-surface_004.png" srcset="../../../_images/sphx_glr_d_create-tri-surface_004.png" alt="d create tri surface" class = "sphx-glr-single-img"/></div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
+インタラクティブなシーン</label><div class="sd-tab-content docutils">
+
+    <iframe src='../../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
+</div>
+</div>
+<p>外側のエッジの一部は拘束されておらず，三角形分割によって不要な三角形が追加されていることに注意してください．私たちは <code class="docutils literal notranslate"><span class="pre">alpha</span></code> パラメータでそれを緩和します．</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">surf</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.PolyDataFilters.delaunay_2d.html#pyvista.PolyDataFilters.delaunay_2d" title="pyvista.PolyDataFilters.delaunay_2d" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">cloud</span><span class="o">.</span><span class="n">delaunay_2d</span></a><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
 <a href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSet.plot.html#pyvista.DataSet.plot" title="pyvista.DataSet.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">surf</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_d_create-tri-surface_005.png" srcset="../../../_images/sphx_glr_d_create-tri-surface_005.png" alt="d create tri surface" class = "sphx-glr-single-img"/><center>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
+スタティックなシーン</label><div class="sd-tab-content docutils">
+<img src="../../../_images/sphx_glr_d_create-tri-surface_005.png" srcset="../../../_images/sphx_glr_d_create-tri-surface_005.png" alt="d create tri surface" class = "sphx-glr-single-img"/></div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-9">
+インタラクティブなシーン</label><div class="sd-tab-content docutils">
+
+    <iframe src='../../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
+</div>
+</div>
+<center>
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/d_create-tri-surface.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.066 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.044 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-solutions-d-create-tri-surface-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/d_create-tri-surface.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo7.svg" width="150px" /></a>

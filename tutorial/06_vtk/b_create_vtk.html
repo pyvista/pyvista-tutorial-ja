@@ -663,14 +663,26 @@ to download the full example code or to run this example in your browser via Bin
 <span class="n">image</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;vtkmodules.vtkCommonDataModel.vtkImageData(0x5569f066f670) at 0x7f6f06148040&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;vtkmodules.vtkCommonDataModel.vtkImageData(0x560e7ef4d8e0) at 0x7fe350360100&gt;
 </pre></div>
 </div>
 <p>PyVistaを使った簡単なプロット</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/version/stable/api/plotting/_autosummary/pyvista.plot.html#pyvista.plot" title="pyvista.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-function"><span class="n">pv</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_b_create_vtk_001.png" srcset="../../_images/sphx_glr_b_create_vtk_001.png" alt="b create vtk" class = "sphx-glr-single-img"/></section>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+スタティックなシーン</label><div class="sd-tab-content docutils">
+<img src="../../_images/sphx_glr_b_create_vtk_001.png" srcset="../../_images/sphx_glr_b_create_vtk_001.png" alt="b create vtk" class = "sphx-glr-single-img"/></div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+インタラクティブなシーン</label><div class="sd-tab-content docutils">
+
+    <iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/06_vtk/images/sphx_glr_b_create_vtk_001.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
+</div>
+</div>
+</section>
 <section id="create-vtkstructuredgrid">
 <h2><code class="docutils literal notranslate"><span class="pre">vtkStructuredGrid</span></code> を作成する<a class="headerlink" href="#create-vtkstructuredgrid" title="Link to this heading">#</a></h2>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define structured points with NumPy</span>
@@ -694,7 +706,7 @@ to download the full example code or to run this example in your browser via Bin
 <span class="n">grid</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x5569f3f2c950) at 0x7f6f16017c40&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x560e761be1c0) at 0x7fe367dee940&gt;
 </pre></div>
 </div>
 <p>ポイントデータの追加</p>
@@ -710,11 +722,23 @@ to download the full example code or to run this example in your browser via Bin
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/version/stable/api/plotting/_autosummary/pyvista.plot.html#pyvista.plot" title="pyvista.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-function"><span class="n">pv</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_b_create_vtk_002.png" srcset="../../_images/sphx_glr_b_create_vtk_002.png" alt="b create vtk" class = "sphx-glr-single-img"/><center>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+スタティックなシーン</label><div class="sd-tab-content docutils">
+<img src="../../_images/sphx_glr_b_create_vtk_002.png" srcset="../../_images/sphx_glr_b_create_vtk_002.png" alt="b create vtk" class = "sphx-glr-single-img"/></div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+インタラクティブなシーン</label><div class="sd-tab-content docutils">
+
+    <iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/06_vtk/images/sphx_glr_b_create_vtk_002.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
+</div>
+</div>
+<center>
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/06_vtk/b_create_vtk.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.578 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.581 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-06-vtk-b-create-vtk-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/b_create_vtk.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo17.svg" width="150px" /></a>

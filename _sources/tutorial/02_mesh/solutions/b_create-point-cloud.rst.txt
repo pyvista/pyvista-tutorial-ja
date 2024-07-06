@@ -79,11 +79,11 @@ locations.
  .. code-block:: none
 
 
-    pyvista_ndarray([[4.81055675e+05, 4.40019840e+06, 1.75859998e+03],
-                     [4.80969275e+05, 4.40015560e+06, 1.76054004e+03],
-                     [4.81017175e+05, 4.40016680e+06, 1.76031006e+03],
-                     [4.80973075e+05, 4.40015720e+06, 1.76055005e+03],
-                     [4.81094575e+05, 4.40017470e+06, 1.75942004e+03]])
+    pyvista_ndarray([[4.80961375e+05, 4.40023900e+06, 1.75777002e+03],
+                     [4.81056675e+05, 4.40024270e+06, 1.75696997e+03],
+                     [4.80984175e+05, 4.40020720e+06, 1.77204004e+03],
+                     [4.81082875e+05, 4.40010550e+06, 1.76315002e+03],
+                     [4.80934875e+05, 4.40015980e+06, 1.76382996e+03]])
 
 
 
@@ -116,7 +116,7 @@ data or your own project, create a PyVista mesh using those points.
     <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>4.809e+05, 4.811e+05</td></tr>
     <tr><td>Y Bounds</td><td>4.400e+06, 4.400e+06</td></tr>
-    <tr><td>Z Bounds</td><td>1.754e+03, 1.785e+03</td></tr>
+    <tr><td>Z Bounds</td><td>1.754e+03, 1.787e+03</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
 
@@ -166,10 +166,32 @@ perception with point clouds (learn more about `EDL
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.png
-   :alt: b create point cloud
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.png
+        :alt: b create point cloud
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.vtksz
+
 
 
 
@@ -238,10 +260,32 @@ render every point as its own sphere using ``render_points_as_spheres``.
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_002.png
-   :alt: b create point cloud
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_002.png
+        :alt: b create point cloud
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_002.vtksz
+
 
 
 
@@ -289,11 +333,11 @@ This time, we're going to create a totally new, random point cloud containing
  .. code-block:: none
 
 
-    pyvista_ndarray([[ 0.49300544,  0.79929308, -0.34362218],
-                     [ 0.84253881, -0.20711094, -0.49722571],
-                     [-0.98326239, -0.15072883,  0.10235185],
-                     [-0.45590563,  0.86167423, -0.22286223],
-                     [-0.88554088, -0.35672045, -0.29760355]])
+    pyvista_ndarray([[ 0.80149289,  0.56893264,  0.18418685],
+                     [ 0.45045482, -0.31703854, -0.8346119 ],
+                     [ 0.5852964 ,  0.39221025,  0.70964727],
+                     [-0.87620482,  0.20009626,  0.43843653],
+                     [ 0.55024475, -0.6346128 , -0.54267607]])
 
 
 
@@ -344,10 +388,32 @@ for more details).
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_003.png
-   :alt: b create point cloud
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_003.png
+        :alt: b create point cloud
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-ja/pyvista-tutorial-ja/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_003.vtksz
+
 
 
 
@@ -366,7 +432,7 @@ for more details).
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.476 seconds)
+   **Total running time of the script:** (0 minutes 3.399 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_b_create-point-cloud.py:
