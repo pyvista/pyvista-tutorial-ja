@@ -546,6 +546,8 @@ document.write(`
 
 <li class="toctree-l2"><a class="reference internal" href="../06_vtk/b_create_vtk.html">VTKオブジェクトの作成</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../06_vtk/c_vtk_algorithms.html">VTKアルゴリズムの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_vtk/d_wasm.html">VTK + WASM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_vtk/e_vtk_next.html">VTK's Next Generation API</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../08_widgets/index.html">PyVistaのウィジェット</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -559,9 +561,11 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../08_widgets/h_spline-widget.html">スプラインウィジェット</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../09_trame/index.html">PyVistaとTrame</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09_trame/index.html">Trame</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../09_trame/a_getting_started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09_trame/a_trame_simple.html">シンプルなTrameアプリ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09_trame/b_trame_actor_color.html">アクターの色をコントロールします</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_trame/b_trame_vtk.html">Using VTK/PyVista and Trame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09_trame/c_trame_scalars.html">スカラー配列の制御</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09_trame/d_trame_scalar_range.html">スカラー範囲の制御</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09_trame/e_trame_algorithm.html">VTK，PyVista，Trameの使用</a></li>
@@ -648,11 +652,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># output first 5 rows</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[0.2729399 , 0.67732892, 0.44749851],
-       [0.4188653 , 0.06575276, 0.28952564],
-       [0.00255931, 0.62566188, 0.53994894],
-       [0.35176428, 0.45976449, 0.83368117],
-       [0.88188012, 0.23950478, 0.35374255]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[0.58647371, 0.09324607, 0.75464703],
+       [0.80037902, 0.34710098, 0.51559783],
+       [0.02127828, 0.76337725, 0.14470739],
+       [0.51962868, 0.09629478, 0.99507199],
+       [0.15699363, 0.72664383, 0.70647976]])
 </pre></div>
 </div>
 <p>点 (n x 3) の numpy 配列を PolyData に渡します．</p>
@@ -667,9 +671,9 @@ to download the full example code or to run this example in your browser via Bin
 <tr><td>N Cells</td><td>100</td></tr>
 <tr><td>N Points</td><td>100</td></tr>
 <tr><td>N Strips</td><td>0</td></tr>
-<tr><td>X Bounds</td><td>2.559e-03, 9.954e-01</td></tr>
-<tr><td>Y Bounds</td><td>1.575e-02, 9.867e-01</td></tr>
-<tr><td>Z Bounds</td><td>1.225e-02, 9.854e-01</td></tr>
+<tr><td>X Bounds</td><td>2.128e-02, 9.776e-01</td></tr>
+<tr><td>Y Bounds</td><td>7.685e-04, 9.762e-01</td></tr>
+<tr><td>Z Bounds</td><td>1.973e-03, 9.951e-01</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
 
@@ -885,7 +889,7 @@ Contains arrays :
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/a_lesson_mesh.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.913 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.677 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-a-lesson-mesh-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/a_lesson_mesh.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo5.svg" width="150px" /></a>

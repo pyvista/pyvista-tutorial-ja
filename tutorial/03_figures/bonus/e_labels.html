@@ -546,6 +546,8 @@ document.write(`
 
 <li class="toctree-l2"><a class="reference internal" href="../../06_vtk/b_create_vtk.html">VTKオブジェクトの作成</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../06_vtk/c_vtk_algorithms.html">VTKアルゴリズムの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06_vtk/d_wasm.html">VTK + WASM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06_vtk/e_vtk_next.html">VTK's Next Generation API</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../08_widgets/index.html">PyVistaのウィジェット</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -559,9 +561,11 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../../08_widgets/h_spline-widget.html">スプラインウィジェット</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../09_trame/index.html">PyVistaとTrame</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../09_trame/index.html">Trame</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../09_trame/a_getting_started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../09_trame/a_trame_simple.html">シンプルなTrameアプリ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../09_trame/b_trame_actor_color.html">アクターの色をコントロールします</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../09_trame/b_trame_vtk.html">Using VTK/PyVista and Trame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../09_trame/c_trame_scalars.html">スカラー配列の制御</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../09_trame/d_trame_scalar_range.html">スカラー範囲の制御</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../09_trame/e_trame_algorithm.html">VTK，PyVista，Trameの使用</a></li>
@@ -796,9 +800,9 @@ add_point_labels(self, points, labels, italic=False, bold=True, font_size=None, 
 <tr><td>N Cells</td><td>10</td></tr>
 <tr><td>N Points</td><td>10</td></tr>
 <tr><td>N Strips</td><td>0</td></tr>
-<tr><td>X Bounds</td><td>1.081e-02, 9.725e-01</td></tr>
-<tr><td>Y Bounds</td><td>2.094e-03, 9.981e-01</td></tr>
-<tr><td>Z Bounds</td><td>1.577e-01, 8.949e-01</td></tr>
+<tr><td>X Bounds</td><td>1.018e-01, 9.402e-01</td></tr>
+<tr><td>Y Bounds</td><td>7.466e-02, 9.339e-01</td></tr>
+<tr><td>Z Bounds</td><td>2.314e-02, 9.426e-01</td></tr>
 <tr><td>N Arrays</td><td>1</td></tr>
 </table>
 
@@ -902,7 +906,7 @@ add_point_labels(self, points, labels, italic=False, bold=True, font_size=None, 
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/bonus/e_labels.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.783 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.786 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-03-figures-bonus-e-labels-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/e_labels.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo9.svg" width="150px" /></a>
