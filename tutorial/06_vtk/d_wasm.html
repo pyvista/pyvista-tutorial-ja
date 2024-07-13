@@ -64,7 +64,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/06_vtk/d_wasm';</script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="VTK&#39;s Next Generation API" href="e_vtk_next.html" />
+    <link rel="next" title="VTKの次世代API" href="e_vtk_next.html" />
     <link rel="prev" title="VTKアルゴリズムの使用" href="c_vtk_algorithms.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -289,7 +289,7 @@
 <li class="toctree-l3"><a class="reference internal" href="b_create_vtk.html">VTKオブジェクトの作成</a></li>
 <li class="toctree-l3"><a class="reference internal" href="c_vtk_algorithms.html">VTKアルゴリズムの使用</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">VTK + WASM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="e_vtk_next.html">VTK's Next Generation API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="e_vtk_next.html">VTKの次世代API</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../08_widgets/index.html">PyVistaのウィジェット</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -468,12 +468,11 @@ document.write(`
                   
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">注釈</p>
-<p><a class="reference internal" href="#sphx-glr-download-tutorial-06-vtk-d-wasm-py"><span class="std std-ref">Go to the end</span></a>
-to download the full example code or to run this example in your browser via Binder</p>
+<p>完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 <a class="reference internal" href="#sphx-glr-download-tutorial-06-vtk-d-wasm-py"><span class="std std-ref">最後に進んでください</span></a> 。</p>
 </div>
 <section class="sphx-glr-example-title" id="vtk-wasm">
 <span id="sphx-glr-tutorial-06-vtk-d-wasm-py"></span><h1>VTK + WASM<a class="headerlink" href="#vtk-wasm" title="Link to this heading">#</a></h1>
-<p>Use WASM local rendering. This requires a pre-release version of VTK:</p>
+<p>WASMローカルレンダリングを使用する。 これにはVTKのプレリリースバージョンが必要です:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--extra-index-url<span class="w"> </span>https://wheels.vtk.org<span class="w"> </span><span class="nv">vtk</span><span class="o">==</span><span class="m">9</span>.3.20240629.dev0
 </pre></div>
 </div>
@@ -654,8 +653,7 @@ to download the full example code or to run this example in your browser via Bin
 <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">ready</span>  <span class="c1"># noqa</span>
 </pre></div>
 </div>
-<p>Make sure to give room for the download of WASM bundle
-Only needed at first execution</p>
+<p>WASMバンドルのダウンロードのためのスペースを確保してください。</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>  <span class="c1"># noqa</span>
 
 <span class="k">await</span> <a href="https://docs.python.org/dev/library/asyncio-task.html#asyncio.sleep" title="asyncio.sleep" class="sphx-glr-backref-module-asyncio sphx-glr-backref-type-py-function"><span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span></a><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># noqa</span>
@@ -703,7 +701,7 @@ Only needed at first execution</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">次へ</p>
-        <p class="prev-next-title">VTK's Next Generation API</p>
+        <p class="prev-next-title">VTKの次世代API</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

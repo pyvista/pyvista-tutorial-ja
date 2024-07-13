@@ -289,7 +289,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../06_vtk/b_create_vtk.html">VTKオブジェクトの作成</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../06_vtk/c_vtk_algorithms.html">VTKアルゴリズムの使用</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../06_vtk/d_wasm.html">VTK + WASM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../06_vtk/e_vtk_next.html">VTK's Next Generation API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../06_vtk/e_vtk_next.html">VTKの次世代API</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../08_widgets/index.html">PyVistaのウィジェット</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -494,11 +494,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.80981975e+05, 4.40008350e+06, 1.77518994e+03],
-                 [4.80945175e+05, 4.40009300e+06, 1.77421997e+03],
-                 [4.81009975e+05, 4.40017390e+06, 1.76008997e+03],
-                 [4.81009575e+05, 4.40016530e+06, 1.76046997e+03],
-                 [4.81078575e+05, 4.40016390e+06, 1.77241003e+03]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.80992475e+05, 4.40008810e+06, 1.76572998e+03],
+                 [4.81083975e+05, 4.40013680e+06, 1.75980005e+03],
+                 [4.81050175e+05, 4.40010130e+06, 1.76146997e+03],
+                 [4.81074975e+05, 4.40022320e+06, 1.75915002e+03],
+                 [4.81081975e+05, 4.40015990e+06, 1.77243994e+03]])
 </pre></div>
 </div>
 <p>サンプルデータまたは自分のプロジェクトからの点/頂点のNumPy配列ができたので，それらの点からPyVistaメッシュを作成します．</p>
@@ -515,7 +515,7 @@ to download the full example code or to run this example in your browser via Bin
 <tr><td>N Strips</td><td>0</td></tr>
 <tr><td>X Bounds</td><td>4.809e+05, 4.811e+05</td></tr>
 <tr><td>Y Bounds</td><td>4.400e+06, 4.400e+06</td></tr>
-<tr><td>Z Bounds</td><td>1.754e+03, 1.784e+03</td></tr>
+<tr><td>Z Bounds</td><td>1.754e+03, 1.787e+03</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
 
@@ -595,11 +595,11 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://docs.pyvista.org/version/stable/api/utilities/_autosummary/pyvista.pyvista_ndarray.html#pyvista.pyvista_ndarray" title="pyvista.pyvista_ndarray" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">vectors</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[ 0.72225325, -0.21046465,  0.65882841],
-                 [-0.31344551,  0.57864122, -0.75294506],
-                 [ 0.00554542,  0.76449359, -0.64460748],
-                 [-0.63575256,  0.39398419,  0.6637734 ],
-                 [ 0.68956571, -0.1298065 , -0.71249519]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[ 0.94073062, -0.33652973, -0.04211466],
+                 [-0.67980568, -0.51229794,  0.52480001],
+                 [ 0.06746502, -0.40992289, -0.90962173],
+                 [ 0.65755341,  0.73160183,  0.17995079],
+                 [ 0.00532144,  0.68504017,  0.72848586]])
 </pre></div>
 </div>
 <p>ベクトル配列を点データとして新しいメッシュに追加します:</p>
@@ -639,7 +639,7 @@ to download the full example code or to run this example in your browser via Bin
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/b_create-point-cloud.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 6.422 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 5.641 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-solutions-b-create-point-cloud-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/b_create-point-cloud.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo7.svg" width="150px" /></a>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>VTK&#39;s Next Generation API &#8212; PyVista Tutorial</title>
+    <title>VTKの次世代API &#8212; PyVista Tutorial</title>
   
   
   
@@ -289,7 +289,7 @@
 <li class="toctree-l3"><a class="reference internal" href="b_create_vtk.html">VTKオブジェクトの作成</a></li>
 <li class="toctree-l3"><a class="reference internal" href="c_vtk_algorithms.html">VTKアルゴリズムの使用</a></li>
 <li class="toctree-l3"><a class="reference internal" href="d_wasm.html">VTK + WASM</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">VTK's Next Generation API</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">VTKの次世代API</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../08_widgets/index.html">PyVistaのウィジェット</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -452,7 +452,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>VTK's Next Generation API</h1>
+    <h1>VTKの次世代API</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -468,11 +468,10 @@ document.write(`
                   
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">注釈</p>
-<p><a class="reference internal" href="#sphx-glr-download-tutorial-06-vtk-e-vtk-next-py"><span class="std std-ref">Go to the end</span></a>
-to download the full example code or to run this example in your browser via Binder</p>
+<p>完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 <a class="reference internal" href="#sphx-glr-download-tutorial-06-vtk-e-vtk-next-py"><span class="std std-ref">最後に進んでください</span></a> 。</p>
 </div>
 <section class="sphx-glr-example-title" id="vtk-s-next-generation-api">
-<span id="sphx-glr-tutorial-06-vtk-e-vtk-next-py"></span><h1>VTK's Next Generation API<a class="headerlink" href="#vtk-s-next-generation-api" title="Link to this heading">#</a></h1>
+<span id="sphx-glr-tutorial-06-vtk-e-vtk-next-py"></span><h1>VTKの次世代API<a class="headerlink" href="#vtk-s-next-generation-api" title="Link to this heading">#</a></h1>
 <p>This requires a pre-release version of VTK:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--extra-index-url<span class="w"> </span>https://wheels.vtk.org<span class="w"> </span><span class="nv">vtk</span><span class="o">==</span><span class="m">9</span>.3.20240629.dev0
 </pre></div>
@@ -564,7 +563,7 @@ to download the full example code or to run this example in your browser via Bin
 <span class="kn">import</span> <span class="nn">pathlib</span>
 </pre></div>
 </div>
-<p>Load input mesh from a vtkPartitionedDataSetCollection file</p>
+<p>vtkPartitionedDataSetCollection ファイルから入力メッシュをロードする</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vtkmodules.vtkIOXML</span> <span class="kn">import</span> <span class="n">vtkXMLPartitionedDataSetCollectionReader</span>
 
 <span class="n">path</span> <span class="o">=</span> <span class="n">_download_archive_file_or_folder</span><span class="p">(</span><span class="s1">&#39;reactor.zip&#39;</span><span class="p">,</span> <span class="n">target_file</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
