@@ -99,7 +99,7 @@ After interacting with the scene, the clipped mesh is available as:
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7fb6dbe8db20)
+    [UnstructuredGrid (0x7fe9e172eee0)
       N Cells:    3538080
       N Points:   3613484
       X Bounds:   9.000e+01, 1.800e+02
@@ -180,7 +180,7 @@ After interacting with the scene, the slice is available as:
  .. code-block:: none
 
 
-    [PolyData (0x7fb6dbe9afa0)
+    [PolyData (0x7fe9e172e8e0)
       N Cells:    38880
       N Points:   39277
       N Strips:   0
@@ -438,7 +438,7 @@ the ``InteractionEvent`` observer:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 11.610 seconds)
+   **Total running time of the script:** (0 minutes 11.752 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_e_plane-widget.py:
