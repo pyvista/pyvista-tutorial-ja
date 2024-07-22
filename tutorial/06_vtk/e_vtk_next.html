@@ -304,7 +304,7 @@
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../09_trame/index.html">Trame</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../09_trame/a_getting_started.html">Getting started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../09_trame/a_getting_started.html">スタート</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../09_trame/a_trame_simple.html">シンプルなTrameアプリ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../09_trame/b_trame_actor_color.html">アクターの色をコントロールします</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../09_trame/b_trame_vtk.html">Using VTK/PyVista and Trame</a></li>
@@ -584,7 +584,7 @@ document.write(`
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">coils</span> <span class="o">=</span> <span class="n">build_magnetic_coils</span><span class="p">(</span><span class="n">reactor</span><span class="p">,</span> <span class="n">current</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Compute B, H in a 32x32x32 grid</p>
+<p>32x32x32グリッドでB, Hを計算する</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtkImageData</span><span class="p">(</span><span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="n">spacing</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
 <span class="n">grid_points</span> <span class="o">=</span> <span class="n">vtk_to_numpy</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">points</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">coils</span><span class="o">.</span><span class="n">getB</span><span class="p">(</span><span class="n">grid_points</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span>
@@ -593,12 +593,12 @@ document.write(`
 <span class="n">grid</span><span class="o">.</span><span class="n">point_data</span><span class="o">.</span><span class="n">set_array</span><span class="p">(</span><span class="s2">&quot;H (A/m)&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Show coils</p>
+<p>コイルを表示</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">magpy</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">coils</span><span class="p">,</span> <span class="n">arrow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">save_dataset</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="s2">&quot;data/solution.vti&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Compute streamlines of B field induced by toroidal coils.</p>
+<p>トロイダルコイルによって誘導されるB磁場のストリームラインを計算する。</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">trace_streamlines</span> <span class="o">=</span> <span class="n">vtkStreamTracer</span><span class="p">(</span>
     <span class="n">integrator_type</span><span class="o">=</span><span class="n">vtkStreamTracer</span><span class="o">.</span><span class="n">RUNGE_KUTTA45</span><span class="p">,</span>
     <span class="n">integration_direction</span><span class="o">=</span><span class="n">vtkStreamTracer</span><span class="o">.</span><span class="n">BOTH</span><span class="p">,</span>
@@ -613,7 +613,7 @@ document.write(`
 <span class="n">create_sphere</span> <span class="o">&gt;&gt;</span> <span class="n">select_ports</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">trace_streamlines</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Visualize streamlines</p>
+<p>ストリームラインの可視化</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vtkmodules.vtkFiltersCore</span> <span class="kn">import</span> <span class="n">vtkTubeFilter</span>
 
 <span class="n">actor</span> <span class="o">=</span> <span class="n">vtkActor</span><span class="p">()</span>
@@ -623,7 +623,7 @@ document.write(`
 <span class="n">renderer</span><span class="o">.</span><span class="n">AddActor</span><span class="p">(</span><span class="n">actor</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Animate the disk position such that it oscillates between y=-1 and y=1.</p>
+<p>ディスクの位置がy=-1とy=1の間で振動するようにアニメートする。</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <a href="https://docs.python.org/dev/library/itertools.html#itertools.cycle" title="itertools.cycle" class="sphx-glr-backref-module-itertools sphx-glr-backref-type-py-function"><span class="n">cycle</span></a>
 
 
@@ -641,7 +641,7 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Render</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Sign up to receive TimerEvent</p>
+<p>TimerEventの受信登録</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">cb</span> <span class="o">=</span> <span class="n">vtkTimerCallback</span><span class="p">(</span><span class="n">create_sphere</span><span class="p">,</span> <span class="n">window</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
 <span class="n">interactor</span><span class="o">.</span><span class="n">RemoveObservers</span><span class="p">(</span><span class="s1">&#39;TimerEvent&#39;</span><span class="p">)</span>
 <span class="n">interactor</span><span class="o">.</span><span class="n">AddObserver</span><span class="p">(</span><span class="s1">&#39;TimerEvent&#39;</span><span class="p">,</span> <span class="n">cb</span><span class="o">.</span><span class="n">execute</span><span class="p">)</span>
