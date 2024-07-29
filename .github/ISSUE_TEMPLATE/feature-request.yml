@@ -1,11 +1,11 @@
 name: Feature Request
 description: Request that a feature be added to PyVista
 labels: ["feature-request"]
-body:
+body: 
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to open this issue to help improve PyVista!
+          Thanks for taking the time to open this issue to help improve PyVista!
   - type: textarea
     id: feature-details
     attributes:
