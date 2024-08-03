@@ -41,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/cards.css?v=90395a4f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -57,7 +57,7 @@
     <script src="../../../_static/copybutton.js?v=49e1bf35"></script>
     <script src="../../../_static/asciinema-player_3.6.3.js"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <script src="../../../_static/translations.js?v=91613774"></script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
@@ -494,11 +494,11 @@ to download the full example code. or to run this example in your browser via Bi
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.81109675e+05, 4.40019800e+06, 1.76940002e+03],
-                 [4.80945075e+05, 4.40023160e+06, 1.76130005e+03],
-                 [4.81042175e+05, 4.40014220e+06, 1.77290002e+03],
-                 [4.81025875e+05, 4.40016700e+06, 1.76031006e+03],
-                 [4.81072975e+05, 4.40007850e+06, 1.77797998e+03]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.80969575e+05, 4.40018420e+06, 1.76793005e+03],
+                 [4.81047775e+05, 4.40008880e+06, 1.76193994e+03],
+                 [4.80981575e+05, 4.40020520e+06, 1.77132996e+03],
+                 [4.81058775e+05, 4.40024740e+06, 1.75683997e+03],
+                 [4.81044475e+05, 4.40022790e+06, 1.75754004e+03]])
 </pre></div>
 </div>
 <p>サンプルデータまたは自分のプロジェクトからの点/頂点のNumPy配列ができたので，それらの点からPyVistaメッシュを作成します．</p>
@@ -595,11 +595,11 @@ to download the full example code. or to run this example in your browser via Bi
 <a href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.pyvista_ndarray.html#pyvista.pyvista_ndarray" title="pyvista.pyvista_ndarray" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">vectors</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[ 0.00119539,  0.56661839, -0.82397948],
-                 [-0.23659399,  0.88856547, -0.39303269],
-                 [-0.51201686, -0.79491054, -0.32550877],
-                 [-0.19658945,  0.488296  , -0.85024679],
-                 [ 0.72316076,  0.33277682, -0.60522567]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[ 0.74867966,  0.58000359, -0.32105234],
+                 [-0.90315887,  0.42720736,  0.04240191],
+                 [ 0.10937041,  0.82162394, -0.5594392 ],
+                 [-0.19204662, -0.86412788,  0.46518931],
+                 [-0.48479821, -0.69623636, -0.52936342]])
 </pre></div>
 </div>
 <p>ベクトル配列を点データとして新しいメッシュに追加します:</p>
@@ -639,10 +639,11 @@ to download the full example code. or to run this example in your browser via Bi
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/b_create-point-cloud.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 6.073 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 6.666 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-solutions-b-create-point-cloud-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/b_create-point-cloud.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo7.svg" width="150px" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/b_create-point-cloud.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo7.svg" style="width: 150px;" />
+</a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/26c38ef67800ebf8f6e040366e9055f5/b_create-point-cloud.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">b_create-point-cloud.ipynb</span></code></a></p>
