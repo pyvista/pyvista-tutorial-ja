@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:05.326** total execution time for 6 files **from tutorial/06_vtk**:
+**00:05.308** total execution time for 6 files **from tutorial/06_vtk**:
 
 .. container::
 
@@ -36,13 +36,13 @@ Computation times
      - 00:02.295
      - 0.0
    * - :ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py` (``a_1_transition_vtk.py``)
-     - 00:01.625
+     - 00:01.632
      - 0.0
    * - :ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` (``c_vtk_algorithms.py``)
-     - 00:00.822
+     - 00:00.801
      - 0.0
    * - :ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)
-     - 00:00.585
+     - 00:00.580
      - 0.0
    * - :ref:`sphx_glr_tutorial_06_vtk_d_wasm.py` (``d_wasm.py``)
      - 00:00.000
