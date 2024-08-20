@@ -332,12 +332,12 @@ that to a  `vtkPoints`_ class.  For example:
 
  .. code-block:: none
 
-    vtkPoints (0x55e9678015d0)
+    vtkPoints (0x5595a4c35bd0)
       Debug: Off
-      Modified Time: 14382448
+      Modified Time: 14382083
       Reference Count: 1
       Registered Events: (none)
-      Data: 0x55e961ff7f60
+      Data: 0x5595a4b1e680
       Data Array Name: Points
       Number Of Points: 3
       Bounds: 
@@ -565,7 +565,7 @@ you may want to use VTK classes directly.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.641 seconds)
+   **Total running time of the script:** (0 minutes 1.640 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_a_1_transition_vtk.py:
