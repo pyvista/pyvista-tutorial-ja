@@ -34,7 +34,7 @@ This exercise walks through the creation of a few different types of VTK dataset
 
     try:
         from vtkmodules.util.numpy_support import numpy_to_vtk
-    except:
+    except:  # noqa: E722
         from vtk.util.numpy_support import numpy_to_vtk
 
 
@@ -73,7 +73,7 @@ Add point data
 
 .. code-block:: Python
 
-    values = np.arange(np.product(image.GetDimensions()))
+    values = np.arange(np.prod(image.GetDimensions()))
     # Convert numpy array to VTK array
     arr = numpy_to_vtk(values)
     arr.SetName("values")  # CRITICAL
@@ -89,7 +89,7 @@ Add point data
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkImageData(0x5595a5b2d2e0) at 0x7f6a44eefee0>
+    <vtkmodules.vtkCommonDataModel.vtkImageData(0x55fa0c843240) at 0x7ff0794d7400>
 
 
 
@@ -176,7 +176,7 @@ Create ``vtkStructuredGrid``
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x5595a4b032a0) at 0x7f6a42367e80>
+    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x55fa0a626860) at 0x7ff0878a2b00>
 
 
 
@@ -263,7 +263,7 @@ Plot with PyVista for simplicity
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.585 seconds)
+   **Total running time of the script:** (0 minutes 0.577 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_b_create_vtk.py:

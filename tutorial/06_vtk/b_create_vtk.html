@@ -491,7 +491,7 @@ to download the full example code. or to run this example in your browser via Bi
 
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span> <span class="nn">vtkmodules.util.numpy_support</span> <span class="kn">import</span> <span class="n">numpy_to_vtk</span>
-<span class="k">except</span><span class="p">:</span>
+<span class="k">except</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
     <span class="kn">from</span> <span class="nn">vtk.util.numpy_support</span> <span class="kn">import</span> <span class="n">numpy_to_vtk</span>
 </pre></div>
 </div>
@@ -504,7 +504,7 @@ to download the full example code. or to run this example in your browser via Bi
 </pre></div>
 </div>
 <p>ポイントデータの追加</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">values</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">GetDimensions</span><span class="p">()))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">values</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.prod.html#numpy.prod" title="numpy.prod" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">prod</span></a><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">GetDimensions</span><span class="p">()))</span>
 <span class="c1"># Convert numpy array to VTK array</span>
 <span class="n">arr</span> <span class="o">=</span> <span class="n">numpy_to_vtk</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">values</span></a><span class="p">)</span>
 <span class="n">arr</span><span class="o">.</span><span class="n">SetName</span><span class="p">(</span><span class="s2">&quot;values&quot;</span><span class="p">)</span>  <span class="c1"># CRITICAL</span>
@@ -512,7 +512,7 @@ to download the full example code. or to run this example in your browser via Bi
 <span class="n">image</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;vtkmodules.vtkCommonDataModel.vtkImageData(0x5595a5b2d2e0) at 0x7f6a44eefee0&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;vtkmodules.vtkCommonDataModel.vtkImageData(0x55fa0c843240) at 0x7ff0794d7400&gt;
 </pre></div>
 </div>
 <p>PyVistaを使った簡単なプロット</p>
@@ -555,7 +555,7 @@ to download the full example code. or to run this example in your browser via Bi
 <span class="n">grid</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x5595a4b032a0) at 0x7f6a42367e80&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x55fa0a626860) at 0x7ff0878a2b00&gt;
 </pre></div>
 </div>
 <p>ポイントデータの追加</p>
@@ -587,7 +587,7 @@ to download the full example code. or to run this example in your browser via Bi
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/06_vtk/b_create_vtk.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.585 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.577 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-06-vtk-b-create-vtk-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/b_create_vtk.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo16.svg" style="width: 150px;" />

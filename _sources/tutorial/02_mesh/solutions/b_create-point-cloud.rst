@@ -79,11 +79,11 @@ locations.
  .. code-block:: none
 
 
-    pyvista_ndarray([[4.81016075e+05, 4.40015710e+06, 1.76076001e+03],
-                     [4.81099575e+05, 4.40013580e+06, 1.75950000e+03],
-                     [4.80972975e+05, 4.40010610e+06, 1.76419995e+03],
-                     [4.81054575e+05, 4.40014930e+06, 1.76184998e+03],
-                     [4.81107875e+05, 4.40023360e+06, 1.76941003e+03]])
+    pyvista_ndarray([[4.80944175e+05, 4.40008900e+06, 1.76457996e+03],
+                     [4.81018475e+05, 4.40021460e+06, 1.76057996e+03],
+                     [4.81035175e+05, 4.40021250e+06, 1.75825000e+03],
+                     [4.81116375e+05, 4.40012420e+06, 1.75917004e+03],
+                     [4.81062475e+05, 4.40008870e+06, 1.76951001e+03]])
 
 
 
@@ -301,7 +301,7 @@ and add those vectors to the mesh.
 This time, we're going to create a totally new, random point cloud containing
 100 points using :func:`numpy.random.random`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-113
+.. GENERATED FROM PYTHON SOURCE LINES 94-112
 
 .. code-block:: Python
 
@@ -316,8 +316,7 @@ This time, we're going to create a totally new, random point cloud containing
         """Create normalized vectors pointing outward from the center of the cloud."""
         origin = mesh.center
         vectors = mesh.points - origin
-        vectors = vectors / np.linalg.norm(vectors, axis=1)[:, None]
-        return vectors
+        return vectors / np.linalg.norm(vectors, axis=1)[:, None]
 
 
     vectors = compute_vectors(point_cloud)
@@ -333,24 +332,24 @@ This time, we're going to create a totally new, random point cloud containing
  .. code-block:: none
 
 
-    pyvista_ndarray([[-2.74152450e-01,  8.12723303e-01,  5.14121840e-01],
-                     [-8.22212572e-01, -1.67700764e-01, -5.43914460e-01],
-                     [-6.95270620e-01, -7.18748054e-01,  2.01988260e-06],
-                     [ 7.46841203e-01, -2.42247163e-01,  6.19309720e-01],
-                     [ 5.68493532e-01,  7.53775192e-01,  3.29602889e-01]])
+    pyvista_ndarray([[ 0.36143392, -0.19531517, -0.91171131],
+                     [-0.26937826,  0.17636495, -0.94674746],
+                     [ 0.238847  ,  0.96779869,  0.0794847 ],
+                     [-0.68579042,  0.6642675 ,  0.29738896],
+                     [ 0.18945346, -0.86760496,  0.45974886]])
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-115
+.. GENERATED FROM PYTHON SOURCE LINES 113-114
 
 Add the vector array as point data to the new mesh:
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-118
+.. GENERATED FROM PYTHON SOURCE LINES 114-117
 
 .. code-block:: Python
 
 
-    point_cloud['vectors'] = vectors
+    point_cloud["vectors"] = vectors
 
 
 
@@ -359,27 +358,27 @@ Add the vector array as point data to the new mesh:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 119-122
+.. GENERATED FROM PYTHON SOURCE LINES 118-121
 
 Now we can make arrows using those vectors using the glyph filter (see the
 `Glyph Example <https://docs.pyvista.org/examples/01-filter/glyphs.html>`_
 for more details).
 
-.. GENERATED FROM PYTHON SOURCE LINES 122-138
+.. GENERATED FROM PYTHON SOURCE LINES 121-137
 
 .. code-block:: Python
 
 
     arrows = point_cloud.glyph(
-        orient='vectors',
+        orient="vectors",
         scale=False,
         factor=0.15,
     )
 
     # Display the arrows
     plotter = pv.Plotter()
-    plotter.add_mesh(point_cloud, color='maroon', point_size=10.0, render_points_as_spheres=True)
-    plotter.add_mesh(arrows, color='lightblue')
+    plotter.add_mesh(point_cloud, color="maroon", point_size=10.0, render_points_as_spheres=True)
+    plotter.add_mesh(arrows, color="lightblue")
     # plotter.add_point_labels([point_cloud.center,], ['Center',],
     #                          point_color='yellow', point_size=20)
     plotter.show_grid()
@@ -419,7 +418,7 @@ for more details).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-146
+.. GENERATED FROM PYTHON SOURCE LINES 138-145
 
 .. raw:: html
 
@@ -432,7 +431,7 @@ for more details).
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 6.536 seconds)
+   **Total running time of the script:** (0 minutes 6.552 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_b_create-point-cloud.py:
