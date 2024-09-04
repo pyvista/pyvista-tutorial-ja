@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:07.194** total execution time for 1 file **from tutorial/04_filters**:
+**00:07.167** total execution time for 1 file **from tutorial/04_filters**:
 
 .. container::
 
@@ -33,5 +33,5 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorial_04_filters_a_lesson_filters.py` (``a_lesson_filters.py``)
-     - 00:07.194
+     - 00:07.167
      - 0.0

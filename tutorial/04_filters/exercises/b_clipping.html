@@ -481,8 +481,7 @@ document.write(`
                   
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">注釈</p>
-<p><a class="reference internal" href="#sphx-glr-download-tutorial-04-filters-exercises-b-clipping-py"><span class="std std-ref">Go to the end</span></a>
-to download the full example code. or to run this example in your browser via Binder</p>
+<p>完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 <a class="reference internal" href="#sphx-glr-download-tutorial-04-filters-exercises-b-clipping-py"><span class="std std-ref">最後に進んでください</span></a> 。</p>
 </div>
 <section class="sphx-glr-example-title" id="clipping-with-planes-boxes">
 <span id="sphx-glr-tutorial-04-filters-exercises-b-clipping-py"></span><h1>平面とボックスでクリップします<a class="headerlink" href="#clipping-with-planes-boxes" title="Link to this heading">#</a></h1>
@@ -573,9 +572,7 @@ to download the full example code. or to run this example in your browser via Bi
 </section>
 <section id="crinkled-clipping">
 <h2>しわくちゃなクリッピング<a class="headerlink" href="#crinkled-clipping" title="Link to this heading">#</a></h2>
-<p>Crinkled clipping is useful if you don't want the clip filter to truly clip
-cells on the boundary, but want to preserve the input cell structure and to
-pass the entire cell on through the boundary.</p>
+<p>クリンプクリッピングは，クリップフィルタが境界上のセルを本当にクリップするのではなく，入力セルの構造を保持し，セル全体を境界から通過させたい場合に有効です．</p>
 <p>このオプションは <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_box()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_sruface()</span></code> で使用できますが， <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_scalar()</span></code> でスカラーによるクリッピングを行っても利用することはできません．</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input mesh</span>
 <span class="n">mesh</span> <span class="o">=</span> <a href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.Wavelet.html#pyvista.Wavelet" title="pyvista.Wavelet" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-function"><span class="n">pv</span><span class="o">.</span><span class="n">Wavelet</span></a><span class="p">()</span>
