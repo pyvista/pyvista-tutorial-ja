@@ -89,7 +89,7 @@ Add point data
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkImageData(0x5612673a0360) at 0x7fa63b4b08e0>
+    <vtkmodules.vtkCommonDataModel.vtkImageData(0x55a579523ad0) at 0x7fd0febbbca0>
 
 
 
@@ -176,7 +176,7 @@ Create ``vtkStructuredGrid``
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x56125a429560) at 0x7fa61c419660>
+    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x55a576a7edf0) at 0x7fd0e3c7e620>
 
 
 
