@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:34.831** total execution time for 8 files **from tutorial/08_widgets**:
+**00:33.404** total execution time for 8 files **from tutorial/08_widgets**:
 
 .. container::
 
@@ -33,26 +33,26 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorial_08_widgets_a_box-widget.py` (``a_box-widget.py``)
-     - 00:14.680
+     - 00:14.747
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_e_plane-widget.py` (``e_plane-widget.py``)
-     - 00:12.453
+     - 00:11.472
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py` (``f_slider-bar-widget.py``)
-     - 00:03.066
+     - 00:03.025
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py` (``c_line-widget.py``)
-     - 00:01.880
+     - 00:01.457
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_g_sphere-widget.py` (``g_sphere-widget.py``)
-     - 00:01.354
+     - 00:01.343
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_b_checkbox-widget.py` (``b_checkbox-widget.py``)
-     - 00:00.746
+     - 00:00.735
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py` (``h_spline-widget.py``)
-     - 00:00.407
+     - 00:00.387
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_d_multi-slider-widget.py` (``d_multi-slider-widget.py``)
-     - 00:00.246
+     - 00:00.238
      - 0.0
