@@ -53,7 +53,7 @@ jobs:
           cd pyvista-tutorial-translations
           git submodule update --remote
           pip install -r ./requirements.txt
-          pip install -r pyvista-tutorial/requirements_docs.txt
+          pip install -e pyvista-tutorial[docs]
           cd ../
       - name: build
         env:
