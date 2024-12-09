@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:16.853** total execution time for 4 files **from tutorial/02_mesh/solutions**:
+**00:19.459** total execution time for 4 files **from tutorial/02_mesh/solutions**:
 
 .. container::
 
@@ -33,14 +33,14 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorial_02_mesh_solutions_b_create-point-cloud.py` (``b_create-point-cloud.py``)
-     - 00:06.321
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_02_mesh_solutions_c_create-uniform-grid.py` (``c_create-uniform-grid.py``)
-     - 00:05.775
+     - 00:06.594
      - 0.0
    * - :ref:`sphx_glr_tutorial_02_mesh_solutions_e_read-file.py` (``e_read-file.py``)
-     - 00:03.523
+     - 00:06.145
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_02_mesh_solutions_c_create-uniform-grid.py` (``c_create-uniform-grid.py``)
+     - 00:05.668
      - 0.0
    * - :ref:`sphx_glr_tutorial_02_mesh_solutions_d_create-tri-surface.py` (``d_create-tri-surface.py``)
-     - 00:01.234
+     - 00:01.051
      - 0.0
