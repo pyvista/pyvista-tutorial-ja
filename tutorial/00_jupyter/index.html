@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -480,7 +480,7 @@
 <p>PyVistaには， <a class="reference external" href="https://kitware.github.io/trame/index.html">Trame</a> を使用してJupyter環境内で完全な機能を持つプロットを表示する機能があります．我々は，PyVistaとTrameをペアリングするメカニズムを提供し，PyVistaプロッタをサーバサイドレンダリングとクライアントサイドレンダリングの両方でWebコンテキストで使用できるようにします．</p>
 <p>Trameバックエンドのサーバーサイドレンダリングモードは，現在のレンダーウィンドウをJupyter内のcanvasにストリーミングし，canvasからのユーザーアクションをVTKレンダーウィンドウに戻すことで動作します（これは， <code class="docutils literal notranslate"><span class="pre">trame-vtk</span></code> 内の <code class="docutils literal notranslate"><span class="pre">vtkRemoteView</span></code> によって、フードの下で行われます．</p>
 <p>例えば，この2つのコードはJupyterのインタラクティブキャンバスを表示します:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 <span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 
 <span class="c1"># short example</span>
@@ -493,7 +493,7 @@
 </pre></div>
 </div>
 <p>便宜上， <code class="docutils literal notranslate"><span class="pre">trame</span></code> を有効にすることもできます(これがデフォルト):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 <span class="n">pv</span><span class="o">.</span><span class="n">set_jupyter_backend</span><span class="p">(</span><span class="s1">&#39;trame&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -506,13 +506,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">'client'</span></code>：純粋なクライアントレンダリングのビューを使用します（一般的に仮想フレームバッファなしで安全）</p></li>
 </ul>
 <p><a class="reference external" href="https://docs.pyvista.org/user-guide/jupyter/index.html#pyvista.set_jupyter_backend" title="(in PyVista v0.44.2)"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_jupyter_backend()</span></code></a> を使用するか， <code class="xref py py-func docutils literal notranslate"><span class="pre">show()</span></code> 呼び出し時に <code class="docutils literal notranslate"><span class="pre">jupyter_backend</span></code> を渡すことでバックエンドを選択することができます．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 <span class="n">pv</span><span class="o">.</span><span class="n">set_jupyter_backend</span><span class="p">(</span><span class="s1">&#39;client&#39;</span><span class="p">)</span>
 
 <span class="n">pv</span><span class="o">.</span><span class="n">Cone</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 <span class="n">pv</span><span class="o">.</span><span class="n">set_jupyter_backend</span><span class="p">(</span><span class="s1">&#39;trame&#39;</span><span class="p">)</span>
 
 <span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>

@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -493,8 +493,8 @@
 <p>ポイントはメッシュの頂点，つまり基礎となる直交座標です．すべてのPyVistaデータセット (メッシュ!) にはポイントがあり，場合によっては，ポイントクラウドのようにポイントのみを持つメッシュを作成できます．</p>
 <p>たとえば，1 Dおよび2 Dのセルタイプ(セルとは何か簡単に説明します)を持つメッシュ用に作成された <a class="reference external" href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.44.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> クラスを使用して，ポイントクラウドメッシュを作成できます．</p>
 <p>ポイントクラウドから始めましょう – これは頂点のみを持つメッシュタイプです．作成するには，2 D配列の直交座標を次のように定義します．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 
 <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
@@ -520,7 +520,7 @@
 <div class="line"><br /></div>
 </div>
 <p>しかし，ほとんどのメッシュは，この格子状のメッシュのように，点と点の間に何らかのつながりがあることに注意が必要です．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">6.20</span><span class="p">,</span> <span class="mf">3.00</span><span class="p">,</span> <span class="mf">7.50</span><span class="p">),</span>
@@ -676,8 +676,8 @@
 <div class="line"><br /></div>
 </div>
 <p>ここでは，点データとセルデータを比較し，色をマッピングするときに点データがセル間でどのように補間されるかを示します．これは，セルのドメイン全体で単一の値を持つセルデータとは異なります．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 <span class="n">uni</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 
 <span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">border</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>

@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -462,13 +462,13 @@
 <p>GeoTIFFから地形に画像や地図を重ね合わせるためには，テクスチャ（GeoTIFF）を貼り付けたいメッシュや地形の延長線上にテクスチャ座標（「テクスチャマッピング」）が一致する必要があるのです．</p>
 <p>これは，GeoTIFF 自体の空間リファレンスを使用することで，イメージのない部分を切り取ることなく，テクスチャがドレープされているメッシュ全体を保持することができるからです．この例では，テクスチャが地形サーフェス上に伸びるように明示的に設定し，テクスチャ/GeoTIFF が地形サーフェスよりはるかに大きな範囲を持つようにしています．</p>
 <p>原文はこちら： <a class="github reference external" href="https://github.com/pyvista/pyvista-support/issues/14">pyvista/pyvista-support#14</a></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">tempfile</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">path</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span><span class="s2">&quot;topo_clean.vtk&quot;</span><span class="p">)</span>
@@ -503,14 +503,14 @@
 </pre></div>
 </div>
 <p>以下のブロックでは， <code class="docutils literal notranslate"><span class="pre">get_gcps</span></code> 関数を使用してラスターの Ground Control Point を取得することができますが，これは GDAL に依存します．このチュートリアルでは，ユーザーがGDALをインストールするのを避けるために，GCPをハードコードするつもりです．</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_gcps</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename</span></a><span class="p">):</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_gcps</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename</span></a><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Helper function retrieves the Ground Control</span>
 <span class="sd">    Points of a GeoTIFF. Note that this requires gdal.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">import</span> <span class="nn">rasterio</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">rasterio</span>
 
-    <span class="k">def</span> <span class="nf">get_point</span><span class="p">(</span><span class="n">gcp</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_point</span><span class="p">(</span><span class="n">gcp</span><span class="p">):</span>
         <span class="k">return</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.array.html#numpy.array" title="numpy.array" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">([</span><span class="n">gcp</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">gcp</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">gcp</span><span class="o">.</span><span class="n">z</span><span class="p">])</span>
 
     <span class="c1"># Load a raster</span>
@@ -621,7 +621,7 @@
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/c_geological-map.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 14.903 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 14.831 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-03-figures-c-geological-map-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/c_geological-map.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo8.svg" style="width: 150px;" />

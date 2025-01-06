@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -487,8 +487,8 @@
 <li><p><a class="reference external" href="https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSetFilters.extract_geometry.html">extract_geometry()</a>: 表面の形状を抽出します．</p></li>
 </ul>
 <p>これらのフィルタを使用するには，データ・オブジェクトで選択したメソッドを直接呼び出します．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 <span class="n">dataset</span><span class="o">.</span><span class="n">set_active_scalars</span><span class="p">(</span><span class="s2">&quot;Spatial Point Data&quot;</span><span class="p">)</span>
@@ -524,8 +524,8 @@
 </div>
 </div>
 <p>他のフィルターはどうですか?いくつかのフィルタ結果を収集して比較してみましょう．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 <span class="n">outline</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">outline</span><span class="p">()</span>

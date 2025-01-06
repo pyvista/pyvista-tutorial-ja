@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -482,8 +482,8 @@
 <h2>VTKからPyVistaへの移行<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>VTKは主にC++で開発されており，データへのアクセスには連鎖したセッターとゲッターのコマンドを使用します．その代わりに，PyVista は VTK のデータタイプを numpy 配列にラップして，ブラケット構文や派手なインデックスの恩恵を受けられるようにしています． このセクションでは，一連の例で2つのアプローチの違いを説明します．</p>
 <p>例えば，VTK Python のバインディングを使用して <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkImageData.html">vtk.vtkImageData</a> データ構造の値をハードコードするには，次のように記述します．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtk</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sin</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">vtk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sin</span>
 </pre></div>
 </div>
 <p>300x300の画像データセットの値を作成する</p>
@@ -509,8 +509,8 @@
 </pre></div>
 </div>
 <p>ご覧のように，単純な <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkImageData.html">vtk.vtkImageData</a> データセットを作成するためには，かなり多くのボイラープレートが必要です．PyVistaでは，より簡潔で，より &quot;Pythonic &quot;な構文が提供されています．PyVistaで同等のコードは以下の通りです．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
 <p>meshgrid 関数を使用して，x および y 値の 2D &quot;グリッド&quot; を作成します．ここでは，実質的にvtkDoubleArrayを置き換えています．</p>
@@ -573,7 +573,7 @@
 <section id="pointset-construction">
 <h3>ポイントセット構築<a class="headerlink" href="#pointset-construction" title="Link to this heading">#</a></h3>
 <p>PyVista は，VTK の C 配列を効率的に割り当て，アクセスするために NumPy に大きく依存しています． 例えば，VTKで点の配列を作るには，通常，リストのすべての点をループして，それを <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkPoints.html">vtkPoints</a> クラスに供給します． 例えば，以下のようになります．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtk</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">vtk</span>
 <span class="n">vtk_array</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkDoubleArray</span><span class="p">()</span>
 <span class="n">vtk_array</span><span class="o">.</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">vtk_array</span><span class="o">.</span><span class="n">SetNumberOfValues</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
@@ -592,7 +592,7 @@
 </pre></div>
 </div>
 <p>PyVistaで同じことをするには，単にNumPyの配列を作成する必要があります．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">np_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.667</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
 </pre></div>
 </div>
@@ -601,7 +601,7 @@
 <p><a class="reference external" href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.vtk_points.html#pyvista.vtk_points" title="(in PyVista v0.44.2)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.vtk_points()</span></code></a> を使って <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkPoints.html">vtkPoints</a> オブジェクトを構築することもできますが，ほとんどの状況では必要ありません．</p>
 </div>
 <p>最終的な目的は， <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span> <span class="pre">&amp;lt;pyvista.core.dataset.DataSet&amp;gt;</span></code> を構築することなので， <a class="reference external" href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.44.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> のコンストラクタに <code class="docutils literal notranslate"><span class="pre">np_points</span></code> の配列を渡すだけです．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 <span class="n">poly_data</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">np_points</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -630,7 +630,7 @@
 <h3>PyVistaのトレードオフ<a class="headerlink" href="#pyvista-tradeoffs" title="Link to this heading">#</a></h3>
 <p>ほとんどの機能は可能ですが，PyVistaでは機能や性能を落とさずにすべてを簡略化できるわけではありません．</p>
 <p><code class="xref py py-class docutils literal notranslate"><span class="pre">collision</span> <span class="pre">&amp;lt;pyvista.PolyDataFilters.collision&amp;gt;</span></code> フィルターでは，2つのメッシュ間のコリジョンを計算する方法を示します． 例えば，以下のようになります．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 
 <span class="c1"># create a default sphere and a shifted sphere</span>
 <span class="n">mesh_a</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
@@ -670,8 +670,8 @@
 <p><a class="reference internal" href="../02_mesh/index.html#mesh"><span class="std std-ref">メッシュとは?</span></a> のセクションで明確にされていないかもしれませんが，PyVistaのメッシュクラスはVTKの対応するクラスのサブクラスであり，これはPyVistaとVTKのワークフローを混在させることができることを意味しています．</p>
 </div>
 <p>VTKのクラスを使って，出力をPyVistaでラップして，効率的にプロットすることを止めるものはありません．例えば</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtk</span>
-<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">vtk</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 
 <span class="c1"># Create a circle using vtk</span>
 <span class="n">polygonSource</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkRegularPolygonSource</span><span class="p">()</span>
@@ -709,9 +709,9 @@
 <section id="vtk-algorithms">
 <h3>VTKアルゴリズム<a class="headerlink" href="#vtk-algorithms" title="Link to this heading">#</a></h3>
 <p>おそらく，PyVistaで（まだ）公開されていないVTKアルゴリズムで，使いたいものがあるのでしょう．PyVistaのオブジェクトはVTKのオブジェクトなので，これは十分に簡単に扱えます．PyVistaのメッシュをVTKアルゴリズムに渡して，出力をラップしてプロットしたり，さらにフィルタリングしたり，何でもできるのです．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="kn">import</span> <span class="nn">vtk</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">vtk</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny_coarse</span><span class="p">()</span>
 

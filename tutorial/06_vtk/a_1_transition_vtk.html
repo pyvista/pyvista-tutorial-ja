@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -475,9 +475,9 @@
 <span id="sphx-glr-tutorial-06-vtk-a-1-transition-vtk-py"></span><h1>VTKからPyVistaへの移行<a class="headerlink" href="#transitioning-from-vtk-to-pyvista" title="Link to this heading">#</a></h1>
 <p>VTKは主にC++で開発されており，データへのアクセスには連鎖したセッターとゲッターのコマンドを使用します．その代わりに，PyVista は VTK のデータタイプを numpy 配列にラップして，ブラケット構文や派手なインデックスの恩恵を受けられるようにしています． このセクションでは，一連の例で2つのアプローチの違いを説明します．</p>
 <p>例えば，VTK Python のバインディングを使用して <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkImageData.html">vtk.vtkImageData</a> データ構造の値をハードコードするには，次のように記述します．</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <a href="https://docs.python.org/dev/library/math.html#math.cos" title="math.cos" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><span class="n">cos</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/math.html#math.sin" title="math.sin" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><span class="n">sin</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <a href="https://docs.python.org/dev/library/math.html#math.cos" title="math.cos" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><span class="n">cos</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/math.html#math.sin" title="math.sin" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><span class="n">sin</span></a>
 
-<span class="kn">import</span> <span class="nn">vtk</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">vtk</span>
 </pre></div>
 </div>
 <p>300x300の画像データセットの値を作成する</p>
@@ -510,8 +510,8 @@
 </pre></div>
 </div>
 <p>ご覧のように，単純な <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkImageData.html">vtk.vtkImageData</a> データセットを作成するためには，かなり多くのボイラープレートが必要です．PyVistaでは，より簡潔で，より &quot;Pythonic &quot;な構文が提供されています．PyVistaで同等のコードは以下の通りです．</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 </pre></div>
 </div>
 <p>meshgrid 関数を使用して，x および y 値の 2D &quot;グリッド&quot; を作成します．ここでは，実質的にvtkDoubleArrayを置き換えています．</p>
@@ -658,7 +658,7 @@
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/06_vtk/a_1_transition_vtk.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.647 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.657 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-06-vtk-a-1-transition-vtk-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/a_1_transition_vtk.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo16.svg" style="width: 150px;" />

@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -459,11 +459,11 @@
 <section class="sphx-glr-example-title" id="control-scalar-range">
 <span id="sphx-glr-tutorial-09-trame-d-trame-scalar-range-py"></span><h1>スカラー範囲の制御<a class="headerlink" href="#control-scalar-range" title="Link to this heading">#</a></h1>
 <p>単純な例を拡張して，マッピングされたスカラーの色の限界をコントロールします．</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista.trame.ui</span> <span class="kn">import</span> <span class="n">plotter_ui</span>
-<span class="kn">from</span> <span class="nn">trame.app</span> <span class="kn">import</span> <span class="n">get_server</span>
-<span class="kn">from</span> <span class="nn">trame.ui.vuetify3</span> <span class="kn">import</span> <span class="n">SinglePageLayout</span>
-<span class="kn">from</span> <span class="nn">trame.widgets</span> <span class="kn">import</span> <span class="n">vuetify3</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista.trame.ui</span><span class="w"> </span><span class="kn">import</span> <span class="n">plotter_ui</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">trame.app</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_server</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">trame.ui.vuetify3</span><span class="w"> </span><span class="kn">import</span> <span class="n">SinglePageLayout</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">trame.widgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">vuetify3</span>
 
 <span class="n">pv</span><span class="o">.</span><span class="n">OFF_SCREEN</span> <span class="o">=</span> <span class="kc">True</span>
 
@@ -477,7 +477,7 @@
 
 
 <span class="nd">@state</span><span class="o">.</span><span class="n">change</span><span class="p">(</span><span class="s2">&quot;scalar_range&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">set_scalar_range</span><span class="p">(</span><span class="n">scalar_range</span><span class="o">=</span><span class="n">mesh</span><span class="o">.</span><span class="n">get_data_range</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: B008</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">set_scalar_range</span><span class="p">(</span><span class="n">scalar_range</span><span class="o">=</span><span class="n">mesh</span><span class="o">.</span><span class="n">get_data_range</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># noqa: B008</span>
     <span class="n">actor</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">scalar_range</span> <span class="o">=</span> <span class="n">scalar_range</span>
     <span class="n">ctrl</span><span class="o">.</span><span class="n">view_update</span><span class="p">()</span>
 

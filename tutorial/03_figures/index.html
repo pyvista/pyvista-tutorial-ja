@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -501,8 +501,8 @@
 <section id="add-mesh-to-plotter-object">
 <h3>Plotterオブジェクトにメッシュを追加する<a class="headerlink" href="#add-mesh-to-plotter-object" title="Link to this heading">#</a></h3>
 <p>プロットする場合，ユーザーはまず <a class="reference external" href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="(in PyVista v0.44.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> のインスタンスを作成する必要があります（Matplotlib の図形のようなものです）．それから， <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_mesh()</span></code> メソッドを通して，プロッタのインスタンスにデータを追加します．このワークフローは，典型的には次のようになります．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Wavelet</span><span class="p">()</span>
 
@@ -569,8 +569,8 @@
 </div>
 </div>
 <p>また， <code class="docutils literal notranslate"><span class="pre">opacity</span></code> 引数で不透明度をスカラー値や線形伝達関数に調整することもできます．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
 
@@ -596,8 +596,8 @@
 </div>
 <p><a class="reference external" href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html">add_mesh</a> のすべてのオプションを見てみましょう．</p>
 <p><code class="docutils literal notranslate"><span class="pre">add_mesh</span></code> メソッドは，同じ <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> のシーンに異なるデータを追加するために何度も呼び出すことができます．例えば，多くの異なるメッシュオブジェクトを作成し，それらを一緒にプロットすることができます．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">kinds</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;tetrahedron&#39;</span><span class="p">,</span>
@@ -646,7 +646,7 @@
 <section id="subplotting">
 <h3>サブプロット<a class="headerlink" href="#subplotting" title="Link to this heading">#</a></h3>
 <p>PyVistaのサブプロットAPIを使えば，データセットを横に並べて比較することも簡単にできます．まず <a class="reference external" href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="(in PyVista v0.44.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> オブジェクトの形状を指定して，次に <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.subplot()</span></code> メソッドでアクティブなサブプロットを登録します．これは Matplotlib の API でサブプロットを行う方法と同じように行います．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 
@@ -679,7 +679,7 @@
 <p class="admonition-title">Tip</p>
 <p>両方のビューのカメラをリンクさせるには <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.link_views()</span></code> メソッドを使用します．</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Wavelet</span><span class="p">()</span>
 <span class="n">cntr</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">contour</span><span class="p">()</span>
@@ -718,7 +718,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">shape=&quot;4/2&quot;</span></code> は，上に4プロット，下に2プロットを意味します．</p></li>
 </ul>
 <p>ここでは，右側に3つ，左側に1つのプロットを作成した例を示します．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Wavelet</span><span class="p">()</span>
 <span class="n">cntr</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">contour</span><span class="p">()</span>
@@ -774,8 +774,8 @@
 <section id="axes-and-bounds">
 <h3>軸と境界<a class="headerlink" href="#axes-and-bounds" title="Link to this heading">#</a></h3>
 <p>軸は <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.show_axes()</span></code> を使ってシーンに追加することができます．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 
@@ -805,8 +805,8 @@
 <p class="admonition-title">Tip</p>
 <p>詳しくは <a class="reference external" href="https://docs.pyvista.org/examples/02-plot/bounds.html">Plotting Bounds</a> を参照してください．</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 

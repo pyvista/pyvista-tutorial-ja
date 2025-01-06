@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -482,7 +482,7 @@
 <p>PyVistaにデータを取り込む方法は主に2つあります．ゼロから自分で作成するか， <a class="reference external" href="https://docs.pyvista.org/api/readers/index.html">互換性のあるファイルフォーマット</a> のいずれかからデータセットを読み込むかです．これから始めるので，ファイルをロードしてみましょう．</p>
 <p>もし，サーフェスモデルや点群，VTKファイルのような手近なデータセットがあれば，それを使うことができます．すぐに使えるものがない場合は，PyVistaの <a class="reference external" href="https://docs.pyvista.org/api/examples/_autosummary/pyvista.examples.downloads.html">pyvista.examples.downloads</a> モジュールでさまざまなファイルをダウンロードすることができます．</p>
 <p>ここでは，非常に基本的なデータセットをダウンロードすることができます．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_saddle_surface</span><span class="p">()</span>
 <span class="n">dataset</span>
 </pre></div>
@@ -548,7 +548,7 @@
 <h2>ファイルから読み込む<a class="headerlink" href="#read-from-a-file" title="Link to this heading">#</a></h2>
 <p>コンピュータのローカルにアクセスできるのであれば，ファイルから直接データセットを読み込むことができます．これは，VTKがサポートしている多くのファイルフォーマットの1つであり，PyVistaが <a class="reference external" href="https://github.com/nschloe/meshio">meshio</a> のようなライブラリに依存できるように，サポートしていない多くのファイルフォーマットでもあり得ます．</p>
 <p>以下の例では，VTKの鉄タンパク質データセット <a class="reference external" href="https://github.com/naucoin/VTKData/blob/master/Data/ironProt.vtk">ironProt.vtk</a> を <a class="reference external" href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.read.html#pyvista.read" title="(in PyVista v0.44.2)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> を使ってファイルからロードしています．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;ironProt.vtk&#39;</span><span class="p">)</span>
 <span class="n">dataset</span>
 </pre></div>
