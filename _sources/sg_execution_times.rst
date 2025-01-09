@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**05:02.535** total execution time for 59 files **from all galleries**:
+**05:15.368** total execution time for 59 files **from all galleries**:
 
 .. container::
 
@@ -33,115 +33,115 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``../../tutorial/03_figures/bonus/g_orbit.py``)
-     - 00:57.640
+     - 01:02.112
      - 0.0
    * - :ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``../../tutorial/03_figures/bonus/d_pbr.py``)
-     - 00:47.892
+     - 00:48.278
      - 0.0
    * - :ref:`sphx_glr_tutorial_04_filters_solutions_c_compute-normals.py` (``../../tutorial/04_filters/solutions/c_compute-normals.py``)
-     - 00:40.895
+     - 00:43.781
      - 0.0
    * - :ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py` (``../../tutorial/03_figures/solutions/c_edl.py``)
-     - 00:34.251
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``../../tutorial/03_figures/c_geological-map.py``)
-     - 00:15.584
+     - 00:33.789
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_a_box-widget.py` (``../../tutorial/08_widgets/a_box-widget.py``)
-     - 00:14.809
+     - 00:14.518
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``../../tutorial/03_figures/c_geological-map.py``)
+     - 00:14.349
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_e_plane-widget.py` (``../../tutorial/08_widgets/e_plane-widget.py``)
-     - 00:12.745
+     - 00:12.687
      - 0.0
    * - :ref:`sphx_glr_tutorial_04_filters_solutions_d_contouring.py` (``../../tutorial/04_filters/solutions/d_contouring.py``)
-     - 00:09.499
+     - 00:08.980
      - 0.0
    * - :ref:`sphx_glr_tutorial_03_figures_solutions_b_lighting_mesh.py` (``../../tutorial/03_figures/solutions/b_lighting_mesh.py``)
-     - 00:08.954
+     - 00:08.878
      - 0.0
    * - :ref:`sphx_glr_tutorial_04_filters_a_lesson_filters.py` (``../../tutorial/04_filters/a_lesson_filters.py``)
-     - 00:07.254
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_02_mesh_solutions_c_create-uniform-grid.py` (``../../tutorial/02_mesh/solutions/c_create-uniform-grid.py``)
-     - 00:04.691
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py` (``../../tutorial/03_figures/a_lesson_figures.py``)
-     - 00:04.676
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py` (``../../tutorial/01_basic/a_lesson_basic.py``)
-     - 00:04.662
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py` (``../../tutorial/01_basic/solutions/a_load_examples_solution.py``)
-     - 00:04.502
+     - 00:06.906
      - 0.0
    * - :ref:`sphx_glr_tutorial_02_mesh_solutions_b_create-point-cloud.py` (``../../tutorial/02_mesh/solutions/b_create-point-cloud.py``)
-     - 00:03.384
+     - 00:05.713
      - 0.0
-   * - :ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py` (``../../tutorial/08_widgets/f_slider-bar-widget.py``)
-     - 00:02.999
+   * - :ref:`sphx_glr_tutorial_02_mesh_solutions_c_create-uniform-grid.py` (``../../tutorial/02_mesh/solutions/c_create-uniform-grid.py``)
+     - 00:05.315
      - 0.0
-   * - :ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py` (``../../tutorial/03_figures/solutions/a_display_options.py``)
-     - 00:02.920
+   * - :ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py` (``../../tutorial/01_basic/a_lesson_basic.py``)
+     - 00:04.801
      - 0.0
-   * - :ref:`sphx_glr_tutorial_02_mesh_a_lesson_mesh.py` (``../../tutorial/02_mesh/a_lesson_mesh.py``)
-     - 00:02.594
+   * - :ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py` (``../../tutorial/03_figures/a_lesson_figures.py``)
+     - 00:04.669
      - 0.0
-   * - :ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``../../tutorial/06_vtk/a_2_pyvista_vtk.py``)
-     - 00:02.287
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_02_mesh_solutions_e_read-file.py` (``../../tutorial/02_mesh/solutions/e_read-file.py``)
-     - 00:02.114
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``../../tutorial/03_figures/d_gif.py``)
-     - 00:01.996
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_04_filters_solutions_b_clipping.py` (``../../tutorial/04_filters/solutions/b_clipping.py``)
-     - 00:01.795
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_00_jupyter_jupyter.py` (``../../tutorial/00_jupyter/jupyter.py``)
-     - 00:01.680
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py` (``../../tutorial/06_vtk/a_1_transition_vtk.py``)
-     - 00:01.614
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_08_widgets_g_sphere-widget.py` (``../../tutorial/08_widgets/g_sphere-widget.py``)
-     - 00:01.380
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py` (``../../tutorial/08_widgets/c_line-widget.py``)
-     - 00:01.285
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``../../tutorial/03_figures/b_shading.py``)
-     - 00:01.245
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py` (``../../tutorial/04_filters/solutions/e_glyphs.py``)
-     - 00:01.227
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_02_mesh_solutions_d_create-tri-surface.py` (``../../tutorial/02_mesh/solutions/d_create-tri-surface.py``)
-     - 00:01.025
+   * - :ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py` (``../../tutorial/01_basic/solutions/a_load_examples_solution.py``)
+     - 00:04.509
      - 0.0
    * - :ref:`sphx_glr_tutorial_00_intro_a_basic.py` (``../../tutorial/00_intro/a_basic.py``)
-     - 00:00.847
+     - 00:04.022
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_02_mesh_solutions_e_read-file.py` (``../../tutorial/02_mesh/solutions/e_read-file.py``)
+     - 00:03.121
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py` (``../../tutorial/08_widgets/f_slider-bar-widget.py``)
+     - 00:03.018
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py` (``../../tutorial/03_figures/solutions/a_display_options.py``)
+     - 00:02.974
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_02_mesh_a_lesson_mesh.py` (``../../tutorial/02_mesh/a_lesson_mesh.py``)
+     - 00:02.804
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``../../tutorial/06_vtk/a_2_pyvista_vtk.py``)
+     - 00:02.247
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``../../tutorial/03_figures/d_gif.py``)
+     - 00:02.032
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_04_filters_solutions_b_clipping.py` (``../../tutorial/04_filters/solutions/b_clipping.py``)
+     - 00:01.915
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_00_jupyter_jupyter.py` (``../../tutorial/00_jupyter/jupyter.py``)
+     - 00:01.716
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py` (``../../tutorial/06_vtk/a_1_transition_vtk.py``)
+     - 00:01.605
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py` (``../../tutorial/08_widgets/c_line-widget.py``)
+     - 00:01.522
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_08_widgets_g_sphere-widget.py` (``../../tutorial/08_widgets/g_sphere-widget.py``)
+     - 00:01.406
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``../../tutorial/03_figures/b_shading.py``)
+     - 00:01.285
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py` (``../../tutorial/04_filters/solutions/e_glyphs.py``)
+     - 00:01.234
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_02_mesh_solutions_d_create-tri-surface.py` (``../../tutorial/02_mesh/solutions/d_create-tri-surface.py``)
+     - 00:01.046
      - 0.0
    * - :ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` (``../../tutorial/06_vtk/c_vtk_algorithms.py``)
-     - 00:00.793
+     - 00:00.797
      - 0.0
    * - :ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py` (``../../tutorial/03_figures/bonus/e_labels.py``)
-     - 00:00.778
+     - 00:00.790
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_b_checkbox-widget.py` (``../../tutorial/08_widgets/b_checkbox-widget.py``)
-     - 00:00.717
+     - 00:00.721
      - 0.0
    * - :ref:`sphx_glr_tutorial_04_filters_bonus_f_sampling_functions_3d.py` (``../../tutorial/04_filters/bonus/f_sampling_functions_3d.py``)
-     - 00:00.599
+     - 00:00.612
      - 0.0
    * - :ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``../../tutorial/06_vtk/b_create_vtk.py``)
-     - 00:00.583
+     - 00:00.584
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py` (``../../tutorial/08_widgets/h_spline-widget.py``)
      - 00:00.389
      - 0.0
    * - :ref:`sphx_glr_tutorial_08_widgets_d_multi-slider-widget.py` (``../../tutorial/08_widgets/d_multi-slider-widget.py``)
-     - 00:00.230
+     - 00:00.242
      - 0.0
    * - :ref:`sphx_glr_tutorial_01_basic_exercises_a_load_examples_exercise.py` (``../../tutorial/01_basic/exercises/a_load_examples_exercise.py``)
      - 00:00.000
