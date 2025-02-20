@@ -709,7 +709,7 @@ Plot comparison
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.869 seconds)
+   **Total running time of the script:** (0 minutes 1.812 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_b_clipping.py:
