@@ -46,7 +46,6 @@ jobs:
           sudo apt-get install -y --no-install-recommends python3-setuptools
           sudo apt-get install -y --no-install-recommends libgl1-mesa-dev xvfb ffmpeg
           sudo apt-get install -y --no-install-recommends python3-venv
-          sudo apt-get install -y --no-install-recommends libgl1-mesa-glx
           sudo apt-get install -y --no-install-recommends python3-tk pandoc
           sudo apt-get install -y --no-install-recommends libgeos-dev
           pip install -U pip setuptools wheel
