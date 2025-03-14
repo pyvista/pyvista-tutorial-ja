@@ -10,12 +10,12 @@ on:
       - main
 jobs:
   script:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.11"
       - name: Get Job URL
         uses: Tiryoh/gha-jobid-action@v1
         id: jobs
@@ -46,7 +46,6 @@ jobs:
           sudo apt-get install -y --no-install-recommends python3-setuptools
           sudo apt-get install -y --no-install-recommends libgl1-mesa-dev xvfb ffmpeg
           sudo apt-get install -y --no-install-recommends python3-venv
-          sudo apt-get install -y --no-install-recommends libgl1-mesa-glx
           sudo apt-get install -y --no-install-recommends python3-tk pandoc
           sudo apt-get install -y --no-install-recommends libgeos-dev
           pip install -U pip setuptools wheel
