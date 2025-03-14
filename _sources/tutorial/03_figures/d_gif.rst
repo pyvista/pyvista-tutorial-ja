@@ -91,9 +91,9 @@ Generate a moving gif from an active plotter.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/site-packages/pyvista/plotting/plotter.py:4872: PyVistaDeprecationWarning: This method is deprecated and will be removed in a future version of PyVista. Directly modify the points of a mesh in-place instead.
+    /opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/pyvista/plotting/plotter.py:4872: PyVistaDeprecationWarning: This method is deprecated and will be removed in a future version of PyVista. Directly modify the points of a mesh in-place instead.
       warnings.warn(
-    /opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/site-packages/pyvista/plotting/plotter.py:4796: PyVistaDeprecationWarning: This method is deprecated and will be removed in a future version of PyVista. Directly modify the scalars of a mesh in-place instead.
+    /opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/pyvista/plotting/plotter.py:4796: PyVistaDeprecationWarning: This method is deprecated and will be removed in a future version of PyVista. Directly modify the scalars of a mesh in-place instead.
       warnings.warn(
 
 
@@ -112,7 +112,7 @@ Generate a moving gif from an active plotter.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.015 seconds)
+   **Total running time of the script:** (0 minutes 2.063 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_d_gif.py:
