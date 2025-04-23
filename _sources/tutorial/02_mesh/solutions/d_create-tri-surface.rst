@@ -76,11 +76,11 @@ First, create some points for the surface.
  .. code-block:: none
 
 
-    array([[-201.69651696, -200.67772968,    1.74633338],
-           [-181.53503647, -200.67772968,    2.56984132],
-           [-158.63852595, -200.67772968,    3.79347896],
-           [-141.28404516, -200.67772968,    4.92110725],
-           [-118.26674888, -200.67772968,    6.63422219]])
+    array([[-198.56783191, -198.63328244,    1.93663503],
+           [-178.77506257, -198.63328244,    2.81337545],
+           [-156.39202781, -198.63328244,    4.09385809],
+           [-139.85541109, -198.63328244,    5.23012062],
+           [-119.86187368, -198.63328244,    6.7806143 ]])
 
 
 
@@ -154,7 +154,7 @@ See :func:`pyvista.UnstructuredGridFilters.delaunay_2d`.
 
     Help on method delaunay_2d in module pyvista.core.filters.poly_data:
 
-    delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound=False, inplace=False, edge_source=None, progress_bar=False) method of pyvista.core.pointset.PolyData instance
+    delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound: 'bool' = False, inplace: 'bool' = False, edge_source=None, progress_bar: 'bool' = False) method of pyvista.core.pointset.PolyData instance
         Apply a 2D Delaunay filter along the best fitting plane.
     
         This filter can be used to generate a 2d surface from a set of
@@ -322,8 +322,8 @@ Clean Edges & Triangulations
     <tr><td>N Cells</td><td>100</td></tr>
     <tr><td>N Points</td><td>100</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>1.726e-02, 9.293e+00</td></tr>
-    <tr><td>Y Bounds</td><td>6.678e-02, 9.283e+00</td></tr>
+    <tr><td>X Bounds</td><td>6.131e-02, 9.287e+00</td></tr>
+    <tr><td>Y Bounds</td><td>9.420e-02, 9.227e+00</td></tr>
     <tr><td>Z Bounds</td><td>0.000e+00, 0.000e+00</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
@@ -477,7 +477,7 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.917 seconds)
+   **Total running time of the script:** (0 minutes 0.998 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py:
