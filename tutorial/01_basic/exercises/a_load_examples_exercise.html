@@ -225,6 +225,25 @@
             <span class="sr-only">The Paper</span></a>
         </li>
 </ul></div>
+        <div class="sidebar-primary-item"><div id="atsphinx-mini18n-select-component">
+  <style>
+    div#atsphinx-mini18n-select-component div {
+      text-align: center;
+    }
+  </style>
+  <div>
+    <label for="atsphinx-mini18n-select-lang">Language:</label>
+    <select name="lang" onchange="{
+                        const values = value.split('@@');
+                        document.cookie = `lang=${values[0]}; path=/; samesite=Strict; max-age=${60*60*24*400};`;
+                        location.href=values[1];
+                        }" id="atsphinx-mini18n-select-lang">
+      <option value="en@@../../../../en/tutorial/01_basic/exercises/a_load_examples_exercise.html">en</option>
+      <option value="ja@@../../../../ja/tutorial/01_basic/exercises/a_load_examples_exercise.html"
+        selected>ja</option>
+    </select>
+  </div>
+</div></div>
         <div class="sidebar-primary-item">
 
  <script>
@@ -546,7 +565,7 @@ document.write(`
 </section>
 <section id="exercise-2-download-and-view-a-file">
 <h1>練習問題#2 - ファイルのダウンロードと表示<a class="headerlink" href="#exercise-2-download-and-view-a-file" title="Link to this heading">#</a></h1>
-<p>データセットをダウンロードして， <a class="reference external" href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.read.html#pyvista.read" title="(in PyVista v0.45.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> で読み込んで実験してみてください．自分で作ったファイルを使ってもいいですし，以下のソースからダウンロードしてもいいでしょう．</p>
+<p>データセットをダウンロードして， <a class="reference external" href="https://docs.pyvista.org/api/utilities/_autosummary/pyvista.read.html#pyvista.read" title="(in PyVista v0.45.2)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> で読み込んで実験してみてください．自分で作ったファイルを使ってもいいですし，以下のソースからダウンロードしてもいいでしょう．</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/pyvista/vtk-data/tree/master/Data">サンプルVTKデータセット</a></p></li>
 <li><p><a class="reference external" href="https://www.amtekcompany.com/teaching-resources/stl-files/">サンプルSTLファイル</a></p></li>

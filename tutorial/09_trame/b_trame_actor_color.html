@@ -225,6 +225,25 @@
             <span class="sr-only">The Paper</span></a>
         </li>
 </ul></div>
+        <div class="sidebar-primary-item"><div id="atsphinx-mini18n-select-component">
+  <style>
+    div#atsphinx-mini18n-select-component div {
+      text-align: center;
+    }
+  </style>
+  <div>
+    <label for="atsphinx-mini18n-select-lang">Language:</label>
+    <select name="lang" onchange="{
+                        const values = value.split('@@');
+                        document.cookie = `lang=${values[0]}; path=/; samesite=Strict; max-age=${60*60*24*400};`;
+                        location.href=values[1];
+                        }" id="atsphinx-mini18n-select-lang">
+      <option value="en@@../../../en/tutorial/09_trame/b_trame_actor_color.html">en</option>
+      <option value="ja@@../../../ja/tutorial/09_trame/b_trame_actor_color.html"
+        selected>ja</option>
+    </select>
+  </div>
+</div></div>
         <div class="sidebar-primary-item">
 
  <script>
