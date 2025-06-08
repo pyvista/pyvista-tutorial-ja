@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:22.524** total execution time for 4 files **from tutorial/03_figures**:
+**00:22.677** total execution time for 4 files **from tutorial/03_figures**:
 
 .. container::
 
@@ -36,11 +36,11 @@ Computation times
      - 00:14.147
      - 0.0
    * - :ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py` (``a_lesson_figures.py``)
-     - 00:04.871
+     - 00:05.041
      - 0.0
    * - :ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)
-     - 00:02.098
+     - 00:02.117
      - 0.0
    * - :ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)
-     - 00:01.408
+     - 00:01.372
      - 0.0
