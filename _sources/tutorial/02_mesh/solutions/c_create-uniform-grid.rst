@@ -13727,7 +13727,7 @@ Here's one of these example datasets:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 5.538 seconds)
+   **Total running time of the script:** (0 minutes 5.115 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_c_create-uniform-grid.py:
