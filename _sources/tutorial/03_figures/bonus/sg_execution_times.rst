@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**13:08.262** total execution time for 3 files **from tutorial/03_figures/bonus**:
+**13:14.204** total execution time for 3 files **from tutorial/03_figures/bonus**:
 
 .. container::
 
@@ -33,11 +33,11 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)
-     - 12:07.488
+     - 12:13.621
      - 0.0
    * - :ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)
-     - 00:59.982
+     - 00:59.827
      - 0.0
    * - :ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py` (``e_labels.py``)
-     - 00:00.793
+     - 00:00.756
      - 0.0
