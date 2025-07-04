@@ -117,7 +117,7 @@ After interacting with the scene, the clipped mesh is available as:
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7f53493f4dc0)
+    [UnstructuredGrid (0x7fc9c6020fa0)
       N Cells:    2018232
       N Points:   1009118
       X Bounds:   -1.194e+02, 1.194e+02
@@ -140,7 +140,7 @@ After interacting with the scene, the clipped mesh is available as:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 13.938 seconds)
+   **Total running time of the script:** (0 minutes 14.040 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_a_box-widget.py:
