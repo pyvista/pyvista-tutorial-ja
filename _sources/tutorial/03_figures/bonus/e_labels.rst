@@ -267,9 +267,9 @@ node:
     <tr><td>N Cells</td><td>10</td></tr>
     <tr><td>N Points</td><td>10</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>1.315e-01, 6.830e-01</td></tr>
-    <tr><td>Y Bounds</td><td>1.021e-01, 9.428e-01</td></tr>
-    <tr><td>Z Bounds</td><td>1.337e-02, 8.714e-01</td></tr>
+    <tr><td>X Bounds</td><td>1.454e-02, 9.833e-01</td></tr>
+    <tr><td>Y Bounds</td><td>5.662e-02, 8.716e-01</td></tr>
+    <tr><td>Z Bounds</td><td>1.278e-01, 8.162e-01</td></tr>
     <tr><td>N Arrays</td><td>1</td></tr>
     </table>
 
@@ -508,7 +508,7 @@ This example will label each point with their scalar values
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.764 seconds)
+   **Total running time of the script:** (0 minutes 0.746 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_bonus_e_labels.py:
