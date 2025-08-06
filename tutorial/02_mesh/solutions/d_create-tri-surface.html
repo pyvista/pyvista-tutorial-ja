@@ -528,14 +528,14 @@ to download the full example code. or to run this example in your browser via Bi
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[-200.13578862, -199.00482673,    1.86322236],
-       [-183.26450059, -199.00482673,    2.57469292],
-       [-160.52197857, -199.00482673,    3.80630481],
-       [-136.61367388, -199.00482673,    5.42956673],
-       [-112.79363397, -199.00482673,    7.30751989]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[-202.66360887, -197.020946  ,    1.84168444],
+       [-174.04352017, -197.020946  ,    3.15740404],
+       [-157.16468082, -197.020946  ,    4.17565271],
+       [-136.91458338, -197.020946  ,    5.62391123],
+       [-114.27841855, -197.020946  ,    7.47324778]])
 </pre></div>
 </div>
-<p>次に，これらの点を使って，点群PyVistaデータオブジェクトを作成します．これは <a class="reference external" href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.45.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトに包含されることになります．</p>
+<p>次に，これらの点を使って，点群PyVistaデータオブジェクトを作成します．これは <a class="reference external" href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="(in PyVista v0.46.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトに包含されることになります．</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># simply pass the numpy points to the PolyData constructor</span>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cloud</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class"><span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">)</span>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSet.plot.html#pyvista.DataSet.plot" title="pyvista.DataSet.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">cloud</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">point_size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
@@ -681,8 +681,8 @@ delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound: &#39;bool&#39; = False, inp
 <tr><td>N Cells</td><td>100</td></tr>
 <tr><td>N Points</td><td>100</td></tr>
 <tr><td>N Strips</td><td>0</td></tr>
-<tr><td>X Bounds</td><td>1.597e-02, 9.300e+00</td></tr>
-<tr><td>Y Bounds</td><td>1.171e-02, 9.275e+00</td></tr>
+<tr><td>X Bounds</td><td>4.986e-02, 9.248e+00</td></tr>
+<tr><td>Y Bounds</td><td>1.340e-02, 9.295e+00</td></tr>
 <tr><td>Z Bounds</td><td>0.000e+00, 0.000e+00</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
@@ -743,7 +743,7 @@ delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound: &#39;bool&#39; = False, inp
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/d_create-tri-surface.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.005 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.992 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-solutions-d-create-tri-surface-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/d_create-tri-surface.ipynb"><img alt="Binderの起動" src="../../../_images/binder_badge_logo7.svg" style="width: 150px;" />
