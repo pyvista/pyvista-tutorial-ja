@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:54.665** total execution time for 4 files **from tutorial/04_filters/solutions**:
+**00:55.157** total execution time for 4 files **from tutorial/04_filters/solutions**:
 
 .. container::
 
@@ -33,14 +33,14 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorial_04_filters_solutions_c_compute-normals.py` (``c_compute-normals.py``)
-     - 00:42.559
+     - 00:42.763
      - 0.0
    * - :ref:`sphx_glr_tutorial_04_filters_solutions_d_contouring.py` (``d_contouring.py``)
-     - 00:08.628
+     - 00:08.804
      - 0.0
    * - :ref:`sphx_glr_tutorial_04_filters_solutions_b_clipping.py` (``b_clipping.py``)
-     - 00:02.193
+     - 00:02.326
      - 0.0
    * - :ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py` (``e_glyphs.py``)
-     - 00:01.284
+     - 00:01.264
      - 0.0
