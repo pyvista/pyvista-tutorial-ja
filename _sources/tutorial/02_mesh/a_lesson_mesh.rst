@@ -65,11 +65,11 @@ You can create one by defining a 2D array of Cartesian coordinates like so:
  .. code-block:: none
 
 
-    array([[0.05537178, 0.51954979, 0.23099107],
-           [0.94397122, 0.98988234, 0.62492599],
-           [0.5878508 , 0.39674207, 0.4815394 ],
-           [0.932417  , 0.87163045, 0.54024396],
-           [0.95806561, 0.78550392, 0.62822788]])
+    array([[0.0281826 , 0.28103322, 0.51011728],
+           [0.5514205 , 0.20858353, 0.99255927],
+           [0.69866824, 0.91766671, 0.90164581],
+           [0.21856167, 0.80707308, 0.90687355],
+           [0.31157876, 0.87977322, 0.75044555]])
 
 
 
@@ -98,9 +98,9 @@ Pass numpy array of points (n by 3) to PolyData
     <tr><td>N Cells</td><td>100</td></tr>
     <tr><td>N Points</td><td>100</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>1.212e-02, 9.807e-01</td></tr>
-    <tr><td>Y Bounds</td><td>9.544e-03, 9.993e-01</td></tr>
-    <tr><td>Z Bounds</td><td>5.992e-02, 9.886e-01</td></tr>
+    <tr><td>X Bounds</td><td>4.707e-03, 9.983e-01</td></tr>
+    <tr><td>Y Bounds</td><td>8.034e-03, 9.934e-01</td></tr>
+    <tr><td>Z Bounds</td><td>2.823e-02, 9.988e-01</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
 
@@ -279,7 +279,7 @@ show some information about it, and plot its location among the mesh.
  .. code-block:: none
 
 
-    Cell (0x7f74377131c0)
+    Cell (0x7f5c679131c0)
       Type:        <CellType.HEXAHEDRON: 12>
       Linear:      True
       Dimension:   3
