@@ -23,14 +23,14 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: script
       - name: Checkout with submodule
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           repository: pyvista/pyvista-tutorial-translations
           submodules: true
           path: pyvista-tutorial-translations
       - name: Checkout other repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: "gh-pages"
