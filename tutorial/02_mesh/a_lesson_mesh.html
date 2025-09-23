@@ -524,11 +524,11 @@ document.write(`
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># output first 5 rows</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[0.82653639, 0.99759997, 0.50651674],
-       [0.9112601 , 0.67831066, 0.23680924],
-       [0.96678367, 0.887407  , 0.91389664],
-       [0.27679761, 0.38910576, 0.94545763],
-       [0.69560153, 0.52306855, 0.21467316]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[0.3032167 , 0.90114639, 0.23625929],
+       [0.78071325, 0.50751272, 0.2606898 ],
+       [0.87274335, 0.12123196, 0.02305659],
+       [0.30873934, 0.31489938, 0.44146558],
+       [0.57429874, 0.3829106 , 0.87328603]])
 </pre></div>
 </div>
 <p>点 (n x 3) の numpy 配列を PolyData に渡します．</p>
@@ -543,9 +543,9 @@ document.write(`
 <tr><td>N Cells</td><td>100</td></tr>
 <tr><td>N Points</td><td>100</td></tr>
 <tr><td>N Strips</td><td>0</td></tr>
-<tr><td>X Bounds</td><td>1.209e-02, 9.858e-01</td></tr>
-<tr><td>Y Bounds</td><td>4.960e-03, 9.976e-01</td></tr>
-<tr><td>Z Bounds</td><td>1.069e-03, 9.815e-01</td></tr>
+<tr><td>X Bounds</td><td>1.723e-04, 9.961e-01</td></tr>
+<tr><td>Y Bounds</td><td>1.389e-02, 9.820e-01</td></tr>
+<tr><td>Z Bounds</td><td>1.331e-03, 9.967e-01</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
 
@@ -563,9 +563,7 @@ document.write(`
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 インタラクティブなシーン</label><div class="sd-tab-content docutils">
-
-    <iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_001.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
-</div>
+<iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_001.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 <p>しかし，ほとんどのメッシュは，この格子状のメッシュのように，点と点の間に何らかのつながりがあることに注意が必要です．</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
@@ -586,9 +584,7 @@ document.write(`
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-3">
 インタラクティブなシーン</label><div class="sd-tab-content docutils">
-
-    <iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_002.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
-</div>
+<iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_002.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny_coarse</span><span class="p">()</span>
 
@@ -607,9 +603,7 @@ document.write(`
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-5">
 インタラクティブなシーン</label><div class="sd-tab-content docutils">
-
-    <iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_003.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
-</div>
+<iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_003.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 </section>
 <section id="what-is-a-cell">
@@ -626,7 +620,7 @@ show some information about it, and plot its location among the mesh.</p>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.Cell.html#pyvista.Cell" title="pyvista.Cell" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">single_cell</span></a>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Cell (0x7fe8bdf3cca0)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Cell (0x7f40f84a5540)
   Type:        &lt;CellType.HEXAHEDRON: 12&gt;
   Linear:      True
   Dimension:   3
@@ -660,9 +654,7 @@ show some information about it, and plot its location among the mesh.</p>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-7">
 インタラクティブなシーン</label><div class="sd-tab-content docutils">
-
-    <iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_004.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
-</div>
+<iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_004.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 <p>セルはボクセルに限らず，3点間の三角形や2点間の線，あるいは1点をセルとすることもできます（ただし，これは特殊なケースです）．</p>
 </section>
@@ -686,9 +678,7 @@ show some information about it, and plot its location among the mesh.</p>
 <input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-9">
 インタラクティブなシーン</label><div class="sd-tab-content docutils">
-
-    <iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_005.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
-</div>
+<iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_005.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 </section>
 <section id="cell-data">
@@ -706,9 +696,7 @@ show some information about it, and plot its location among the mesh.</p>
 <input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-11">
 インタラクティブなシーン</label><div class="sd-tab-content docutils">
-
-    <iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_006.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
-</div>
+<iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_006.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 <p>ここでは，点データとセルデータを比較し，色をマッピングするときに点データがセル間でどのように補間されるかを示します．これは，セルのドメイン全体で単一の値を持つセルデータとは異なります．</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
@@ -732,9 +720,7 @@ show some information about it, and plot its location among the mesh.</p>
 <input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-13">
 インタラクティブなシーン</label><div class="sd-tab-content docutils">
-
-    <iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_007.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
-</div>
+<iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_007.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 </section>
 <section id="field-data">
@@ -777,15 +763,13 @@ Contains arrays :
 <input id="sd-tab-item-15" name="sd-tab-set-7" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-15">
 インタラクティブなシーン</label><div class="sd-tab-content docutils">
-
-    <iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_008.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
-</div>
+<iframe src='../../_static/static_viewer.html?fileURL=../_images/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_008.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 <center>
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/a_lesson_mesh.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 3.009 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 3.341 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-a-lesson-mesh-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/a_lesson_mesh.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo5.svg" style="width: 150px;" />
