@@ -524,11 +524,11 @@ document.write(`
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># output first 5 rows</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[0.3032167 , 0.90114639, 0.23625929],
-       [0.78071325, 0.50751272, 0.2606898 ],
-       [0.87274335, 0.12123196, 0.02305659],
-       [0.30873934, 0.31489938, 0.44146558],
-       [0.57429874, 0.3829106 , 0.87328603]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[0.35746963, 0.57701008, 0.64776729],
+       [0.90698197, 0.837804  , 0.21983181],
+       [0.74482701, 0.48308714, 0.04025354],
+       [0.31025769, 0.76315341, 0.39194386],
+       [0.44882988, 0.30776277, 0.2790562 ]])
 </pre></div>
 </div>
 <p>点 (n x 3) の numpy 配列を PolyData に渡します．</p>
@@ -543,9 +543,9 @@ document.write(`
 <tr><td>N Cells</td><td>100</td></tr>
 <tr><td>N Points</td><td>100</td></tr>
 <tr><td>N Strips</td><td>0</td></tr>
-<tr><td>X Bounds</td><td>1.723e-04, 9.961e-01</td></tr>
-<tr><td>Y Bounds</td><td>1.389e-02, 9.820e-01</td></tr>
-<tr><td>Z Bounds</td><td>1.331e-03, 9.967e-01</td></tr>
+<tr><td>X Bounds</td><td>1.444e-02, 9.999e-01</td></tr>
+<tr><td>Y Bounds</td><td>1.709e-03, 9.285e-01</td></tr>
+<tr><td>Z Bounds</td><td>1.878e-02, 9.771e-01</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
 
@@ -608,19 +608,14 @@ document.write(`
 </section>
 <section id="what-is-a-cell">
 <h2>セルとは？<a class="headerlink" href="#what-is-a-cell" title="Link to this heading">#</a></h2>
-<p>A cell is the geometry between points that defines the connectivity or
-topology of a mesh. In the examples above, cells are defined by the lines
-(edges colored in black) connecting points (colored in red). For example, a
-cell in the beam example is a voxel defined by the region between eight
-points in that mesh. Here we can extract one of the cells from the mesh,
-show some information about it, and plot its location among the mesh.</p>
+<p>セルとは，メッシュの接続性またはトポロジーを定義する点間のジオメトリです．上記の例では，セルは線（黒で着色されたエッジ）と接続点（赤で着色された）によって定義されています．例えば，ビームの例におけるセルは，そのメッシュの8つの点の間の領域によって定義されるボクセルである．ここでは，メッシュから1つのセルを取り出し，その情報を表示し，メッシュの中での位置をプロットすることができます．</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mesh</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.Cell.html#pyvista.Cell" title="pyvista.Cell" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">single_cell</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSet.get_cell.html#pyvista.DataSet.get_cell" title="pyvista.DataSet.get_cell" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">mesh</span><span class="o">.</span><span class="n">get_cell</span></a><span class="p">(</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSet.n_cells.html#pyvista.DataSet.n_cells" title="pyvista.DataSet.n_cells" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-property"><span class="n">mesh</span><span class="o">.</span><span class="n">n_cells</span></a> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.Cell.html#pyvista.Cell" title="pyvista.Cell" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">single_cell</span></a>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Cell (0x7f40f84a5540)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Cell (0x7fd88b1594e0)
   Type:        &lt;CellType.HEXAHEDRON: 12&gt;
   Linear:      True
   Dimension:   3
@@ -769,7 +764,7 @@ Contains arrays :
   <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/a_lesson_mesh.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
   </a>
-</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 3.341 seconds)</p>
+</center><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 3.131 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-02-mesh-a-lesson-mesh-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/a_lesson_mesh.ipynb"><img alt="Binderの起動" src="../../_images/binder_badge_logo5.svg" style="width: 150px;" />
